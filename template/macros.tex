@@ -1,0 +1,130 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%           Macros           %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Lists
+\newcommand{\itemList}[1]
+{
+	\begin{itemize}
+		#1
+	\end{itemize}
+}
+
+% Equations
+\newcommand{\eqn}[1]
+{
+	\begin{eqnarray}
+		#1
+	\end{eqnarray}
+}
+
+% Non-numbered chapter
+\newcommand{\chapternonum}[1]
+{
+    \chapter*{#1} 
+    \addcontentsline{toc}{chapter}{#1}
+}
+
+% Non-numbered section
+\newcommand{\sectionnonum}[1]
+{
+    \section*{#1} 
+    \addcontentsline{toc}{section}{#1}
+}
+
+% References to figures and tables
+\newcommand{\reffig}[1]{\textsc{Fig.}~\ref{#1}}
+\newcommand{\reftab}[1]{\textsc{Table}~\ref{#1}}
+
+% Instert and empty page
+\newcommand{\emptypage}[0]
+{
+    \newpage
+    \strut
+    \newpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Images management
+%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\insertFigure}[3]
+{
+    \begin{figure}[tb]
+        \centering
+        \includegraphics[width=#2\textwidth]{#1}
+        \caption{#3}
+        \label{fig:#1}
+    \end{figure}
+}
+
+\newcommand{\insertTwoFigures}[5]
+{
+    \begin{figure}[tb]
+        \centering
+        \includegraphics[width=#4\textwidth]{#2}
+        \includegraphics[width=#4\textwidth]{#3}
+        \caption{#5}
+        \label{fig:#1}
+    \end{figure}
+}
+
+%%%%%%%%%%%%%%%
+% Colored text
+%%%%%%%%%%%%%%%
+
+\newcommand{\Cgreen}[1] { {\color{green!80!blue}{#1}}}
+\newcommand{\Cgreenb}[1]{ \textbf{\color{green!80!blue}{#1}}}
+
+\newcommand{\Cred}[1]  { {\color{red}{#1}}}
+\newcommand{\Credb}[1] { \textbf{\color{red}{#1}}}
+
+\newcommand{\Corange}[1] { {\color{orange}{#1}}}
+\newcommand{\Corangeb}[1]{ \textbf{\color{orange}{#1}}}
+
+\newcommand{\Cblue}[1]  { {\color{blue}{#1}}        }
+\newcommand{\Cblueb}[1] { \textbf{\color{blue}{#1}} }
+
+\newcommand{\Cviolet}[1]  { {\color{red!50!blue}{#1}}        }
+\newcommand{\Cvioletb}[1] { \textbf{\color{red!50!blue}{#1}} }
+
+\newcommand{\Ckingblue}[1]  { {\color{blue!33!green}{#1}}        }
+\newcommand{\Ckingblueb}[1] { \textbf{\color{blue!33!green}{#1}} }
+
+%%%%%%%%
+% Misc
+%%%%%%%%
+
+\newcommand{\todo}[1]{\textbf{\color{red!75!blue}{[To do : #1]}}}
+
+\newcommand{\definedAs}[0]{\equiv}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography management
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\addReference}[4]{\bibitem{#1} #2, \emph{#3}. #4}
+
+\newcommand{\loremipsum}[0]{Lorem ipsum dolor sit amet, ad mel dicta iisque splendide, ei mei ipsum inciderint disputando. Causae aliquam nonumes ut vix. Per ex modus laudem accusata, eu eum erant expetenda, has id consequat efficiendi. Rationibus appellantur quo ad. Eam zril ancillae hendrerit ut, sea mutat oratio dissentiunt te.
+
+Modo efficiantur interpretaris cu has, in vis adolescens deterruisset. Lorem urbanitas et duo, has primis fabellas reprehendunt ut, cetero fastidii intellegebat cum cu. Mei everti animal impedit no. Ut denique praesent percipitur qui. Sed ad movet ubique possim, ut ferri docendi qui.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEP notations, analysis stuff
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lstop}       [0]{\tilde{t}_1}
+\newcommand{\lneutralino} [0]{\tilde{\chi}_1^0}
+\newcommand{\lchargino}   [0]{\tilde{\chi}_1^\pm}
+\newcommand{\deltam}      [0]{\Delta m}
+\newcommand{\GeV}         [0]{~\text{GeV}}
+\newcommand{\pT}          [0]{p_T}
+\newcommand{\mass}        [1]{m_{#1}}
+\newcommand{\abseta}      [0]{\left| \eta \right|}
+\newcommand{\oneLeptonTop}[0]{1\ell~\text{top}}
+\newcommand{\diLeptonTop} [0]{t\bar{t} \rightarrow \ell \ell}
+\newcommand{\Wjets}       [0]{\text{$W$+jets}}
+\newcommand{\MT}          [0]{M_T}
+
