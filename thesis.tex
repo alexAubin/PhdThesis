@@ -512,19 +512,63 @@
 
             \todo{Plots of shape for all / some variables ?}
 
+            \subsection{Figure of merit}
+
+            Before going into the details of the signal region optimization, we first need to introduce the
+            metric used to do so. The problem of defining cuts to be applied on a variable can be summarized 
+            as knowing how to compromise between the quantity of selected signal, $S(\text{cut})$, versus selected
+            background, $B(\text{cut})$, such that the sensitivity of the analysis is maximized. Ideally,
+            one would run the full statistical interpretation using toy data. However, such a procedure 
+            is often CPU intensive and not suitable for an iterative process. A more flexible way is
+            to define a figure of merit (FoM) that approximate the statistical interpretation one is aiming
+            to perform.
+
+            Let's consider the background only hypothesis $H_0$, also called null hypothesis, and the 
+            signal hypothesis $H_1$. These hypothesis are modeled by a probability density function (pdf) of 
+            the number of events, as sketched on Figure \ref{fig:interpretation}.
+           
+            \insertFigure{interpretation}{0.7}
+                                         {Illustration of the modelization of the hypothesis $H_0$ and $H_1$.}
+
+            From the point of view of excluding a signal, a simple approach consist in computing the type 
+            II error (or probability to miss a signal) provided that $D$ events are observed in the
+            data. Assuming that the pdf is gaussian, one can express the distance between $D$ and $H_1$ in terms 
+            of standard deviations using $(\text{mean}(H_1) - D) / \sigma(H_1) = (S + B - D) / \sqrt{S+B}$.
+            The figure of merit can be defined from considering the expected value of this quantity when assuming 
+            a toy data equal to $B$, the mean realization of $H_0$ : $\text{FoM}_\text{exclusion} \definedAs S 
+            / \sqrt{S+B}$. The same reasonning applies to the point of view of signal discovery, considering 
+            the type I error (or probability of false discovery), leading to $\text{FoM}_\text{discovery}
+            \definedAs S/\sqrt{B}$.
+
+            The FoM described so far however takes only into account the statistical uncertainty on signal and 
+            background but not the systematic aspects. To get a more realistic uncertainty, one can add to 
+            $\sigma^2(H)$ a term $f^2 B^2$ where $f$ represents an estimate of the relative systematic uncertainty 
+            on the background. Additionally, to work around issues where the remaining statistics becomes low and 
+            cuts are not realistic anymore, we ignore cases where $S < 3$ or $B < 1$.
+
+            \todo{Comment about Asimov Z}
+
         \subsection{Cut-based signal regions}
 
-            This section discuss the optimization of signal regions in the cut-based approach.
-            First we introduce the figure of merit that is used to perform the optimization,
-            then the optimization procedure itself and finally the results and performances obtained.
-
-            \subsubsection{Figure of merit}
-            \loremipsum
-            
             \subsubsection{Optimization procedure}
-            \loremipsum
+
+            The variables are first classified by their individual discriminating power, estimated by taking the 
+            maximum FoM achievable on a few signal benchmarks when scanning the possible cuts. The most 
+            discriminating variables are $M_T$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^{W}$, We also consider 
+            $\Delta \phi(j_{1,2},\vec{MET})$, hadronic top $\chi^2$, $p_T(\text{lead. } b)$ and the presence of a
+            5th, ISR jet. These variables have low discrimating power at preselection level but get useful after
+            additional cuts on $M_T$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^W$ depending of the $\deltam$ considered.
+
+            On a few signal benchmarks, we perform a $n$-dimensionnal optimization of the cuts on these variables,
+            though not cutting on both $MET$ and $MET/\sqrt{H_T}$ at the same time. 
+
+            %mention that we add a scale factor to 1ltop et Wjets to take into account background estimation effects
+
 
             \subsubsection{Results and performances}
+
+            
+
             \loremipsum
 
         \subsection{BDT-based signal regions}
@@ -532,6 +576,8 @@
             \loremipsum
 
     \section{Background estimation \label{sec:analysis_backgroundEstimation}}
+
+        
         \loremipsum
 
         \subsection{Background normalization in MT peak}
