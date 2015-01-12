@@ -528,7 +528,7 @@
             the number of events, as sketched on Figure \ref{fig:interpretation}.
            
             \insertFigure{interpretation}{0.7}
-                                         {Illustration of the modelization of the hypothesis $H_0$ and $H_1$.}
+                         {Illustration of the modelization of the hypothesis $H_0$ and $H_1$.}
 
             From the point of view of excluding a signal, a simple approach consist in computing the type 
             II error (or probability to miss a signal) provided that $D$ events are observed in the
@@ -554,10 +554,10 @@
 
             The variables are first classified by their individual discriminating power, estimated by taking the 
             maximum FoM achievable on a few signal benchmarks when scanning the possible cuts. The most 
-            discriminating variables are $M_T$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^{W}$, We also consider 
+            discriminating variables are $\MT$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^{W}$, We also consider 
             $\Delta \phi(j_{1,2},\vec{MET})$, hadronic top $\chi^2$, $p_T(\text{lead. } b)$ and the presence of a
             5th, ISR jet. These variables have low discrimating power at preselection level but get useful after
-            additional cuts on $M_T$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^W$ depending of the $\deltam$ considered.
+            additional cuts on $\MT$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^W$ depending of the $\deltam$ considered.
 
             On a few signal benchmarks, we perform a $n$-dimensionnal optimization of the cuts on these variables,
             though not cutting on both $MET$ and $MET/\sqrt{H_T}$ at the same time. 
@@ -577,19 +577,74 @@
 
     \section{Background estimation \label{sec:analysis_backgroundEstimation}}
 
+        \subsection{Overview} 
+
+        In this section, we focus on the estimation of the different background contributions. 
+        Four kinds of control regions are defined by inverting some of the requirements of the
+        preselection and signal regions, as illustrated on Figure \ref{fig:backgroundEstimationOverview}.
+        Each of these aim to provide signal-free sectors in which to check how good is the modeling
+        of the backgrounds by the Monte-Carlo and perform data-driven estimations.
+
+            \insertFigure{backgroundEstimationOverview}{0.7}
+                         {Overview of the control regions used in the background estimation method.}
+
+        The $\MT$-peak control region is defined by looking at events satisfying $50 < \MT < 80 \GeV$
+        instead of the signal region $\MT$ requirement. This control region is enriched in $\oneLeptonTop$
+        and is used as a well-controled region in which to normalize the $\oneLeptonTop$, $\Wjets$ 
+        and $\diLeptonTop$ as documented in \ref{sec:MTpeakNormalization}.
         
+        The $0b\text{-tag}$ control region is defined by requiring no $b$-tagged jet in the event.
+        This region is enriched in $\Wjets$ and $\oneLeptonTop$ and is used to control and correct 
+        the tail of $\MT$ for these two components as described in \ref{sec:MTtailCorrection}.
+
+        The $2\ell$ control region is defined by requiring exactly two selected leptons instead of
+        one, and lowering the $MET$ cut to $50 \GeV$. Additionnally, to limit the contribution
+        from Drell-Yan, we veto events where the invariant mass of the dilepton system, $\mass{\ell\ell}$,
+        is such that $\left|\mass{\ell\ell} - m_{Z}\right| < 15 \GeV$. Finally, the $1\ell$+veto control 
+        region is defined by requiring exactly one selected leptons and one lepton veto. This region 
+        is intended to control the modeling of the second lepton veto. Both the $2\ell$ and $1\ell$+veto
+        are being looked at on the whole $\MT$ range and are not used to derive scale factors but only 
+        systematic uncertainties on the background as detailed in \ref{sec:background_systematics}.
+
+        \todo{Add cutflow table of the dirrent control regions at preselection ?}
+
+        \subsection{Background normalization in $\MT$-peak \label{sec:MTpeakNormalization}}
+
+            The $\MT$-peak control region, defined as $50 < \MT < 80 \GeV$ is the first step of the
+            background estimation method. It is used to normalize the $\oneLeptonTop$, $\Wjets$ and
+            $\diLeptonTop$ components while the rare component is taken directly from Monte-Carlo.
+            This normalization is done for each signal region individually, effectively allowing to
+            absorb disagreements caused by cuts on not-so-well modeled variables and effect from jet
+            energy scale, trigger efficiency and lepton identification efficiencies. 
+
+            The normalization is done in two steps : first, a scale factor $\SFpre$ is
+            computed before the application of the second lepton veto, substracting the rare component :
+
+            \begin{equation}
+                \SFpre \definedAs \left( \frac{N(\text{data}) - N(\text{rare})}{N(\oneLeptonTop) + N(\Wjets) + N(\diLeptonTop)} \right)
+                \label{eq:SFpreDefinition}
+            \end{equation}
+
+            $\SFpre$ is used to normalize only the $\diLeptonTop$ component \todo{Maybe explain why it's done this way ?}. Another scale factor, $\SFpost$ is used after application of the second lepton veto, substracting the rare and the corrected $\diLeptonTop$ component :
+
+            \begin{equation}
+                \SFpost \definedAs \left( \frac{N(\text{data}) - N(\text{rare}) - \SFpre \times N(\diLeptonTop)}{N(\oneLeptonTop) + N(\Wjets)} \right)
+                \label{eq:SFpostDefinition}
+            \end{equation}
+
+            At preselection level, $\SFpre$ and $\SFpost$ are equal to $(1.06 \pm 0.01)$ and $(1.05 \pm 0.01)$ respectively.
+
+        \subsection{$\MT$-tail correction in the $0b$-tag region \label{sec:MTtailCorrection}}
         \loremipsum
 
-        \subsection{Background normalization in MT peak}
-        \loremipsum
+        \subsection{Control plots at preselection level}
 
-        \subsection{MT tail correction in the 0btag region}
-        \loremipsum
+        \todo{$MT$, $MET$, $MT2W$ for each of the 4 control regions}
 
     \section{Systematics \label{sec:analysis_systematics}}
         \loremipsum
 
-        \subsection{Background systematics}
+        \subsection{Background systematics \label{sec:background_systematics}}
         \loremipsum
 
         \subsection{Signal systematics}
