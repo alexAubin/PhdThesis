@@ -51,7 +51,7 @@
 
 \newcommand{\insertFigure}[3]
 {
-    \begin{figure}[tb]
+    \begin{figure}[h!]
         \centering
         \includegraphics[width=#2\textwidth]{#1}
         \caption{#3}
@@ -61,11 +61,36 @@
 
 \newcommand{\insertTwoFigures}[5]
 {
-    \begin{figure}[tb]
+    \begin{figure}[h!]
         \centering
         \includegraphics[width=#4\textwidth]{#2}
         \includegraphics[width=#4\textwidth]{#3}
         \caption{#5}
+        \label{fig:#1}
+    \end{figure}
+}
+
+\newcommand{\insertThreeFigures}[6]
+{
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=#5\textwidth]{#2}
+        \includegraphics[width=#5\textwidth]{#3}
+        \includegraphics[width=#5\textwidth]{#4}
+        \caption{#6}
+        \label{fig:#1}
+    \end{figure}
+}
+
+\newcommand{\insertFourFigures}[7]
+{
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=#6\textwidth]{#2}
+        \includegraphics[width=#6\textwidth]{#3}\\
+        \includegraphics[width=#6\textwidth]{#4}
+        \includegraphics[width=#6\textwidth]{#5}
+        \caption{#7}
         \label{fig:#1}
     \end{figure}
 }
@@ -131,3 +156,5 @@ Modo efficiantur interpretaris cu has, in vis adolescens deterruisset. Lorem urb
 \newcommand{\MT}          [0]{M_T}
 \newcommand{\SFpre}       [0]{SF_{\text{pre}}^{\text{peak}}}
 \newcommand{\SFpost}      [0]{SF_{\text{post}}^{\text{peak}}}
+\newcommand{\SFnobtag}    [0]{SF_{0b\text{-tag}}^{\text{peak}}}
+\newcommand{\MlbPrime}    [0]{M'_{\ell b}}

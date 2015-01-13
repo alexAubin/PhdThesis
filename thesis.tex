@@ -635,11 +635,71 @@
             At preselection level, $\SFpre$ and $\SFpost$ are equal to $(1.06 \pm 0.01)$ and $(1.05 \pm 0.01)$ respectively.
 
         \subsection{$\MT$-tail correction in the $0b$-tag region \label{sec:MTtailCorrection}}
-        \loremipsum
 
+        The $0b$-tag control region allows to control the tail of $\MT$ of the $\Wjets$ and $\oneLeptonTop$ components. Before looking at the tail, however, we start by normalizing the background in the $\MT$ peak of this control region, in a similar fashion as what is done in \ref{sec:MTpeakNormalization}. This is done by introducing $\SFnobtag$, used to normalize the $\Wjets$ and $\oneLeptonTop$ contributions :
+
+        \begin{equation}
+            \SFnobtag \definedAs \left( \frac{N(\text{data}) - N(\text{rare}) - N(\diLeptonTop)}{N(\oneLeptonTop) + N(\Wjets)} \right)
+            \label{eq:SF0btagDefinition}
+        \end{equation}
+
+        At preselection level, $\SFnobtag$ is found to be $(0.99 \pm 0.01)$. After normalization to the peak, a clear disagreement in the tail of $\MT$ is observed for $\MT > 100 \GeV$ between the data and Monte-Carlo, as shown on \ref{fig:templateFit/MT_notCorrected}. This is an important point of the analysis as it means that the Monte-Carlo needs to be corrected to have a reliable prediction of the $\oneLeptonTop$ and $\Wjets$ in the $\MT$ tail. So far, the understanding of this disagreement comes from two source : first, the off-shell contributions of $\Wjets$ is underestimated by the simulation, and second, detector effects leads to a larger tail for the $\oneLeptonTop$ events.
+
+        \insertFigure{templateFit/MT_notCorrected}{0.7}
+                     {Data/MC comparison on the full $M_T$ distribution in the $0b$-tag control region at preselection level, after propagation of $\SFnobtag$. A clear discrepancy is visible for $\MT > 100 \GeV$.}
+
+        A method is put in place to correct the discrepancy using a template fit to estimate separately the contribution of $\oneLeptonTop$ and $\Wjets$ from the data. To do this, we use $\MlbPrime$ which was found to have a good discriminating power between the two process categories and being well discribed in the peak of $\MT$, as shown on \ref{fig:MlbPrimeForTemplateFit}.
+
+        \insertFourFigures{MlbPrimeForTemplateFit}
+                          {templateFit/Mlb_0b_peak}
+                          {templateFit/Mlb_0b_tail}
+                          {templateFit/preselection_Mlb_noFit}
+                          {templateFit/preselection_Mlb_withFit}
+                          {0.45}
+                          {Distribution of $\MlbPrime$ in the $0b$-tag control region, data/MC comparison in the $M_T$ peak (top left), superimposed and normalized $\oneLeptonTop$ and $\Wjets$ components in the $M_T$ tail (top right), data/MC comparison in the $M_T$ tail before correction of the Monte-Carlo (bottom left) and after correction (bottom right). On the bottom right, the uncertainty of the scale factors are propagated in the ratio.}
+
+        The method is implemented using the \textsc{RooFit} toolbox with the Minuit2 implementation of the \textsc{Migrad} minimizer algorithm. The normalization of the $\oneLeptonTop$ and $\Wjets$ components are free parameters translated in term of scale factors, $SF_{\oneLeptonTop}$ and $SF_{\Wjets}$, while the normalization of the $\diLeptonTop$ and rare components are taken from the Monte-Carlo and constrained with a 20\% uncertainty during the fit process. To validate the method, a closure test is performed by generating toy data from the Monte-Carlo where arbitrary scale factors where injected. The estimated scale factors are then compared to the input scale factors. A very good linearity is found for scale factors varying from 0.10 to 3. The fit is performed both in the $\MT$ peak and tail regions and we extract $SFR = SF^{\text{tail}} / SF^{\text{peak}}$ for both processes, representing the discrepancy in the tail independently from the peak normalization. Different sources of systematic uncertainty are considered : the jet energy scale, the normalization of the rare background, the Monte-Carlo statistics, the choice of the minimizer algorithm, the choice of the initial fit conditions, the generator setup (scale, matching, top pass, \textsc{Powheg} or \textsc{MadGraph}, top $\pT$ reweighting). The most important sources are the Monte-Carlo statistics (leading to 11\% of relative uncertainty on SFR), the generator scale (9\%) and the jet energy scale. A conservative 20\% is used as relative systematic uncertainty.
+
+        At preselection level, $SFR_{\oneLeptonTop}$ and $SFR_{\Wjets}$ are found to be $(1.04 \pm 0.16 (\text{stat.}) \pm 0.21 (\text{syst.}))$ and $(1.33 \pm 0.10 (\text{stat.}) \pm 0.27 (\text{syst.}) )$ respectively. The plot on Figure \ref{fig:MlbPrimeForTemplateFit} illustrate the impact on the $\MlbPrime$ data/MC comparison after propagating the scale factors.
+
+        \todo{Describe how the numbers for BDT and CnC are computed}
+
+        \insertTwoFigures{templateFitBDTResults}
+                          {templateFit/BDT_1ltop}
+                          {templateFit/BDT_Wjets}
+                          {0.7}
+                          {Template fit results for $\oneLeptonTop$ (top) and $\Wjets$ (bottom) for the different BDT discriminators, keeping 25\% of the statistics after the cut. The uncertainty is only statistical. The red line represents the mean value for the $SFR$ and the blue dotted lines account for the uncertainty on the $SFR$.}
+
+        \insertThreeFigures{templateFitBDTResults}
+                           {templateFit/CnC_MTcuts}
+                           {templateFit/CnC_METcuts}
+                           {templateFit/CnC_METoverSqrtHTcuts}
+                           {0.325}
+                           {Template fit results for individual cuts on $\MT$ (left), $MET$ (middle) and $MET/\sqrt{H_T}$ (right) after preselection. The uncertainties shown are statistical only.}
+ 
         \subsection{Control plots at preselection level}
 
-        \todo{$MT$, $MET$, $MT2W$ for each of the 4 control regions}
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.325\textwidth]{controlPlots/MTpeak/MT}
+                \includegraphics[width=0.325\textwidth]{controlPlots/MTpeak/MET}
+                \includegraphics[width=0.325\textwidth]{controlPlots/MTpeak/MT2W}\\
+                \includegraphics[width=0.325\textwidth]{controlPlots/0btag/MT}
+                \includegraphics[width=0.325\textwidth]{controlPlots/0btag/MET}
+                \includegraphics[width=0.325\textwidth]{controlPlots/0btag/MT2W}\\
+                \includegraphics[width=0.325\textwidth]{controlPlots/reversedVeto/MT}
+                \includegraphics[width=0.325\textwidth]{controlPlots/reversedVeto/MET}
+                \includegraphics[width=0.325\textwidth]{controlPlots/reversedVeto/MT2W}\\
+                \includegraphics[width=0.325\textwidth]{controlPlots/2leptons/MT}
+                \includegraphics[width=0.325\textwidth]{controlPlots/2leptons/MET}
+                \includegraphics[width=0.325\textwidth]{controlPlots/2leptons/MT2W}\\
+                \caption{A few control plots, showing the data/MC comparison for $\MT$ (left column), $MET$ (middle column) and $M_{T2}^W$ (right column) in the different control regions : $\MT$-peak (first row), $0b$-tag (second row), 1 lepton+veto (third row) and 2 leptons (fourth row)}
+                \label{fig:derpi}
+            \end{figure}
+
+        \subsection{Background prediction}
+
+        \todo{formulas here}
 
     \section{Systematics \label{sec:analysis_systematics}}
         \loremipsum
