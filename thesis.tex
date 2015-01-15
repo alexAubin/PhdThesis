@@ -408,8 +408,8 @@
        $b$-tagged jet are defined by, on top of the previous requirements, using the medium working point of the 
        Combined Secondary Vertex (CSV) tagging algorithm. \todo{Mention efficiency and fake rate}
 
-       The value of the CSV discriminant is corrected in the simulation as function of the $p_T$ and $\eta$
-       of the jet to account for known data/MC discrepancies.
+       The value of the CSV discriminant is corrected in the simulation via a reshaping technique, function of the 
+       $p_T$ and $\eta$ of the jet to account for known data/MC discrepancies.
 
        The missing transverse energy is computed by considering the negative vector sum of jets, leptons and 
        unclustered particles reconstructed by the particle-flow algorithms. It is corrected by propagating the 
@@ -614,8 +614,8 @@
             background estimation method. It is used to normalize the $\oneLeptonTop$, $\Wjets$ and
             $\diLeptonTop$ components while the rare component is taken directly from Monte-Carlo.
             This normalization is done for each signal region individually, effectively allowing to
-            absorb disagreements caused by cuts on not-so-well modeled variables and effect from jet
-            energy scale, trigger efficiency and lepton identification efficiencies. 
+            absorb disagreements caused by cuts on not-so-well modeled variables and uncertainty on the
+            je energy scale, the trigger efficiency, lepton identification efficiency and luminosity.
 
             The normalization is done in two steps : first, a scale factor $\SFpre$ is
             computed before the application of the second lepton veto, substracting the rare component :
@@ -676,7 +676,9 @@
                            {templateFit/CnC_METoverSqrtHTcuts}
                            {0.325}
                            {Template fit results for individual cuts on $\MT$ (left), $MET$ (middle) and $MET/\sqrt{H_T}$ (right) after preselection. The uncertainties shown are statistical only.}
- 
+        
+        \subsection{Control of the second lepton veto and $\diLeptonTop$ component}
+
         \subsection{Control plots at preselection level}
 
             \begin{figure}[h!]
@@ -693,7 +695,10 @@
                 \includegraphics[width=0.325\textwidth]{controlPlots/2leptons/MT}
                 \includegraphics[width=0.325\textwidth]{controlPlots/2leptons/MET}
                 \includegraphics[width=0.325\textwidth]{controlPlots/2leptons/MT2W}\\
-                \caption{A few control plots, showing the data/MC comparison for $\MT$ (left column), $MET$ (middle column) and $M_{T2}^W$ (right column) in the different control regions : $\MT$-peak (first row), $0b$-tag (second row), 1 lepton+veto (third row) and 2 leptons (fourth row)}
+                \caption{A few control plots, showing the data/MC comparison for $\MT$ (left column), 
+                        $MET$ (middle column) and $M_{T2}^W$ (right column) in the different control
+                        regions : $\MT$-peak (first row), $0b$-tag (second row), 1 lepton+veto (third
+                        row) and 2 leptons (fourth row)}
                 \label{fig:derpi}
             \end{figure}
 
@@ -701,14 +706,135 @@
 
         \todo{formulas here}
 
-    \section{Systematics \label{sec:analysis_systematics}}
+    \section{Systematic uncertainties \label{sec:analysis_systematics}}
         \loremipsum
 
-        \subsection{Background systematics \label{sec:background_systematics}}
-        \loremipsum
+        \subsection{Systematic uncertainties on the background}
 
-        \subsection{Signal systematics}
-        \loremipsum
+            \subsection{Second lepton veto efficiency}
+
+            The uncertainty on the efficiency of the second lepton veto is propagated to the
+            fraction of $\diLeptonTop$ events that have a second lepton in the acceptance. For
+            the isolated track veto lepton, this is defined as having a second generated 
+            $e/\mu$ or a one prong $\tau \rightarrow h$ with $\pT > 5 \text{ or } 10 \GeV$, 
+            respectively, with $\abseta < 2.4$. This fraction is about 70\%. The uncertainty 
+            for these events is 6\% and is obtained from tag-and-probe studies \todo{reference 
+            to SUS-13-011}. Regarding the $\tau$ veto lepton, the events considered are those 
+            with a hadronic $\tau$ in the acceptance, with true visible transverse energy $> 20 
+            \GeV$ in $\abseta < 2.4$. This fraction is about $10 \sim 15 \%$ of the total. The 
+            uncertainty on the efficiency of the $\tau$-ID algorithm is 7\%, taken from $\tau$ 
+            group studies \todo{reference}.
+
+            \subsection{Modeling of $\diLeptonTop$}
+
+            The goodness of the modeling of the $\diLeptonTop$ background is checked in the 2
+            leptons and 1 lepton + veto control regions via the scale factors $\SFtwoLepTail$
+            and $\SFvetoTail$. As the agreement has been checked to be overall good, no correction
+            for the modeling of the tail is applied to $\diLeptonTop$ to compute the prediction
+            from the Monte-Carlo. However, an uncertainty is propagated to the $\diLeptonTop$ yield 
+            as a way to quantify the trust in the Monte-Carlo.
+
+            Because the cuts defining the signal regions are sometimes very tight, they lead to
+            small number of events in the corresponding control region. This has for consequence that
+            $\SFtwoLepTail$ and $\SFvetoTail$ have very large uncertainties and conclusions are
+            difficult to draw.
+
+            To work around this problem while still probing the tail of $\MT$ near the signal
+            region, we define loosened cuts to check these scale factors with more statistics.
+            These cuts are designed by requiring to have at least 30 events remaining in the tail of
+            $\MT$ for the 2 lepton control region, to keep the uncertainty in the range of 20$\sim$30\%.
+            
+            For the BDT signal regions, it is done by loosening the cuts on the BDT outputs with
+            three different cuts on $N_\text{jets}$ : $\geq 2$, $\geq 3$ and $\geq 4$. This mean
+            that we consider three kinds of loosened BDT cuts. Doing so allows to probe further the
+            description of the tail of the BDT output via $N_\text{jets} \geq 2$ because the looser
+            $N_\text{jets}$ requirement allows a tighter cut, while $N_\text{jets} \geq 4$ is closer
+            to the actual preselection but with a looser cut on the BDT output. 
+
+            For the cut-based approach, it is done by removing the conditions on $\Delta \phi( j_{1,2},
+            \vec{MET} )$ and, hadronic top $\chi^2$ and the condition on $N_\text{jets}$ in the definition
+            of the ISR-jet selection. For some of the signal regions, it is needed to go further by 
+            relaxing the $MET$, $M_{T2}^W$ and $\pT(\text{lead.} b)$ cuts. 
+
+            For each of the relaxed control region, we compute the value of $\SFtwoLepTail$ and
+            $\SFvetoTail$ to quantify the agreement between data and the simulation in the tail of $\MT$.
+            The scale factors are found to be compatible with one and and enveloppe is computed for
+            each signal region to account for the spread of the scale factors for each of the
+            associated control regions. The results is presented on \ref{} and \ref{} for the BDT and
+            cut-based signal regions respectively.
+
+            \subsection{Modeling of $N_\text{jets}$ for $t\bar{t}$}
+
+            b
+
+            \subsection{Cross section of $\oneLeptonTop$, $\Wjets$ and rare components}
+        
+            The $\oneLeptonTop$ component cross-section is varied by 10\% while the $W$+jets 
+            and rare background cross-sections are varied by 50\%. The uncertainty on the rare 
+            component cross-section is meant to conservatively cover the knowledge we have of 
+            this background as it taken directly from the Monte-Carlo, while the $\oneLeptonTop$ and 
+            $\Wjets$ cross-sections uncertainty are meant to cover variations in the relative 
+            proportions of the backgrounds. These uncertainty impact the normalization of the 
+            other backgrounds during the $\MT$-peak normalization through $\SFpre$ and $\SFpost$.
+
+            \subsection{Statistic uncertainty in $\MT$ peak}
+            
+            The statistics being limited in the $\MT$-peak region, the computation of 
+            $\SFpre$ and $\SFpost$ comes with an uncertainty dominated by the event counts 
+            in the data. The uncertainty is propagated to the total background yield uncertainty.
+
+            \subsection{Uncertainty on $SFR_{\oneLeptonTop}$ and $SFR_{\Wjets}$}
+
+            As described in section \label{sec:MTtailCorrection}, the $\MT$-tail correction
+            scale factors for $\oneLeptonTop$ and $\Wjets$ are computed with an uncertainty
+            coming from statistics in the $0b$-tag control region and systematic effects
+            from the template fit method itself. This uncertainty is propagated to the total
+            background yield uncertainty and is one of the major contribution for the signal
+            region with a large remaining fraction of $\oneLeptonTop$.
+
+            \subsection{Limited statistic of the Monte-Carlo in $\MT$ tail}
+            
+            \todo{}
+
+            \subsection{Summary of background uncertainties at preselection}
+           
+            \todo{}
+
+    \subsection{Systematic uncertainties on the signal}
+
+    While the background prediction is dominated by data-driven systematic
+    uncertainties, the signal uncertainty sources are more related to the
+    confidence in the different element of the construction of the Monte-Carlo
+    samples and algorithm used.
+
+    The limited available statistics of the signal sample leads to a 2\% maximal
+    2\% uncertainty. The integrated luminosity is known with a precision of 2.2\%
+    and is propagated to the uncertainty of the yield. The trigger efficiency
+    used in the very first steps of the selection is known with a precision of 3\%.
+    The lepton identification and isolation efficiency are observed to be consistent
+    between data and Monte-Carlo within an envelope of 5\%.
+
+    The jet energy scale uncertainty is studied by varying the jet energy corrections
+    within their $\pm$1 sigma uncertainty before the jet selection. The variation is
+    properly propagated into the $MET$ value. During the process, we also assume a 
+    10\% uncertainty on the unclustered energy defined as $(\vec{MET} + \sum_\text{jets}
+    \vec{p} + \sum_\text{leptons} \vec{p})$ where jets and leptons are selected with looser
+    $\pT$ and $\abseta$ requirements. This effect leads to a maximum 10\% uncertainty on
+    the signal yields.
+
+    The uncertainty on the reshaping of the $b$-tagging discriminator is also considered
+    by varying the technique within $\pm$1 sigma uncertainy before the application of
+    $b$-tagging requirements. This leads to a 3\% uncertainty on the signal yields.
+
+    The uncertainty on the ISR jets reweighting applied on signal is taken from data/MC
+    scale factors derived from the analysis of events with high $\diLeptonTop$ purity. The
+    scale factors, function of the $\pT$ recoil of the system, are varied within their
+    uncertainties and lead to a maximum variation of 8 and 10\% on the signal yield, depending
+    of the decay mode.
+
+    Finally, the uncertainty on PDF are calculated, following the PDF4LHC prescription,
+    using the CT10, NNPDF 2.1, and MSTW2009 PDF sets. \todo{references} The impact on the
+    signal efficiency range from 10 to 30\% depending of the signal mass point. 
 
     \section{Results and interpretation \label{sec:analysis_results}}
         \loremipsum
