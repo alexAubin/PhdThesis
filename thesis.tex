@@ -222,19 +222,38 @@
 
         \subsection{Theoretical context and assumptions}
 
-        One of the best assets of supersymmetry is its ability to solve the hierarchy 
-        problem in a natural way, that is by requiring a small amount for fine-tunning 
-        to explain the low mass of the Higgs Boson. In particular, the top quark $t$ 
-        contribution to the divergence of the Higgs is reduced by the introduction of 
-        the stop quark $\lstop$ \todo{illustration}. In the simplest case, the two 
-        contributions would cancel each other perfectly provided that the top and stop 
-        quarks have the same mass. However, it has been experimentally shown that this 
-        is not the case \todo{reference, justification ?}. Nevertheless, naturalness can 
-        be used to constrain the stop mass if ones define what is an acceptable level of 
-        tunning. Despite the fact that such constrain is highly dependent of hypothesis
-        made on the SUSY parameters, it is commonly admitted that stop quarks should have
-        a mass below or around 1 TeV for SUSY to remain natural. This makes the search
-        for stop and important channel for possible SUSY discovery.
+        \insertFigure{illustrationHiggsProtection}{0.4}
+                     {\todo{add figure} One-loop correction to the Higgs for a fermionic field $f$ and bosonic field $b$.}
+
+        One of the best assets of supersymmetry is its ability to explain the low mass
+        of the Higgs boson, since the boson-fermion symmetry introduces a mechanism to
+        protect the mass of the Higgs . This is illustrated on Figure
+        \ref{fig:illustrationHiggsProtection}, showing the one-loop corrections to $m_H^2$
+        from a fermionic and bosonic field coupled to the Higgs via the Lagrangian terms
+        $- \lambda_f H \bar{f} f$ and $\lambda_b \left| H \right|^2 \left| b \right|^2$.
+        \todo{cite S Liem somewhere here}. The leading order corrections writes :
+
+        \begin{equation}
+            \Delta \mass{h}^2 = - \frac{\left| \lambda_f \right|^2}{8\pi^2} \Lambda^2_{\text{UV}}
+            \, \, \, \, \, \, \, \, \, \, \text{and} \, \, \, \, \, \, \, \, \, \,
+            \Delta \mass{h}^2 =   \frac{\lambda_b}{16\pi^2} \Lambda^2_{\text{UV}}
+        \end{equation}
+
+        where $\Lambda^2_{\text{UV}}$ is the ultraviolet momentum cutoff which regulates
+        the loop integral. In the most ideal case, one could have $\left| \lambda_f \right|^2
+        = \lambda_b$ and associate two scalar to each fermion (one for each chirality), 
+        the corrections cancel each others. \todo{clarify link between $\lambda$ and masses..}
+        This however does not happens if the mass of the particle and its superpartner 
+        are not the same, and tunning has to be reintroduced to keep the Higgs mass low.
+        This is especially important in the case of the top as the correction it introduces
+        on $\mass{h}^2$ is one of the biggest. 
+        
+        One can estimate the level of tunning needed as function of the superpartner of
+        the top for the theory to keep providing a natural explanation to the hierarchy
+        problem, and use it as a constrain. Despite the fact that such constrain is 
+        highly dependent of hypothesis made on the SUSY parameters, it is commonly admitted 
+        that stop quarks should have a mass below or around 1 TeV for SUSY to remain natural.
+        This makes the search for stop and important channel for possible SUSY discovery.
 
         A second appealing feature of supersymmetry is that it can provide a dark matter 
         candidate. This happens in R-parity conserving models where the lightest supersymmetric
@@ -386,12 +405,38 @@
 
         The first category of veto lepton targets an isolated track left by a second electron or muon, or by a tau hadron
         decaying into only one charged hadron (one prong). To do this, we look for a reconstructed charged particle in the
-        event. \todo{criteria}
+        event. The particle have to be within $\Delta R > 0.1$ of an already selected lepton and to be compatible with the
+        primary vertex with $d_z < 0.05$ cm.. If the particle as been identified as an electron or muon candidate by the 
+        reconstruction algorithms, it is required to have $\pT > 5 \GeV$ and a relative isolation lower than 20\%. If the
+        particle is not tagged as electron or muon candidate, the $\pT$ requirement is tighten to 10 $\GeV$, the relative
+        isolation must be loweer than 10\%, and its charge must be opposite to the one of an already selected lepton.
 
-        The second category of veto lepton targets a tau lepton that decayed hadronically into one or more charged hadron.
-        \todo{fill the rest}
+        The second category of veto lepton targets a $\tau$ lepton that decayed hadronically into one or more charged hadron.
+        The $\tau$ candidates are a subset of the jets reconstructed on the events and are selected using a discriminator
+        from a multivariate analysis of the jet parameter and topology. The medium working point is used \todo{reference}.
+        In addition, we require the $\tau$ candidate to have $\pT > 20 \GeV$, to be separated from an already selected
+        lepton with $\Delta R > 0.4$ and to be oppositely charged. 
 
-        \todo{performance : breakdown matrix of second lepton category vs evolution as function of cuts in second lepton vetos}
+        Table \ref{tab:secondLeptonVetoPerformances} summarize the performances of the second lepton vetos by showing the
+        efficiency on the different subcategories of lepton, computed from a $t\bar{t}$ sample. The last column shows the
+        impact on the whole sample. More than 60\% of the background is rejected while only 89\% of the 1$\ell$ category is
+        conserved.
+
+        \begin{table}
+        \hspace*{-1.2cm}
+        \begin{tabular}{|c|c|cccccc|}
+            \hline
+            \textbf{selection}                  & no 2$^\text{nd}$ $\ell$ & not in accept. & $e/\mu$ & $\tau \rightarrow e/\mu$ & 1 prong $\tau $&$\geq$ 3 prong $\tau$ & all \\
+            \hline
+            \textbf{iso. track veto}            & 0.91                    & 0.91  & 0.31  & 0.24  & 0.24  & 0.91  & 0.44  \\  
+            \textbf{$\tau$ veto}                & 0.97                    & 0.98  & 0.65  & 0.80  & 0.57  & 0.68  & 0.71  \\
+            \hline
+            \textbf{iso. track + $\tau$ veto}   & 0.89                    & 0.90  & 0.26  & 0.22  & 0.21  & 0.62  & 0.38 \\
+            \hline
+        \end{tabular}
+            \caption{Selection effiencies of two veto definitions, estimated on the different category of second leptons on a $t\bar{t}$ sample.}
+            \label{secondLeptonVetoPerformances}
+        \end{table}
 
         \subsection{Jets and missing transverse energy}
 
@@ -406,7 +451,8 @@
        and the jet object multiplicity \todo{reference}.
 
        $b$-tagged jet are defined by, on top of the previous requirements, using the medium working point of the 
-       Combined Secondary Vertex (CSV) tagging algorithm. \todo{Mention efficiency and fake rate}
+       Combined Secondary Vertex (CSV) tagging algorithm. The efficiency is typically around 60\% while the fake rate is
+       around 1\%.
 
        The value of the CSV discriminant is corrected in the simulation via a reshaping technique, function of the 
        $p_T$ and $\eta$ of the jet to account for known data/MC discrepancies.
@@ -427,13 +473,45 @@
         electron trigger, while for events with a leading muon, the cross-trigger has to be fired if the muon $\pT$
         is within $\left[ 20, 26 \right] \GeV$ otherwise the single muon trigger is used.
 
-        \todo{detail background category, mention that only those with significant contribution are shown,
-        for instance QCD is ignored because suppressed by MET cut}
+        We consider four categories of background : $\oneLeptonTop$, $\Wjets$, $\diLeptonTop$ and rare. Other standard
+        model processes such as QCD backgrounds are not considered as their contribution is very low. The $\oneLeptonTop$
+        category consist of $t\bar{t}$ production in the single lepton channel and single top production ($s$ and $t$ channels).
+        The $\Wjets$ category is the production of a $W$ decaying leptonically, associated with the production of several
+        jets from initial or final state radiation. The $\diLeptonTop$ category corresponds to the $t\bar{t}$ production
+        in the two lepton channel. Finally, the rare category regroups several different processes from Drell-Yan, diboson,
+        triboson and $t\bar{t}$+boson.
 
-        \todo{cutflow table}
-        
-        \todo{plot showing signal selection efficiency}
-        
+        The table \ref{tab:cutflowPreselection} presents a breakdown of the yield of the background at different steps of the
+        preselection. The figure \ref{fig:selectionEfficiency} shows the selection efficiency of the signal accross the $(\mass{\lstop},
+        \mass{\lneutralino})$ space for the four signal scenario which are studied. 
+
+        \begin{table}[h!]
+        \hspace*{-0.7cm}
+        \begin{tabular}{|c|cccc|}
+            \hline
+                        & =1$\ell$, $\geq 4$ jets   & $\geq 1b$-tag             & $MET > 80 \GeV$         &  2$^\text{nd}\, \ell$ veto (baseline) \\
+            \hline
+        $\oneLeptonTop$ & 253909.66 $\pm$ 211.28    & 212568.20 $\pm$ 193.32    &  61066.46 $\pm$ 100.87  & 54036.75 $\pm$ 94.89     \\
+        $\diLeptonTop$  &  26240.39 $\pm$ 67.18     &  22193.22 $\pm$ 61.76     &  11235.80 $\pm$ 43.49   &  4169.19 $\pm$ 26.56     \\
+        $\Wjets$        & 128327.17 $\pm$ 239.63    &  18224.79 $\pm$ 94.63     &   4791.57 $\pm$ 44.63   &  4460.32 $\pm$ 43.15     \\
+        rare            &  41243.08 $\pm$ 102.30    &  16630.13 $\pm$ 79.21     &   4925.60 $\pm$ 45.69   &  3835.77 $\pm$ 40.95     \\
+            \hline
+        total SM        & 449720.31 $\pm$ 342.11    & 269616.34 $\pm$ 237.52    &  82019.42 $\pm$ 127.06  & 66502.02 $\pm$ 115.10    \\
+            \hline
+        \end{tabular}
+            \caption{Breakdown of the yield of the different background categories, at different stages of the selection.}
+            \label{tab:cutflowPreselection}
+        \end{table}
+
+        \insertFourFigures{selectionEfficiency}
+                          {selectionEfficiency/T2tt}
+                          {selectionEfficiency/T2bw-075}
+                          {selectionEfficiency/T2bw-050}
+                          {selectionEfficiency/T2bw-025}
+                          {0.45}
+                          {Selection efficency of the signal accross the $(\mass{\lstop},\mass{\lneutralino})$ space for the $\lstop \rightarrow t \lneutralino$ decay mode (top left) and the $\lstop \rightarrow b \lchargino$ decay mode for $x = 0.75$ (top right), 0.50 (bottom left) and 0.25 (bottom right). The efficiency is computed with respect to all channels, not only $1$-lepton channel.}
+
+
     \section{Signal region design and optimisation \label{sec:analysis_optimization}}
 
     After the baseline selection, the two dominant background categories are the $\oneLeptonTop$
@@ -447,70 +525,146 @@
 
     Figure \ref{fig:MTatPreselection} shows how $\MT$ distributes for the different backgrounds and
     two signal examples after preselection. Given the discriminating power that this variable provides,
-    cutting on it is the starting point of all the signal region definitions following. The base cut
-    applied is $\MT > 100 \GeV$. Table \ref{tab:MTcutImpact} shows a quantitave breakdown of the impact
-    of the cut on the different yields. In particular, one can notice how the $\diLeptonTop$ fraction increases.
+    cutting on it is the starting point of all the signal region definitions following. 
+    
+    Two approaches are use to define signal regions : a cut-based approach that consist of a list
+    of cuts on variables, and a boosted decision tree (BDT) approach that combines multiple inputs into
+    ont discriminating variable on which a cut is applied. For the cut-based approach, we use $\MT > 120 \GeV$
+    as a starting point whereas for the BDT approach we use $\MT > 100 \GeV$. Table \ref{tab:MTcutImpact}
+    shows a quantitave breakdown of the impact of the cut on the different yields. In particular, 
+    one can notice how the relative fraction of $\diLeptonTop$ increases.
+
+    We first present the discriminating variables that are used to design the signal regions, classified
+    according to their nature, then the detail of the optimization procedure and the performances.
 
     \insertTwoFigures{MTatPreselection}
                      {MTsuperimposed}{MTstack}{0.45}
                      {Distribution of $\MT$ for the different backgrounds and two signal examples,
                      superimposed after normalization to one (on the left) or stacked after normalization to the luminosity (on the right).}
 
-        \todo{cutflow table showing impact of MT cut}
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|ccc|}
+            \hline
+                         & baseline                 & $\MT > 100 \GeV$          & $\MT > 120 \GeV$           \\
+            \hline
+        $\oneLeptonTop$  & 54036.75 $\pm$ 94.89     &  5970.82 $\pm$ 31.72      &  1663.56 $\pm$ 16.68       \\
+        $\diLeptonTop$   &  4169.19 $\pm$ 26.56     &  2117.45 $\pm$ 18.93      &  1529.55 $\pm$ 16.02       \\
+        $\Wjets$         &  4460.32 $\pm$ 43.15     &   477.25 $\pm$ 13.95      &   170.39 $\pm$ 8.38        \\
+        rare             &  3835.77 $\pm$ 40.95     &   490.23 $\pm$ 13.99      &   233.06 $\pm$ 9.43        \\
+            \hline
+        total SM         & 66502.02 $\pm$ 115.10    &  9055.74 $\pm$ 41.89      & 3596.57 $\pm$ 26.35        \\
+            \hline
+        \end{tabular}
+        \caption{Breakdown of the yield of the different background categories, after cutting on $\MT > 100 \GeV$ and $\MT > 120 \GeV$.}
+        \label{tab:MTcutImpact}
+    \end{table}
 
         \subsection{Discriminating variables}
 
-        To further increase the signal-to-noise ratio, several signal regions are constructed to adress
-        specific regions of the $(\mass{\lstop},\mass{\lneutralino})$ space. These regions are designed
-        by considering other discriminating variables. Two approaches are considered : a cut-based approach
-        that consist of a list of cuts on variables, and a boosted decision tree approach that combines
-        multiple inputs into one discriminating variable on which a cut is applied. We first present the
-        variables that are considered, with an attempt to classify them according to their nature.
+        The following section describe the variables that are later use to define the signal regions. Figure \ref{fig:variables} indend to represent the discriminating power of the variable by comparing the background to two signal example. However, it should be kept in mind that some of them only show their usefulness after cutting on other variables or in specific regions of the (\mass{\lstop},\mass{\lneutralino}) space.
 
            \subsubsection{Kinematic and angular variables}
 
                 \begin{itemize}
-                    \item $p_T(\ell)$, $p_T(\text{lead. jet})$, $p_T(\text{lead. } b)$ ;
-                    \item $H_T$ ;
-                    \item $\Delta R( \ell, \text{lead. } b)$ ;
+                    \item $p_T(\ell)$, $p_T(\text{lead. jet})$, $p_T(\text{lead. } b)$ ; The $\pT$ of the 
+                        selected objects are a natural source of discriminating power as the signal is exptected 
+                        to have a larger momentum than the backgrounds. For both the cut-based and BDT approach, 
+                        $p_T(\text{lead. } b)$ is especially a good variable for the $\lstop \rightarrow b \lchargino$ 
+                        decay mode as the $b$ quarks are expected to have large momentum because they are direct 
+                        decay product of the stop. For the BDT approach, $p_T(\ell)$ and $p_T(\text{lead. jet})$ 
+                        are considered because of the different of correlation they have with other variables 
+                        compared to the background.
+                    \item $H_T$ ; In a similar fashion, one can look at $H_T \definedAs \sum_{\text{jets}} \pT$. 
+                        This variable is expected to get a larger average value for the signal compared to standard 
+                        $t\bar{t}$ production because of the contribution of the stop rest mass to the momentum of 
+                        the decay products.
+                    \item $\Delta R( \ell, \text{lead. } b)$ ; In the $\lstop \rightarrow t \lneutralino$ decay mode,
+                        as $\deltam$ grows, the top quarks become more and more boosted and their decay products are 
+                        more colimated in one single direction. This variable aim to exploit this fact, expecting more 
+                        signal events at lower $\Delta R$.
                 \end{itemize}
 
            \subsubsection{Missing energy related and topology}
 
                 \begin{itemize}
-                    \item  $MET$ ; while the preselection already includes a cut on the missing
+                    \item  $MET$ ; While the preselection already includes a cut on the missing
                         transverse energy, cutting further on it can significantly increase the
                         signal-to-noise ratio, especially at high masses.
-                    \item  $MET / \sqrt{H_T}$ ; an alternative to $MET$ is the use of $MET / \sqrt{H_T}$.
+                    \item  $MET / \sqrt{H_T}$ ; An alternative to $MET$ is the use of $MET / \sqrt{H_T}$.
                         Cutting on this variable can be interpreted as a two-dimensional cut using
                         the formula $MET^{2} < k^2 \cdot H_T$ where $k$ is the value of the cut.
                         This allows to better reject background events with a high $MET$ value coming
                         from detector effect and uncertanty due to large hadronic activity in the event.
-                    \item $\Delta \phi( j_{1,2}, \vec{MET} )$ ;
-                    \item $H_{T}^\text{ratio}$ ;
+                    \item $\Delta \phi( j_{1,2}, \vec{MET} )$ ; A topological difference between the signal and the background, 
+                        similar to $M_T$, is the correlation between the direction of the $MET$ and two leading jets. $\Delta 
+                        \phi( j_{1,2}, \vec{MET} )$ corresponds to the minimum of $\Delta \phi$ between the $MET$ direction and 
+                        the leading and next-to-leading jets. The $t\bar{t}$ background tends to get low values for this variable
+                        because the $\nu_{\ell}$ direction is linked to the $b$ quark from the top parent. In signal events, 
+                        the $MET$ is less correlated to the $b$-jet and can easily get to higher values.
+                    \item $H_{T}^\text{ratio}$ ; Another way of using the $MET$ direction is to compute the ratio of the
+                        hadronic activity in the same emisphere as the $MET$ compared to the total hadronic activity of the event,
+                        $H_T$. Because the visible energy recoils on the LSP in signal events, this variable tends to have
+                        low values for signal while being around 0.5 for background. 
                 \end{itemize}
 
            \subsubsection{Invariant masses, kinematic fit}
            
                 \begin{itemize}
-                    \item $M_{T2}^{W}$ ;
-                    \item Hadronic top $\chi^{2}$ ;
-                    \item $M_{\ell b}$, $M'_{\ell b}$ ;
-                    \item $M_{3b}$ ;
+                    \item $M_{T2}^{W}$ ; $\MT$-like variables have been developed to target cases with two sources of missing energy
+                                         in the event. \todo{reference} These extensions are often called $M_{T2}$. Here, we make use of
+                                         $M_{T2}^W$ which is specifically designed for the topology of the $\diLeptonTop$ background, with
+                                         one lepton missing. The $M_{T2}^W$ is defined by considering all possible couples ($\vec{p}_{\text{missing }W_1}$
+                                         , $\vec{p}_{\nu_2}$) that fit the constrains $\vec{p}_{\text{missing }W_1} + \vec{p}_{\nu_2} = \vec{MET}$, $m(\text{missing }W_1) 
+                                         = m( \ell + \nu_2 ) = m_W \sim 80 \GeV$ and $m(b_1 + \text{missing }W_1) = m(b_2 + 
+                                         \ell_2 + \nu_2) = \mass{Y}$. The resulting value for $M_{T2}^W$ is the minimum value of $\mass{Y}$ found.
+                                         For the $\diLeptonTop$ background, this variable has an end point at $m_t \sim 172 \GeV$ while
+                                         the signal can get to larger values.
+                    \item Hadronic top $\chi^{2}$ ; An other way to fight the $\diLeptonTop$ background is to try to reconstruct hadronic top
+                                                    from the jets in the event. It can be done by finding the best couple of jet that fits into
+                                                    the constrain of the mass of the $W$ and then to the mass of the top by adding a third jet.
+                                                    The value of the $\chi^2$ is defined as 
+                                                    $$\chi^2 = \frac{(\mass{j_1 j_2 j_3} - \mass{t})^2}{\sigma^2_{j_1 j_2 j_3}} + \frac{(\mass{j_1 j_2} - \mass{W})^2}{\sigma^2_{j_1 j_2}}$$
+                                                    where the $\sigma$ are the uncertainties on the mass of the jet systems by propagating the jet energy resolution.
+                    \item $M_{\ell b}$, $M'_{\ell b}$ ; We consider also the invariant mass of the $\ell$+leading $b$ jet system. This variable
+                                                        is a simple attempt to reconstruct the mass of the leptonic top system despite missing
+                                                        the information of the neutrino. This variable is useful in the search for $\lstop \rightarrow
+                                                        b \lchargino$ as there is no end point at $m_t$ for this variable because there is no
+                                                        top in the decay chain and larger values can be obtained for signal events. An extension
+                                                        of this variable to the case where there is no $b$ in the event, $M'_{\ell b}$, consist
+                                                        to use the jet with the highest $b$-tagging discriminator value.
+                    \item $M_{3b}$ ; In a similar way, one can attempt to reconstruct the mass of the hadronic top system by considering the
+                                     three jets most back-to-back to the selected lepton. Here again, values larger than $m_t$ can be expected in
+                                     the case of $\lstop \rightarrow b \lchargino$ as no top is involved in the decay chain.
                 \end{itemize}
 
            \subsubsection{Objects multiplicity}
 
                 \begin{itemize}
-                    \item Jet multiplicity ;
-                    \item ISR-tagged jet ;
+                    \item Jet multiplicity ; The jet multiplicity also tends to provide discriminating power \todo{need more justification here...}
+                    \item ISR-tagged jet ; Trying to reconstruct a jet from an ISR can provide significant gain especially 
+                           in the low $\deltam$ region where discrimination with respect to standard model $t\bar{t}$ is difficult. Signal events 
+                           are more likely to be associated with a high-$p_T$ ISR because of the energy treshold needed to produce the stop pair. 
+                           Here, we define the ISR-tagged jet by requiring a 5th jet with $p_T > 200 \GeV$ and not $b$-tagged.
                 \end{itemize}
 
-            \todo{Finish variable description}
-
-            \todo{Add sketches}
-
-            \todo{Plots of shape for all / some variables ?}
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.32\textwidth]{variables/leadingBPt}
+                \includegraphics[width=0.32\textwidth]{variables/HT}
+                \includegraphics[width=0.32\textwidth]{variables/deltaRLeptonB}\\
+                \includegraphics[width=0.32\textwidth]{variables/MET}
+                \includegraphics[width=0.32\textwidth]{variables/METoverSqrtHT}
+                \includegraphics[width=0.32\textwidth]{variables/deltaPhiMETJets}\\
+                \includegraphics[width=0.32\textwidth]{variables/HTratio}
+                \includegraphics[width=0.32\textwidth]{variables/MT2W}
+                \includegraphics[width=0.32\textwidth]{variables/HadronicChi2}\\
+                \includegraphics[width=0.32\textwidth]{variables/Mlb_hemi}
+                \includegraphics[width=0.32\textwidth]{variables/M3b}
+                \includegraphics[width=0.32\textwidth]{variables/leadingNonBPtN5}
+                \caption{Stacked plots representing the different discriminating variables used to design the signal region, for background and two signal examples after preselection and cut on $M_T > 100 \GeV$.}
+                \label{fig:variables}
+            \end{figure}
 
             \subsection{Figure of merit}
 
@@ -546,8 +700,6 @@
             on the background. Additionally, to work around issues where the remaining statistics becomes low and 
             cuts are not realistic anymore, we ignore cases where $S < 3$ or $B < 1$.
 
-            \todo{Comment about Asimov Z}
-
         \subsection{Cut-based signal regions}
 
             \subsubsection{Optimization procedure}
@@ -560,14 +712,21 @@
             additional cuts on $\MT$, $MET$, $MET/\sqrt{H_T}$ and $M_{T2}^W$ depending of the $\deltam$ considered.
 
             On a few signal benchmarks, we perform a $n$-dimensionnal optimization of the cuts on these variables,
-            though not cutting on both $MET$ and $MET/\sqrt{H_T}$ at the same time. 
+            though not cutting on both $MET$ and $MET/\sqrt{H_T}$ at the same time. During the optimization,
+            we include global scale factors on the $\oneLeptonTop$ and $\Wjets$ to mimic the effect of the background
+            estimation that will be described later. Typically these categories are considered with a scale factors
+            1.3.
 
-            %mention that we add a scale factor to 1ltop et Wjets to take into account background estimation effects
-
+            After optimizing on a few benchmarks, a set of list of cuts is defined and a systematic check accross the
+            $(\mass{\lstop},\mass{\lneutralino})$ plane is performed to keep the most performing list of cuts. For the
+            sake of simplicity, we then proceed to a manual clustering of similar lists and remove cuts that do not 
+            significantly improve the performances.
 
             \subsubsection{Results and performances}
 
-            
+            The resulting list of cuts are presented on Table \ref{tab:CnCresult} and Figure \ref{fig:CnCperformances}
+            shows the best performing set accross the $(\mass{\lstop},\mass{\lneutralino})$ plane as well as the
+            corresponding FoM.
 
             \loremipsum
 
@@ -660,7 +819,7 @@
 
         The method is implemented using the \textsc{RooFit} toolbox with the Minuit2 implementation of the \textsc{Migrad} minimizer algorithm. The normalization of the $\oneLeptonTop$ and $\Wjets$ components are free parameters translated in term of scale factors, $SF_{\oneLeptonTop}$ and $SF_{\Wjets}$, while the normalization of the $\diLeptonTop$ and rare components are taken from the Monte-Carlo and constrained with a 20\% uncertainty during the fit process. To validate the method, a closure test is performed by generating toy data from the Monte-Carlo where arbitrary scale factors where injected. The estimated scale factors are then compared to the input scale factors. A very good linearity is found for scale factors varying from 0.10 to 3. The fit is performed both in the $\MT$ peak and tail regions and we extract $SFR = SF^{\text{tail}} / SF^{\text{peak}}$ for both processes, representing the discrepancy in the tail independently from the peak normalization. Different sources of systematic uncertainty are considered : the jet energy scale, the normalization of the rare background, the Monte-Carlo statistics, the choice of the minimizer algorithm, the choice of the initial fit conditions, the generator setup (scale, matching, top pass, \textsc{Powheg} or \textsc{MadGraph}, top $\pT$ reweighting). The most important sources are the Monte-Carlo statistics (leading to 11\% of relative uncertainty on SFR), the generator scale (9\%) and the jet energy scale. A conservative 20\% is used as relative systematic uncertainty.
 
-        At preselection level, $SFR_{\oneLeptonTop}$ and $SFR_{\Wjets}$ are found to be $(1.04 \pm 0.16 (\text{stat.}) \pm 0.21 (\text{syst.}))$ and $(1.33 \pm 0.10 (\text{stat.}) \pm 0.27 (\text{syst.}) )$ respectively. The plot on Figure \ref{fig:MlbPrimeForTemplateFit} illustrate the impact on the $\MlbPrime$ data/MC comparison after propagating the scale factors.
+        At preselection level, $\SFRoneLeptonTop$ and $\SFRWjets$ are found to be $(1.04 \pm 0.16 (\text{stat.}) \pm 0.21 (\text{syst.}))$ and $(1.33 \pm 0.10 (\text{stat.}) \pm 0.27 (\text{syst.}) )$ respectively. The plot on Figure \ref{fig:MlbPrimeForTemplateFit} illustrate the impact on the $\MlbPrime$ data/MC comparison after propagating the scale factors.
 
         \todo{Describe how the numbers for BDT and CnC are computed}
 
@@ -709,9 +868,9 @@
     \section{Systematic uncertainties \label{sec:analysis_systematics}}
         \loremipsum
 
-        \subsection{Systematic uncertainties on the background}
+        \subsection{Systematic uncertainties on the background \label{sec:background_systematics}}
 
-            \subsection{Second lepton veto efficiency}
+            \subsubsection{Second lepton veto efficiency}
 
             The uncertainty on the efficiency of the second lepton veto is propagated to the
             fraction of $\diLeptonTop$ events that have a second lepton in the acceptance. For
@@ -725,7 +884,7 @@
             uncertainty on the efficiency of the $\tau$-ID algorithm is 7\%, taken from $\tau$ 
             group studies \todo{reference}.
 
-            \subsection{Modeling of $\diLeptonTop$}
+            \subsubsection{Modeling of $\diLeptonTop$}
 
             The goodness of the modeling of the $\diLeptonTop$ background is checked in the 2
             leptons and 1 lepton + veto control regions via the scale factors $\SFtwoLepTail$
@@ -763,11 +922,11 @@
             associated control regions. The results is presented on \ref{} and \ref{} for the BDT and
             cut-based signal regions respectively.
 
-            \subsection{Modeling of $N_\text{jets}$ for $t\bar{t}$}
+            \subsubsection{Modeling of $N_\text{jets}$ for $t\bar{t}$}
 
             b
 
-            \subsection{Cross section of $\oneLeptonTop$, $\Wjets$ and rare components}
+            \subsubsection{Cross section of $\oneLeptonTop$, $\Wjets$ and rare components}
         
             The $\oneLeptonTop$ component cross-section is varied by 10\% while the $W$+jets 
             and rare background cross-sections are varied by 50\%. The uncertainty on the rare 
@@ -777,13 +936,13 @@
             proportions of the backgrounds. These uncertainty impact the normalization of the 
             other backgrounds during the $\MT$-peak normalization through $\SFpre$ and $\SFpost$.
 
-            \subsection{Statistic uncertainty in $\MT$ peak}
+            \subsubsection{Statistic uncertainty in $\MT$ peak}
             
             The statistics being limited in the $\MT$-peak region, the computation of 
             $\SFpre$ and $\SFpost$ comes with an uncertainty dominated by the event counts 
             in the data. The uncertainty is propagated to the total background yield uncertainty.
 
-            \subsection{Uncertainty on $SFR_{\oneLeptonTop}$ and $SFR_{\Wjets}$}
+            \subsubsection{Uncertainty on $\SFRoneLeptonTop$ and $\SFRWjets$}
 
             As described in section \label{sec:MTtailCorrection}, the $\MT$-tail correction
             scale factors for $\oneLeptonTop$ and $\Wjets$ are computed with an uncertainty
@@ -792,52 +951,137 @@
             background yield uncertainty and is one of the major contribution for the signal
             region with a large remaining fraction of $\oneLeptonTop$.
 
-            \subsection{Limited statistic of the Monte-Carlo in $\MT$ tail}
+            \subsubsection{Limited statistic of the Monte-Carlo in $\MT$ tail}
             
             \todo{}
 
-            \subsection{Summary of background uncertainties at preselection}
+            \subsubsection{Summary of background uncertainties at preselection}
            
             \todo{}
 
-    \subsection{Systematic uncertainties on the signal}
+        \subsection{Systematic uncertainties on the signal}
 
-    While the background prediction is dominated by data-driven systematic
-    uncertainties, the signal uncertainty sources are more related to the
-    confidence in the different element of the construction of the Monte-Carlo
-    samples and algorithm used.
+        While the background prediction is dominated by data-driven systematic
+        uncertainties, the signal uncertainty sources are more related to the
+        confidence in the different element of the construction of the Monte-Carlo
+        samples and algorithm used.
 
-    The limited available statistics of the signal sample leads to a 2\% maximal
-    2\% uncertainty. The integrated luminosity is known with a precision of 2.2\%
-    and is propagated to the uncertainty of the yield. The trigger efficiency
-    used in the very first steps of the selection is known with a precision of 3\%.
-    The lepton identification and isolation efficiency are observed to be consistent
-    between data and Monte-Carlo within an envelope of 5\%.
+        The limited available statistics of the signal sample leads to a 2\% maximal
+        2\% uncertainty. The integrated luminosity is known with a precision of 2.2\%
+        and is propagated to the uncertainty of the yield. The trigger efficiency
+        used in the very first steps of the selection is known with a precision of 3\%.
+        The lepton identification and isolation efficiency are observed to be consistent
+        between data and Monte-Carlo within an envelope of 5\%.
 
-    The jet energy scale uncertainty is studied by varying the jet energy corrections
-    within their $\pm$1 sigma uncertainty before the jet selection. The variation is
-    properly propagated into the $MET$ value. During the process, we also assume a 
-    10\% uncertainty on the unclustered energy defined as $(\vec{MET} + \sum_\text{jets}
-    \vec{p} + \sum_\text{leptons} \vec{p})$ where jets and leptons are selected with looser
-    $\pT$ and $\abseta$ requirements. This effect leads to a maximum 10\% uncertainty on
-    the signal yields.
+        The jet energy scale uncertainty is studied by varying the jet energy corrections
+        within their $\pm$1 sigma uncertainty before the jet selection. The variation is
+        properly propagated into the $MET$ value. During the process, we also assume a 
+        10\% uncertainty on the unclustered energy defined as $(\vec{MET} + \sum_\text{jets}
+        \vec{p} + \sum_\text{leptons} \vec{p})$ where jets and leptons are selected with looser
+        $\pT$ and $\abseta$ requirements. This effect leads to a maximum 10\% uncertainty on
+        the signal yields.
 
-    The uncertainty on the reshaping of the $b$-tagging discriminator is also considered
-    by varying the technique within $\pm$1 sigma uncertainy before the application of
-    $b$-tagging requirements. This leads to a 3\% uncertainty on the signal yields.
+        The uncertainty on the reshaping of the $b$-tagging discriminator is also considered
+        by varying the technique within $\pm$1 sigma uncertainy before the application of
+        $b$-tagging requirements. This leads to a 3\% uncertainty on the signal yields.
 
-    The uncertainty on the ISR jets reweighting applied on signal is taken from data/MC
-    scale factors derived from the analysis of events with high $\diLeptonTop$ purity. The
-    scale factors, function of the $\pT$ recoil of the system, are varied within their
-    uncertainties and lead to a maximum variation of 8 and 10\% on the signal yield, depending
-    of the decay mode.
+        The uncertainty on the ISR jets reweighting applied on signal is taken from data/MC
+        scale factors derived from the analysis of events with high $\diLeptonTop$ purity. The
+        scale factors, function of the $\pT$ recoil of the system, are varied within their
+        uncertainties and lead to a maximum variation of 8 and 10\% on the signal yield, depending
+        of the decay mode.
 
-    Finally, the uncertainty on PDF are calculated, following the PDF4LHC prescription,
-    using the CT10, NNPDF 2.1, and MSTW2009 PDF sets. \todo{references} The impact on the
-    signal efficiency range from 10 to 30\% depending of the signal mass point. 
+        Finally, the uncertainty on PDF are calculated, following the PDF4LHC prescription,
+        using the CT10, NNPDF 2.1, and MSTW2009 PDF sets. \todo{references} The impact on the
+        signal efficiency range from 10 to 30\% depending of the signal mass point. 
+
+    \section{Signal contamination handling}
+
+        Signal contamination occurs when a significant fraction of signal events is present in
+        the control regons. While it doesn't affect the predicted yield for the background-only hypothesis
+        ($H_0$), a significant contamination can bias the data-driven aspects of the background
+        estimation when predicting the expected yield under the signal hypothesis ($H_1$). As a
+        consequence, it leads to an overestimation of the expected background under the signal hypothesis
+        therefore increasing the probability to incorrectly reject the signal hypothesis (type II error).
+        
+        The signal contamination level is studied across the $(\mass{\lstop},\mass{\lneutralino})$
+        plane by computing the $C \definedAs S/B$ in the $\MT$-peak control region and 0 $b$-tag
+        control region and comparing it to the signal purity, $P \definedAs S/B$, in the signal region :
+
+        \begin{equation}
+            R \definedAs \frac{C}{P} = \frac{(S/B)_\text{control region}}{(S/B)_\text{signal region}}
+            \label{eq:contaminationRatio}
+        \end{equation}
+      
+        This ratio $R$ is found to be sometimes higher than an arbitrary treshold value of 15$\sim$20\%.
+        This is especially true when considering the the low $\deltam$ region of the $(\mass{\lstop},
+        \mass{\lneutralino})$ plane, as the signal is likely to get smaller values of $\MT$ and the $b$-jets
+        are less likely to be selected or correctly $b$-tagged as their momentum decrease. This is illustrated
+        on Figure \ref{fig:signalContaminationIllustration} which shows the differences in shape of $\MT$ and
+        $b$-tagged jet multiplicity for two benchmarks of the $\lstop \rightarrow t \lneutralino$ decay mode.
+       
+        \todo{include figure}
+    
+        It is concluded that the signal contamination can not be neglected. One needs to correct the modeling
+        of the $H_1$ hypothesis by peforming a different background estimation $\tilde{B}$ compared to the 
+        $H_0$ hypothesis.
+
+        The data-driven aspects are corrected by including the signal when computing the scale factors for the
+        $\MT$-peak normalization and $\MT$-tail correction. In the case of $\SFpre$ and $\SFpost$, the scale factors
+        are corrected by substracting both the rare and signal component to normalize the $\oneLeptonTop$, $\Wjets$
+        and $\diLeptonTop$ components :
+
+        \begin{equation}
+            \SFpreTilde \definedAs \left( \frac{N(\text{data}) - N(\text{rare} - N(\text{signal}))}{N(\oneLeptonTop) + N(\Wjets) + N(\diLeptonTop)} \right)
+        \end{equation}
+        \begin{equation}
+            \SFpostTilde \definedAs \left( \frac{N(\text{data}) - N(\text{rare}) - N(\text{signal}) - \SFpreTilde \times N(\diLeptonTop)}{N(\oneLeptonTop) + N(\Wjets)} \right)
+        \end{equation}
+
+        In the case of the $\MT$-tail correction scale factors, they are corrected by including the signal contribution
+        to the rare category before fitting the $\oneLeptonTop$ and $\Wjets$ components to the data using the template
+        fit method. We however constrain $\SFRoneLeptonTopTilde$ to be $\geq 1$.
+
+        The corrected background $\tilde{B}$ is computed the same way as described in Equations \todo{ref to equations}
+        using the corrected scale factors. As the correction depends of the signal, it is shall be performed on a per-benchmark
+        basis. However, as it is a CPU intensive task, it is done only with a setp of $50 \GeV$ instead of the $25 \GeV$
+        of the signal samples. The background prediction for other benchmarks is corrected using an interpolation of
+        the ration $\tilde{B}/B$ across the $(\mass{\lstop},\mass{\lneutralino})$ plane.
 
     \section{Results and interpretation \label{sec:analysis_results}}
         \loremipsum
+
+        \insertFourFigures{resultsBDT}
+                          {results/BDT_T2tt/signalRegion_MTtail_yield}
+                          {results/BDT_T2bw075/signalRegion_MTtail_yield}
+                          {results/BDT_T2bw050/signalRegion_MTtail_yield}
+                          {results/BDT_T2bw025/signalRegion_MTtail_yield}
+                          {0.355}
+                          {blah}
+
+        \insertFourFigures{resultsCnC}
+                          {results/CnC_T2tt/signalRegion_MTtail_yield}
+                          {results/CnC_T2bw075/signalRegion_MTtail_yield}
+                          {results/CnC_T2bw050/signalRegion_MTtail_yield}
+                          {results/CnC_T2bw025/signalRegion_MTtail_yield}
+                          {0.355}
+                          {blah}
+
+        \insertFourFigures{limitsBDT}
+                          {limits/T2tt_BDT}
+                          {limits/T2bw075_BDT}
+                          {limits/T2bw050_BDT}
+                          {limits/T2bw025_BDT}
+                          {0.45}
+                          {blah}
+
+        \insertFourFigures{limitsCnC}
+                          {limits/T2tt_CnC_L}
+                          {limits/T2bw075_CnC_L}
+                          {limits/T2bw050_CnC_L}
+                          {limits/T2bw025_CnC_L}
+                          {0.45}
+                          {blah}
 
     \section{Perspectives \label{sec:analysis_perspective}}
         \loremipsum
@@ -914,4 +1158,6 @@
 %             {arXiv:physics/0703039}
 
 \end{thebibliography}
+
+
 
