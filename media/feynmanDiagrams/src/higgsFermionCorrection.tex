@@ -1,0 +1,24 @@
+
+\hspace*{0.05cm}
+\begin{fmfgraph*}(95,60)
+    
+    \fmfpen{0.7pt}
+
+    \fmfleft{i}
+    \fmfright{o}
+    \fmf{dashes,label=$H$}{i,v1}
+    \fmf{dashes}{v2,o}
+    \fmf{plain,label=$f$,left,tension=.3}{v1,v2}
+    \fmf{plain,left,tension=.3}{v2,v1}
+    %\fmf{fermion,label=$f$,left,tension=.3}{v1,v2}
+    %\fmf{fermion,label=$\bar{f}$,left,tension=.3}{v2,v1}
+
+    % Free position of stuff
+    \fmffreeze
+
+    % Shift vertices
+    \fmfshift{5right}{v1}
+    \fmfshift{10right}{v2}
+    \fmfshift{15right}{o}
+
+\end{fmfgraph*}
