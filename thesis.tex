@@ -458,19 +458,19 @@
     Drell-Yan, diboson, triboson, $t\bar{t}W$ and $t\bar{t}Z$ simulations are performed 
     using \textsc{MadGraph} \cite{Madgraph}. For all the background samples, the 
     hadronization step is performed with \textsc{Pythia}6 \cite{Pythia} and the response of
-    the detector is simulated thourhg a \textsc{Geant4}-based model of the detector.
+    the detector is simulated through a \textsc{Geant4}-based model of the detector.
     
     Signal benchmarks samples are generated according to a grid in term of $\mass{\lstop}$
     and $\mass{\lneutralino}$ with $25\GeV$ steps. The stop pair production is simulated
-    using \textsc{MadGraph} with up to to additional partons generated in the hard collision,
+    using \textsc{MadGraph} with up to two additional partons generated in the hard collision,
     and the decay of the stops and hadronization is done with \textsc{Pythia}. The detector
     response is simulated using the CMS fast simulation package. 
 
     Simulated events are weighted to match the integrated luminosity and pile-up distribution
-    of the recorded collisions. $t\bar{t}$ events also are weighted as function of the $\pT$ of 
-    the generated top quark to correct for a known disagreement \refNeeded. Finally, we also
-    weight signal events to correct the modeling of initial-state radiations based on studies
-    of the $Z$ recoil in $Z$+jets events \cite{ISRmodelingDominick}.
+    of the recorded collisions. Additionally, $t\bar{t}$ events are weighted as function of 
+    the $\pT$ of the generated top quark to correct for a known disagreement \refNeeded. 
+    Finally, we also reweight signal events to correct for a mismodeling of initial-state 
+    radiation observed in the recoil of $Z$+jets and $t\bar{t}$ events \cite{ISRmodelingDominick}.
 
     \section{Objects and events selection \label{sec:analysis_objectAndEventSelection}}
     %==============================================================
@@ -546,36 +546,87 @@
     process becomes a major background of this analysis after cutting on the variable $\MT$.
     This motivated the development of efficient ways to reject this specific background, 
     in particular via a veto targeting events with a 'lost' lepton.
-    Leptons can be lost
-    because of too tight requiremets 
 
-    The first category of veto lepton targets an isolated track left by a second 
-    electron or muon, or by a tau hadron decaying into only one charged hadron (one prong). 
-    To do this, we look for a reconstructed charged particle in the event. The particle 
-    have to be within $\Delta R > 0.1$ of an already selected lepton and to be compatible 
-    with the primary vertex with $d_z < 0.05$ cm.. If the particle as been identified as 
-    an electron or muon candidate by the  reconstruction algorithms, it is required to 
-    have $\pT > 5\GeV$ and a relative isolation lower than 20\%. If the particle is not 
-    tagged as electron or muon candidate, the $\pT$ requirement is tighten to $10\GeV$, 
-    the relative isolation must be loweer than 10\%, and its charge must be opposite to 
-    the one of an already selected lepton.
+    To characterize the problem, the dileptonic $t\bar{t}$ events passing a selection
+    requiring exactly one selected lepton are classified according to the nature and 
+    kinematic of the lost lepton taken from the Monte-Carlo truth. Five categories are considered :
+    \begin{itemize}
+        \item ($e/\mu$) Electrons or muons with $\pT > 5\GeV$, $\abseta < 2.5$ ;
+        \item ($\tau \rightarrow e/\mu$) Taus decaying to an electron or muon with $\pT > 5\GeV$, $\abseta < 2.5$ ;
+        \item (1-prong $\tau$) Taus decaying to one charged hadron with $\pT > 10\GeV$, $\abseta < 2.5$ ;
+        \item ($\geq$ 3-prong $\tau$) Taus decaying to three or more charged hadrons 
+              with total visible energy $> 20\GeV$, $\abseta < 2.5$ ;
+        \item (Not in acceptance) Other cases fall in this category as their reconstruction 
+              is considered too challenging.
+    \end{itemize}
 
-    The second category of veto lepton targets a $\tau$ lepton that decayed hadronically into one or more charged hadron.
-    The $\tau$ candidates are a subset of the jets reconstructed on the events and are selected using a discriminator
-    from a multivariate analysis of the jet parameter and topology. The medium working point is used \refNeeded.
-    In addition, we require the $\tau$ candidate to have $\pT > 20\GeV$, to be separated from an already selected
-    lepton with $\Delta R > 0.4$ and to be oppositely charged. 
+    Figure \ref{fig:secondLeptonVeto/ttllComposition/initial} shows a diagram representing 
+    the contribution of each category to the dileptonic $t\bar{t}$ events. To address all
+    the categories (appart from the lepton not in acceptance), two vetos are designed.
 
-    Table \ref{tab:secondLeptonVetoPerformances} summarize the performances of the second lepton vetos by showing the
-    efficiency on the different subcategories of lepton, computed from a $t\bar{t}$ sample. The last column shows the
-    impact on the whole sample. More than 60\% of the background is rejected while only 89\% of the 1$\ell$ category is
-    conserved.
+    \insertFigure{secondLeptonVeto/ttllComposition/initial}{0.5}
+                 {Nature of the lost lepton in dileptonic $t\bar{t}$ after a selection 
+                 requiring exactly one high-$\pT$ selected lepton and at least three 
+                 high-$\pT$ jets}
+
+    The first category of veto lepton targets the $e/\mu$, $\tau \rightarrow e/\mu$ and
+    1-prong $\tau$ categories. We look for a reconstructed isolated particle in the event, 
+    discarding those that are within $\Delta R < 0.1$ of an already selected lepton. To 
+    remove fakes from pile-up activity, we require the track of the particle to be 
+    compatible with the primary vertex with $d_z < 0.05$ cm. A different treatment is then
+    applied on the particle depending if it is flagged or not as electron or muons by the
+    particle-flow algorithm. If the particle is flagged as an electron or muon candidate,  
+    it is required to have $\pT > 5\GeV$ and a relative isolation lower than 0.2. 
+    If the particle is not flagged as electron or muon candidate, the $\pT$ requirement 
+    is tighten to $10\GeV$, the relative isolation must be lower than 0.1, and its charge 
+    must be opposite to the one of an already selected lepton. 
+    Figure \ref{fig:isoTrackVeto_distributions} shows the distribution of $d_z$ and the
+    relative isolation before cutting on them. The particle are categorized depending if
+    they are flagged as $e/\mu$ candidate by the particle flow, and if it is matched to a 
+    generated lepton or not.
+
+    \insertTwoFigures{isoTrackVeto_distributions}
+                     {secondLeptonVeto/isoTrack/pdf/1DSuperimposed/singleLepton/passID/dz}
+                     {secondLeptonVeto/isoTrack/pdf/1DSuperimposed/singleLepton/passID/relIso}
+                     {0.45}
+                     {Distribution of $d_z$ (on the left) and relative isolation (on the right)
+                     for the particle-flow candidates. A cut on $\pT > 5\GeV$ for candidates 
+                     flagged as $e/\mu$ is applied while $\pT > 10\GeV$ is required for 
+                     the other candidates.}
+
+    The second category of veto lepton targets a $\tau$ lepton that decayed hadronically 
+    into one or more charged hadron. $\tau$ candidates are reconstructed using the 
+    hadron-plus-strips (HPS) algorithm \refNeeded. To reject fakes, we use a discriminator 
+    based on a multivariate analysis of the parameter and topology of the jet. A medium
+    working point is used, leading to a tagging efficiency of 70-80\% for a fake rate of
+    about 1\% as shown on Figure \ref{fig:tauVeto_distributions} on the left. The $\tau$
+    candidates must be separated from an already selected lepton by $\Delta R > 0.4$ and
+    to be oppositely charged. In addition, to reject fakes at low $\pT$ as shown on Figure 
+    \ref{fig:tauVeto_distributions} on the right, we require the $\tau$ candidate to have 
+    $\pT > 20\GeV$.
+
+    \insertTwoFigures{tauVeto_distributions}
+                     {secondLeptonVeto/tau/taggingEfficiency}
+                     {secondLeptonVeto/tau/pT}
+                     {0.45}
+                     {Tagging efficiency of the $\tau$ MVA discriminator as function of the 
+                     $\pT$ of the $\tau$ candidate (on the right) and $\pT$ spectra of 
+                     the fakes and candidates matched to generated leptons.}
+
+    Table \ref{tab:secondLeptonVetoPerformances} summarize the performances of the 
+    second lepton vetos by showing the efficiency on the different categories. 
+    It is important to keep an eye to the category of events with no generated second lepton,
+    especially because we don't want to loose too much efficiency for signal events.
+    This is what is shown in the first column 'no 2$^\text{nd}$ $\ell$', while the last 
+    column shows the impact on all dileptonic $t\bar{t}$ event : more than 60\% of the dilepton 
+    background is rejected when applying both vetoes, while only 11\% of events with no
+    second lepton are lost.
 
     \begin{table}
     \hspace*{-1.2cm}
-    \begin{tabular}{|c|c|cccccc|}
+    \begin{tabular}{|c|c|ccccc|c|}
         \hline
-        \textbf{selection}                  & no 2$^\text{nd}$ $\ell$ & not in accept. & $e/\mu$ & $\tau \rightarrow e/\mu$ & 1 prong $\tau $&$\geq$ 3 prong $\tau$ & all \\
+        \textbf{selection}                  & no 2$^\text{nd}$ $\ell$ & not in accept. & $e/\mu$ & $\tau \rightarrow e/\mu$ & 1 prong $\tau $ & $\geq$ 3 prong $\tau$ & all 2$\ell$ \\
         \hline
         \textbf{iso. track veto}            & 0.91                    & 0.91  & 0.31  & 0.24  & 0.24  & 0.91  & 0.44  \\  
         \textbf{$\tau$ veto}                & 0.97                    & 0.98  & 0.65  & 0.80  & 0.57  & 0.68  & 0.71  \\
@@ -590,22 +641,25 @@
         \subsection{Jets and missing transverse energy}
         %==============================================
 
-       Jets are reconstructed using the anti-$k_t$ clustering algorithm with a parameter $R = 0.5$ on the particle-flow
-       information. Three types of corrections are applied : an energy offset and $\eta$ dependent and $\pT$ dependent
-       corrections, as well as a residual correction accounting for discrepancies between data and simulation.
+       Jets are reconstructed using the anti-$k_t$ clustering algorithm with a size 
+       parameter $R = 0.5$ on the particle-flow candidates. Three types of corrections 
+       are applied : an energy offset and $\eta$ dependent and $\pT$ dependent corrections, 
+       as well as a residual correction accounting for discrepancies between data and simulation.
 
-       Selected jets are required to have $\pT > 30 \GeV$ and $\abseta < 2.4$. They also have to be separated from
-       lepton candidates in $\Delta R > 0.4$ and to pass a jet identification criteria \refNeeded with loose
-       requirements on the neutral and charged fractions, charged multiplicity and number of constituents. Furthermore,
-       a pile-up identification algorithm is used which combine the vertex compatibility, the topology of the jet shape 
-       and the jet object multiplicity \refNeeded.
+       Selected jets are required to have $\pT > 30 \GeV$ and $\abseta < 2.4$. They also 
+       have to be separated from lepton candidates in $\Delta R > 0.4$ and to pass a jet 
+       identification criteria with loose requirements on the neutral and 
+       charged fractions, charged multiplicity and number of constituents. Furthermore,
+       a pile-up identification algorithm is used which combine the vertex compatibility, 
+       the topology of the jet shape and the jet object multiplicity into a discriminant 
+       that helps to better rejects jets from pile-up \refNeeded.
 
-       $b$-tagged jet are defined by, on top of the previous requirements, using the medium working point of the 
-       Combined Secondary Vertex (CSV) tagging algorithm. The efficiency is typically around 60\% while the fake rate is
-       around 1\%.
-
-       The value of the CSV discriminant is corrected in the simulation via a reshaping technique, function of the 
-       $\pT$ and $\eta$ of the jet to account for known data/MC discrepancies.
+       $b$-tagged jets are defined by, on top of the previous requirements, using the 
+       medium working point of the Combined Secondary Vertex (CSV) tagging algorithm. 
+       The efficiency of this tagger is typically around 60\% for $b$-jets while the fake 
+       rate of light jets is around 1\%. The value of the CSV discriminant is corrected in 
+       the simulation via a reshaping technique, function of the $\pT$, $\eta$ and flavor
+       of the jet to account for known data/MC discrepancies \refNeeded.
 
        The missing transverse energy, $\vec{\MET}$, is computed by considering the 
        negative vector sum of all particle-flow candidates in the event and corrected by
@@ -624,12 +678,15 @@
 
         The baseline selection, or preselection, is defined by asking exactly one electron or muon, at least 
         four jets among which at least one is $b$-tagged, and a missing transverse energy higher than $80 \GeV$.
-        A veto is applied on events containing a second lepton as defined in \ref{sec:vetoLeptons}. Additionally,
-        we filter events that are known to suffer from noise or anomalous subdetector operation, as well as events
-        with inconsistent directions of the missing transverse energy calorimeter-based and particle-flow-based
-        approach ($\Delta \phi < 1.5$). For data, we require that events with a leading electron fired the single
-        electron trigger, while for events with a leading muon, the cross-trigger has to be fired if the muon $\pT$
-        is within $\left[ 20, 26 \right] \GeV$ otherwise the single muon trigger is used.
+        A veto is applied on events containing a second lepton as defined in \ref{sec:vetoLeptons}.
+        For data, we require that events with a leading electron fired the single electron 
+        trigger, while for events with a leading muon, the cross-trigger has to be fired 
+        if the muon $\pT$ is within $\left[ 20, 26 \right] \GeV$ otherwise the single muon 
+        trigger is used.
+        % Justify cuts : 1 b-tag + 4 jets to remove W+jets
+        % 2-btag would reduce the efficiency too much
+        % MET allows to reject QCD, (W+jets and tt1l) while not being too tight for some signal
+        % veto to reject dilepton events...
 
         We consider four categories of background : $\oneLeptonTop$, $\Wjets$, $\diLeptonTop$ and rare. Other standard
         model processes such as QCD backgrounds are not considered as their contribution is very low. The $\oneLeptonTop$
@@ -1730,24 +1787,25 @@
          \subsubsection{Expected benefits from new object reconstruction and selection techniques}
          % =====================================================
 
-             % PUPPI jets, new isolation, 
+             \subsubsection{PUPPI jets, PUPPI MET ?}
+
+             \subsubsection{new isolation, ..?}
 
          \subsubsection{Potential for new variables (?)}
 
-             % MT significance, 
-             % MT deconstruction, allowing to have more control to the regime looking at ? e.g. lower lepton pT  at low deltaM ?
+             \subsubsection{MT deconstruction, allowing to have more control to the regime looking at ? e.g. lower lepton pT  at low deltaM ?}
 
-             % ISR tagging improvement 
+             \subsubsection{ISR tagging improvement}
 
-             % Topness ?
+             \subsubsection{Topness ?}
 
-             % soft leptons ? or is that a different analysis ? how to probe high neutralino regime, low deltaM ?
+             \subsubsection{reduce lepton threshold ? how to probe high neutralino regime, low deltaM ?}
+             
+             \subsubsection{MT significance ?}
 
-             % FOM for optimization ?
+             \subsubsection{FOM for optimization ?}
             
-             % statistical interpretation using multiple bin to simultaneously fit S and B ?
-
-            
+             \subsubsection{statistical interpretation using multiple bin to simultaneously fit S and B ?}
     
     \section{Overview of related searches for top partner in CMS \label{sec:analysis_overviewStopSearches}}
     %==============================================================
@@ -1762,13 +1820,12 @@
         
         % Other methods ? 
 
-        \subsection{Razor ? MT2 ?}
+        \subsection{Razor ? (G3G related)}
         
         % Other production mode
 
-        \subsection{Gluino mediated ?}
-        
-        \subsection{t2 -> H t1 -> ... ?}
+        \subsection{Related signature ? : t2 -> H t1 -> ... ?}
+        \subsection{G3G}
         
         % Specific part of the mass space
 
@@ -1778,8 +1835,7 @@
 
 % the first problem is with triggering these events : the jets and leptons originating from the stop decays are too soft to be used during the online selection. The only possibility is to consider these processes with ISR with a consequent reduction in the effective cross section.
 
-        \subsection{Spin correlation, ttbar cross section measurement for stealth region}
-
+        \subsection{Indirect : Spin correlation, ttbar cross section measurement for stealth region}
 
 
 %==============================================================
