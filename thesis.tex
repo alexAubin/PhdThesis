@@ -25,29 +25,32 @@
 
     Quantum field theory apply the idea of quantum mechanics to fields, by treating the
     field $\phi$ as an operator subject to commutation relations analogous to those of
-    quantum mechanics. The field can then be expressed as a Fourrier sum of particle
-    creation and annihilation operators and particles are intepreted as a excitations of
+    quantum mechanics. The field can then be expressed as a Fourrier sum of quanta
+    creation and annihilation operators and particles are intepreted as quantas of
     the field.
 
     The behavior of fields can be described using the powerful and concise Lagrangian
     formalism which introduces a quantity called the Lagrangian density (referred later
     as simply the Lagrangian),
-    $$
+    \eq{lagrangianForm}
+    {
         \mathcal{L}(\phi,\partial_\mu \phi)
         =
         T(\phi,\partial_\mu \phi) - V(\phi,\partial_\mu \phi)
-    $$
+    }
     where the terms $T$ and $V$ describes respectively the kinetic and potential of the
     field $\phi$. The least action principle states that one can obtain the equation of
     motion of a system by requiring that the action, defined as
-    $$
+    \eq{actionDefinition}
+    {
         \mathcal{S}
         =
         \int_V \mathcal{L}(\phi,\partial_\mu \phi) d^4x
-    $$
+    }
     is stationnary with respect to an infinitesimal variation $\phi \rightarrow \phi +
     \delta\phi$. This principle yields the Euler-Lagrange equation,
-    $$
+    \eq{eulerLagrange}
+    {
         \frac{\partial \mathcal{L}}{\partial \phi}
         -
         \partial_\mu
@@ -56,7 +59,7 @@
         \right)
         =
         0
-    $$
+        }
     which can be solved to obtain the equations of motion. This is why the Lagrangian is
     a core element as it summarize all the dynamic of the fields.
 
@@ -71,18 +74,262 @@
     which fields exists, what are their properties and how they couple with each other.
 
     \insertFigure{feynmanDiagramExample}{0.3}
-                 {Example of vertex corresponding to a Lagrangian term $k \cdot \phi_1 \phi_2 \phi_3$.}
+                 {Example of vertex corresponding to a Lagrangian term
+                 $k \cdot \phi_1 \phi_2 \phi_3$.}
 
-        \subsection{Noether's theorem and symmetries}
-        \loremipsum
+        \subsection{Noether's theorem and gauge symmetries}
+
+    A big part of the theoretical work of particle physics is related to the studies of
+    the symmetries of the Lagrangian. One of the most remarkable result in physics is
+    called the Noether theorem, stating that to every transformation of the space-time
+    coordinate and fields that let the Lagrangian invariant, there are two quantities
+    called current and charge which are conserved. This is a powerful result as it creates
+    a direct link between symmetries and laws of nature.
+
+    Using this theorem on space-time symmetries, one can for instance deduce the
+    conservation of energy-momentum from invariance of the Lagrangian according to
+    space-time translations.
+
+    However, a specific interest goes into studying internal symmetries of the field,
+    called gauge symmetries. Gauge transformations are transformations built from a gauge
+    group and acting on the fields.They take the form :
+    \eq{gaugeTransformation}
+    {
+        \psi(x^\mu)
+        \rightarrow
+        U(x^\mu) \psi(x^\mu)
+    }
+    where $U$ is an element of the group. If $U$ does not depend on $x^\mu$, the gauge is
+    said to be global, while if it does depend on $x^\mu$, the gauge is said to be local.
+
+    One of the most striking example of the application of gauge symmetry is the case of
+    quantum electrodynamics using the group $U(1)$. Starting from the Dirac lagrangian
+    describing massive, non-interacting electrons,
+    \eq{diracLagrangian}
+    {
+        \mathcal{L}
+        =
+        \bar{\psi_e} (i \gamma^\mu \partial_\mu - m) \psi_e,
+    }
+    and considering a $U(1)$ transformation,
+    \eq{U1gauge}
+    {
+        \psi_e(x^\mu)
+        \rightarrow
+        e^{i \,\cdot\, q_e \,\cdot\, \theta(x^\mu)} \psi_e(x^\mu),
+    }
+    one easily finds that $\mathcal{L}$ is invariant under global transformation (i.e.
+    considering $\partial_\mu \theta = 0$) but not under local transformation.
+
+    Here, it should be understood that the transformation \ref{eq:U1gauge} corresponds
+    to a change in the phase of the field $\psi_e$. A global invariance corresponds to the
+    fact that one can offset the phase of the field in the same way accross all the universe
+    without changing the laws of physics. However, we know from special relativity
+    that what happens at some place in the universe doesn't immediately affects a distant
+    place. In a similar manner, the motivation to require local gauge invariance is that
+    we should be able to vary continuously the offset we put on the phase of the field accros
+    space-time without changing the laws of physics.
+
+    Requiring local gauge invariance forces to replace the derivative $\partial_\mu$
+    by a covariant derivative $D_\mu$,
+    \eq{covariantDerivative}
+    {
+        D_\mu
+        =
+        \partial_\mu - i q_e A_\mu
+    }
+    where we introduced a new field $A_\mu$ which transforms appropriately. The lagrangian
+    becomes
+    \eq{QEDLagrangian}
+    {
+        \mathcal{L}
+        =
+        \underbrace{i \bar{\psi_e} \gamma^\mu \partial_\mu \psi_e}_{\psi_e \text{ kinetic}}
+        -
+        \underbrace{\frac{1}{4} F_{\mu\nu} F^{\mu\nu}}_{A_\mu \text{ kinetic}}
+        -
+        \underbrace{m \bar{\psi_e} \psi_e}_{\psi_e \text{ mass}}
+        -
+        \underbrace{i q_e \bar{\psi_e} \gamma^\mu A_\mu \psi_e}_{\psi_e \leftrightarrow A_\mu \text{ interaction}}
+        ,
+    }
+    where we introduced
+    \eq{Fmunu}
+    {
+        F_{\mu\nu}
+        =
+        \partial_\mu A_\nu - \partial_\nu A_\mu
+        .
+    }
+    There are now two kinematic terms, a mass term and an interaction term with strength $q_e$
+    between $\psi_e$, the electron field, and $A_\mu$, identified as the photon field.
+    Therefore, imposing a local gauge symmetry has led to introduce interaction between
+    the two fields. This important result was generalized to non-abelian groups $SU(n)$ by
+    Yang and Mills. The corresponding transformations are of the form
+    \eq{SUNgauge}
+    {
+        \psi(x^\mu)
+        \rightarrow
+        e^{i \,\cdot\, q_\psi \,\cdot\, t_k \theta^k(x^\mu)} \psi(x^\mu),
+    }
+    where $q_\psi$ is the charge of $\psi$ under this transformation, $\theta^k$ are
+    arbitrary values and the $t_k$ are the $n^2-1$ generators of $SU(n)$ satisfying the
+    Lie algebra commutation relations. To get an invariance with respect to this
+    transformation, one is forced to introduce $n^2 - 1$ vector gauge bosons $G$ and the
+    covariant derivative becomes
+    \eq{CovariantDerivativeSUn}
+    {
+        D_\mu
+        =
+        \partial_\mu - i q_\psi t_k G^k_\mu
+    }
+    An important feature of non-abelian groups is that an additional term comes up from
+    the fact that the matrices $t_k$ do not commute and leads to an interaction term
+    between the gauge bosons $G$.
 
     \section{The Standard Model of particle physics}
+
+    The Standard Model reflects our current understanding of particle physics. It is
+    built from the following ingredients :
+    \begin{itemize}
+        \item the gauge symmetries corresponding to the interactions ;
+        \item the fermionic fields and their properties ;
+        \item the scalar field leading to spontanneous symmetry breaking.
+    \end{itemize}
+
+    The Standard Model includes three interactions : electromagnetic, weak and strong.
+    The gauge group describing the strong interaction is $SU(3)_C$, where $C$ stands for
+    color. The electromagnetic and weak interactions are unified in the so-called electroweak
+    interaction which is a spontanneously broken symmetry. The corresponding gauge group
+    is $U(1)_Y \times SU(2)_L$ where $Y$ and $L$ stands for weak hypercharge and
+    weak isospin.
+
+    The fermionic fields of the Standard Model are categorized according to their
+    properties : up and down-type quarks are field carrying both electroweak charges and
+    colors, while leptons carry only electroweak charges. Fields are grouped into
+    three families called generation according to their masses.
+
         \subsection{The strong sector}
+
         \loremipsum
+
         \subsection{The electroweak sector}
+
         \loremipsum
+
         \subsection{The electroweak symmetry breaking}
-        \loremipsum
+
+    One of the big challenge of particle physics around the 50's was to understand why
+    the strong and weak interaction was short-range whereas the electromagnetic
+    interaction is infinite-range. It got understood later that the strong interaction
+    appears short-range because of confinement. However, attempting to describe the
+    weak interaction with an $SU(2)_L$ gauge symmetry proved unsuccessful as mass terms
+    for the gauge bosons are breaking the symmetry and therefore not allowed.
+
+    Nevertheless, a remarkable property of certain physical system is how symmetry can
+    be spontanneously broken. A straightforward experience is to place a pen perpendicular
+    to a table. This system exhibits an invariance by rotation around the axis of the pen.
+    However, it is in an unstable configuration and as soon as the pen is released,
+    micro-fluctuations makes it fall in one particular direction. Despite the fact that the
+    set of all possible outcomes are symmetric by rotation, the fact that only one of this
+    outcome can be realized breaks the cylindrical symmetry of the system.
+
+    It was discovered that this idea can be succesfully applied to the electroweak symmetry
+    $U(1)_Y \times SU(2)_L$ to obtain massive gauge bosons and massive fermions, via a
+    spontanneous breaking of this symmetry first introduced by Robert Brout, François
+    Englert and Peter Higgs.
+
+    We onsider the introduction of a complex scalar $SU(2)$ doublet $\phi$ with $L = 1$,
+    and $Y = 1$,
+    \eq{higgsDoublet}
+    {
+        \phi
+        =
+        \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix}
+        =
+        \frac{1}{\sqrt{2}} \begin{pmatrix} h^+ \cdot e^{i\theta^+} \\ h^0 \cdot e^{i\theta^0} \end{pmatrix}.
+    }
+    The Lagrangian of $\phi$ can be written under the form
+    \eq{higgsLagrangian}
+    {
+        \mathcal{L}
+        =
+        D_\mu \phi D^\mu \phi - V(\phi),
+        \,\,\,\,\,\,\,\,
+        \text{with}
+        \,\,\,\,\,\,\,\,
+        V(\phi) = \mu^2 \left| \phi \right| + \lambda \left| \phi \right|^2.
+    }
+    For $\mu^2 < 0$ and $\lambda > 0$, one gets a degenerated minima for $V(\phi)$ satisfying
+    \eq{higgsSolutions}
+    {
+        \left| \phi \right|
+        =
+        \sqrt{\phi^\dagger \phi}
+        =
+        \frac{v}{\sqrt{2}}
+        ,
+        \,\,\,\,\,\,\,\,
+        \text{with}
+        \,\,\,\,\,\,\,\,
+        v \definedAs \sqrt{\frac{-\mu^2}{\lambda}}.
+    }
+    Because the symmetry is local, we may perform different isospin rotations for different
+    values of $x^\mu$ such that $h^+ = \theta^+ = \theta^0 = 0$ and $h^0(x^\mu) = v + h(x^\mu)$
+    with $h(x^\mu) = 0$ in vacuum. This is called the unitary jauge in which $\phi$ takes the form
+    \eq{higgsDoubletUnitaryJauge}
+    {
+        \phi
+        =
+        \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix}
+        =
+        \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + h \end{pmatrix}.
+    }
+
+    To understand how this field impacts the physics of $SU(2)_L \times U(1)_Y$, let us
+    start from the covariant derivative
+    \eqalign{CovariantDerivativeSU2U1}
+    {
+        D_\mu
+        & =
+        \partial_\mu - i g_B B_\mu - i g_W t_a W^a_\mu \nonumber\\
+        & =
+        \partial_\mu - i
+        \begin{pmatrix}
+            g_W  W_\mu^3 + g_B  B_\mu    &   g_W (W_\mu^1 - i  W_\mu^2) \\
+            g_W (W_\mu^1 + i   W_\mu^2)  & - g_W W_\mu^3 + g_B  B_\mu   \\
+        \end{pmatrix} \nonumber\\
+        & =
+        \partial_\mu - i
+        \begin{pmatrix}
+            g_{WB} A_\mu & g_W W_\mu^\dagger \\
+            g_W W_\mu    & - g_{WB} Z_\mu    \\
+        \end{pmatrix}.
+    }
+    Here, we introduced :
+    \eqalign{DefinitionAZW}
+    {
+        g_{WB} & = \sqrt{g^2_W + g^2_B} \nonumber\\
+        A_\mu  & = (g_W W_\mu^3 + g_B B_\mu) / g_{WB} \nonumber\\
+        Z_\mu  & = (g_W W_\mu^3 - g_B B_\mu) / g_{WB} \nonumber\\
+        W_\mu  & = W_\mu^1 + i  W_\mu^2
+    }
+    Expanding the Lagrangian of $\phi$, one may find
+    \eqalign{HiggsFieldKinetic}
+    {
+    D_\mu \phi D^\mu \phi & = \underbrace{\frac{1}{2}\partial_\mu \phi \partial^\mu \phi}_{h \text{ kinetic}}
+                            + \underbrace{(\frac{v^2 g_W^2}{2}) W_\mu W^\mu}_{W \text{ mass}}
+                            + \underbrace{(\frac{v^2 g_{WB}^2}{2}) Z_\mu Z^\mu}_{Z \text{ mass}}\nonumber\\
+                            & + \underbrace{(v g_W) h W_\mu W^\mu}_{hWW \text{ interaction}}
+                            + \underbrace{(v g_{WB}) h Z_\mu Z^\mu}_{hZZ \text{ interaction}}
+                            + \underbrace{(\frac{g_W^2}{2}) hh W_\mu W^\mu}_{hhWW \text{ interaction}}
+                            + \underbrace{(\frac{g_{WB}^2}{2}) hh Z_\mu Z^\mu}_{hhZZ \text{ interaction}}
+
+    }
+
+
+
+
 
     \section{Shortcomings of the Standard Model}
         \subsection{Open questions and criticism}
@@ -103,11 +350,6 @@
         \loremipsum
             \subsubsection{Particle physics}
         \loremipsum
-
-
-
-
-
 
 
 
@@ -264,7 +506,7 @@
         One can estimate the level of tunning needed as function of the superpartner of
         the top for the theory to keep providing a natural explanation to the hierarchy
         problem, and use it as a constrain. Despite the fact that such constrain is
-        highly dependent of hypothesis made on the SUSY parameters, it is commonly admitted
+        highly dependent on hypothesis made on the SUSY parameters, it is commonly admitted
         that stop quarks should have a mass below or around $1\TeV$ for SUSY to remain natural.
         This makes the search for stop and important channel for possible SUSY discovery.
 
@@ -284,7 +526,7 @@
         $\tilde{\chi}$ are combination of the bino $\tilde{B}$, the two neutral higgsinos
         $\tilde{H}_{1,2}$, and the neutral wino $\tilde{W}_3$. One can compute the relic
         abudance of dark matter by solving the Boltzmann equation \cite{EllisDarkMatter}
-        depending essentially of the LSP mass $m_{\text{LSP}}$ and the annihilation cross-section.
+        depending essentially on the LSP mass $m_{\text{LSP}}$ and the annihilation cross-section.
         The next-to-lightest supersymmetric particle (NLSP) mass is a crucial parameter as
         it strongly affect the annihilation cross-section and therefore the relic abudance.
         In particular, cosmological observations are favorizing cases where the LSP is
@@ -316,7 +558,7 @@
         A first case is considered with $\mass{\lchargino} \gg \mass{\lstop}$ and the stop
         decays through $\lstop \rightarrow t \lneutralino$, as represented on figure
         \ref{fig:stopDecayModes} on the left. This signal is referred to as \textsc{T2tt}
-        in the simplified model nomenclature and depends of two free parameters
+        in the simplified model nomenclature and depends on two free parameters
         $\mass{\lstop}$ and $\mass{\lneutralino}$.
 
         A second case is considered with $\mass{\lchargino} \in [\mass{\lneutralino},
@@ -344,7 +586,7 @@
         branching ratio equal to 1. It should also be noted that the polarization of the
         top quarks in the $\lstop \rightarrow t \lneutralino$ mode and $\lchargino$ and
         $W$ bosons in the $\lstop \rightarrow b \lchargino \rightarrow b W^{\pm}
-        \lneutralino$ are dependent of the mixing matrices of the $\lstop$, $\lchargino$
+        \lneutralino$ are dependent on the mixing matrices of the $\lstop$, $\lchargino$
         and $\lneutralino$. This can later significantly affect the distributions of
         variables and selection efficiencies and is discussed in section
         \ref{sec:analysis_results}.
@@ -365,7 +607,7 @@
                          $\lstop \rightarrow b \lchargino \rightarrow b W^{\pm} \lneutralino$ decay mode
                          (on the right). The lines of the supersymmetric particles are drawn in red.}
 
-        The cross-section of direct $\lstop$ pair production, which depends only of $\mass{\lstop}$, is presented
+        The cross-section of direct $\lstop$ pair production, which depends only on $\mass{\lstop}$, is presented
         on Figure \ref{fig:stopPairXsec} for $8\TeV$ and $13\TeV$ $pp$ collisions as computed at next-leading-order
         by the software \textsc{Prospino} \refNeeded. At $8\TeV$, the cross-section range from $\orderOf{100\pb}$
         at $\mass{\lstop} = 150\GeV$ to $\orderOf{1\fb}$ at $\mass{\lstop} = 900 \GeV$.
@@ -375,7 +617,7 @@
         for $8\TeV$ (in blue) and $13\TeV$ (in orange) proton-proton collisions. The bands represent uncertainty from PDF.}
 
         The search is performed across the $(\mass{\lstop},\mass{\lneutralino})$ plane
-        represented on Figure \ref{fig:stopMassSpace}. Depending of the value of
+        represented on Figure \ref{fig:stopMassSpace}. Depending on the value of
         $\deltam \definedAs \mass{\lstop} - \mass{\lneutralino}$, different phenomenologies
         appears.
 
@@ -513,7 +755,7 @@
 
     The single muon trigger used requires an isolated muon candidate with $\pT > 24\GeV$
     and a relative isolation lower than 0.15 in a cone of $\Delta R = 0.3$. The efficiency
-    of this trigger ranges from 78\% to 95\% depending of the $\pT$ and $\abseta$ the muon.
+    of this trigger ranges from 78\% to 95\% depending on the $\pT$ and $\abseta$ the muon.
     In addition to this singlee muon trigger,, a muon+jets trigger is used, allowing a
     lower $\pT$ treshold for the muon. This trigger requires a muon candidate with
     $\pT > 17\GeV$ and $\abseta < 2.1$ and at least three jets with $\pT > 30\GeV$ and
@@ -523,7 +765,7 @@
     the reconstruction of electron is more challenging and subject to fakes than muons,
     criterias are applied on the shower shape, the matching between track and supercluster,
     and the ratio between hadronic and electromagnetic energy. In the barrel, the efficiency
-    of this trigger ranges from 7\% to 97\% depending of the $\pT$ of the electron.
+    of this trigger ranges from 7\% to 97\% depending on the $\pT$ of the electron.
 
     The analysis makes also use of dilepton triggers to later control the dileptonic
     $t\bar{t}$ component. For these, electrons candidates are identified using loose
@@ -1155,7 +1397,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     merit defined in formula \ref{FoM}. To work around cases with very low background or signal leading,
     i.e. caveat \#2, we use $\tilde{B} \definedAs \text{max}(B,1)$ and set the FoM to 0
     if $S < 3$. The relative systematic uncertainty on the background is set to vary between
-    15 and 30\% depending of the tightness of the cuts. We also incorporate some feedback
+    15 and 30\% depending on the tightness of the cuts. We also incorporate some feedback
     of the background estimation that will be described later, by rescaling the $\oneLeptonTop$
     and $\Wjets$ contributions with a factor 1.3. This has for effect to favorize the
     rejection of these backgrounds over the $\diLeptonTop$ and rare components.
@@ -1781,7 +2023,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             Table \ref{tab:systematicSummary} shows a breakdown of the different systematics
             uncertainties that are considered, at preselection level and the range of them
             for the two kinds of signal regions. The relative importance of the individual
-            systematics varies depending of the signal regions as the composition of the
+            systematics varies depending on the signal regions as the composition of the
             background itself varies : at preselection level, the importance of the
             $\SFRoneLeptonTop$ uncertainty is high as the $\oneLeptonTop$ component is still large.
             However for some signal regions, the $\diLeptonTop$ is the dominant contributions and
@@ -1849,7 +2091,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
         Finally, the uncertainty on PDF are calculated, following the PDF4LHC prescription,
         using the CT10, NNPDF 2.1, and MSTW2009 PDF sets. \refNeeded The impact on the
-        signal efficiency range from 10 to 30\% depending of the signal mass point.
+        signal efficiency range from 10 to 30\% depending on the signal mass point.
 
     \section{Signal contamination handling}
     %==============================================================
@@ -1903,7 +2145,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         fit method. We however constrain a posteriori to the fit $\SFRoneLeptonTopTilde$ to be $\geq 1$.
 
         The corrected background $\tilde{B}$ is computed the same way as described in equations \ref{eq:prediction1ltop} to \ref{eq:predictionrare}
-        using the corrected scale factors. As the correction depends of the signal, it is shall be performed on a per-benchmark
+        using the corrected scale factors. As the correction depends on the signal, it is shall be performed on a per-benchmark
         basis. However, as it is a CPU intensive task, it is done only with a setp of $50 \GeV$ instead of the $25 \GeV$
         of the signal samples. The background prediction for other benchmarks is corrected using an interpolation of
         the ration $\tilde{B}/B$ across the $(\mass{\lstop},\mass{\lneutralino})$ plane. Figure \ref{fig:signalContaminationSFmap} shows
