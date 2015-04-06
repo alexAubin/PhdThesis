@@ -188,13 +188,14 @@
     between the gauge bosons $G$.
 
     \section{The Standard Model of particle physics}
+    %====================================================================================
 
     The Standard Model reflects our current understanding of particle physics. It is
-    built from the following ingredients :
+    a quantum field theory constructed with the following ingredients :
     \begin{itemize}
-        \item the gauge symmetries corresponding to the interactions ;
-        \item the fermionic fields and their properties ;
-        \item the scalar field leading to spontanneous symmetry breaking.
+        \item fermionic fields and their properties ;
+        \item gauge symmetries corresponding to interactions ;
+        \item scalar field leading to spontanneous symmetry breaking.
     \end{itemize}
 
     The Standard Model includes three interactions : electromagnetic, weak and strong.
@@ -207,47 +208,65 @@
     The fermionic fields of the Standard Model are categorized according to their
     properties : up and down-type quarks are field carrying both electroweak charges and
     colors, while leptons carry only electroweak charges. Fields are grouped into
-    three families called generation according to their masses.
+    three families called generations as shown on Tab. \ref{tab:StandardModelFields}.
 
-        \subsection{The strong sector}
+    \begin{table}
+        \centering
+        \begin{tabular}{|ccc||c|cc|cc|}
+            \hline
+            1$^\text{st}$ gen. & 2$^\text{nd}$ gen. & 3$^\text{rd}$ gen . & $Y$  & $L$ & $L^3$   & $C$ & $C^3$(?) \\
+            \hline
+            \hline
+            $(u, d)_L$         & $(s,c)_L$          & $(t,b)_L$           &  1/3 & 1   & (1, -1) & 1   & $(r, g, b)$ \\
+            $u_R$              & $s_R$              & $t_R$               &  4/3 & 0   & -       & 1   & $(r, g, b)$ \\
+            $d_R$              & $c_R$              & $b_R$               & -2/3 & 0   & -       & 1   & $(r, g, b)$ \\
+            \hline
+            \hline
+            $(\nu_e, e)_L$     & $(\nu_\mu,\mu)_L$  & $(\nu_\tau,\tau)_L$ &  -1  & 1   & (1, -1) & 0   & - \\
+            $e_R$              & $\mu_R$            & $\tau_R$            &  -2  & 0   & -       & 0   & - \\
+            \hline
+        \end{tabular}
+        \caption{Fermionic fields of the Standard Model and associated charges with respect to
+        the fundamental interactions.}
+        \label{tab:StandardModelFields}
+    \end{table}
 
-        \loremipsum
-
-        \subsection{The electroweak sector}
-
-        \loremipsum
-
-        \subsection{The electroweak symmetry breaking}
+        \subsection{The electroweak interaction and symmetry breaking}
+    %====================================================================================
 
     One of the big challenge of particle physics around the 50's was to understand why
-    the strong and weak interaction was short-range whereas the electromagnetic
-    interaction is infinite-range. It got understood later that the strong interaction
-    appears short-range because of confinement. However, attempting to describe the
+    the weak interaction was short-range whereas the electromagnetic interaction is
+    infinite-range. To be able to describe an interaction with range $\orderOf{d}$, one
+    would need a massive mediator with a mass $m \sim d^{-1}$. Attempting to describe the
     weak interaction with an $SU(2)_L$ gauge symmetry proved unsuccessful as mass terms
-    for the gauge bosons are breaking the symmetry and therefore not allowed.
+    for the gauge bosons are breaking the symmetry.
 
     Nevertheless, a remarkable property of certain physical system is how symmetry can
-    be spontanneously broken. A straightforward experience is to place a pen perpendicular
+    be spontanneously broken. To understand this, a straightforward experience is to
+    place a pen perpendicular
     to a table. This system exhibits an invariance by rotation around the axis of the pen.
     However, it is in an unstable configuration and as soon as the pen is released,
     micro-fluctuations makes it fall in one particular direction. Despite the fact that the
     set of all possible outcomes are symmetric by rotation, the fact that only one of this
-    outcome can be realized breaks the cylindrical symmetry of the system.
+    outcome can be realized at a time breaks the cylindrical symmetry of the system.
 
-    It was discovered that this idea can be succesfully applied to the electroweak symmetry
-    $U(1)_Y \times SU(2)_L$ to obtain massive gauge bosons and massive fermions, via a
-    spontanneous breaking of this symmetry first introduced by Robert Brout, François
-    Englert and Peter Higgs.
+    The keystone of the Standard Model is the succesful application of this idea to the
+    the electroweak symmetry $U(1)_Y \times SU(2)_L$ to obtain massive gauge bosons and
+    massive fermions, via a spontanneous breaking of this symmetry first introduced by
+    Robert Brout, François Englert and Peter Higgs.
 
-    We onsider the introduction of a complex scalar $SU(2)$ doublet $\phi$ with $L = 1$,
-    and $Y = 1$,
+    Let's introduce a complex scalar $SU(2)$ doublet $\phi$ with $L = 1$ and $Y = 1$,
     \eq{higgsDoublet}
     {
         \phi
         =
-        \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix}
+        \begin{pmatrix} \phi_1 \\ \phi_2 \end{pmatrix}
         =
-        \frac{1}{\sqrt{2}} \begin{pmatrix} h^+ \cdot e^{i\theta^+} \\ h^0 \cdot e^{i\theta^0} \end{pmatrix}.
+        \frac{1}{\sqrt{2}}
+        \begin{pmatrix}
+          h_1 \cdot e^{i\theta_1} \\
+          h_2 \cdot e^{i\theta_2}
+        \end{pmatrix}.
     }
     The Lagrangian of $\phi$ can be written under the form
     \eq{higgsLagrangian}
@@ -274,64 +293,163 @@
         \,\,\,\,\,\,\,\,
         v \definedAs \sqrt{\frac{-\mu^2}{\lambda}}.
     }
+
     Because the symmetry is local, we may perform different isospin rotations for different
-    values of $x^\mu$ such that $h^+ = \theta^+ = \theta^0 = 0$ and $h^0(x^\mu) = v + h(x^\mu)$
-    with $h(x^\mu) = 0$ in vacuum. This is called the unitary jauge in which $\phi$ takes the form
+    values of $x^\mu$ and define the unitary jauge such that $h_1 = \theta_1 = \theta_2
+    = 0$ and $h_2(x^\mu) = v + h(x^\mu)$ with $h = 0$ in vacuum. The situation
+    is summarized on Figure \ref{fig:theory/higgsPotential}. Note that even
+    though this choice is arbitrary, one may work with $h_1$ instead of $h_2$ and would
+    still obtain a consistent picture at the end. In our case, $\phi$ takes the form
     \eq{higgsDoubletUnitaryJauge}
     {
         \phi
         =
-        \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix}
+        \begin{pmatrix} \phi_1 \\ \phi_2 \end{pmatrix}
         =
         \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + h \end{pmatrix}.
     }
 
-    To understand how this field impacts the physics of $SU(2)_L \times U(1)_Y$, let us
-    start from the covariant derivative
+    \insertFigure{theory/higgsPotential}{0.4}
+                 {Representation of the Higgs potential with $\mu^2 < 0$ and $\lambda > 0$.}
+
+    To understand how this field impacts the physics of $SU(2)_L \times U(1)_Y$ let us
+    look at the covariant derivative. We may note $W^{i=1,2,3}$ and $B$ the gauge bosons.
     \eqalign{CovariantDerivativeSU2U1}
     {
-        D_\mu
+        D_\mu \phi
         & =
-        \partial_\mu - i g_B B_\mu - i g_W t_a W^a_\mu \nonumber\\
+        \partial_\mu \phi - i g_B Y_\phi B_\mu \phi - i g_W L_\phi t_a W^a_\mu \phi \nonumber\\
         & =
-        \partial_\mu - i
+        \partial_\mu \phi - i
         \begin{pmatrix}
             g_W  W_\mu^3 + g_B  B_\mu    &   g_W (W_\mu^1 - i  W_\mu^2) \\
             g_W (W_\mu^1 + i   W_\mu^2)  & - g_W W_\mu^3 + g_B  B_\mu   \\
-        \end{pmatrix} \nonumber\\
-        & =
-        \partial_\mu - i
-        \begin{pmatrix}
-            g_{WB} A_\mu & g_W W_\mu^\dagger \\
-            g_W W_\mu    & - g_{WB} Z_\mu    \\
-        \end{pmatrix}.
+        \end{pmatrix}
+        \phi\\
     }
-    Here, we introduced :
+    We may rewrite it under the form
+    \eqalign{CovariantDerivativeSU2U1NewForm}
+    {
+        D_\mu \phi
+        & =
+        \partial_\mu \phi - i
+        \begin{pmatrix}
+            g_{WB} A_\mu & g_W W_\mu^-       \\
+            g_W W_\mu^+  & - g_{WB} Z_\mu    \\
+        \end{pmatrix} \phi.
+    }
+    where we introduced \todo{wtf, it's not a rotation matrix...} :
     \eqalign{DefinitionAZW}
     {
-        g_{WB} & = \sqrt{g^2_W + g^2_B} \nonumber\\
-        A_\mu  & = (g_W W_\mu^3 + g_B B_\mu) / g_{WB} \nonumber\\
-        Z_\mu  & = (g_W W_\mu^3 - g_B B_\mu) / g_{WB} \nonumber\\
-        W_\mu  & = W_\mu^1 + i  W_\mu^2
+        g_{WB}     & = \sqrt{g^2_W + g^2_B} \nonumber\\
+        A_\mu      & = (g_W W_\mu^3 + g_B B_\mu) / g_{WB} \nonumber\\
+        Z_\mu      & = (g_W W_\mu^3 - g_B B_\mu) / g_{WB} \nonumber\\
+        W_\mu^\pm  & = W_\mu^1 \pm i  W_\mu^2\\
     }
-    Expanding the Lagrangian of $\phi$, one may find
+
+    Expanding the kinetic term of $\phi$, one find the following terms appearing :
     \eqalign{HiggsFieldKinetic}
     {
     D_\mu \phi D^\mu \phi & = \underbrace{\frac{1}{2}\partial_\mu \phi \partial^\mu \phi}_{h \text{ kinetic}}
-                            + \underbrace{(\frac{v^2 g_W^2}{2}) W_\mu W^\mu}_{W \text{ mass}}
-                            + \underbrace{(\frac{v^2 g_{WB}^2}{2}) Z_\mu Z^\mu}_{Z \text{ mass}}\nonumber\\
+                            + \underbrace{(\frac{v^2 g_W^2}{2}) W_\mu W^\mu}_{W_\mu \text{ mass}}
+                            + \underbrace{(\frac{v^2 g_{WB}^2}{2}) Z_\mu Z^\mu}_{Z_\mu \text{ mass}}
+                            + \underbrace{(0) A_\mu A^\mu}_{A_\mu \text{ mass}}
+                            \nonumber\\
                             & + \underbrace{(v g_W) h W_\mu W^\mu}_{hWW \text{ interaction}}
                             + \underbrace{(v g_{WB}) h Z_\mu Z^\mu}_{hZZ \text{ interaction}}
                             + \underbrace{(\frac{g_W^2}{2}) hh W_\mu W^\mu}_{hhWW \text{ interaction}}
                             + \underbrace{(\frac{g_{WB}^2}{2}) hh Z_\mu Z^\mu}_{hhZZ \text{ interaction}}
-
+    }
+    And the potential term yields, up to a constant,
+    \eq{HiggsFieldPotential}
+    {
+        V(\phi) = \underbrace{(\mu^2) h h}_{h \text{ mass}}
+                + \underbrace{(\lambda v) h h h}_{hhh \text{ interaction}}
+                + \underbrace{(\frac{\lambda}{4}) h h h h}_{hhhh \text{ interaction}}.
     }
 
+    Introducing the $SU(2)$ doublet $\phi$ with the right properties therefore lead to
+    new terms that break the invariance of the Lagrangian under $SU(2)_L \times U(1)_Y$,
+    namely the mass terms of $W$ and $Z$ bosons which are now the physical bosons. However,
+    we may find that the Lagrangian is now invariant under $U(1)_Q$ with
+    $Q = \frac{1}{2}(Y+L^3)$ which is identified as the electromagnetic interaction, and
+    whose gauge boson is the massless $A_\mu$ which is identified as the photon. With
+    respect to electromagnetism, quarks get charges equal to $2/3$ and $-1/3$, and leptons
+    get charges equal to 0 and -1.
+    The procedure yielded a new massive boson $h$ and is called the Higgs boson.
 
+    One may introduce new terms in the Lagrangian corresponding to coupling between the
+    scalar field $\phi$ and the fermion fields, so-called Yukawa coupling. For instance
+    for leptons :
+    \eqalign{YukawaCoupling}
+    {
+        \mathcal{L}_{\text{Yukawa}}
+        & =
+        - \sum_{\ell = e, \mu, \tau} y_\ell (\bar{\ell}_R \phi^\dagger \Lambda_L + \bar{\Lambda}_L \phi \ell_R)
+        \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+        \text{with } \Lambda_L = \begin{pmatrix} \nu_\ell \\ \ell \end{pmatrix}_L
+        \nonumber\\
+        & =
+        - \sum_{\ell = e, \mu, \tau} \underbrace{(\frac{y_\ell v}{\sqrt{2}}) \bar{\ell} \ell}_{\ell \text{ mass}}
+        + \underbrace{(\frac{y_\ell}{\sqrt{2}}) h \bar{\ell} \ell}_{h\ell \bar{\ell} \text{ interaction}}.
+    }
+    The terms written in the form $k \cdot v \bar{\ell} \ell$, which can be seen as interaction
+    with the vacuum expectation value $v$ of the field $\phi$ are interpreted as mass terms
+    of the leptons. The case of the quarks is slightly more complicated as a mixing matrix
+    is introduced between the three quarks generations.
 
+    \subsection{The strong interaction}
+    %====================================================================================
 
+    The group $SU(3)$ corresponds to the strong interaction and affect quarks. The
+    associated gauge bosons are called the gluons and the charge is called color. As $SU(3)$
+    is a non-abelian group, the gluons are also carrying color and interact with each other.
+    The name \emph{strong} comes from the value of the compling constant, being larger
+    than the weak interaction by a factor $\orderOf{100}$.
+
+    $SU(3)$ is unbroken and therefore its associated gauge bosons, the gluons, are massless.
+    Because of this, one could conclude that the range of the strong interaction is infinite
+    just like electromagnetism is. However, when computing the evolution of the strong coupling
+    as function of the energy scale, it is found to tend to zero at high energies
+    and tend to infinity at low energies. This leads to two following key features of the strong
+    interaction.
+
+    At high energies, i.e. short distances, two colored particles are not much
+    affected by each other presence. This is referred to as assymptotic freedom. In comparison,
+    the same situation in electromagnetism leads to a strong attraction or repulsion of
+    two charged particles.
+
+    At low energies, i.e. long distances, the intensity of the interaction grows. Therefore
+    to split a hadron into individual quarks, someone will need to give energy to the
+    system up to the situation where this energy will be converted into new coloured
+    particles that will form new hadrons. This phenomena is called confinment. Interestingly,
+    confinment is a property which is still not completely demonstrated from a theoretical
+    point of view. In the context of high energy physics, confinment translates into the
+    production of jets of hadrons when quarks or gluons are produced in collisions.
+
+    \subsection{The success of the Standard Model}
+    %====================================================================================
+
+    The Standard Model includes 19 free parameters : 10 masses, 3 coupling parameters,
+    4 quark mixing matrix, the Higgs vaccum expectation value and the strong CP-violating
+    phase \todo{introduce it before}. The parameters and consistency of the Standard
+    Model has been extensively measured and tested in several experiments, in particular
+    at the LEP experiments, the Belle and BaBar experiment, and at the Tevatron. In 2012,
+    the CMS and ATLAS experiments at the LHC discovered the last remaining particle, the
+    Higgs Boson with a mass $m_H \sim 125\GeV$.
+
+    Figure \ref{fig:theory/standardModelFit} shows the result of the global fit of
+    observables of the Standard Model.
+    % Pertubative computations ?
+
+    \insertFigure{theory/fermionMasses}{0.6}
+                 {Masses of the fermions of the Standard Model}
+
+    \insertFigure{theory/standardModelFit}{0.4}
+                  {Global fit of observable of the Standard Model}
 
     \section{Shortcomings of the Standard Model}
+    %====================================================================================
         \subsection{Open questions and criticism}
         \loremipsum
         \subsection{The hierachy problem}
@@ -340,6 +458,7 @@
         \loremipsum
 
     \section{Theories beyond the Standard Model}
+    %====================================================================================
         \subsection{Zoology of Standard Model extensions}
         \loremipsum
         \subsection{Supersymmetry}
