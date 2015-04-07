@@ -83,10 +83,10 @@
     the symmetries of the Lagrangian. One of the most remarkable result in physics is
     called the Noether theorem, stating that to every transformation of the space-time
     coordinate and fields that let the Lagrangian invariant, there are two quantities
-    called current and charge which are conserved. This is a powerful result as it creates
-    a direct link between symmetries and laws of nature.
+    called current and charge which are conserved. This is a very powerful theorem as it
+    creates a direct link between symmetries and laws of nature.
 
-    Using this theorem on space-time symmetries, one can for instance deduce the
+    Using this theorem on space-time symmetries, one can deduce for instance the
     conservation of energy-momentum from invariance of the Lagrangian according to
     space-time translations.
 
@@ -121,14 +121,14 @@
     one easily finds that $\mathcal{L}$ is invariant under global transformation (i.e.
     considering $\partial_\mu \theta = 0$) but not under local transformation.
 
-    Here, it should be understood that the transformation \ref{eq:U1gauge} corresponds
-    to a change in the phase of the field $\psi_e$. A global invariance corresponds to the
-    fact that one can offset the phase of the field in the same way accross all the universe
-    without changing the laws of physics. However, we know from special relativity
-    that what happens at some place in the universe doesn't immediately affects a distant
-    place. In a similar manner, the motivation to require local gauge invariance is that
-    we should be able to vary continuously the offset we put on the phase of the field accros
-    space-time without changing the laws of physics.
+    The transformation \ref{eq:U1gauge} can be seen as a change in the phase of the field
+    $\psi_e$. A global invariance corresponds to the fact that one can choose to offset
+    the phase of the field in the same way accross all the universe without changing the
+    laws of physics. However, from the principle of locality, we know that what happens
+    somewhere in the universe doesn't immediately affects a distant place. In a similar
+    manner, the motivation to require local gauge invariance is that we should be able to
+    vary continuously the offset we put on the phase of the field accross space-time
+    without changing the laws of physics.
 
     Requiring local gauge invariance forces to replace the derivative $\partial_\mu$
     by a covariant derivative $D_\mu$,
@@ -195,39 +195,51 @@
     \begin{itemize}
         \item fermionic fields and their properties ;
         \item gauge symmetries corresponding to interactions ;
-        \item scalar field leading to spontanneous symmetry breaking.
+        \item one scalar field leading to spontanneous symmetry breaking, called the
+              Higgs field.
     \end{itemize}
 
-    The Standard Model includes three interactions : electromagnetic, weak and strong.
-    The gauge group describing the strong interaction is $SU(3)_C$, where $C$ stands for
-    color. The electromagnetic and weak interactions are unified in the so-called electroweak
-    interaction which is a spontanneously broken symmetry. The corresponding gauge group
-    is $U(1)_Y \times SU(2)_L$ where $Y$ and $L$ stands for weak hypercharge and
-    weak isospin.
+    The Standard Model includes two interactions : electroweak and strong. The electroweak
+    interaction is described by the gauge group $U(1)_Y \times SU(2)_L$ where $Y$ and $L$
+    stands for weak hypercharge and weak isospin. A notable property is how it affects
+    differently left-handed fermions from right-handed ones. This interaction is
+    spontaneously broken by the Higgs field, leading to the known electromagnetism and
+    weak interactions. The gauge group describing the strong interaction is $SU(3)_C$,
+    where $C$ stands for color and has $3^2-1 = 8$ associated gauge bosons.
 
     The fermionic fields of the Standard Model are categorized according to their
-    properties : up and down-type quarks are field carrying both electroweak charges and
-    colors, while leptons carry only electroweak charges. Fields are grouped into
-    three families called generations as shown on Tab. \ref{tab:StandardModelFields}.
+    properties : quarks are fields that carry both electroweak charges and colors, whereas
+    leptons carry only electroweak charges. They are grouped into three families called
+    flavour, or generations, sharing the same charges as shown on Tab.
+    \ref{tab:StandardModelFields}.
+
+    Fermions are initially massless and acquire a mass via
+    the electroweak symmetry breaking. While it is common to write directly the left-handed
+    fermions with lowercase letters, let us write them for the moment with uppercase letter
+    to emphasize that these flavour states are not necessarily the mass states. In the same
+    vein, it is common to express $Q$ and $\Lambda$ using the right-handed counterparts
+    of the left-handed fermions. However we decide here to not do so and see how things
+    can naturally be identified after the electroweak symmetry breaking.
 
     \begin{table}
         \centering
-        \begin{tabular}{|ccc||c|cc|cc|}
+        \begin{tabular}{|ccc||ccc|}
             \hline
-            1$^\text{st}$ gen. & 2$^\text{nd}$ gen. & 3$^\text{rd}$ gen . & $Y$  & $L$ & $L^3$   & $C$ & $C^3$(?) \\
-            \hline
-            \hline
-            $(u, d)_L$         & $(s,c)_L$          & $(t,b)_L$           &  1/3 & 1   & (1, -1) & 1   & $(r, g, b)$ \\
-            $u_R$              & $s_R$              & $t_R$               &  4/3 & 0   & -       & 1   & $(r, g, b)$ \\
-            $d_R$              & $c_R$              & $b_R$               & -2/3 & 0   & -       & 1   & $(r, g, b)$ \\
+            1$^\text{st}$ gen. & 2$^\text{nd}$ gen. & 3$^\text{rd}$ gen.  & $Y$  & $L$ & $C$\\
             \hline
             \hline
-            $(\nu_e, e)_L$     & $(\nu_\mu,\mu)_L$  & $(\nu_\tau,\tau)_L$ &  -1  & 1   & (1, -1) & 0   & - \\
-            $e_R$              & $\mu_R$            & $\tau_R$            &  -2  & 0   & -       & 0   & - \\
+            $Q^1_L$            & $Q^2_L$            & $Q^3_L$             &  1/3 & 1   & 1  \\
+            $U_R$              & $S_R$              & $T_R$               &  4/3 & 0   & 1  \\
+            $D_R$              & $C_R$              & $B_R$               & -2/3 & 0   & 1  \\
+            \hline
+            \hline
+            $\Lambda^1_L$      & $\Lambda^2_L$      & $\Lambda^3_L$       &  -1  & 1   & 0  \\
+            $E_R$              & $M_R$              & $\Theta_R$          &  -2  & 0   & 0  \\
             \hline
         \end{tabular}
         \caption{Fermionic fields of the Standard Model and associated charges with respect to
-        the fundamental interactions.}
+        the fundamental interactions. The convention adopted here is to have $L = 1$ and
+        $Y = -1$ for the left-handed lepton fields.}
         \label{tab:StandardModelFields}
     \end{table}
 
@@ -368,31 +380,49 @@
                 + \underbrace{(\frac{\lambda}{4}) h h h h}_{hhhh \text{ interaction}}.
     }
 
-    Introducing the $SU(2)$ doublet $\phi$ with the right properties therefore lead to
-    new terms that break the invariance of the Lagrangian under $SU(2)_L \times U(1)_Y$,
-    namely the mass terms of $W$ and $Z$ bosons which are now the physical bosons. However,
-    we may find that the Lagrangian is now invariant under $U(1)_Q$ with
+    Introducing the $SU(2)$ doublet $\phi$ with the right properties therefore lead to two
+    things. First, the prediction of a scalar, observable boson $h$ which is called the
+    Higgs boson. Second, new terms in the Lagrangian that break the invariance under
+    $SU(2)_L \times U(1)_Y$, namely the mass terms of the now physical $W$ and $Z$ bosons.
+    However, we may find that the Lagrangian is now invariant under $U(1)_Q$ with
     $Q = \frac{1}{2}(Y+L^3)$ which is identified as the electromagnetic interaction, and
     whose gauge boson is the massless $A_\mu$ which is identified as the photon. With
-    respect to electromagnetism, quarks get charges equal to $2/3$ and $-1/3$, and leptons
-    get charges equal to 0 and -1.
-    The procedure yielded a new massive boson $h$ and is called the Higgs boson.
+    respect to electromagnetism, right-handed quarks get charges equal to $2/3$ and $-1/3$,
+    and leptons $E_R$, $M_R$ and $\Theta_R$  get charges to -1. We may notice now that
+    the component of $Q^i_L$ under $SU(2)_L$, $Q^i_L = (Q_{+L}, Q_{-L})$, have electromagnetic
+    charges also equal to $2/3$ and $-1/3$ and we get tempted to write $Q^1_L = (U_{L}, D_{L})$
+    for the first generation and so on for the others. The same observation is made for the
+    right-handed leptons and we write $\Lambda^1_L = (N_{e,L}, E_{L})$.
 
-    One may introduce new terms in the Lagrangian corresponding to coupling between the
-    scalar field $\phi$ and the fermion fields, so-called Yukawa coupling. For instance
-    for leptons :
+    Since we introduced a new field $\phi$, we may introduce also new terms in the
+    Lagrangian corresponding to coupling between the scalar field $\phi$ and the fermion
+    fields, so-called Yukawa coupling. Such terms can exist provided that they respect the
+    symmetry of the Lagrangian. For instance, we may \emph{not} introduce terms of the form
+    $\phi$-quark-lepton as they would break the $SU(3)_C$ invariance. However, we can
+    introduce terms of the form $E_R\phi^\dagger\Lambda^i_L$, with $i = 1,2,3$. Notice
+    how \emph{apriori} there might be mixing between two different generations. All the
+    terms for leptons can be written with the form :
     \eqalign{YukawaCoupling}
     {
         \mathcal{L}_{\text{Yukawa}}
         & =
-        - \sum_{\ell = e, \mu, \tau} y_\ell (\bar{\ell}_R \phi^\dagger \Lambda_L + \bar{\Lambda}_L \phi \ell_R)
-        \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
-        \text{with } \Lambda_L = \begin{pmatrix} \nu_\ell \\ \ell \end{pmatrix}_L
+        %- \sum_{i,j} (y^{ij} \bar{L}^i_R \phi^\dagger \Lambda^j_L + y'^{ij} \Lambda^{\dagger j}_L \phi L_R^i)
+        - \sum_{i,j} (y^{ij} \bar{L}^i_R \phi^\dagger \Lambda^j_L + \text{h.c.})
+        \,\,\,\,\,\,
+        \text{with } \Lambda_L = \begin{pmatrix} \Lambda_{+L} \\ \Lambda_{-L} \end{pmatrix}
+        \,\,\,\,\,\,
+        \text{and } L^i = (E,M,\Theta)
         \nonumber\\
         & =
-        - \sum_{\ell = e, \mu, \tau} \underbrace{(\frac{y_\ell v}{\sqrt{2}}) \bar{\ell} \ell}_{\ell \text{ mass}}
+        %- \sum_{i,j} (v+h)(y^{ij} \bar{L}^i_R \Lambda^j_{-L} + y'^{ij} \bar{\Lambda}^{j}_{-L} L_R^i)\\
+        - (v+h)\sum_{i,j} (y^{ij} \bar{L}^i_R \Lambda^j_{-L} + \text{h.c.})\\
+        & =
+        - \sum_{L = e, \mu, \tau} \underbrace{(\frac{y_\ell v}{\sqrt{2}}) \bar{L} \ell}_{\ell \text{ mass}}
         + \underbrace{(\frac{y_\ell}{\sqrt{2}}) h \bar{\ell} \ell}_{h\ell \bar{\ell} \text{ interaction}}.
     }
+
+    \todo{Fixme}
+
     The terms written in the form $k \cdot v \bar{\ell} \ell$, which can be seen as interaction
     with the vacuum expectation value $v$ of the field $\phi$ are interpreted as mass terms
     of the leptons. The case of the quarks is slightly more complicated as a mixing matrix
