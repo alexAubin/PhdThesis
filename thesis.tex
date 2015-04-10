@@ -229,12 +229,12 @@
             \hline
             \hline
             $Q^1_L$            & $Q^2_L$            & $Q^3_L$             &  1/3 & 1   & 1  \\
-            $U_R$              & $S_R$              & $T_R$               &  4/3 & 0   & 1  \\
-            $D_R$              & $C_R$              & $B_R$               & -2/3 & 0   & 1  \\
+            $U^1_R$            & $U^2_R$            & $U^3_R$             &  4/3 & 0   & 1  \\
+            $D^1_R$            & $D^2_R$            & $D^3_R$             & -2/3 & 0   & 1  \\
             \hline
             \hline
             $\Lambda^1_L$      & $\Lambda^2_L$      & $\Lambda^3_L$       &  -1  & 1   & 0  \\
-            $E_R$              & $M_R$              & $\Theta_R$          &  -2  & 0   & 0  \\
+            $E^1_R$            & $E^2_R$            & $E^3_R$             &  -2  & 0   & 0  \\
             \hline
         \end{tabular}
         \caption{Fermionic fields of the Standard Model and associated charges with respect to
@@ -243,7 +243,7 @@
         \label{tab:StandardModelFields}
     \end{table}
 
-        \subsection{The electroweak interaction and symmetry breaking}
+        \subsection{The electroweak interaction}
     %====================================================================================
 
     One of the big challenge of particle physics around the 50's was to understand why
@@ -266,6 +266,8 @@
     the electroweak symmetry $U(1)_Y \times SU(2)_L$ to obtain massive gauge bosons and
     massive fermions, via a spontanneous breaking of this symmetry first introduced by
     Robert Brout, François Englert and Peter Higgs.
+
+    \subsubsection{Spontanneous breaking of the electroweak interaction}
 
     Let's introduce a complex scalar $SU(2)$ doublet $\phi$ with $L = 1$ and $Y = 1$,
     \eq{higgsDoublet}
@@ -383,8 +385,9 @@
     Introducing the $SU(2)$ doublet $\phi$ with the right properties therefore lead to two
     things. First, the prediction of a scalar, observable boson $h$ which is called the
     Higgs boson. Second, new terms in the Lagrangian that break the invariance under
-    $SU(2)_L \times U(1)_Y$, namely the mass terms of the now physical $W$ and $Z$ bosons.
-    However, we may find that the Lagrangian is now invariant under $U(1)_Q$ with
+    $SU(2)_L \times U(1)_Y$, namely the mass terms of $W$ and $Z$ bosons which are now the
+    the now physical (in the sense of observable) bosons.
+    However, we find that the Lagrangian is now invariant under $U(1)_Q$ with
     $Q = \frac{1}{2}(Y+L^3)$ which is identified as the electromagnetic interaction, and
     whose gauge boson is the massless $A_\mu$ which is identified as the photon. With
     respect to electromagnetism, right-handed quarks get charges equal to $2/3$ and $-1/3$,
@@ -394,31 +397,30 @@
     for the first generation and so on for the others. The same observation is made for the
     right-handed leptons and we write $\Lambda^1_L = (N_{e,L}, E_{L})$.
 
+    \subsubsection{Fermions masses and mass eigenstates}
+
     Since we introduced a new field $\phi$, we may introduce also new terms in the
     Lagrangian corresponding to coupling between the scalar field $\phi$ and the fermion
     fields, so-called Yukawa coupling. Such terms can exist provided that they respect the
     symmetry of the Lagrangian. For instance, we may \emph{not} introduce terms of the form
     $\phi$-quark-lepton as they would break the $SU(3)_C$ invariance. However, we can
-    introduce terms of the form $E_R\phi^\dagger\Lambda^i_L$, with $i = 1,2,3$. Notice
-    how \emph{apriori} there might be mixing between two different generations. All the
-    terms for leptons can be written with the form :
+    introduce terms of the form $E^i_R\phi^\dagger\Lambda^j_L$. Notice how $i$ is not
+    necessarily equal to $j$, i.e. we can have terms mixing two different generations.
+    All the terms for leptons can be written with the form :
     \eqalign{YukawaCoupling}
     {
         \mathcal{L}_{\text{Yukawa}}
         & =
-        %- \sum_{i,j} (y^{ij} \bar{L}^i_R \phi^\dagger \Lambda^j_L + y'^{ij} \Lambda^{\dagger j}_L \phi L_R^i)
-        - \sum_{i,j} (y^{ij} \bar{L}^i_R \phi^\dagger \Lambda^j_L + \text{h.c.})
+        - \sum_{i,j} (y^{ij} \bar{E}^i_R \phi^\dagger \Lambda^j_L + \text{h.c.})
         \,\,\,\,\,\,
         \text{with } \Lambda_L = \begin{pmatrix} \Lambda_{+L} \\ \Lambda_{-L} \end{pmatrix}
         \,\,\,\,\,\,
-        \text{and } L^i = (E,M,\Theta)
         \nonumber\\
         & =
-        %- \sum_{i,j} (v+h)(y^{ij} \bar{L}^i_R \Lambda^j_{-L} + y'^{ij} \bar{\Lambda}^{j}_{-L} L_R^i)\\
-        - (v+h)\sum_{i,j} (y^{ij} \bar{L}^i_R \Lambda^j_{-L} + \text{h.c.})\\
-        & =
-        - \sum_{L = e, \mu, \tau} \underbrace{(\frac{y_\ell v}{\sqrt{2}}) \bar{L} \ell}_{\ell \text{ mass}}
-        + \underbrace{(\frac{y_\ell}{\sqrt{2}}) h \bar{\ell} \ell}_{h\ell \bar{\ell} \text{ interaction}}.
+        - (v+h)\sum_{i,j} (y^{ij} \bar{E}^i_R \Lambda^j_{-L} + \text{h.c.})\\
+        %& =
+        %- \sum_{L = e, \mu, \tau} \underbrace{(\frac{y_\ell v}{\sqrt{2}}) \bar{L} \ell}_{\ell \text{ mass}}
+        %+ \underbrace{(\frac{y_\ell}{\sqrt{2}}) h \bar{\ell} \ell}_{h\ell \bar{\ell} \text{ interaction}}.
     }
 
     \todo{Fixme}
@@ -453,24 +455,47 @@
     to split a hadron into individual quarks, someone will need to give energy to the
     system up to the situation where this energy will be converted into new coloured
     particles that will form new hadrons. This phenomena is called confinment. Interestingly,
-    confinment is a property which is still not completely demonstrated from a theoretical
-    point of view. In the context of high energy physics, confinment translates into the
-    production of jets of hadrons when quarks or gluons are produced in collisions.
+    confinment is a property which is still not completely demonstrated from a mathematical
+    point of view.
+
+    In the context of high energy physics, confinment translates into the production of
+    jets of hadrons when quarks or gluons are produced in collisions. Jet physics is
+    therefore a crucial aspect when reconstructing an event in a particle collider.
+
+    During the previous section, we have seen how the particle masses arises from the
+    introduction of the Higgs field breaking the symmetry. However it is remarkable to notice
+    that the mass of hadrons, which ultimately composes everyday matter, comes essentially
+    from the kinetic and binding energy holding the quarks and not from the quark masses
+    themselves.
 
     \subsection{The success of the Standard Model}
     %====================================================================================
 
-    The Standard Model includes 19 free parameters : 10 masses, 3 coupling parameters,
-    4 quark mixing matrix, the Higgs vaccum expectation value and the strong CP-violating
-    phase \todo{introduce it before}. The parameters and consistency of the Standard
+    The Standard Model includes 19 free parameters : ten fermion and one scalar mass, three
+    coupling parameters, four quark mixing matrix parameters, the Higgs vaccum expectation
+    value and the strong CP-violating phase \todo{introduce it before}.
+
+
+
+    The parameters and consistency of the Standard
     Model has been extensively measured and tested in several experiments, in particular
     at the LEP experiments, the Belle and BaBar experiment, and at the Tevatron. In 2012,
     the CMS and ATLAS experiments at the LHC discovered the last remaining particle, the
     Higgs Boson with a mass $m_H \sim 125\GeV$.
 
     Figure \ref{fig:theory/standardModelFit} shows the result of the global fit of
-    observables of the Standard Model.
-    % Pertubative computations ?
+    observables of the Standard Model. In such a fit, one observable at a time is set free
+    while others are taken from experiment. The value of the free observable is then
+    predicted from the model, and compared to its experimentally measured value. The
+    difference is finally compared to the experimental uncertainty. This allows to have a
+    global test of the consistency of the model, as any significant deviation between the
+    predicted and measured value would indicated a flaw. The results indicate that the theory
+    is consistent, as no deviation larger than 3$\sigma$ is found.
+
+    More generally, the Standard Model is often said to be the most tested theory of all
+    time.
+    % Pertubative computations ? Renormalization
+    % "Best tested theory ever"
 
     \insertFigure{theory/fermionMasses}{0.6}
                  {Masses of the fermions of the Standard Model}
@@ -480,25 +505,181 @@
 
     \section{Shortcomings of the Standard Model}
     %====================================================================================
-        \subsection{Open questions and criticism}
-        \loremipsum
+
+    Despite its success, the Standard Model contains theoretical open questions and
+    experimental facts unexplained. For these reasons, it is thought to be still incomplete
+    or to be an effective area valid only at low energy while there would be a higher
+    degree of symmetry at high energy. In this section, we focus especially on the hiearchy
+    problem and dark matter as they are the most relevant one for this document, and
+    discuss briefly other open questions.
+
         \subsection{The hierachy problem}
-        \loremipsum
+
+    The hierarchy problem is related to the prediction of the physical Higgs boson mass.
+    Before stepping into this problem, let's first look at the case of the mass of fermions
+    and gauge bosons.
+
+    To compute a physical, observable parameter in a quantum field theory, one needs to
+    integrate over all possible quantum corrections related to this parameter. In the case
+    of the cross-section of a process, this means considering all loops and diagrams
+    with the same initial and final state. In the case of the mass of a particle, one is
+    interested to diagrams that contribute to the propagator. An example of diagram contributing
+    to the propagator of the electron is given in \ref{fig:electronPropagator}. We may
+    express the observable mass $m_e$ of the electron as the sum of the bare mass $m^0_{e}$,
+    that is to say the actual parameter inside the lagrangian, and $\Delta m_e$ representing
+    the contributions from the quantum corrections :
+
+    \eq{electronMassCorrection}
+    {
+        m^2_e \, = \, {m_e^0}^2 + \Delta m_e^2
+    }
+
+    For effective theories, the computation of quantum corrections is done with respect to
+    an energy cutoff $\Lambda$, representing the scale at which new physics is expected
+    to play a significant role. In the case of \ref{fig:electronPropagator}, this mean
+    that we shall integrate over all momentum inside the loop up to the scale $\Lambda$.
+    For instance, if one considers electrodynamics as an effective theory of electroweak,
+    at one-loop level :
+
+    \eq{electronMassCorrection2}
+    {
+        \Delta m_e \, \simeq \, \frac{\alpha}{4\pi} \, m_e^0 \, \text{ln}(\frac{\Lambda}{m_e^0})
+    }
+
+    With $\Lambda = \Lambda_{\text{electroweak}} = 100\GeV$, we find that
+    $\frac{\Delta m_e}{m_e} \sim 20\%$. It is a relatively small correction, in the sense
+    that it is not surprising to have a mass for the electron that is $\leq \orderOf{1\GeV}$.
+    The most important feature in \ref{eq:electronMassCorrection2} is the fact that $\Delta m_e$
+    is proportional to $m_e^0$ and not $\Lambda$ as it means the mass will not diverge
+    when the scale grows.
+
+    There is a remarkable and more general property behind this term which is that a
+    gauge invariant lagrangian cannot generate corrections that are breaking the symmetry. In
+    the case of electrodynamics with a massive electron, the mass term is already breaking
+    the chiral symmetry $U(1)_L \times U(1)_R$, but because this is a so-called soft-breaking
+    term, the property should still hold in the limit where $m_e^0 \rightarrow 0$. It is
+    therefore common to say that chiral symmetry protects the mass of fermions from divering.
+    The same fact is observed for gauge bosons masses in the case of the electroweak
+    symmetry breaking by the Higgs field : here, the gauge bosons are protected by the
+    gauge invariance preventing the mass to diverge.
+
+    Looking at the mass of the Higgs boson, it is found that the Standard Model does not include
+    any mechanism that prevent the mass of a scalar boson from diverging. The actual
+    computation for the correction from a fermion loop gives :
+
+    \eq{higgsMassCorrectionFromFermion}
+    {
+        \Delta m_h^2 \, \propto \, m_f^2 \Lambda^2,
+    }
+
+    which diverge with $\Lambda$. If one is confident that the Standard Model is valid
+    up to the Planck scale, where gravity will obviously play a significant role, then
+    the observable Higgs mass is
+
+    \eq{higgsMassCorrectionFromFermion}
+    {
+        m_h^2 \, \simeq \, {m_h^0}^2 + \kappa \cdot m^2_\text{Planck}
+    }
+
+    where $\kappa$ is a function of the Standard Model coupling and masses. The
+    three quantities $m_h^0$, $\kappa$, and $m_\text{planck}$ are \emph{a priori} unrelated
+    to each other from the point of view of the theory. Unless the parameters of the
+    Standard Model conspire with each other and are \emph{fine-tuned} at twenty decimal
+    places, there is no reason to expect that $m_h \ll m_\text{planck}$. However we know
+    that $m_h \sim \orderOf{10^2\GeV} \ll m_\text{planck} \sim \orderOf{10^{19}\GeV}$ which
+    is not natural. This is referred to as the hierarchy problem, as from this considerations
+    there is no reason to expect such a large hierarchy problem between the electroweak
+    scale and the Planck scale.
+
         \subsection{Dark matter}
-        \loremipsum
+
+            % Observations : galaxies, gravitational lens effect, CMB
+
+            % Possible models, WIMP, but also axions, ... ?
+
+        \subsection{Other open questions and criticism}
+
+    Other open questions or unexplained facts add fuel to the belief that the Standard Model
+    is not a complete theory.
+
+    \begin{itemize}
+        \item \textbf{Dark energy} - The standard model of cosmology, so-called $\Lambda$CDM,
+            contains a non-null cosmological constant written $\Lambda$. The cosmological
+            constant is initially an additional authorized term in Einstein's equation
+            which relates space-time curvature to energy-momentum. Such term is necessary
+            to explain the observed accelerated expansion of the universe from the study
+            of the redshift of supernovas. The cosmological constant can be interpreted
+            as vacuum energy, often referred to as dark energy. Despite the fact that this
+            is in principle in agreement with quantum field theory which predicts vacuum
+            energy from vacuum quantum fluctuations, there is a complete mismatch, of $\orderOf{10^{120}}$,
+            between the small measured value of $\Lambda$ and its prediction
+            by quantum field theory, often called the vacuum catastrophe or the worst
+            prediction in the history of physics. A big challenge of current physics therefore
+            consists in understanding the nature of dark energy and why it is so small
+            compared to prediction.
+        \item \textbf{Matter-antimatter asymmetry} - It is a well established fact that
+            the baryonic content of the Universe is made of matter. Because matter and antimatter
+            should have been produced in equal proportion during the big bang, there must
+            be sources of asymmetry. Sakharoved established a set of conditions that would
+            induce such an asymmetry. Among them is that the symmetries C and CP, i.e. inversion
+            of charge and inversion of both charge and parity, is violated. The Standard Model
+            with massless neutrinos contains two sources of CP-violation originating from
+            the CKM matrix and the CP-violating phase in the QCD lagrangian. So far however,
+            these sources are not important enough to explain the magnitude of the baryon
+            asymmetry.
+        \item \textbf{Neutrino masses} -
+    \end{itemize}
+
+    \begin{itemize}
+        \item \textbf{Strong CP problem} - As introduced before, there is a term allowed in
+            the QCD lagrangian that introduces CP-violation via a phase $\theta$. The value
+            of this parameter has been so far found to be very close to zero despite
+            lack of theoretical arguments to not be of the order of 1. This is a situation
+            similar to the hierarchy problem where we can expect that there is a mechanism
+            at stake protecting this phase to be too different from zero.
+        \item \textbf{Quantum gravity description} - Gravitation is currently not described
+            by the Standard Model. This problem, which is to know how to unify general
+            relativity with quantum field theory, is one of the biggest problem of modern
+            physics. If it exists, the gauge boson associated to the gravitation would
+            need to have a spin equal to 2. It is however not known if and how such
+            a theory would be renormalizable as it leads to uncancellable divergences.
+        \item \textbf{Forces unification} - Several times in the history of physics,
+            phenomenons have been understood to have a common underlying structure and
+            been unified. The simple name electromagnetism has in its ethymology a clear
+            reference to electrodynamic and magnetism. It is therefore natural for physicist
+            to look for possibilities of unification, in our case regarding the electroweak
+            and strong interaction, and ultimately with gravitation.
+        \item \textbf{Quark masses, number of fermion families and free parameters} -
+            Finally, there are conceptual interrogations about the fact that the quarks have
+            such different masses, in particular regarding the top quark as it is the
+            heaviest known particle. The same kind of conceptual interrogations goes about
+            the number of fermion families : is there any fundamental reason to have three
+            families instead of one, two, or an infinity of them ?
+    \end{itemize}
+
 
     \section{Theories beyond the Standard Model}
     %====================================================================================
         \subsection{Zoology of Standard Model extensions}
-        \loremipsum
+
+        % Extra dim -> compactification, compactification over time (interest w.r.t inflation), ...
+        %           -> hierarchy problem
+
+        % Little higgs
+
+        % Axions ?
+
+        % Talk somewhere about multiverse / anthropic principle
         \subsection{Supersymmetry}
-        \loremipsum
-        \subsection{Constrains on top partners and dark matter}
-        \loremipsum
-            \subsubsection{Cosmology}
-        \loremipsum
-            \subsubsection{Particle physics}
-        \loremipsum
+
+        % General idea and motivation
+        % Most simple lagrangian with global SUSY
+
+
+        % Several supersymmetry
+
+        % Mention local SUSY -> sugra
+
 
 
 
