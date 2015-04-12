@@ -543,7 +543,7 @@
 
     \eq{electronMassCorrection2}
     {
-        \Delta m_e \, \simeq \, \frac{\alpha}{4\pi} \, m_e^0 \, \text{ln}(\frac{\Lambda}{m_e^0})
+        \Delta m_e \, \simeq \, \frac{\alpha}{4\pi} \, m_e^0 \, \text{ln}\left(\frac{\Lambda}{m_e^0}\right)
     }
 
     With $\Lambda = \Lambda_{\text{electroweak}} = 100\GeV$, we find that
@@ -557,11 +557,12 @@
     gauge invariant lagrangian cannot generate corrections that are breaking the symmetry. In
     the case of electrodynamics with a massive electron, the mass term is already breaking
     the chiral symmetry $U(1)_L \times U(1)_R$, but because this is a so-called soft-breaking
-    term, the property should still hold in the limit where $m_e^0 \rightarrow 0$. It is
-    therefore common to say that chiral symmetry protects the mass of fermions from divering.
+    term, the property should still hold in the limit where $m_e^0 \rightarrow 0$ and
+    therefore the correction cannot be proportionnal to $\Lambda$. It is common to refer to
+    this by saying that chiral symmetry protects the mass of fermions from diverging.
     The same fact is observed for gauge bosons masses in the case of the electroweak
     symmetry breaking by the Higgs field : here, the gauge bosons are protected by the
-    gauge invariance preventing the mass to diverge.
+    gauge invariance preventing the mass terms.
 
     Looking at the mass of the Higgs boson, it is found that the Standard Model does not include
     any mechanism that prevent the mass of a scalar boson from diverging. The actual
@@ -576,7 +577,7 @@
     up to the Planck scale, where gravity will obviously play a significant role, then
     the observable Higgs mass is
 
-    \eq{higgsMassCorrectionFromFermion}
+    \eq{higgsMassCorrectionTotal}
     {
         m_h^2 \, \simeq \, {m_h^0}^2 + \kappa \cdot m^2_\text{Planck}
     }
@@ -593,7 +594,32 @@
 
         \subsection{Dark matter}
 
-            % Observations : galaxies, gravitational lens effect, CMB
+    Dark matter is another puzzle of current cosmology and fundamental physics in general.
+    The first main observation leading to the dark matter hypothesis came from the measurement
+    of rotation curves of galaxies. These curves showed the evolution of the radial velocity
+    of stars inside the galaxy as function of their distance to the galactic center. One
+    can predict such curves by infering the galaxy's mass repartition from models and
+    spectrometry, and applying Newton's law of gravitation. The observed curves are
+    well-described for the central region of the galaxy but then instead of decreasing
+    with distance, stayed approximately constant.
+
+    This observation suggested that there is a halo of invisible matter around
+    galaxies, interacting gravitationnaly but not electromagnetically with the rest of the
+    matter, hence the denomination \emph{dark} matter. Further experimental measurements
+    provided indirect evidences for the existence of such dark matter. One of the main
+    ones are using the technique of gravitational lensing that allows the observer to
+    infer the mass of a galaxy or a cluster from the bending of the light emitted by
+    an object further in the background. Nowadays, dark matter is part of the standard
+    model of cosmology as there are many astrophysical and cosmological phenomenom which
+    cannot be described without it, and found to represent $\orderOf{80\%}$ of the matter
+    content in the universe.
+
+    However the nature of dark matter is still unknown and no clear direct evidence has
+    been found for it. It is now commonly admitted that there is no suitable candidate
+    for it in the Standard Model. Dark matter candidates must be gravitationally interacting,
+    not be short-lived and must not be baryonic. Last but not least, it must also be
+    cold, that is to say that it must have low kinetic energy.
+
 
             % Possible models, WIMP, but also axions, ... ?
 
@@ -649,12 +675,14 @@
             reference to electrodynamic and magnetism. It is therefore natural for physicist
             to look for possibilities of unification, in our case regarding the electroweak
             and strong interaction, and ultimately with gravitation.
-        \item \textbf{Quark masses, number of fermion families and free parameters} -
+        \item \textbf{Free parameters and arbitrary field content} -
             Finally, there are conceptual interrogations about the fact that the quarks have
             such different masses, in particular regarding the top quark as it is the
             heaviest known particle. The same kind of conceptual interrogations goes about
             the number of fermion families : is there any fundamental reason to have three
-            families instead of one, two, or an infinity of them ?
+            families instead of one, two, or an infinity of them ? More generally, there
+            are numerous fact about the Standard Model parameters and field content that
+            feel arbitrary and may hide an underlying, more fundamental pattern.
     \end{itemize}
 
 
@@ -670,16 +698,74 @@
         % Axions ?
 
         % Talk somewhere about multiverse / anthropic principle
+
+            % Additional symmetries -> particles / gauge / space-time
+            % Additional particles
+            % Additional dimensions
+
         \subsection{Supersymmetry}
 
-        % General idea and motivation
-        % Most simple lagrangian with global SUSY
+        Supersymmetry, abbreviated SUSY, was an idea that emerged around the 70's. It
+        designates a symmetry between bosons and fermions. Mathematically,
+        we can write such a transformation :
+        \eqalign{SUSYtransformation}
+        {
+            Q \rvert \text{F} \rangle \rightarrow \rvert \text{B} \rangle \nonumber
+            \\
+            Q \rvert \text{B} \rangle \rightarrow \rvert \text{F} \rangle
+        }
+        where the index $f$ and $b$ refer to fermion and boson. Here, $Q$ is a \emph{global}
+        symmetry, i.e. it does not depend of space-time, and is therefore not a gauge
+        symmetry. As it relates two states with different spins, it must itself have a
+        spin 1/2. This means \todo{but why...} that SUSY is a space-time symmetry
+        in the sense that it is a non-trivial extension of the Poincaré algebra. It can
+        be noted that this is actually the only one possible. \todo{Haag, Lopuszanski, Sohnius, 1975}
 
+        A remarkable property of SUSY is that trying to gauge it, that is making the
+        transformation space-time dependent, yields a description of gravitation called
+        supergravity or, abbreviated, SUGRA. Supersymmetry also provides a link with
+        string theory which is a candidate of theory of everything.
+
+        To each fermion is therefore associated a boson with same charges, to each boson
+        is associated a fermion. The particule associated to another by SUSY is called
+        superpartner, and can be put together in a superfield. To ensure the consistency
+        of the theory\todo{check this}, superpartners of vector bosons have spin 1/2 and superpartners
+        of fermions have spin 0.  SUSY alone predicts that a particle and its superpartner
+        should have the same mass. However this cannot be the case in pratice as no
+        such thing has been observed by experiments, meaning that supersymmetry must be
+        a broken symmetry.
+
+        There are several mechanism that are candidate to spontanneously break SUSY. Some
+        are based on a gravity mediated supersymmetry breaking, others involve a gauge
+        mediated mechanism, and another possibility is to have an anomaly mediated breaking.
+        Since the exact mechanism is unknown at the moment, one can simply consider that
+        there are terms in the Lagrangian which are softly breaking the symmetry, leading
+        to different masses between the superpartners.
+
+        One of the initial motivation for supersymmetry is that it provides a mechanism that
+        protects the mass of scalar bosons. In the case of the Higgs boson, one can show
+        that if the superpartners have equal masses, then the quadratic divergences
+        introduced in \ref{eq:higgsMassCorrectionFromFermion} cancel each other and
+        it gets natural for the Higgs to have a mass much lower than the Planck scale.
+        If SUSY is only softly broken, then as for chiral and gauge symmetry, then the
+        boson-fermion symmetry still prevents to have a quadratic divergence. Instead,
+        we are left with a mild logarithmic divergence :
+        \eq{higgsMassCorrectionInSUSY}
+        {
+            \Delta m_h^2 \, \propto \, (m_f^2 - m_b^2) \, \text{ln}\left(\frac{\Lambda}{m_b}\right).
+        }
+
+        The most studied realization of supersymmetry is the minimal supersymmetric standard
+        model, or MSSM, corresponding to adding the minimum number of fields to the Standard
+        Model for it to become supersymmetric. At each fermion and gauge boson is threfore
+        associated a superpartner that we may call sfermion and gaugino. Regarding the
+        Higgs field, it is necessary to add not only a superpartner for it called higgsino,
+        but also another Higgs field to ensure the concistency of the theory.
 
         % Several supersymmetry
-
-        % Mention local SUSY -> sugra
-
+            % R-parity
+            % MSSM, pMSSM, cMSSM
+        % Pheno implications
 
 
 
