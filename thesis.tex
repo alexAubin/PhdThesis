@@ -27,7 +27,7 @@
     field $\phi$ as an operator subject to commutation relations analogous to those of
     quantum mechanics. The field can then be expressed as a Fourrier sum of quanta
     creation and annihilation operators and particles are intepreted as quantas of
-    the field.
+    the field. \todo{a work about virtual particles}
 
     The behavior of fields can be described using the powerful and concise Lagrangian
     formalism which introduces a quantity called the Lagrangian density (referred later
@@ -62,6 +62,8 @@
         }
     which can be solved to obtain the equations of motion. This is why the Lagrangian is
     a core element as it summarize all the dynamic of the fields.
+
+    \todo{introduce lagrangian for scalar, fermion, vector}
 
     Additionally, the structure of $\mathcal{L}$ can be easily interpreted knowing that
     a term with the form $m \phi \phi$ corresponds to a mass $m$ for the field $\phi$,
@@ -109,7 +111,7 @@
     {
         \mathcal{L}
         =
-        \bar{\psi_e} (i \gamma^\mu \partial_\mu - m) \psi_e,
+        \bar{\psi_e} (i \dslash - m) \psi_e,
     }
     and considering a $U(1)$ transformation,
     \eq{U1gauge}
@@ -130,16 +132,23 @@
     vary continuously the offset we put on the phase of the field accross space-time
     without changing the laws of physics.
 
-    Requiring local gauge invariance forces to replace the derivative $\partial_\mu$
-    by a covariant derivative $D_\mu$,
+    Local gauge invariance can be obtained by introducing a vector field $A_\mu$ which
+    transforms according to
     \eq{covariantDerivative}
     {
-        D_\mu
-        =
-        \partial_\mu - i q_e A_\mu
+        A_\mu
+        \rightarrow
+        A_\mu + \frac{1}{g} \partial_\mu \theta,
     }
-    where we introduced a new field $A_\mu$ which transforms appropriately. The lagrangian
-    becomes
+    where $g$ is an arbitrary constant we may call coupling constant, and replacing the
+    derivative $\dslash$ in the Lagrangian with a covariant derivative $\Dslash$,
+    \eq{covariantDerivative}
+    {
+        \Dslash
+        \definedAs
+        \dslash - i \cdot q_e g \cdot \gamma^\mu A_\mu
+    }
+    The lagrangian becomes, after expansion,
     \eq{QEDLagrangian}
     {
         \mathcal{L}
@@ -153,7 +162,7 @@
         \underbrace{i q_e \bar{\psi_e} \gamma^\mu A_\mu \psi_e}_{\psi_e \leftrightarrow A_\mu \text{ interaction}}
         ,
     }
-    where we introduced
+    where the kinetic term of $A_\mu$,
     \eq{Fmunu}
     {
         F_{\mu\nu}
@@ -161,11 +170,11 @@
         \partial_\mu A_\nu - \partial_\nu A_\mu
         .
     }
-    There are now two kinematic terms, a mass term and an interaction term with strength $q_e$
+    was added. There are now two kinematic terms, a mass term and an interaction term with strength $q_e g$
     between $\psi_e$, the electron field, and $A_\mu$, identified as the photon field.
     Therefore, imposing a local gauge symmetry has led to introduce interaction between
     the two fields. This important result was generalized to non-abelian groups $SU(n)$ by
-    Yang and Mills. The corresponding transformations are of the form
+    Yang and Mills. For these groups, the corresponding transformations are of the form
     \eq{SUNgauge}
     {
         \psi(x^\mu)
@@ -179,9 +188,9 @@
     covariant derivative becomes
     \eq{CovariantDerivativeSUn}
     {
-        D_\mu
+        \Dslash
         =
-        \partial_\mu - i q_\psi t_k G^k_\mu
+        \dslash - i \cdot q_\psi g \cdot \gamma^\mu t_k G^k_\mu
     }
     An important feature of non-abelian groups is that an additional term comes up from
     the fact that the matrices $t_k$ do not commute and leads to an interaction term
@@ -466,7 +475,7 @@
     introduction of the Higgs field breaking the symmetry. However it is remarkable to notice
     that the mass of hadrons, which ultimately composes everyday matter, comes essentially
     from the kinetic and binding energy holding the quarks and not from the quark masses
-    themselves.
+    themselvesi \todo{talk about chiral symmetry breaking}.
 
     \subsection{The success of the Standard Model}
     %====================================================================================
@@ -688,33 +697,131 @@
 
     \section{Theories beyond the Standard Model}
     %====================================================================================
+
         \subsection{Zoology of Standard Model extensions}
 
-        % Extra dim -> compactification, compactification over time (interest w.r.t inflation), ...
-        %           -> hierarchy problem
+        Since a few decades, extensions to the Standard Model have been proposed and
+        studied with the aim to adress its shortcomings. One can attempt to categorize
+        them as function of the fundamental ingredient they add to the theory, either
+        additional symmetries, space-time dimensions or field content.
 
-        % Little higgs
+            \subsubsection{Additional or extended symmetries}
+            % -> particles / gauge / space-time
 
-        % Axions ?
+        One of the possibility to extend the Standard Model is to look at symmetries.
+        There are however different kind of symmetries, which do not impact the theory
+        the same way, namely space-time symmetries or gauge symmetries. The only possible
+        extension of space-time symmetries is supersymmetry which is discussed later
+        in a dedicated section.
 
-        % Talk somewhere about multiverse / anthropic principle
+        It's possible to think about gauge groups which include the Standard Model group,
+        $SU(3) \times SU(2) \times U(1)$ to create Grand Unification Theories (GUT) in which
+        the coupling constants are unified. Such groups are also motivated because they
+        naturally introduce a symmetry between leptons and quarks as one can think of
+        when looking at the pattern of the Standard Model.
 
-            % Additional symmetries -> particles / gauge / space-time
-            % Additional particles
-            % Additional dimensions
+        The most simple group one can find is $SU(5)$ which would be a broken symmetry at
+        low energy just as the electroweak symmetry is. Rotations in the $SU(5)$ space
+        can mix the quark and lepton fields which led to a prediction of proton decay
+        incompatible with experimental measurements. Grand-unificiation with $SU(5)$ is
+        now mostly abandonned but remains an idea studied for larger groups such as $SO(10)$.
+
+            \subsubsection{Additional dimensions}
+
+        The second possibility is to add extra space-time dimensions. While everyday's life
+        is only composed of 3+1 (space and time) dimensions, theoretical mechanism have been
+        discovered that could explain why additional dimensions are noticeable at our scale.
+        The extra dimension is usually considered to be a space-like dimension, as an
+        additional time-like dimension would break causality. Extra dimensions theories
+        are of particular interest for unifying interaction with gravitation and answering
+        the hierarchy problem.
+
+        Large extra dimensions (ADD) theories are based on the idea that the Standard Model
+        interactions take place only in the four dimensions and gravity would be
+        allowed to travel in the extra dimensions. At large distances, gravity would
+        be diluted while at low distances (i.e. high energies) the Standard Model interaction
+        and gravitation would have coupling constant that are of the same order. A phenomenological
+        consequence is that microscopic black holes could be produced in high-energy collisions
+        provided that the collision probe distances lower than the Schwarzschild radius.
+
+        The Randall-Sundrum (RS) scenarios consider a five dimensions universe made of two
+        four dimensions branes separated by an extremely warped fifth dimension. One of
+        the brane corresponds to the Standard Model physics while the other brane would be
+        the realm of gravity. The distance separating the two brane is directly linked to
+        the difference of energy scale between the Standard Model sector and the gravitation
+        sector. A phenomelogicial prediction of these models is the production of gravitaton
+        excitations at the TeV scale.
+
+        Finally, universal extra dimensions (UED) theories are based on the idea that
+        the extra dimensions are compactified such that they are not noticeable at macroscopic
+        scales. An useful analogy to understand the compactification of a dimension is
+        consider that, for instance, a guitar string seen from very far looks like a one-dimensional
+        object whereas if seen from very close exhibits a second periodic dimension around
+        the string axis because of its thickness. The additional dimensions are therefore
+        parametrized as function of a radius. Phenomenologically, one would observe a discrete
+        mass spectra for the Standard Model particles corresponding to excitations along
+        the compactified dimensions.
+
+            \subsubsection{Additional or modified field content}
+
+        A third possibility is to introduce new ad-hoc fields of modify existing ones
+        to adress the shortcomings of the Standard Model.
+
+        One first elegant idea following this principle is to explain the lightness of the
+        Higgs by considering it is a composite object. This idea is inspired from QCD where
+        light scalars are encountered and do not exhibit a naturalness problem. Pions,
+        for example, can be seen as Goldstone bosons of the spontanneous breaking of chiral
+        symmetry, and therefore are massless. However in practice, chiral symmetry is not exact as
+        the underlying quarks do have mass, thus pions are only pseudo-Goldstone boson and get a mass,
+        but they are still protected by the approximate chiral symmetry from being heavy.
+        Applying the same idea to the Higgs would therefore answer the hiearchy problem.
+        This also means that there would be a new interaction whom the Higgs would
+        be just the lightest hadron-like state and other state could be seen at higher
+        energy. Another indication of compositeness would also come from different couplings
+        to gauge bosons.
+
+        Other hypothesis of new fields include axions, an idea first introduced to solve
+        the strong CP problem and eventually led to a dark matter candidate. Axions would
+        have masses lower than $\orderOf{1~\text{eV}}$ while still satisfying criteria to
+        be cold dark matter candidates.
+
+        Focusing on the search for dark matter candidates leads to proposing that dark matter
+        is not made of just one, but several kind of particles regrouped in the concept
+        of an hidden sector. There are several possibilities to describe the link between
+        the Standard Model and this hidden sector, for instance by assuming that the Higgs
+        relate the two sectors, or by ntroducing a new
+        $U(1)_H$ gauge group whose gauge boson would be a so-called dark photon.
+
+            \subsubsection{The anthropic principle}
+
+        Finally, one of the alternative to theories beyond the Standard Model is to
+        simply accept the Standard Model as it is. This is strongly related to Einstein's
+        interrogation regarding if Nature had any choice at teh creation of the universe.
+        It can be argued that most of the shortcomings of the Standard Model related to
+        gravitation and cosmology might simply be unsolvable at scales accessible by
+        particle physics experiments. The most important remaining issue are related to the
+        fine-tunning in the hierarchy problem and the arbitrary of the other parameters of
+        the theory. The anthropic principle states that when studying the universe, it
+        should be taken into account that conscious life is possible in it. It might be
+        that our universe is simply one realization of universe among many others in what
+        is called a multiverse. What appears as to be fine-tunning would in fact be
+        equivalent to natural selection at the scale of the mutiverse where the observed
+        universes can only be the one allowing conscious life. This view is however controversial
+        as it yields very little, if no testable prediction and can be interpreted as
+        giving up on trying to understand the universe.
 
         \subsection{Supersymmetry}
 
-        Supersymmetry, abbreviated SUSY, was an idea that emerged around the 70's. It
-        designates a symmetry between bosons and fermions. Mathematically,
-        we can write such a transformation :
+        Here, we propose to have a close look at the idea of Supersymmetry. Supersymmetry,
+        abbreviated SUSY, emerged around the 70's and designates a symmetry between bosons
+        and fermions. Mathematically, we can write such a transformation :
         \eqalign{SUSYtransformation}
         {
             Q \rvert \text{F} \rangle \rightarrow \rvert \text{B} \rangle \nonumber
             \\
             Q \rvert \text{B} \rangle \rightarrow \rvert \text{F} \rangle
         }
-        where the index $f$ and $b$ refer to fermion and boson. Here, $Q$ is a \emph{global}
+        where the subscript $f$ and $b$ refer to fermion and boson. Here, $Q$ is a \emph{global}
         symmetry, i.e. it does not depend of space-time, and is therefore not a gauge
         symmetry. As it relates two states with different spins, it must itself have a
         spin 1/2. This means \todo{but why...} that SUSY is a space-time symmetry
@@ -758,17 +865,14 @@
         The most studied realization of supersymmetry is the minimal supersymmetric standard
         model, or MSSM, corresponding to adding the minimum number of fields to the Standard
         Model for it to become supersymmetric. At each fermion and gauge boson is threfore
-        associated a superpartner that we may call sfermion and gaugino. Regarding the
-        Higgs field, it is necessary to add not only a superpartner for it called higgsino,
-        but also another Higgs field to ensure the concistency of the theory.
+        associated a superpartner that we may call sfermion and gaugino. It should be
+        once again stressed that left-handed and right-handed fermions are different
+        fermions : therefore there are for example two selectrons, one associated to
+        each chirality of the electron. Regarding the Higgs field, it is necessary to add
+        not only a superpartner for it called higgsino, but also another Higgs field to
+        ensure the concistency of the theory.
 
-        % Several supersymmetry
-            % R-parity
-            % MSSM, pMSSM, cMSSM
-        % Pheno implications
-
-
-
+        \todo{more on pheno : table of susy particles, MSSM, cMSSM, pMSSM, pheno implications}
 
 
 
