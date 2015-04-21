@@ -1,0 +1,22 @@
+
+\hspace*{0.25cm}
+\begin{fmfgraph*}(95,58)
+
+    \fmfpen{0.7pt}
+
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+
+    \fmflabel{$e^-$}{i1}
+    \fmflabel{$e^+$}{i2}
+    \fmflabel{$\mu^+$}{o1}
+    \fmflabel{$\mu^-$}{o2}
+
+    \fmf{fermion}{i1,v1}
+    \fmf{fermion}{v2,i2}
+    \fmf{fermion}{o1,v3}
+    \fmf{fermion}{v4,o2}
+
+    \fmfpoly{shaded,smooth,pull=1.0}{v1,v3,v4,v2}
+
+\end{fmfgraph*}

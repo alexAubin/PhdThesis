@@ -1,11 +1,43 @@
 
+% Margins
 \geometry{a4paper, top=3cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 
-%\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+% Sections format
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
 
+% Chapter title format
+\titleformat{\chapter}[display]{\bfseries\huge}
+{Chapter \ \thechapter}
+{-2ex}
+{ % before-code
+    \rule{\textwidth}{1pt}
+    \centering
+}
+[ % after-code
+    \vspace{-2ex}
+    \rule{\textwidth}{1pt}
+]
+
+% ToC depth
 \setcounter{tocdepth}{2}
 
-\setlength{\parskip}{8pt}
+% Itemize style
+\renewcommand\labelitemi{--}
 
+% 1.5 space between lines
 \onehalfspacing
 
+% Space between paragraphs
+\setlength{\parskip}{8pt}
+
+% Header and footer style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[RE,LO]{}
+\fancyfoot[CE,CO]{}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
