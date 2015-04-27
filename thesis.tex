@@ -8,6 +8,31 @@
 
 \chapternonum{Introduction}
 
+%
+% There are worlds out there where the sky is burning, and the sea’s asleep, and the rivers dream;
+% people made of smoke and cities made of song. Somewhere there’s danger, somewhere there’s injustice,
+% and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to do.”
+%
+% It’s like when you’re a kid. The first time they tell you that the world’s turning and you just can’t
+% quite believe it ’cause everything looks like it’s standing still… I can feel it: the turn of the Earth.
+% The ground beneath our feet is spinning at 1,000 miles an hour and the entire planet is hurtling around
+% the sun at 67,000 miles an hour, and I can feel it. We’re falling through space, you and me, clinging to
+% the skin of this tiny little world, and if we let go… That’s who I am.
+%
+% The universe is big. It’s vast and complicated and ridiculous. And sometimes, very rarely, impossible
+% things just happen and we call them miracles.
+%
+% So, you find a breach, probe it, the sphere comes through, 600 feet above London, BAM! It leaves a hole
+% in the fabric of reality. And that hole, you think: “Should we leave it alone, should we back off, should
+% we play it safe?” NAH, you think: “Let’s make it BIGGER!”
+%
+% People assume that time is a strict progression of cause to effect, but actually from a non-linear,
+% non-subjective viewpoint, it’s more like a big ball of wibbly-wobbly, timey-wimey stuff.
+%
+% Tracked you down with this. This is my timey-wimey detector. It goes ding when there’s stuff.
+% Also, it can boil an egg at 30 paces, whether you want it to or not, actually, so I’ve learned to stay away from hens. It’s not pretty when they blow.
+%
+
 %==============================================================
 \setcounter{mtc}{1}
 \chapter{The Standard Model of particle physics and beyond}
@@ -606,7 +631,7 @@
     from the kinetic and binding energy holding the quarks and not from the quark masses
     themselvesi \todo{relate this to chiral symmetry breaking}.
 
-    \subsection{The success of the Standard Model}
+    \subsection{The success of the Standard Model \label{standardModelSuccess}}
     %====================================================================================
 
     The Standard Model includes 19 free parameters : ten fermion and one scalar mass, three
@@ -1243,7 +1268,35 @@
 \newpage
 %==============================================================
 
+    There are several approaches one can take toward new physics. First, using already
+    available measurement of observables and exploiting the fact described in \ref{standardModelSuccess}
+    that observables are impacted through loops by the entire Nature's lagrangian,
+    it's possible to infer information or limits regarding yet-unknown physics. Historically,
+    this has been proved successful numerous times, for instance to predict the
+    mass of the top quark from the $W$ boson mass. Similarly, a smoking-gun for some
+    supersymmetric model is the enhancement of the branching ratio BR($B_s \rightarrow \mu^+\mu^-$).
+    However, despite the fact this approach provides valuable information, it can
+    be criticized as only providing indirect evidences and not a clear window to new phenomena.
+    Moreover, the statistics and detector resolution required to increase the accuracy
+    of the prediction grows exponentially.
+
+    The most attractive and fruitful approach is of course the direct observation of
+    new phenomena. One often forgotten fact is that new physics might not appear at high
+    energies but at low energies instead. This is motivated for intance by by axions
+    theories and some hidden sector theories which predict particles with sub-eV masses
+    or rare interactions. Nevertheless it is more common to assume that new physics will
+    show up at high energies. To probe higher energies, particle colliders have been
+    built with increasing center of mass energies ($\sqrt{s}$) during the last centuries.
+    Two famous ones are the Large Electron-Positron (LEP) collider and the Tevatron. The
+    LEP was an $e^+e^-$ collider which operated at a maximum of $\sqrt{s} \approx 200\GeV$
+    at CERN in the 90's and led to the discovery and study of the $Z$ and $W$ bosons. The
+    Tevatron was a $p\bar{p}$ collider which operated at a maximum $\sqrt{s} \approx 2\TeV$
+    at Fermilab until 2011. Nowadays, the only high energy collider in operation is the
+    (Large Hadron Collider) LHC at CERN.
+
     \section{The Large Hadron Collider}
+
+
         \loremipsum
         \subsection{Scientific context and program}
         \loremipsum
@@ -1252,24 +1305,70 @@
         \subsection{Performances during Run I}
         \loremipsum
 
+        % Scientific movidation and goal
+
+        % Specificities of hadron colliders wrt e+e- for instance : rayonnement synchrotron, composite particle thus PDF, environnement bruité par les hadrons (donc plus grande systematiques) ...
+
+        % Setup : CERN, chaine d'injection, dimensions
+        % Beam parameters : number of p / beam, bunch crossing frequency
+            % Definition de sqrt(s), instantaneous luminosity, integrated luminosity
+            % Don't forget ion collisions
+            % Total beam energy and comparison with real-life stuff
+
+        % Explication cavité acceleractrice, courbure du faiseau, propagation droite,
+        % croisement, ...?
+        % Challenge : courbature du faisceau, correction de la diffusion avec sextupoles et ocotpoles  -> superconducting magnets, cooling
+
+        % Cross-section of typical processes at LHC
+            % -> mention how high-masses processes have cross-section growing faster in sqrt(s) than lower-mass backgrounds
+
+        % Experiences : emph on complementarité/concurrence
+
+        % Estimate of price/event ?
+        % Lumi measurement ?
+
     \section{The Compact Muon Solenoid experiment}
         \loremipsum
         \subsection{The CMS detector}
         \loremipsum
-            \subsubsection{The tracker and magnet}
+            \subsubsection{Physics motivations and detector overview}
+            % Hardware overview
+            % Coordinate system
+            % Status of the experiment
         \loremipsum
-            \subsubsection{The calorimeters}
+
+            % For each subsystem : show a sketch of barrel / endcap + picture of the actual thing
+            % Talk about hardware and principle of the subsystem + discuss resolution
+            \subsubsection{Pixel ?and? tracker}
         \loremipsum
-            \subsubsection{The muon chambers}
+            \subsubsection{Electromagnetic calorimeter}
+        \loremipsum
+            \subsubsection{Hadronic calorimeter}
+        \loremipsum
+            \subsubsection{Magnet}
+        \loremipsum
+            \subsubsection{Muon system}
         \loremipsum
         \subsection{Trigger system}
+
+        % The challenge : 50 or 25ns to only a few kHz / Hz
+
         \loremipsum
             \subsubsection{L1}
         \loremipsum
             \subsubsection{HLT}
         \loremipsum
-        \subsection{Object reconstruction algorithms and calibration}
-            \subsubsection{Vertex and tracks}
+
+        \subsection{Object and events reconstruction}
+
+        % Particle-flow ... ?
+
+            \subsubsection{Tracking and vertexing}
+
+            % Tracking algorithm
+
+            % Vertexing principle / fit
+
         \loremipsum
             \subsubsection{Electrons and photons}
         \loremipsum
@@ -1277,24 +1376,45 @@
         \loremipsum
             \subsubsection{Jets and missing energy}
             %(maybe plot showing the difference of jet clust algorithm for a same event/example)
-        \loremipsum
-        \subsection{Performances}
-        \loremipsum
-            \subsubsection{Particle-flow vs Calo-based algorithm ?}
-        \loremipsum
-            \subsubsection{Expected vs current performances ?}
-        \loremipsum
-            \subsubsection{Upcoming upgrades ?}
+
+            % Jet correction ?
+
+            % Calibration ?
         \loremipsum
 
-     \section{Monte Carlo generator and detector simulation}
-        \loremipsum
-        \subsection{Hard scattering}
-        \loremipsum
-        \subsection{Parton showering}
-        \loremipsum
-        \subsection{Detector simulation}
-        \loremipsum
+
+        % Upgrades ?
+
+        \section{Collisions and detector simulations}
+
+            % Why Monte-Carlo and not analytic/empirical models or response curves ?
+
+            % Schema showing the actual complexity of a collision
+
+            \subsection{Monte-Carlo generations of the hard scattering}
+
+            % PDF
+
+            % Matrix-element method ?
+
+            \loremipsum
+            \subsection{Parton showering}
+
+            % Hadronization
+            % Fragmentation
+            % Decays of tau ?
+
+            % Interface avec matrix element (MLM method ? Matching ?)
+
+            \loremipsum
+            \subsection{Detector simulation}
+
+            % Geant 4
+            % Digitization
+
+            % PU modeling
+
+            \loremipsum
 
 %==============================================================
 \setcounter{mtc}{3}
@@ -2062,6 +2182,8 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         Figure \ref{fig:}
 
         \todo{Add sketch for ISR}.
+
+        % C.f. thèse de nicolas p 66, la proba q->gq  est 4/3 (1+x^2) / (1 - x)
 
         To take advantage of this situation, one can design criterias to select jets that
         are likely to originate from ISR \todo{Ref to slides/paper about ISR tagging}.
