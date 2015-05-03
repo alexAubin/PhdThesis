@@ -691,7 +691,9 @@
     is consistent, as no deviation larger than 3$\sigma$ is found.
 
     \insertFigure{theory/fermionMasses}{0.6}
-                 {Masses of the fermions of the Standard Model}
+                 {Masses of the fermions and bosons of the Standard Model. The photon
+                 $\gamma$, gluon $g$ and neutrinos $\nu_\ell$ are not represented as they
+                 are massless in the context of the Standard Model.}
 
     \insertFigure{theory/standardModelFit}{0.35}
                   {Global fit of observable of the Standard Model}
@@ -1182,7 +1184,10 @@
                 \hline
             \end{tabular}
             \end{tabular}
-            \caption{Superpartners of the fermions and bosons of the standard model, categorized according to flavor eigenstates (on the left) and masses eigenstates (on the right). A symbol " indicates that the mass eigenstate is identical to flavor eigenstate. \label{tab:MSSMsuperpartners}}
+            \caption{Superpartners of the fermions and bosons of the standard model,
+            categorized according to flavor eigenstates (on the left) and masses eigenstates
+            (on the right). A symbol " indicates that the mass eigenstate is identical to
+            flavor eigenstate. \label{tab:MSSMsuperpartners}}
         \end{table}
 
         By design, the MSSM conservs a quantum number called R-parity defined as \todo{define J and B}:
@@ -1268,6 +1273,16 @@
 \newpage
 %==============================================================
 
+    \section{The Large Hadron Collider}
+
+    \todo{references !!}
+
+    \todo{clarify incident / run I at 7/8 TeV, run II will be at 13 TeV}
+
+    \todo{mention that the Higgs has been discovered}
+
+    \subsection{Scientific context and challenges}
+
     There are several approaches one can take toward new physics. First, using already
     available measurement of observables and exploiting the fact described in \ref{standardModelSuccess}
     that observables are impacted through loops by the entire Nature's lagrangian,
@@ -1292,62 +1307,283 @@
     at CERN in the 90's and led to the discovery and study of the $Z$ and $W$ bosons. The
     Tevatron was a $p\bar{p}$ collider which operated at a maximum $\sqrt{s} \approx 2\TeV$
     at Fermilab until 2011. Nowadays, the only high energy collider in operation is the
-    (Large Hadron Collider) LHC at CERN.
+    Large Hadron Collider (LHC) at CERN.
 
-    \section{The Large Hadron Collider}
+    The LHC is a circular hadron collider built at CERN, near Geneva. One of its physics
+    goal is the production high-energy proton-proton ($pp$) collisions to explore physics around
+    $1\sim10 \TeV$ to test the validity of the Standard Model and possibly discover new
+    physics. It is also capable of producing heavy ions (PbPb) collisions or proton-ion
+    collision ($p$Pb) to study nuclear physics at high energy, in particular the properties
+    of quark-gluon plasma. The rest of this
+    document will focus on $pp$ collisions.
+
+    The LHC collider has been built using the same tunnel as the LEP. The beam energy at
+    the LEP was largely limited by the energy loss from synchrotron radiation. This loss
+    is proportional to $E^4 / (m^{4} r^{2})$ with $E$ and $m$ the energy and mass of the
+    particle, and $r$ the radius of the tunnel. As $m_p$ is much larger than $m_e$, it is
+    easier to maintain the energy of a rotating proton beam than an electron/positron one.
+    Consequently, using protons is preferred if the goal is to reach the highest possible
+    energy, justifying this choice for the LHC. We will see in section
+    \ref{sec:physicsFromCollisionsAtTheLHC}, how proton collisions are however challenging
+    from a reconstruction and analysis point of view.
+
+    \subsection{Beam injection, control and acceleration}
 
 
-        \loremipsum
-        \subsection{Scientific context and program}
-        \loremipsum
-        \subsection{Setup}
-        \loremipsum
-        \subsection{Performances during Run I}
-        \loremipsum
+    The creation and first acceleration of the proton beam work as follow. Protons are initially
+    produced by heating low-pressure $H_2$ gas which produces $H^+ = p$ and $e^-$ and
+    separating the protons using high voltages. The protons are fed to an acceleration
+    chain made of consecutive accelerators which use radiofrequencies to create an acceleration
+    gradient. At the end of the chain, in the Super Proton Synchrotron (SPS), the
+    beam acquired an energy of $450\GeV$ before being injected in the LHC ring. The LHC
+    ring is a tunnel of 27 kilometers built between $50$ and $200$ m underground. The
+    project was originally designed to accelerate the proton beam up to $7\TeV$ per beam,
+    corresponding to a center of mass energy $\sqrt{s} = 14\TeV$. Four experiments are
+    installed along the ring, at each collision point. Two of them, ATLAS and CMS, are
+    general-purpose experiments while ALICE focuses on heavy-ion collisions and LHCb studies
+    $b$-hadrons properties. Figure \ref{fig:LHClayout} presents an overview and the general
+    layout of the machine.
 
-        % Scientific movidation and goal
+    \insertTwoFigures{LHClayout}
+                     {LHC/LHCring}
+                     {LHC/LHClayout}
+                     {0.6}
+                     {On the top, sketch of the underground installation showing the SPS
+                     and the injection tunnels as well as the four experiments. On the bottom,
+                     layout of the LHC ring. The installation is divided in eight octants,
+                     with some of them dedicated to collisions but also injection, acceleration (RF)
+                     and beam dump.}
 
-        % Specificities of hadron colliders wrt e+e- for instance : rayonnement synchrotron, composite particle thus PDF, environnement bruité par les hadrons (donc plus grande systematiques) ...
+    One of the biggest challenge of the LHC was the construction and operation of magnets
+    powerful enough to bend the trajectory of the protons at such high energies. To do
+    so, superconducting magnets made of a niobium-titanium alloy are used and are able to
+    produce a magnetic field of up to $8.33$ T. The operating temperature of such magnets
+    is only a few Kelvins : in the context of the LHC, they are required to be cooled using
+    a complex system of superfluid helium-4 at 1.9K. It is remarkable to note that this
+    temperature is actually cooler than the cosmic microwave background at $\approx2.7$ K.
 
-        % Setup : CERN, chaine d'injection, dimensions
-        % Beam parameters : number of p / beam, bunch crossing frequency
-            % Definition de sqrt(s), instantaneous luminosity, integrated luminosity
-            % Don't forget ion collisions
-            % Total beam energy and comparison with real-life stuff
+    Operating superconducting magnets require a good control and understanding of quenches.
+    A magnet quench occurs when a part of the superconducting material loose its superconducting
+    property and starts to heat because of Joule effect. Because the critical temperature
+    is usually low, this can create a chain reaction as the heat spread. Quenches are
+    not such unusual events, and the LHC employs a sophisticated system to detect them and protect
+    the magnetic system by automatically dumping the beam, mitigating the effect of the
+    quench and extracting the energy stored inside the magnet.
+    \todo{http://cerncourier.com/cws/article/cern/54383}. However, deffects in the protection
+    system or more generally in the electrical and mechanical apparatus can have dramatic
+    impact as the energy can easily damage the machine if released improperly. In 2008,
+    a faulty electrical interconnection between two magnets led to an electrical arc that
+    punctured the cryogenic fluid enclosure and vaporized a fraction of the fluid causing
+    important damages to the installation.
 
-        % Explication cavité acceleractrice, courbure du faiseau, propagation droite,
-        % croisement, ...?
-        % Challenge : courbature du faisceau, correction de la diffusion avec sextupoles et ocotpoles  -> superconducting magnets, cooling
+    %\insertFigure{LHC/pipePhoto}{0.7}{\todo{caption} Credit : Maximilien Brice, CERN}
+    \insertTwoFigures{LHCpipe}
+                     {LHC/dipoleCrossSection2}
+                     {LHC/pipePhoto2}
+                     {0.7}
+                     {On the top, cross-section of a cryodipole of the LHC
+                     \todo{ref to LHC Machine / JINST 3 S08001 doi:10.1088/1748-0221/3/08/S08001},
+                     showing the magnet coils around the two beam pipes, and the cooling system.
+                     On the bottom, technician working on an interconnection between two LHC
+                     sections (credit : Anna Pantelia, CERN).}
 
-        % Cross-section of typical processes at LHC
-            % -> mention how high-masses processes have cross-section growing faster in sqrt(s) than lower-mass backgrounds
+    The pipes of the LHC consist of about 1200 dipole sections represented on Figure
+    \ref{fig:LHCpipe}, each $15$ m long, whose role are to bend the beam using dipole
+    magnets. About 400 quadrupole magnets that are used to squeeze the
+    beam. Higher multipolar magnets are also used to prevent and correct instabilities of
+    the beam. The effective bending radius, created from the $17.6$ km of dipoles is
+    $r \approx 2.8$ km, to be compared to the radius of the full machine being about $4.3$km.
 
-        % Experiences : emph on complementarité/concurrence
+    The beam is organized in bunches of protons separated by a time interval of 50 or
+    25 ns depending of the machine configuration. Each bunch is made of about $10^{11}$
+    protons. The LHC uses radiofrequency cavities to increase the energy of the beam by
+    about 0.5 MeV per rotation, or $5.4\GeV$ per second. At $7\TeV$ per beam with 25 ns
+    between bunches, the total energy of the beam is about 360 MJ and the energy stored
+    in the magnet system is about 600 MJ, roughly corresponding to the energy of a
+    lighting bolt. The beams are then made to collide at four different points along the
+    ring, corresponding to the four main experiments.
 
-        % Estimate of price/event ?
-        % Lumi measurement ?
+        \subsection{Physics of $pp$ collisions \label{sec:physicsFromCollisionsAtTheLHC}}
+
+    The number of $pp$ collisions happening per unit of time is characterized by the
+    instanteneous luminosity $L$ which depends of the bunch crossing frequency, the
+    number of bunches and proton per bunches and other beam and geometry parameters.
+    The two general purpose experiments, ATLAS and CMS, aim for a peak luminosity
+    $ L = 10^{34} \text{cm}^{-2} \text{s}^{-1} = 10 \text{nb}^{-1} / \text{s}$. For a
+    given process, one can compute the number of expected events.
+
+    $$ n_\text{event} = L \times \sigma_\text{process} $$
+
+    where $\sigma_\text{process}$ is the cross-section of the process and $n$ a number
+    of event per unit of time. Later, we may refer to the integrated luminosity over all
+    data-taking which relates to $N$, the total number of events produced.
+
+    Figure \ref{fig:LHC/ppCrossSections} shows the evolution of the cross section of different
+    processes such as $W$ or $Z$ production. The total inelastic cross section is about
+    60 mb. At peak luminosity and with a bunch crossing every 25 ns, this corresponds
+    to 15 inelastic interactions per bunch crossing on average. This is what is behind
+    the notion of pile-up : one event, or collision, contains $\orderOf{10-30}$
+    interactions with generally only one is of interest, such as the production of a $W$
+    or $Z$ boson.
+
+    \insertFigure{LHC/ppCrossSections}{0.5}{Evolution of the cross sections of typical
+    processes for $p\bar{p}$/$pp$ collisions as function of $\sqrt{s}$. Two vertical
+    lines corresponds to the center of mass energy of the Tevatron ($\sqrt{s} \approx 2\TeV$)
+    and the LHC ($\sqrt{s} = 14\TeV$) \todo{ref to  arXiv:0812.2341}}
+
+    This is a crucial point in the context of $pp$ collisions, as inelastic hadron collisions
+    naturally produce jets arising from the parton showering and hadronization of gluons
+    and quarks. Therefore, a lot of particles polute the environment of each event, affecting the
+    number of impact in the tracking detector and energy measurement in calorimeters.
+    It is thus needed to develop methods to mitigate the effect of pile-up.
+
+    Furthermore, when considering one process of interest, it must be kept in mind that
+    protons are composite objects made of partons, i.e. quarks and gluons, among which three
+    valence quarks. At a given moment, a parton only carries a fraction of the total
+    proton momentum. This is described by the parton distribution functions (PDF), characterizing
+    the probably to find a parton with a fraction of impulsion $x$, depending of its
+    nature. This implies that the center of mass energy of the two incoming partons is in
+    fact always lower than the beam energy. Each incoming parton may also radiate partons
+    right before the interaction, a processus called initial state radiation, leading to
+    additional jets in the event. Finally, the remaining partons may interact with each
+    other in what is called the underlying event, and produce high-energy jets, almost
+    collinear to the beam axis.  $pp$ collisions
+    are therefore complex processes, as summarized in Figure \ref{fig:LHC/ppCollision}, due
+    to the composite nature of the proton and the fact that the parton are colored objects.
+
+    \todo{PDF plot}
+
+    \insertFigure{LHC/ppCollision}{0.65}{Feynman diagram showing the complexity of a
+    single proton-proton collision. Two partons from the incoming protons partipate
+    to the hard scattering leading to a $\gamma^*/Z$ resonnance which decays into two
+    quarks. In both the initial and final states, the coloured particles may radiate gluons
+    (or a gluon may split into a quark pair), leading to initial and final state radiations.}
+
+    % Estimate of price/event ?
 
     \section{The Compact Muon Solenoid experiment}
-        \loremipsum
+
+        The CMS experiment is one of the four experiments installed at the collision
+        points of the LHC. It is a general purpose experiment, though mostly dedicated
+        to the study of $pp$ collisions, in particular to test the validity of the Standard
+        Model, to understand the electroweak symmetry breaking, and to search for new physics. From this
+        perspective, CMS is in scientific cooperation and competition with ATLAS, the
+        other general purpose experiment. In the context of the search for new physics,
+        having two experiments independently studying the same phenomenons is both
+        stimulating but also crucial to have robust claims. It can indeed be
+        argued that having two experiments both seeing a $3\sigma$ discrepancy is more
+        convincing than one experiment seeing a $5\sigma$ discrepancy with no possibility
+        of cross-checkign the result.
+
+        In this section, the CMS detector will first be introduced generally before inspecting
+        each subsystems. Then, the trigger system that aim to select which collisions to
+        record will be presented. Finally, it will be explained how the physics objects
+        can be reconstructed from the information recorded by the detector.
+
         \subsection{The CMS detector}
-        \loremipsum
+
             \subsubsection{Physics motivations and detector overview}
-            % Hardware overview
-            % Coordinate system
-            % Status of the experiment
-        \loremipsum
+
+        The CMS detector is an instrument that answer the fantastic challenges posed by
+        the LHC machine while providing good measurement for physics purpose.
+
+        The subsystems of the detector must indeed have a time response lower than 25 ns,
+        corresponding to the design bunch crossing frequency, and to be synchronized with
+        each other. The detector must also be able to disentangle between the
+        $\orderOf{10-30}$ collisions occuring at each bunch-crossing by being able to
+        reconstruct the collision vertices with good precision. Last but not least,
+        the quantity of data per event is such that all events cannot be recorded. The
+        detector must then decide in real time which events to keep, and which to reject
+        from a fast analysis of each events.
+
+        Among the many physics signature CMS aims to look at, the discovery and study of a
+        light ($\orderOf{125 \GeV}$) Higgs boson in the channels $h\rightarrow\gamma\gamma$
+        and $h\rightarrow ZZ \rightarrow 4\ell$ requires good measurements of the photon,
+        electron and muon energy-momentum. Furthemore, from the perspective of final
+        states involving dark matter candidates, one needs to obtain a good measurement
+        of the energy escaping detection. This requires a good and an as hermetic as
+        possible measurement of the repartition of the hadronic and electromagnetic energy
+        in each event.
+
+        The CMS detector is a heremetic, cylinder-shaped detector consisting of several
+        layers dedicated to a given task as represented on Figure \ref{fig:CMS/detectorOverview}.
+        Near the interaction point in the beam pipe is found the system is dedicated to the
+        detection of impacts left by charged particles. It is composed of a pixel detector
+        layers and microstrip layers. Around the tracking system is the electromagnetic
+        calorimeter, whose aim is to measure the energy of photons and electrons using
+        scintillation crystals. The next layer, the hadronic calorimeter, aims to measure
+        the energy carried by hadrons produced in the collisions. It is a scintillator made
+        of brass and plastic sandwich. The superconducting magnet provides a strong magnetic
+        field of 3.8 T using the same technology than the LHC magnets, a nobium-titanium
+        alloy, to bend the trajectory of charged particles. Finally, the muon system uses
+        three different technologies to record the impact of muons.
+
+        \insertFigure{CMS/detectorOverview}{0.9}{Overview of the CMS detector.}
+
+        The coordinate system $(x,y,z)$ of CMS, represented on Figure \ref{fig:CMS/coordinateSystem},
+        is defined such that $x$ is directed to the center of the LHC, $y$ points toward
+        the sky and $z$ is colinear to the beam axis. As the detector exhibits a
+        cylindrical symmetry, it is convenient to work with the azimuthal angle $\phi$
+        between the momentum $\vec{p}$ of a particle and the $x$ axis in the transverse
+        plane. The projection of $\vec{p}$ in the transverse plane is called $\vec{p}_T$.
+        Additionnaly, the pseudo-rapidinity $\eta$ is defined by :
+
+        $$ \eta \definedAs - \text{ln}(\text{tan}\frac{\theta}{2}) $$
+
+        where $\theta$ is the polar angle. $\eta$ is equal to 0 for particles produced in
+        the transverse plane, about 0.88 for $\theta = \pi/4$ and tends to $\infty$ in the
+        limit where the particle is produced along the beam axis. In the plane ($\phi$,$\eta$),
+        we define the distance between two particles as
+        $\Delta R \definedAs \sqrt{\Delta \phi^2 + \Delta \eta^2}$.
+
+        \insertFigure{CMS/coordinateSystem}{0.7}{Coordinate system of CMS represented in
+        the longitudinal plane (on the left) and in the transverse plane (on the right).}
+
 
             % For each subsystem : show a sketch of barrel / endcap + picture of the actual thing
             % Talk about hardware and principle of the subsystem + discuss resolution
-            \subsubsection{Pixel ?and? tracker}
+            \subsubsection{Tracker system}
+
+            \insertFigure{CMS/tracker}{0.7}{}
+
+        The tracker system is the piece of detector closest to the interact point. Its goal
+        is to reconstruct the trajectory left by charged particles to estimate its diretion
+        and momentum, and to identify not only the primary interaction vertices, but also
+        secondary vertices from the hadronization of $b$-quarks. This requires a precision
+        on the vertex to less than one milimeter. While being this accurate, the instrument
+        must be able to handle the conditions of the LHC. At nominal conditions,
+        it can be estimated that about 1000 charged particles are produced for every bunch
+        crossing each 25 ns. This roughly corresponds to a hit rate of 1 MHz/mm$^2$ at 4
+        cm of the interaction point and 3 kHZ/mm$^2$ at 115 cm.
+
+        The technology employed is
+
+
+        % Technology
+
+        % Challenges : sustain 10MHz at 4 cm, ...
+
+        % Goals : tracks, vertex, with precision blah
+
+        % Sub structures : pixel, TIB, TOB, ..., coverage
+        % Size of each fundamental components : pixel, strips, ...
+
+
         \loremipsum
             \subsubsection{Electromagnetic calorimeter}
+
+            \insertFigure{CMS/ECAL}{0.6}{}
+
         \loremipsum
             \subsubsection{Hadronic calorimeter}
-        \loremipsum
+
+            \insertFigure{CMS/HCAL}{0.6}{}
+
+            \loremipsum
             \subsubsection{Magnet}
         \loremipsum
             \subsubsection{Muon system}
+            \insertFigure{CMS/muon}{0.6}{}
         \loremipsum
         \subsection{Trigger system}
 
