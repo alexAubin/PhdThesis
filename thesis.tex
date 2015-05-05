@@ -1532,9 +1532,11 @@
 
         where $\theta$ is the polar angle. $\eta$ is equal to 0 for particles produced in
         the transverse plane, about 0.88 for $\theta = \pi/4$ and tends to $\infty$ in the
-        limit where the particle is produced along the beam axis. In the plane ($\phi$,$\eta$),
-        we define the distance between two particles as
-        $\Delta R \definedAs \sqrt{\Delta \phi^2 + \Delta \eta^2}$.
+        limit where the particle is produced along the beam axis. More qualitatively, we
+        refer to low $\eta$ values as the central or barrel region, while high $\eta$ values
+        are referred to as forward or endcap region. In the plane ($\phi$,$\eta$), we
+        define the distance between two directions as $\Delta R \definedAs \sqrt{\Delta
+        \phi^2 + \Delta \eta^2}$.
 
         \insertFigure{CMS/coordinateSystem}{0.7}{Coordinate system of CMS represented in
         the longitudinal plane (on the left) and in the transverse plane (on the right).}
@@ -1544,37 +1546,83 @@
             % Talk about hardware and principle of the subsystem + discuss resolution
             \subsubsection{Tracker system}
 
-            \insertFigure{CMS/tracker}{0.7}{}
-
         The tracker system is the piece of detector closest to the interact point. Its goal
         is to reconstruct the trajectory left by charged particles to estimate its diretion
         and momentum, and to identify not only the primary interaction vertices, but also
         secondary vertices from the hadronization of $b$-quarks. This requires a precision
-        on the vertex to less than one milimeter. While being this accurate, the instrument
-        must be able to handle the conditions of the LHC. At nominal conditions,
-        it can be estimated that about 1000 charged particles are produced for every bunch
-        crossing each 25 ns. This roughly corresponds to a hit rate of 1 MHz/mm$^2$ at 4
-        cm of the interaction point and 3 kHZ/mm$^2$ at 115 cm.
+        on the vertex to less than one milimeter.
 
-        The technology employed is
+        While achieving this level of accuracy, the instrument must be able to handle the conditions of
+        the LHC. At nominal conditions, it can be estimated that about 1000 charged particles
+        are produced for every bunch crossing each 25~ns. This roughly corresponds to a
+        hit rate of 1~MHz/mm$^2$ at 4~cm of the interaction point and 3~kHZ/mm$^2$ at 115~cm.
+        To not be overwhelmed (i.e. have a low occupancy), the detector must therefore
+        have a high granularity. Moreover, the electronics should resist and be reliable with
+        respect to the high radiation environment and the magnetic field. Last but not
+        least, the overall quantity of material involved should be as small as possible to
+        not alterate the trajectory of the particle. The choosen technology is a fully
+        silicon-based detector as it is at the same time compact and accurate. However,
+        for optimum performances, silicon must be cooled to $-10\sim15^oC$.
 
+        \insertFigure{CMS/tracker}{0.7}{Layout of the tracker system. Each
+            line represent a silicon sensor organized in different modules.}
 
-        % Technology
+        The tracker system is made of several sensors arranged in layers, in turn arranged
+        in modules, as represented in \ref{fig:CMS/tracker}. At the center, the pixel module
+        uses silicon pixel sensors of $100 \times 150~\mu$m$^2$. The barrel of this module
+        is composed of three 53 cm layers in the region $r < 10$ cm, supplemented by two
+        disk layers placed at $\left|z\right| \approx$ 35 and 45~cm to cover the forward
+        region. In total, the pixel detector contains 66 million pixels covering about 1~m$^2$.
 
-        % Challenges : sustain 10MHz at 4 cm, ...
+        The rest of the tracker system is bassed on silicon microstrips with sizes ranging
+        from $10~\text{cm} \times 80~\mu\text{m}^2$ to $25~\text{cm} \times 180~\mu\text{m}^2$.
+        It is divided in two barrels, the tracker inner barrel (TIB) and outer barrel (TOB),
+        supplemented by two endcap modules, the tracker inner disks (TID) and tracker endcaps
+        (TEC). The strip tracker contains 9.3 million strips and cover almost 200 m$^2$ of
+        surface. Overall, the system has a length of 5.6~m and a radius of 1.1~m and covers
+        up to $\abseta \approx 2.5$.
 
-        % Goals : tracks, vertex, with precision blah
+        \todo{cooling ?}
 
-        % Sub structures : pixel, TIB, TOB, ..., coverage
-        % Size of each fundamental components : pixel, strips, ...
-
-
-        \loremipsum
             \subsubsection{Electromagnetic calorimeter}
 
-            \insertFigure{CMS/ECAL}{0.6}{}
+        The electromagnetic calorimeter role is to measure the energy of incoming electrons
+        and photon. The specifications of this subdetector are particularly oriented for
+        the search of the $h \rightarrow \gamma \gamma$ channel. The resolution on the
+        invariant mass of the diphoton system depends directly on the energy and angular
+        resolution of the photons. This part of the detector is of course also crucial for
+        all processes involving electrons, such as $Z$ and $W$.
 
-        \loremipsum
+        The technology adopted for the ECAL is lead tungstate crystals (PbWO$_4$). Lead
+        tungstate is a very dense scintillation material, about 8.3~g/cm$^3$, with a short
+        radiation length 0.89~cm, making it an appropriate choice for a compact calorimeter.
+        On the other hand, the light output is relatively low, about 4.5 photoelectrons
+        per MeV, and thus requires the use of photomultipliers to improve the accuracy.
+        The calorimeter uses crystals with a size of $2.2\times2.2~\text{cm}^2$
+        for the front face and 23~cm in length, as represented on Figure \ref{fig:CMS/ECALcrystal}.
+        In terms of $\eta-\phi$, each crystal covers a region of approximately $0.0174
+        \times 0.0174$.
+
+        \insertFigure{CMS/ECALcrystal}{0.5}{Crystal used in the ECAL with the photodiode
+        glued to the back of the crystal.}
+
+        In the endcaps, to help discriminate between prompt photons and $\pi^0$ decaying
+        to two directionnaly close photons, two preshower disks are placed in front of the
+        ECAL. Their role is to initiate electromagnetic shower and provide a finer granularity
+        with silicon strips 0.2~cm wide to be compared to the $\sim2\times2~cm^2$ faces
+        of the crystals.
+
+        \insertFigure{CMS/ECAL}{0.6}{Layout of the electromagnetic calorimeter}
+
+        The global layout of the ECAL is presented on figure \ref{fig:CMS/ECAL}. The ECAL
+        barrel extends to $\abseta = 1.479$, supplemented by the ECAL endcap
+        up to $\abseta = 3.0$. The preshower disks cover the region $\abseta \in [1.653,2.6]$.
+        Overall, the system is 7.8m long and lie within $1.2 < r < 1.8$~m.
+        The optical properties of the crystal is a crucial parameter that depends of the
+        temperature and radiations received. To obtain accurate measurements, a cooling
+        system ensure that the crystal temperature is stable at $18\pm0.05^oC$ and the
+        transparency is monitored in real time via a laser system.
+
             \subsubsection{Hadronic calorimeter}
 
             \insertFigure{CMS/HCAL}{0.6}{}
@@ -1600,6 +1648,8 @@
         % Particle-flow ... ?
 
             \subsubsection{Tracking and vertexing}
+
+            % Explain need for a good alignment
 
             % Tracking algorithm
 
