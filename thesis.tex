@@ -1295,7 +1295,7 @@
     Moreover, the statistics and detector resolution required to increase the accuracy
     of the prediction grows exponentially.
 
-    The most attractive and fruitful approach is of course the direct observation of
+    The most attractive and popular approach is the direct production and observation of
     new phenomena. One often forgotten fact is that new physics might not appear at high
     energies but at low energies instead. This is motivated for intance by by axions
     theories and some hidden sector theories which predict particles with sub-eV masses
@@ -1309,13 +1309,15 @@
     at Fermilab until 2011. Nowadays, the only high energy collider in operation is the
     Large Hadron Collider (LHC) at CERN.
 
+    \todo{maybe mention somehow that pp are better at probing new physics in the strong
+    sector whereas lepton collider are better at probing new physics in electroweak sector}
+
     The LHC is a circular hadron collider built at CERN, near Geneva. One of its physics
     goal is the production high-energy proton-proton ($pp$) collisions to explore physics around
     $1\sim10 \TeV$ to test the validity of the Standard Model and possibly discover new
     physics. It is also capable of producing heavy ions (PbPb) collisions or proton-ion
     collision ($p$Pb) to study nuclear physics at high energy, in particular the properties
-    of quark-gluon plasma. The rest of this
-    document will focus on $pp$ collisions.
+    of quark-gluon plasma. The rest of this document will focus on $pp$ collisions.
 
     The LHC collider has been built using the same tunnel as the LEP. The beam energy at
     the LEP was largely limited by the energy loss from synchrotron radiation. This loss
@@ -1328,7 +1330,6 @@
     from a reconstruction and analysis point of view.
 
     \subsection{Beam injection, control and acceleration}
-
 
     The creation and first acceleration of the proton beam work as follow. Protons are initially
     produced by heating low-pressure $H_2$ gas which produces $H^+ = p$ and $e^-$ and
@@ -1663,13 +1664,14 @@
         The layout of the HCAL is presented on Figure \ref{fig:CMS/HCAL}. The HCAL barrel
         (HB) extends to $\abseta \approx 1.4$ while the HCAL endcap (HE) extends up to
         $\abseta \approx 3.0$. The segmentation term of $\eta,\phi$ is about $0.087 \times 0.087$
-        in the barrel. A last layer of the HCAL called the HCAL outer (HO) uses
-        the magnet coil as an absorption layer. HO is exclusively made of scintillation
-        tiles and complements the measurement of the HB. Finally, to measure hadrons
-        produce in the high-forward region, two calorimeters are located at $z \approx 11.2$~m
-        to cover $\abseta$ up to 5.2. As they receive a high flux of particles coming from
-        underlying events, the material for these calorimeters must therefore be more
-        resistant to radiation and use hard quartz fiber instead of plastic ones.
+        in the barrel which is 25 times coarser than ECAL. A last layer of the HCAL called
+        the HCAL outer (HO) uses the magnet coil as an absorption layer. HO is exclusively
+        made of scintillation tiles and complements the measurement of the HB. Finally, to
+        measure hadrons produce in the high-forward region, two calorimeters are located at
+        $z \approx 11.2$~m to cover $\abseta$ up to 5.2. As they receive a high flux of
+        particles coming from underlying events, the material for these calorimeters must
+        therefore be more resistant to radiation and use hard quartz fiber instead of
+        plastic ones.
 
         The resolution measured on pion is
         \eq{HCALresolution}
@@ -1683,7 +1685,7 @@
 
         with
 
-        \eqalign{ECALresolution2}
+        \eqalign{HCALresolution2}
         {
             S & = 0.084~\text{GeV}^{1/2} \text{, the stochastic contribution,}\\
             C & = 0.074\text{, the constant contribution.}\nonumber
@@ -1711,31 +1713,181 @@
 
         \subsection{Object and events reconstruction}
 
-        % Particle-flow ... ?
+        After recording an event with the detector, the outputs of each subdetectors
+        are to be analyzed to identify the nature and properties of particles produced in the
+        event. Ultimately, one want to reduce step by step the complexity of an event to
+        something physically understandable. Here, we briefly present some of the
+        cornerstones of the CMS reconstruction. First, the vertexing and tracking step
+        corresponds to the identification of tracks left by charged particles in the tracker
+        and the collision vertices. This step is a crucial point for the second part, the
+        particle flow algorithm which combines measurement from the tracker, muon systems
+        and calorimeters to produce a collection of reconstructed particles. In a third step,
+        jets of particles can be constructed using clustering algorithms to reach the original
+        parton impulsion and direction, and a general impulsion imbalance can be computed
+        to sign the production of particles that escapted detections.
 
             \subsubsection{Tracking and vertexing}
 
-            % Explain need for a good alignment
+        The challenge to which the tracking step must responds is to find and reconstruct
+        tracks left by the thousands particles produced in each bunch crossing, among the
+        many hits in each layers. If designed badly, this step can lead to increased
+        computing time due to the number of possible hits combination one has to try,
+        or a high fake rate. The tracking algorithm must therefore be efficient in time,
+        but also have a good reconstruction efficiency and a low fake rate.
 
-            % Tracking algorithm
+        CMS tracking algorithm starts by constructing seeds from pair or triplets of hits
+        in the pixel detector, compatible with the beamspot. Then, assuming that these
+        hits are coming from a charged particle, the trajectory is extrapolated to the
+        next layers. If a hit is found compatible with the extrapolation, it is used to
+        update the track parameters estimation. Finally, once some criterias are reached,
+        the algorithm stops and a final fit is performed to determine the track parameters.
+        Once this first step is done, an iterative procedure is performed by removing the
+        hits associated to reconstructed tracks, and repeating the track reconstruction
+        from new seeds with looser criterias.
+        The track reconstruction efficiency for muons is found to be very good as it is
+        higher than 99\% up to $\abseta \sim 2.4$, whereas for pions the efficiency varies
+        between 85 and 95\% depending on $\pT$ and $\eta$.
 
-            % Vertexing principle / fit
+        Reconstructed tracks are used to identify collision vertices, or primary vertices
+        (as opposed to secondary vertices which occur in the hadronization of $b$ quarks).
+        Only good quality tracks are used in the process, which is defined using their
+        compatibility with the beam spot, the number of hits and their fit quality. A
+        metric is defined from the closest approach of the track to the $z$-axis and
+        the associated uncertainty coming from the track measurement. Then, a deterministic
+        annealing algorithm is used to cluster the tracks into vertices. Compared to the
+        traditional jet algorithm that will be discussed later, this algorithm is a divisive
+        clustering algorithm : at first, all tracks are put in a single group, which is then
+        iteratively divided in smaller groups until a given condition is met. Once it is
+        done, the tracks of each group are used to fit the position of the initial vertex.
+        The resolution on the vertex position in $(x,y,z)$ depends of the number of tracks
+        associated to the vertex, being about 0.1~mm when the vertex has only 5 tracks, and
+        down to 10-20~$\mu$m when it has more than 40 tracks.
 
-        \loremipsum
-            \subsubsection{Electrons and photons}
-        \loremipsum
-            \subsubsection{Muons}
-        \loremipsum
-            \subsubsection{Jets and missing energy}
-            %(maybe plot showing the difference of jet clust algorithm for a same event/example)
+        \todo{discuss alignment ?}
 
-            % Jet correction ?
+            \subsubsection{Particle flow algorithm}
 
-            % Calibration ?
-        \loremipsum
+        \todo{ref to PFT-09-001}
 
+        The particle flow algorithm's role is to efficiently combine the output of each
+        subdetectors to reconstruct each single particles according to their nature. Thanks
+        to a development before the data taking, it has quickly become the most commong
+        method of reconstruction used to physics analysis such as cross-section measurements
+        and searches for new physics. Particle flow is especially relevant in the context
+        of jet clustering that will be presented in the next section : he tracker provides
+        key information for low $\pT$ charged particles and their direction directly at the
+        vertex, whereas the calorimeters are better suited for high $\pT$ regime and neutral
+        particles.
 
-        % Upgrades ?
+        To combine the outputs of the subdetectors, links are created between elements
+        to create blocks. Given the granularity of the detector, blocks are typically made
+        of one, two or three elements. For instance, reconstructed charged-particle tracks
+        are used to extrapolate the trajectory of the particle to the ECAL and HCAL layers.
+        If energy deposits are found nearby the predicted impact using the $\Delta R$
+        metric, the track is linked to the energy deposits. Similarly, tracks in the
+        tracker can be linked to tracks in the muon system under the condition that the
+        global fit of the two tracks is good enough, using a $\chi^2$ as metric.
+
+        The reconstruction of electron is more challenging as they are significantly
+        affected by Bremsstrahlung : the tracker acts for them as a preshower in which
+        they are likely to radiate photons when travelling through the layers.
+        In an attempt to collect and link those photons to the charged-particle track,
+        tangents to a track at each layer are extrapolated to the ECAL and compatible
+        energy deposits are linked to the track.
+
+        After the link step, the identification step is performed from the least ambiguous
+        object to the most ambiguous object. Each time an object is identified, it is
+        removed from the algorithm before starting the next identification step.
+
+        The least ambiguous objects, the muons, are identified from blocks made of compatible
+        tracks in the tracker and the muon system. Then, electrons are considered from
+        block made of tracks and energy deposits in the ECAL. The exact treatment for
+        electron is more careful than for other tracks, as the fit of the track must take
+        into account the successive loss of energy due to Bremsstrahlung in the tracker
+        layers. Therefore, the tracks are refitted using a Gaussian-Sum filter (GSF)
+        \todo{ref here}. The final identification involve criteria put on the tracking,
+        calorimetric and compatibility variables.
+
+        After the charged leptons identification, criterias are applied on the remaining
+        tracks and those are considered to be charged hadron candidates. Their energy
+        and momentum is computed either from the track alone assuming a charged pion
+        hypothesis, or combining the track and calorimeter information which is relevant
+        in particular at high $\pT$ or large $\eta$ where the tracker resolution is
+        degraded. Finally, after substracting the energy deposits from charged particles
+        in the ECAL and HCAL, the remaining significant energy deposits give rise to photon
+        candidates and neutral hadron candidates.
+
+        \todo{discuss performance}
+
+            \subsubsection{Jet reconstruction}
+
+        The concept of jets refer to collimated bunches of stable hadrons coming from partons
+        (quarks or gluons) after they fragment and hadronize. Reconstructing jets can
+        therefore yields information regarding quarks or gluons produced in the events.
+        However, it can not be stressed enough that there is no direct equivalence between
+        a jet and a parton : a jet is fundamentally an ambigous object as one parton
+        shower can overlap with another, and their very definition is given by the choice
+        of algorithm to reconstruct them. Moreover, a jet can be contaminated by other
+        hadronic activity in the event, such as pile-up, which can degrade the energy
+        and angular resolution. Jet physics is therefore a very rich topic and a field
+        in itself, which goes from reconstruction to calibration and study of the jet
+        substructure.
+
+        Two main category of algorithm exist to build jets : cone-based algorithm and
+        incremental clustering algorithm. CMS mainly use two incremental clustering
+        algorithm. The starting point is a definition of the metric between objects in the
+        event, which may be for instance the energy deposits in the calorimeters or the
+        particle flow collection. The main algorithm is called anti-$k_T$ and uses a metric
+        defined by
+        \eq{jetClusteringMetric}
+        {
+            d_{ij} \definedAs \text{min}(p^{2p}_{T,i},p^{2p}_{T,j}) \frac{\Delta R^2}{r^2}
+        }
+        where $p = -1$ for anti-$k_T$, $\pT$ is the value of the transverse momentum of
+        the ojects, and $r$ is a size parameter, analogous to the size of a cone and
+        typically equal to 0.5 for CMS during Run I. The algorithm looks for the smallest
+        $d_{ij}$ in the event and the corresponding objects are merged together into a
+        jet. The algorithm stops when all the $\Delta R$ are higher than $r$. In the
+        simple case with one high-$\pT$ object and several softer objects around, the
+        hard one will agregate all the softer ones and the result is a cone-like jet. When
+        there are two or more high-$\pT$ objects in the event, they either get merged into
+        a single jet ($\Delta R < r$) with a cone-like shape around their barycenter, or
+        lead to two separated jets ($\Delta R > r$) where the dominant object will first
+        aggregate the softer objects.
+
+        The second algorithm, called Cambridge/Aachen algorithm, uses the metric from Eq.
+        \ref{eq:jetClusteringMetric} but with $p = 0$, i.e. not relying on the $\pT$ of
+        the objects but only on their angular proximity. The shape of the jets obtained with
+        this algorithm are less likely to be cone-like. Nevertheless, it has been found to
+        yield better results for substructure-oriented studies of jets.
+
+        \todo{discuss corrections, performance, add sketch}
+
+            \subsubsection{Missing transverse energy}
+
+        So far it has been shown how to reconstruct charged leptons and photons and get
+        information regarding quarks and gluons produced in the event. The remaining
+        type of stable particles one expects from the Standard Model is neutrinos, which
+        have very low rate of interaction with matter and therefore escape detection. Some
+        theories beyond the Standard Model also include stable particles escaping detection
+        such as neutralinos in SUSY.
+
+        It is possible to infer information about the production
+        of such particles via the energy-momentum conservation in the transverse plane\footnote{The
+        longitudinal plane can however not be used, since the two incoming partons carry
+        different momentums.}. A significant imbalance may reveal the momentum carried by
+        the sum of invisible particles. We define the missing transverse energy as :
+        \eq{ETmissDefinition}
+        {
+            \MET \definedAs - \sum_{\text{objects}} \vec{\pT}.
+        }
+        As for the jets, several $\MET$ can be computed depending on the choice of the object
+        collection which can be energy deposits in the calorimeters, tracks or the
+        particle flow collection. Detector effects such as tresholds in the calorimeters,
+        or acceptance effects generally lead to artificial $\MET$ in addition to the
+        actual contribution of invisible particles. One of the challenge of $\MET$ reconstruction
+        is therefore to understand the different sources of bias and smearing and correct
+        for them to improve its resolution.
 
         \section{Collisions and detector simulations}
 
@@ -2780,7 +2932,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     preferred at low $\deltam$ compared to $\MET$. In the off-shell and stealthy regime,
     the ISR jet requirement plays an important role to gain sensitivity, despite the
     fact that this leaves little room for other cuts given the already low preselection
-    efficiency and the tightness of requiring a 5th jet at high $p_T$.
+    efficiency and the tightness of requiring a 5th jet at high $\pT$.
     In the medium and high $\deltam$ regime, cutting on $M_{T2}^W$ provides a good gain
     in sensitivity because the large $\MET$ of the signal is less likely to decomposable
     in such a way that it fits the constrains while style yielding a light $m_Y$ mass.
@@ -3715,7 +3867,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
             \insertFigure{wTagging/taggingEfficiency_fromttbar}{0.5}
                          {Tagging efficiency for the true $W$ jets and fakes from quark/gluon
-                         jets, as function of the $p_T$ of the jet.}
+                         jets, as function of the $\pT$ of the jet.}
 
             \subsubsection{Impact on the analysis sensitivity}
 
@@ -3756,8 +3908,8 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \mass{\lneutralino}) = (650,325)$ and $(850,100) \GeV$. An object selection
         strongly inspired from \ref{sec:analysis_objectAndEventSelection}, though simplified
         for this study, was used. A similar preselection is applied, requiring one electron
-        or muon with $p_T > 30\GeV$, at least four jets among which one $b$-tagged, at least
-        50 \GeV for $\MET$ and vetoing on a second lepton with $p_T > 5\GeV$. Table \ref{tab:phys14Preselection}
+        or muon with $\pT > 30\GeV$, at least four jets among which one $b$-tagged, at least
+        50 \GeV for $\MET$ and vetoing on a second lepton with $\pT > 5\GeV$. Table \ref{tab:phys14Preselection}
         shows the Monte-Carlo yields for $\mathcal{L} = 1\invfb$ obtained at preselection
         and after cutting on $\MT > 120\GeV$.
 
