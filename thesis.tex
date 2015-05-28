@@ -1,12 +1,16 @@
 
-
 \dominitoc
 \tableofcontents
 
 %\emptypage
 \newpage
 
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
 \chapternonum{Introduction}
+
+\loremipsum
 
 %
 % There are worlds out there where the sky is burning, and the sea’s asleep, and the rivers dream;
@@ -1452,7 +1456,11 @@
     are therefore complex processes, as summarized in Figure \ref{fig:LHC/ppCollision}, due
     to the composite nature of the proton and the fact that the parton are colored objects.
 
-    \todo{PDF plot}
+    \insertFigure{partonDistributionFunctionsExample}{0.7}{Example of PDFs at different
+    for two energies $Q$ provided by the MSTW group \todo{confirm "group" ?}. At lower energies,
+    one clearly distinguish the large fraction of momentum $x$ carried by $u$ and $d$ valence
+    quarks while other species are only present in the parton sea and less probable as
+    their mass increase. As $Q^2$ grows, the probability to probe sea partons increases.}
 
     \insertFigure{LHC/ppCollision}{0.65}{Feynman diagram showing the complexity of a
     single proton-proton collision. Two partons from the incoming protons partipate
@@ -1763,8 +1771,6 @@
         associated to the vertex, being about 0.1~mm when the vertex has only 5 tracks, and
         down to 10-20~$\mu$m when it has more than 40 tracks.
 
-        \todo{discuss alignment ?}
-
             \subsubsection{Particle flow algorithm}
 
         \todo{ref to PFT-09-001}
@@ -1861,7 +1867,27 @@
         this algorithm are less likely to be cone-like. Nevertheless, it has been found to
         yield better results for substructure-oriented studies of jets.
 
-        \todo{discuss corrections, performance, add sketch}
+        An example of jet reconstruction is show in Figure \ref{fig:CMS/jetExample}. Figure
+        \ref{fig:jetEfficiencies}
+
+        \insertFigure{CMS/jetExample}{0.6}{Representation of a $115\GeV$ jet reconstructed in CMS
+        with the anti-$k_t$ algorithm, showing the reconstructed tracks left by charge
+        particles in plain blue lines, and the trajectory of neutral particles in dotted
+        lines. The electromagnetic and hadronic deposits in calorimeters are represented
+        in lego plots in yellowish and teal respectively. One should note how the curved
+        trajectory of some charged particles make it so that they actually leave the
+        pseudo-cone when flying out of the vertex.
+        \todo{ref ? http://www.quantumdiaries.org/2011/06/01/anatomy-of-a-jet-in-cms/}}
+
+        \insertTwoFigures{jetEfficiencies}
+        {CMS/jetMatchingEfficiency}
+        {CMS/jetResolution}{0.49}
+        {Comparison of some performances for the jet reconstruction using particle flow as
+        input compared to a calorimeter-based approach. On the left, jet matching efficiency
+        as function of the generated $\pT$ in the central region $\abseta < 1.5$, effectively
+        corresponding to the probability of succesfully reconstructing a jet within
+        $\Delta R < 0.1$ of the generated parton. On the right, relative difference between
+        the reconstructed and generated $\pT$ for initial partons with $40 < \pT < 60\GeV$.}
 
             \subsubsection{Missing transverse energy}
 
@@ -1889,20 +1915,20 @@
         is therefore to understand the different sources of bias and smearing and correct
         for them to improve its resolution.
 
-        \section{Collisions and detector simulations}
+        \subsection{Collisions and detector simulations}
 
             % Why Monte-Carlo and not analytic/empirical models or response curves ?
 
             % Schema showing the actual complexity of a collision
 
-            \subsection{Monte-Carlo generations of the hard scattering}
+            %\subsection{Monte-Carlo generations of the hard scattering}
 
             % PDF
 
             % Matrix-element method ?
 
             \loremipsum
-            \subsection{Parton showering}
+            %\subsection{Parton showering}
 
             % Hadronization
             % Fragmentation
@@ -1910,15 +1936,12 @@
 
             % Interface avec matrix element (MLM method ? Matching ?)
 
-            \loremipsum
-            \subsection{Detector simulation}
+            %\subsection{Detector simulation}
 
             % Geant 4
             % Digitization
 
             % PU modeling
-
-            \loremipsum
 
 %==============================================================
 \setcounter{mtc}{3}
@@ -2531,7 +2554,13 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 398 $\pm$ 21              & 356
     \GeV$, while the same variable can get to higher values for the signal. We therefore
     introduce the variable $\MT$ :
 
-    $$ \MT \definedAs m_T(\vec{p}(\ell),\vec{\MET}) = \sqrt{2 \MET \cdot \pT(\ell) \cdot ( 1 - cos( \Delta \phi  ) ) } $$
+    $$
+    \MT
+    \definedAs
+    m_T(\vec{p}(\ell),\vec{\MET})
+    =
+    \sqrt{2 \MET \cdot \pT(\ell) \cdot ( 1 - cos( \Delta \phi  ) ) }
+    $$
 
     where $\Delta \phi$ is the azimuthal angle between the lepton and the $\vec{\MET}$
     directions.
@@ -2711,62 +2740,62 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
         \subsubsection{Other variables used in the BDT approach}
 
-            \todo{Fixme}
+    \todo{Fixme}
 
-            \begin{itemize}
-                \item $\pT(\ell)$, $\pT(\text{lead. jet})$, $\pT(\text{lead. } b)$ ; The $\pT$ of the
-                    selected objects are a natural source of discriminating power as the signal is exptected
-                    to have a larger momentum than the backgrounds. For both the cut-based and BDT approach,
-                    $\pT(\text{lead. } b)$ is especially a good variable for the $\lstop \rightarrow b \lchargino$
-                    decay mode as the $b$ quarks are expected to have large momentum because they are direct
-                    decay product of the stop. For the BDT approach, $\pT(\ell)$ and $\pT(\text{lead. jet})$
-                    are considered because of the different of correlation they have with other variables
-                    compared to the background.
-                \item $H_T$ ; In a similar fashion, one can look at $H_T \definedAs \sum_{\text{jets}} \pT$.
-                    This variable is expected to get a larger average value for the signal compared to standard
-                    $t\bar{t}$ production because of the contribution of the stop rest mass to the momentum of
-                    the decay products.
-                \item $\Delta R( \ell, \text{lead. } b)$ ; In the $\lstop \rightarrow t \lneutralino$ decay mode,
-                    as $\deltam$ grows, the top quarks become more and more boosted and their decay products are
-                    more colimated in one single direction. This variable aim to exploit this fact, expecting more
-                    signal events at lower $\Delta R$. \todo{less visible in T2bw, because...}
-                \item $H_{T}^\text{ratio}$ ; Another way of using the $\MET$ direction is to compute the ratio of the
-                    hadronic activity in the same emisphere as the $\MET$ compared to the total hadronic activity of the event,
-                    $H_T$. Because the visible energy recoils on the LSP in signal events, this variable tends to have
-                    low values for signal while being around 0.5 for background.
-                \item $M_{\ell b}$, $M'_{\ell b}$ ; We consider also the invariant mass of the $\ell$+leading $b$ jet system. This variable
-                    is a simple attempt to reconstruct the mass of the leptonic top system despite missing
-                    the information of the neutrino. This variable is useful in the search for $\lstop \rightarrow
-                    b \lchargino$ as there is no end point at $m_t$ for this variable because there is no
-                    top in the decay chain and larger values can be obtained for signal events. An extension
-                    of this variable to the case where there is no $b$ in the event, $M'_{\ell b}$, consist
-                    to use the jet with the highest $b$-tagging discriminator value.
-                \item $M_{3b}$ ; In a similar way, one can attempt to reconstruct the mass of the hadronic top system by considering the
-                    three jets most back-to-back to the selected lepton. Here again, values larger than $m_t$ can be expected in
-                \item Jet multiplicity ; The jet multiplicity also tends to provide discriminating power \todo{need more justification here...}
-            \end{itemize}
+    \begin{itemize}
+        \item $\pT(\ell)$, $\pT(\text{lead. jet})$, $\pT(\text{lead. } b)$ ; The $\pT$ of the
+            selected objects are a natural source of discriminating power as the signal is exptected
+            to have a larger momentum than the backgrounds. For both the cut-based and BDT approach,
+            $\pT(\text{lead. } b)$ is especially a good variable for the $\lstop \rightarrow b \lchargino$
+            decay mode as the $b$ quarks are expected to have large momentum because they are direct
+            decay product of the stop. For the BDT approach, $\pT(\ell)$ and $\pT(\text{lead. jet})$
+            are considered because of the different of correlation they have with other variables
+            compared to the background.
+        \item $H_T$ ; In a similar fashion, one can look at $H_T \definedAs \sum_{\text{jets}} \pT$.
+            This variable is expected to get a larger average value for the signal compared to standard
+            $t\bar{t}$ production because of the contribution of the stop rest mass to the momentum of
+            the decay products.
+        \item $\Delta R( \ell, \text{lead. } b)$ ; In the $\lstop \rightarrow t \lneutralino$ decay mode,
+            as $\deltam$ grows, the top quarks become more and more boosted and their decay products are
+            more colimated in one single direction. This variable aim to exploit this fact, expecting more
+            signal events at lower $\Delta R$. \todo{less visible in T2bw, because...}
+        \item $H_{T}^\text{ratio}$ ; Another way of using the $\MET$ direction is to compute the ratio of the
+            hadronic activity in the same emisphere as the $\MET$ compared to the total hadronic activity of the event,
+            $H_T$. Because the visible energy recoils on the LSP in signal events, this variable tends to have
+            low values for signal while being around 0.5 for background.
+        \item $M_{\ell b}$, $M'_{\ell b}$ ; We consider also the invariant mass of the $\ell$+leading $b$ jet system. This variable
+            is a simple attempt to reconstruct the mass of the leptonic top system despite missing
+            the information of the neutrino. This variable is useful in the search for $\lstop \rightarrow
+            b \lchargino$ as there is no end point at $m_t$ for this variable because there is no
+            top in the decay chain and larger values can be obtained for signal events. An extension
+            of this variable to the case where there is no $b$ in the event, $M'_{\ell b}$, consist
+            to use the jet with the highest $b$-tagging discriminator value.
+        \item $M_{3b}$ ; In a similar way, one can attempt to reconstruct the mass of the hadronic top system by considering the
+            three jets most back-to-back to the selected lepton. Here again, values larger than $m_t$ can be expected in
+        \item Jet multiplicity ; The jet multiplicity also tends to provide discriminating power \todo{need more justification here...}
+    \end{itemize}
 
-            \begin{figure}[h!]
-                \centering
-                \includegraphics[width=0.32\textwidth]{variables/leadingBPt}
-                \includegraphics[width=0.32\textwidth]{variables/HT}
-                \includegraphics[width=0.32\textwidth]{variables/deltaRLeptonB}\\
-                \includegraphics[width=0.32\textwidth]{variables/MET}
-                \includegraphics[width=0.32\textwidth]{variables/METoverSqrtHT}
-                \includegraphics[width=0.32\textwidth]{variables/deltaPhiMETJets}\\
-                \includegraphics[width=0.32\textwidth]{variables/HTratio}
-                \includegraphics[width=0.32\textwidth]{variables/MT2W}
-                \includegraphics[width=0.32\textwidth]{variables/HadronicChi2}\\
-                \includegraphics[width=0.32\textwidth]{variables/Mlb_hemi}
-                \includegraphics[width=0.32\textwidth]{variables/M3b}
-                \includegraphics[width=0.32\textwidth]{variables/leadingNonBPtN5}
-                \caption{Stacked plots representing the different discriminating variables used to design the signal region, for background and two signal examples after preselection and cut on $M_T > 100 \GeV$.
-                \todo{update plot with missing variables and/or use same benchmark as previously, ie 450/50}}
-                \label{fig:variables}
-            \end{figure}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.32\textwidth]{variables/leadingBPt}
+        \includegraphics[width=0.32\textwidth]{variables/HT}
+        \includegraphics[width=0.32\textwidth]{variables/deltaRLeptonB}\\
+        \includegraphics[width=0.32\textwidth]{variables/MET}
+        \includegraphics[width=0.32\textwidth]{variables/METoverSqrtHT}
+        \includegraphics[width=0.32\textwidth]{variables/deltaPhiMETJets}\\
+        \includegraphics[width=0.32\textwidth]{variables/HTratio}
+        \includegraphics[width=0.32\textwidth]{variables/MT2W}
+        \includegraphics[width=0.32\textwidth]{variables/HadronicChi2}\\
+        \includegraphics[width=0.32\textwidth]{variables/Mlb_hemi}
+        \includegraphics[width=0.32\textwidth]{variables/M3b}
+        \includegraphics[width=0.32\textwidth]{variables/leadingNonBPtN5}
+        \caption{Stacked plots representing the different discriminating variables used to design the signal region, for background and two signal examples after preselection and cut on $M_T > 100 \GeV$.
+        \todo{update plot with missing variables and/or use same benchmark as previously, ie 450/50}}
+        \label{fig:variables}
+    \end{figure}
 
-            \subsection{Figure of merit and sensitivity estimation}
-            %==============================================================
+    \subsection{Figure of merit and sensitivity estimation}
+    %==============================================================
 
     Before going into the details of the signal region optimization, we first need to
     introduce the metric used to do so. The problem of defining cuts to be applied on a
@@ -3989,12 +4018,6 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             \item Search for t2 -> H t1 -> ... ?
             \item Indirect searches for stealth region, using cross section measurement / spin correlation
         \end{itemize}
-
-
-%==============================================================
-\chapter{???}
-%==============================================================
-        \loremipsum
 
 
 %==============================================================
