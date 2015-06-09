@@ -1612,7 +1612,7 @@
         In terms of $\eta-\phi$, each crystal covers a region of approximately $0.0174
         \times 0.0174$.
 
-        \insertFigure{CMS/ECALcrystal}{0.5}{Crystal used in the ECAL with the photodiode
+        \insertFigure{CMS/ECALcrystal}{0.5}{PbWO$_4$ crystal used in the ECAL with the photodiode
         glued to the back of the crystal.}
 
         In the endcaps, to help discriminate between prompt photons and $\pi^0$ decaying
@@ -1621,7 +1621,8 @@
         with silicon strips 0.2~cm wide to be compared to the $\sim2\times2~cm^2$ faces
         of the crystals.
 
-        \insertFigure{CMS/ECAL}{0.6}{Layout of the electromagnetic calorimeter.}
+        \insertFigure{CMS/ECAL}{0.6}{Layout of the electromagnetic calorimeter. Each of the
+        blue segments represent a PbWO$_4$ crystal.}
 
         The global layout of the ECAL is presented on figure \ref{fig:CMS/ECAL}. The ECAL
         barrel (EB) extends to $\abseta = 1.479$, supplemented by the ECAL endcap (EC)
@@ -1667,7 +1668,7 @@
         emit lights. The light is gathered by fibers inside the tiles, which is then
         linked to readout electronics.
 
-        \insertFigure{CMS/HCAL}{0.6}{}
+        \insertFigure{CMS/HCAL}{0.6}{Layout of the hadronic calorimeter.}
 
         The layout of the HCAL is presented on Figure \ref{fig:CMS/HCAL}. The HCAL barrel
         (HB) extends to $\abseta \approx 1.4$ while the HCAL endcap (HE) extends up to
@@ -1705,19 +1706,60 @@
 
             \subsubsection{Muon system}
 
-            \insertFigure{CMS/muon}{0.6}{}
+            \insertFigure{CMS/muon}{0.6}{Layout of the muon system.}
 
             \loremipsum
 
         \subsection{Trigger system}
 
-        % The challenge : 50 or 25ns to only a few kHz / Hz
+        The CMS detector must sustain a rythm of one bunch crossing each 50 or 25 ns, depending
+        of the condition of the LHC machine. The raw output of the detector is therefore
+        about $40~$MHz. It is unrealistic to consider storing and reconstructing all these events
+        because of the transfer speed, memory and computing power it would require. Therefore,
+        a selection must be applied online to reduce the rate to a more realistic one,
+        set to about $400~$Hz.
 
-        \loremipsum
-            \subsubsection{L1}
-        \loremipsum
-            \subsubsection{HLT}
-        \loremipsum
+        The system in charge of this task is called the trigger. The reduction of the rate
+        is done by performing a minimalist reconstruction of objects in the event
+        and applying thresholds to decide quickly whether the event might be relevant for
+        physics analysis, typically because it contains high-$\pT$ objects. The design of
+        the thresholds must be done carefully to have an adequate balance between reduction
+        of the rate and trigger efficiency of the relevant physics processes. Optimization
+        of the execution time of the software as well as the accuracy of the minimalist
+        reconstruction is in this context crucial to efficiently use the available ressources.
+
+        The trigger system of CMS is composed of two levels. The level 1 (L1) trigger first
+        reduce the rate from $40~$MHz to $100~$kHz, followed by the high-level trigger (HLT)
+        which further reduces the rate to $400~$Hz.
+
+        \insertFigure{CMS/triggerL1}{0.8}{Architecture of the L1 trigger.}
+
+        The L1 trigger is implemented is itself composed of different stages as
+        represented on Figure \ref{fig:CMS/triggerL1}. It only takes information from
+        the calorimeters and muon system as input. The first stages, the regional calorimeter
+        and muon triggers, are at the closest of the subsystems, identifying significant
+        energy deposits or muon impacts in each region of the detector independently.
+        Regional triggers produce a list of muons, $e/\gamma$ candidates and local energy
+        deposits. This information is fed to the global calorimeter and muon triggers which
+        combine it and remove redundant information. The final global trigger implements
+        the trigger menu, that is the set of requirements applied on the final list of
+        objects. L1 triggers range from simple single objects with a $\pT$ threshold, to
+        selection requiring the coincidence of several objects with topological conditions
+        on them. Generally speaking, the total rate of a given signature decreases as the
+        variety and number of objects it contains increases. It is therefore possible to
+        put lower threshold on more complex selection compared to simpler ones. For instance,
+        the $\pT$ thresholds are lower for a $e+\mu$ trigger compared to a dimuon trigger,
+        itself having lower thresholds than a single muon trigger.
+
+        If the events pass any of the selection in the L1 menu, it is handled to the HLT.
+        The HLT selection consists of a much larger list of path compared to L1.
+        It is performed on a computer farm able to perform a full reconstruction
+        of the objects present in the event, including the information from the tracker.
+        However to optimize the processing time for each event, the reconstruction is
+        performed as much as possible in steps of increasing complexity. For instance,
+        selection steps involving only calorimeters and muon detectors are performed before
+        any tracking reconstruction is required, as it is a CPU intensive step. Once
+        an event is selected, it is stored to be used in offline physics analysis.
 
         \subsection{Object and events reconstruction}
 
@@ -1859,7 +1901,8 @@
         there are two or more high-$\pT$ objects in the event, they either get merged into
         a single jet ($\Delta R < r$) with a cone-like shape around their barycenter, or
         lead to two separated jets ($\Delta R > r$) where the dominant object will first
-        aggregate the softer objects.
+        aggregate the softer objects. An example of jet reconstructed with this algorithm
+        is shown in Figure \ref{fig:CMS/jetExample}.
 
         The second algorithm, called Cambridge/Aachen algorithm, uses the metric from Eq.
         \ref{eq:jetClusteringMetric} but with $p = 0$, i.e. not relying on the $\pT$ of
@@ -1867,8 +1910,17 @@
         this algorithm are less likely to be cone-like. Nevertheless, it has been found to
         yield better results for substructure-oriented studies of jets.
 
-        An example of jet reconstruction is show in Figure \ref{fig:CMS/jetExample}. Figure
-        \ref{fig:jetEfficiencies}
+        Figure \ref{fig:jetEfficiencies} presents a comparison of the performances obtained
+        for particle-flow jets and calorimeter-based jets. For a given initial parton, the
+        probability to succesfully reconstruct a jet in $\Delta R < 0.1$ reach 90\% for
+        a parton of $30\GeV$ for particle-flow jets compared to $80\GeV$ for
+        calorimeter-based jets. In terms of $\pT$ resolution, the reconstructed $\pT$ is
+        for the particle-flow jets roughly within $90\% \pm 15\%$ of the generated $\pT$
+        when in the range $40-60\GeV$, whereas it is within $50\% \pm 15\%$ for
+        calorimeted-based jets. This bias in the reconstructed transverse momentum, called
+        jet energy scale, is typically due to tresholds and inefficiencies in the calorimeter
+        and can be measured and corrected after the jet reconstruction. This correction is
+        typically parametrized as function of $\pT$ and $\eta$.
 
         \insertFigure{CMS/jetExample}{0.6}{Representation of a $115\GeV$ jet reconstructed in CMS
         with the anti-$k_t$ algorithm, showing the reconstructed tracks left by charge
@@ -1896,7 +1948,7 @@
         type of stable particles one expects from the Standard Model is neutrinos, which
         have very low rate of interaction with matter and therefore escape detection. Some
         theories beyond the Standard Model also include stable particles escaping detection
-        such as neutralinos in SUSY.
+        such as neutralinos in R-parity conserving SUSY.
 
         It is possible to infer information about the production
         of such particles via the energy-momentum conservation in the transverse plane\footnote{The
@@ -1907,13 +1959,63 @@
         {
             \MET \definedAs - \sum_{\text{objects}} \vec{\pT}.
         }
-        As for the jets, several $\MET$ can be computed depending on the choice of the object
-        collection which can be energy deposits in the calorimeters, tracks or the
-        particle flow collection. Detector effects such as tresholds in the calorimeters,
-        or acceptance effects generally lead to artificial $\MET$ in addition to the
-        actual contribution of invisible particles. One of the challenge of $\MET$ reconstruction
-        is therefore to understand the different sources of bias and smearing and correct
-        for them to improve its resolution.
+        In this formula, one must define what are the objects to consider and this choice
+        leads to several possible reconstruction, such as calorimeter-based, track-based
+        or PF-based $\MET$. Several effects may lead to articial $\MET$ in addition to the
+        actual contribution of invisible particles, which can be classified in two categories :
+        intrinsec condition and resolution of the detector, for instance the jet energy
+        resolution ; and misreconstruction of the events or mismeasurement in the
+        operation of the detector, for instance in the operating of the laser correction
+        of the ECAL. One of the challenge of $\MET$ reconstruction is therefore to identify
+        and understand the different sources of unphysical missing energy as well as bias and
+        smearing, and either correct them to improve the resolution or veto the corresponding
+        events
+        .
+        Figure \ref{fig:METspectrum}, on the left, shows how sources of unphysical $\MET$
+        lead to an unexpected large tail in the reconstructed distribution for the data.
+        After identifiying several causes and filtering out events likely to have unphysical
+        $\MET$, the agreement between data and simulation is restored.
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.53\textwidth]{CMS/MET/cleaning}
+            \includegraphics[width=0.45\textwidth]{CMS/MET/spectrumInZmumu}
+            \caption{On the left, comparison of data with simulation of the
+            particle-flow based $\MET$ distribution, before and after cleaning of the events
+            likely to contain unphysical $\MET$. On the right, distribution of $\MET$ in
+            a $Z \rightarrow \mu\mu$ enriched sample.}
+            \label{fig:METspectrum}
+        \end{figure}
+
+        Events with no genuine $\MET$ provides a mean to study the resolution.
+        $Z \rightarrow \mu\mu$ events fit well this purpose as muons are well-identified objects
+        with a good resolution and a constrain can be put on the invariant mass of the
+        dimuon system to obtain a sample with good purity. Figure \ref{fig:METspectrum},
+        on the right, shows the distribution of the reconstructed particle-flow based
+        $\MET$ in such events. The maximum of the distribution is around $10-20\GeV$ and
+        drops by three orders of magnitude up to $70-80\GeV$.
+
+        The resolution can be studied as function of $q_T$, the recoil of the $Z \rightarrow \mu\mu$
+        system due to initial state radiations, and also as function of the pile-up in the
+        event, as presented on Figure \ref{fig:METresolution}. At low $q_T$, the ISR is
+        essentially too soft to be measured accurately, and therefore $\vec{u}_{||}
+        \definedAs \vec{\MET} - (\vec{\mu}_1 + \vec{\mu}_2)$ is quite different from $\vec{q}_T$.
+        At $q_T \sim 40\GeV$, however, the measurement of the ISR gets better and $u_{||}$
+        is within $\sim 3\%$ of $q_T$. The resolution of $\vec{u}_{||}$ strongly depends
+        of the PU since more hadronic activity tends to increase jet energy mismeasurement.
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.58\textwidth]{CMS/MET/resolutionVsQt}
+            \includegraphics[width=0.41\textwidth]{CMS/MET/resolutionVsPU}
+            \caption{On the left, measurement of the ratio $-u_{||}/q_T$ as function of $q_T$
+            if $Z\rightarrow\mu\mu$, $Z\rightarrow e e$ and $\gamma$+jets events using
+            the particle-flow based $\MET$. On the right, measurement of the resolution of
+            $u_{||}$ as function of the number of reconstructed vertices, for
+            $Z\rightarrow\mu\mu$ events.}
+            \label{fig:METresolution}
+        \end{figure}
+
 
         \subsection{Collisions and detector simulations}
 
