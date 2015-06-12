@@ -583,7 +583,7 @@
         \label{tab:StandardModelFieldsAfterElectroweakBreaking}
     \end{table}
 
-    \subsection{The strong interaction}
+    \subsection{The strong interaction \label{sec:strongInteraction}}
     %====================================================================================
 
     The group $SU(3)$ corresponds to the strong interaction and affect quarks. The
@@ -699,7 +699,7 @@
                  $\gamma$, gluon $g$ and neutrinos $\nu_\ell$ are not represented as they
                  are massless in the context of the Standard Model.}
 
-    \insertFigure{theory/standardModelFit}{0.35}
+    \insertFigure{theory/standardModelFit}{0.43}
                   {Global fit of observable of the Standard Model}
 
     \section{Shortcomings of the Standard Model}
@@ -1277,13 +1277,12 @@
 \newpage
 %==============================================================
 
-    \section{The Large Hadron Collider}
-
     \todo{references !!}
 
-    \todo{clarify incident / run I at 7/8 TeV, run II will be at 13 TeV}
+    \todo{explicitly explain LHC incident / + CMS run I at 7/8 TeV, run II will be at 13
+    TeV + talk about the Higgs discovery at some point}
 
-    \todo{mention that the Higgs has been discovered}
+    \section{The Large Hadron Collider}
 
     \subsection{Scientific context and challenges}
 
@@ -1514,20 +1513,29 @@
         possible measurement of the repartition of the hadronic and electromagnetic energy
         in each event.
 
-        The CMS detector is a heremetic, cylinder-shaped detector consisting of several
-        complementary layers as represented on Figure \ref{fig:CMS/detectorOverview}.
-        Near the interaction point in the beam pipe is found the system is dedicated to the
-        detection of impacts left by charged particles. It is composed of a pixel detector
-        layers and microstrip layers. Around the tracking system is the electromagnetic
+        \insertFigure{CMS/detectorOverview}{0.9}{Overview of the CMS detector.}
+
+        The CMS detector is a hermetic, cylinder-shaped detector consisting of several
+        complementary layers\footnote{while this structure is found in three of the four
+        main experiments at the LHC, other structures exists in particle physics detector,
+        for instance for the LHCb experiment or the AMS detector, composed of successive
+        layers.} as represented on Figure \ref{fig:CMS/detectorOverview}.
+        CMS design's is centered around a superconducting magnet delivering a field of 3.8~T
+        using the same technology than the LHC, a nobium-titanium alloy. Its role is to
+        bend the trajectory of charged particles, directly impacting the accuracy of
+        their momentum measurement. Near the interaction point is found the tracker system, dedicated to
+        the detection of impacts left by charged particles. It is composed of a pixel detector
+        layers and microstrip layers. Around the tracker is the electromagnetic
         calorimeter, whose aim is to measure the energy of photons and electrons using
         scintillation crystals. The next layer, the hadronic calorimeter, aims to measure
         the energy carried by hadrons produced in the collisions. It is a scintillator made
-        of brass and plastic sandwich. The superconducting magnet provides a strong magnetic
-        field of 3.8 T using the same technology than the LHC magnets, a nobium-titanium
-        alloy, to bend the trajectory of charged particles. Finally, the muon system uses
-        three different technologies to record the impact of muons.
+        of brass and plastic sandwich. Finally, the muon system uses three different
+        technologies to record the impact of muons. Figure \ref{fig:CMS/detectorPhoto}
+        shows a photography of the actual detector during its assembly.
 
-        \insertFigure{CMS/detectorOverview}{0.9}{Overview of the CMS detector.}
+        \insertFigure{CMS/detectorPhoto}{0.75}{Photography of the CMS detector, showing some
+        of the muon system, the magnet and the return yoke, and the HCAL barrel during
+        assembly.}
 
         The coordinate system $(x,y,z)$ of CMS, represented on Figure \ref{fig:CMS/coordinateSystem},
         is defined such that $x$ is directed to the center of the LHC, $y$ points toward
@@ -1550,9 +1558,6 @@
         \insertFigure{CMS/coordinateSystem}{0.7}{Coordinate system of CMS represented in
         the longitudinal plane (on the left) and in the transverse plane (on the right).}
 
-
-            % For each subsystem : show a sketch of barrel / endcap + picture of the actual thing
-            % Talk about hardware and principle of the subsystem + discuss resolution
             \subsubsection{Tracker system}
 
         The tracker system is the piece of detector closest to the interact point. Its goal
@@ -1590,8 +1595,6 @@
         (TEC). The strip tracker contains 9.3 million strips and cover almost 200 m$^2$ of
         surface. Overall, the system has a length of 5.6~m and a radius of 1.1~m and covers
         up to $\abseta \approx 2.5$.
-
-        \todo{cooling ?}
 
             \subsubsection{Electromagnetic calorimeter}
 
@@ -1700,24 +1703,57 @@
             C & = 0.074\text{, the constant contribution.}\nonumber
         }
 
-            \subsubsection{Magnet}
-
-            \loremipsum
-
             \subsubsection{Muon system}
 
-            \insertFigure{CMS/muon}{0.6}{Layout of the muon system.}
+        The muon system is composed of several subsystems placed in the return yoke of
+        the superconducting magnet as represented in Figure \ref{fig:CMS/muon}. It aims to
+        measure accurately the trajectory of muons.
 
-            \loremipsum
+        \insertFigure{CMS/muon}{0.6}{Layout of the muon system.}
+
+        Three different gas-based technologies are used, whose choice was driven by the
+        large surface to be covered and the differents radiation environment :
+        \begin{itemize}
+            \item \textbf{Drift tubes} (DT) - This technology uses streched wire within
+                a gas volume. Charged particles travelling through the gas ionize atoms,
+                leaving a cloud of electron along the track. These electrons then drift
+                in the tube and are collected by the positively-charged wire. By knowing
+                the point where the electron where collected along the wire, and the
+                time between the hit and collection, it is possible to infer the position
+                of the impact in the drift tube.
+            \item \textbf{Cathode strips chambers} (CSC) - Cathode strips chambers are
+                made of array of anode wires crossing cathode strips within a gas volume.
+                A charged particle travelling through the gas ionize atoms and provokes an
+                avalanche of electrons. The electrons and ions move to the anode and
+                cathode respectively, producing a signal in both of them which leads to
+                a bidimensionnal information.
+            \item \textbf{Resistive plate chambers} (RPC) - Resistive plate chambers are
+                made of two plates of high-resistivity platic acting as cathode and anode
+                separated by a gas volume. After ionization of the gas causing an
+                electron avalanche, the chages travel through the plastic plates to be
+                collected by strips situated behind them.
+        \end{itemize}
+
+        The DT technology is used in the barrel, up to $z \approx 6.5~\text{m}$, covering
+        pseudo-rapidities up to $z = 1.2$, while the CSC technology is used for the endcap,
+        where the background rate is large and the magnetic field is also large and non-uniform,
+        between $z \approx 6~\text{m}$ and $z \approx 10.5~\text{m}$ covering up to $\abseta = 2.4$.
+        The RPC complements the previous technologies for $\abseta$ up to 1.6, providing a
+        coarser position resolution but a faster response and better time resolution.
+
+        When combining the information of the muon system with the tracker, one can
+        obtain a relative resolution on the $p_T$ typically of $1\%$, and a relative
+        resolution on $\eta$ and $\phi$ typically of the order of $10^{-5}$ and $10^{-4}$
+        respectively.
 
         \subsection{Trigger system}
 
         The CMS detector must sustain a rythm of one bunch crossing each 50 or 25 ns, depending
         of the condition of the LHC machine. The raw output of the detector is therefore
         about $40~$MHz. It is unrealistic to consider storing and reconstructing all these events
-        because of the transfer speed, memory and computing power it would require. Therefore,
-        a selection must be applied online to reduce the rate to a more realistic one,
-        set to about $400~$Hz.
+        considering of the transfer link, memory and computing power it would require.
+        Therefore, a selection must be applied online to reduce the rate to a more realistic
+        one, set to about $400~$Hz.
 
         The system in charge of this task is called the trigger. The reduction of the rate
         is done by performing a minimalist reconstruction of objects in the event
@@ -2017,33 +2053,130 @@
         \end{figure}
 
 
-        \subsection{Collisions and detector simulations}
+        \section{Collisions and detector simulations}
 
-            % Why Monte-Carlo and not analytic/empirical models or response curves ?
+            After registering the events from the detector, and reconstructing the particles
+            produced, one needs a mean to compare the experiment with theories. Given
+            the complexity of a single bunch crossing, including the hard scattering,
+            underlying event and pile-up, and the complexity of the detector, the distribution
+            of observables can not in the general case be predicted analytically. One must
+            instead rely on Monte-Carlo generations and an accurate detector simulation.
+            Such simulation can also help design the detector in the first place, for
+            instance by studying the performances on a given process, all the way
+            from the hard scattering to the objects after reconstruction.
 
-            % Schema showing the actual complexity of a collision
+            The full chain of simulation can be implemented as follow. First, the model
+            is implemented and the feynman rules associated to the Lagrangian are computed.
+            Then, for a given process, a Monte-Carlo generator computes all possible
+            feynman diagrams up to a given order, and randomly generates hard-scatterings.
+            To these hard-scatterings are added the underlying event, initial and
+            final state radiations, and the quarks are hadronized. Finally the particles
+            are propagated to the detector and its response is simulated.
 
-            %\subsection{Monte-Carlo generations of the hard scattering}
+            \subsection{Monte-Carlo generations of the hard scattering}
 
-            % PDF
+            \todo{ref to arXiv:hep-ph/0403045v2}
 
-            % Matrix-element method ?
+            To get a better idea of how Monte-Carlo event generation of the hard scattering
+            is performed, it is useful to take a simple example such as the diagram
+            $u\bar{u} \rightarrow Z \rightarrow d\bar{d}$ at tree level. The corresponding
+            infinitesimal cross section is
+            \eq{crossSectionEventGeneration}
+            {
+                d \sigma(u\bar{u} \rightarrow Z \rightarrow d\bar{d})
+                =
+                \frac{1}{2\hat{s}}
+                \left|
+                    \mathcal{M}(u\bar{u} \rightarrow Z \rightarrow d\bar{d})
+                \right|^2
+                \frac{d\text{cos}(\theta)d\phi}{32\pi^2}
+            }
+            where $(\theta,\phi)$ are the angles of the $Z$ decay, $\mathcal{M}$
+            is the matrix element and $\hat{s}$ is the center of mass energy. The matrix
+            element is, for a given diagram, a number computable from the feynman rules.
+            To generate events according to this simple process, one may draw random
+            values of $cos(\theta)$ and $\phi$, uniformly distributed in $[-1, 1]$ and
+            $[0,2\pi]$ respectively. From the mass constrains and the direction of the
+            decay, it is then possible to compute the quadri-momentum of the products.
 
-            \loremipsum
-            %\subsection{Parton showering}
+            The value of $d\sigma$ is directly related to the probability of this event
+            occuring and is different for each value of $cos(\theta)$ and $\phi$. To obtain
+            a set of events with a $\cos(\theta)$, $\phi$ distribution corresponding to
+            what is to be observed in Nature, it is possible to unweight these events using
+            the hit-and-miss technique.
 
-            % Hadronization
-            % Fragmentation
-            % Decays of tau ?
+            With these simple steps, we presented the basic procedure to build a Monte-Carlo
+            event generator. However in real life, and in particular in the case of the
+            LHC, the initial state is made of protons. Therefore, in order to obtain a
+            description of actual collisions, one must consider instead the process
+            $pp \rightarrow Z \rightarrow d\bar{d}$ and integrate over the parton distribution
+            function.
 
-            % Interface avec matrix element (MLM method ? Matching ?)
+            Furthermore, a complete description of such a process must also include
+            diagrams with additional partons produced in the event, coming for instance
+            from initial or final state radiation, e.g. $pp \rightarrow Z \rightarrow
+            d\bar{d}$, $d\rightarrow dg$, but also from more complex diagrams. Generating
+            diagrams with additional partons in the final state however induces an exponentially growing
+            number of diagrams to consider, and one must find adequate ways to implement
+            this from a purely software point of view.
 
-            %\subsection{Detector simulation}
+            Finally, this description focused on tree-level diagram, but contributions from
+            higher order diagrams (NLO, NNLO, ...) are to be taken into account to obtain
+            an accurate description of the processus.
 
-            % Geant 4
-            % Digitization
+            \subsection{Hadronization and hadron decays}
 
-            % PU modeling
+            Partons are affected by QCD and cannot exist in free state, as discussed in
+            section \ref{sec:strongInteraction}. If partons move away from each other
+            with a sufficient energy, this energy will be used to create new colored
+            particles and bind into hadrons forming a jet of particle collimated in the
+            direction of the initial partons. This processus is referred to as hadronization,
+            and is a crucial point of event generation as it determines the structure
+            of generated jets.
+
+            The number of problematics related to hadronization makes it a quite rich and
+            active topic. The interface between the generation of the hard scattering
+            and the parton shower is not trivial as no factorization technique to rigourosly
+            factorize these two problematics. For instance, a gluon emission during
+            the parton showering (so-called soft emission) may correspond to an additional
+            parton during the generation of the hard process (so-called hard emission),
+            ultimately causing double counting and biasing the event set. To solve this
+            problem, a factorization prescription, called a matching scheme, must be define
+            to remove this double counting .
+
+            There are different techniques to simulate hadronization. The
+            technique used in the software \textsc{Pythia} is based on the Lund string
+            model. In this model, two partons moving away from each other are linked
+            via a gluonic string being stretched, its potential energy growing at
+            the expense of its kinetic energy. When its potential energy becomes of the
+            order of the mass of two quarks, this string is likely to break into two
+            strings with a new pair of quarks in the middle. This process goes on until
+            hadrons are formed, which may in turn decay according to known branching
+            fractions. So far, hadronization techniques contains parameters that must
+            be tuned according to experiments.
+
+            \subsection{Detector simulation}
+
+            Now knowing the final state after hadronization and decay of the hadrons, we
+            want to put our events in the context of a bunch crossing at the LHC. In
+            particular, we need to take into account the pile-up. To do so, a number of
+            PU collision is drawn according to an arbitrary distribution similar to the
+            one expected in the data. Pile-up collisions are added to the event from a
+            set of pre-generated and hadronized events.
+
+            Then, we want to simulate the response of the entire CMS subdetectors. To do
+            this, a detailed description of the detector is implemented in the software
+            \textsc{Geant4}. This description can be tuned to study, for instance,
+            misalignment condition. The interaction between the particles emerging from
+            the bunch crossing and the material of the detector is simulated using physical
+            models \todo{maybe be more specific here}, eventually generating a signal in
+            the readout electronics. The trigger is simulated as well, though only to know
+            which bits are fired rather than filtering out events at this stage. The
+            simulation takes up to a few seconds per event.
+
+            Mainly for time constrains, it is in some case good enough to perform a
+            fast simulation by parametrizing the reponse of the detector instead of
+            simulating the whole interaction of particles with the detector material.
 
 %==============================================================
 \setcounter{mtc}{3}
