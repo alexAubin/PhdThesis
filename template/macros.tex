@@ -33,9 +33,11 @@
     \addcontentsline{toc}{section}{#1}
 }
 
-% References to figures and tables
-\newcommand{\reffig}[1]{\textsc{Fig.}~\ref{#1}}
-\newcommand{\reftab}[1]{\textsc{Table}~\ref{#1}}
+% References to figures, tables, equation
+\newcommand{\reffig}[1]{\hyperref[#1]{Figure~\ref*{#1}}}
+\newcommand{\reftab}[1]{\hyperref[#1]{Table~\ref{#1}}}
+\newcommand{\refequation}[1]{\hyperref[#1]{Equation~\ref{#1}}}
+\newcommand{\refsection}[1]{\hyperref[#1]{Section~\ref{#1}}}
 
 % Instert and empty page
 \newcommand{\emptypage}[0]
