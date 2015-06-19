@@ -1577,8 +1577,18 @@
         silicon-based detector as it is at the same time compact and accurate. However,
         for optimum performances, silicon must be cooled to $-10\sim15^oC$.
 
-        \insertFigure{CMS/tracker}{0.7}{Layout of the tracker system. Each
-            line represent a silicon sensor organized in different modules.}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.55\textwidth]{CMS/tracker}
+            \includegraphics[width=0.44\textwidth]{CMS/tracker3D}
+            \caption{Layout of the tracker system.
+            On the left, red lines represent the pixel, blue lines represent double-sided
+            strips module and black lines represent single-sided strips modules.}
+            \label{fig:CMS/tracker}
+        \end{figure}
+
+
 
         The tracker system is made of several sensors arranged in layers, in turn arranged
         in modules, as represented in \reffig{fig:CMS/tracker}. At the center, the pixel module
@@ -1811,7 +1821,7 @@
         parton impulsion and direction, and a general impulsion imbalance can be computed
         to sign the production of particles that escapted detections.
 
-            \subsubsection{Tracking and vertexing}
+            \subsubsection{Tracking and vertexing \label{sec:trackingAndVertexing}}
 
         The challenge to which the tracking step must responds is to find and reconstruct
         tracks left by the thousands particles produced in each bunch crossing, among the
@@ -1846,7 +1856,13 @@
         done, the tracks of each group are used to fit the position of the initial vertex.
         The resolution on the vertex position in $(x,y,z)$ depends of the number of tracks
         associated to the vertex, being about 0.1~mm when the vertex has only 5 tracks, and
-        down to 10-20~$\mu$m when it has more than 40 tracks.
+        down to 10-20~$\mu$m when it has more than 40 tracks. \reffig{fig:CMS/vertexing}
+        illustrates the vertexing capabilities in an event with 78 vertices reconstructed.
+        Finally, the primary collision vertex is defined as the vertex with highest
+        $\sum_\text{tracks} ({\pT}^2)$.
+
+        \insertFigure{CMS/vertexing}{0.7}{Zoom on the beamspot region of an impressing event
+        containing 78 reconstructed vertices.}
 
             \subsubsection{Particle flow algorithm}
 
@@ -2148,8 +2164,8 @@
             model. In this model, two partons moving away from each other are linked
             via a gluonic string being stretched, its potential energy growing at
             the expense of its kinetic energy. When its potential energy becomes of the
-            order of the mass of two quarks, this string is likely to break into two
-            strings with a new pair of quarks in the middle. This process goes on until
+            order of the mass of two quarks, this string is likely to break and pull
+            out a pair of quarks out of vaccuum. This process goes on until
             hadrons are formed, which may in turn decay according to known branching
             fractions. So far, hadronization techniques contains parameters that must
             be tuned according to experiments.
@@ -2184,38 +2200,275 @@
 \newpage
 %==============================================================
 
-    \section{Principle and importance of b-tagging techniques}
-        \loremipsum
+    $b$ quarks are found in the final state of a large variety of physics processes
+    involving top quarks, $Z$ or Higgs bosons, and beyond the Standard Model signatures.
+    The hadronization of $b$ quarks produces $B$ hadrons, i.e. hadrons with a structure
+    involving a $b$ quark. $B$ hadrons have remarkable properties compared to other hadrons,
+    making it possible to identify jets originating from the hadronization of $b$ quarks.
+    Such identification is done using $b$-tagging algorithms, and are an important tool of
+    a large percentage of analysis in the CMS collaboration to select or reject processes.
 
-    \section{Discriminating observables and algorithms}
-        \loremipsum
-        \subsection{Impact parameter}
-        \loremipsum
-        \subsection{Secondary vertex}
-        \loremipsum
-        \subsection{Soft leptons}
-        \loremipsum
-        \subsection{Track counting algorithm}
-        \loremipsum
-        \subsection{Simple secondary vertex}
-        \loremipsum
-        \subsection{CSV}
-        \loremipsum
+    In \refsection{sec:bJetProperties}, we will discuss the $B$ hadrons and $b$ jet properties,
+    which are the starting point of $b$-tagging, followed in \refsection{sec:bTagAlgorithms}
+    by the discussion of $b$-tagging strategy and algorithms. In \refsection{sec:bTagValidation},
+    we shall discuss the $b$-tagging validation activity within the CMS collaboration, in
+    particular focusing on some major validations to prepare the Run II of the LHC.
 
-    \section{Algorithms performances and prospectives}
-        \loremipsum
-        \subsection{Performances at $8\TeV$}
-        \loremipsum
-        \subsection{Performances for Run II}
-        \loremipsum
-        \subsection{Development of boosted algorithms}
-        \loremipsum
-        \subsection{Studies for high PU conditions}
-        \loremipsum
+    \section{Topology of beautiful jets \label{sec:bJetProperties}}
 
+    The hadronization of $b$ quarks produce $B$ hadrons, which are bound states of
+    a $b$ quark and one or two other quarks. Their studies is of particular importance
+    to measure the CKM matrix and CP violation, a field known as heavy flavour physics.
+    $B$ hadrons have particular properties compared to other hadrons found in light jets,
+    i.e. arising from the hadronization of $u$, $d$, $s$ quarks and gluons. $C$ hadrons,
+    which are bound states of a $c$ quark, also share to a lesser extends some of these
+    properties, which will naturally make $c$ jets more difficult to distringuish from
+    $b$ jets.
+    \begin{itemize}
+        \item \textbf{Large mass} - $B$ hadrons have masses ranging from $5$ to $10~\GeV$, as
+              they contain a $b$ quark. This is a large mass compared to hadrons from
+              light jets, typically less than $0.1~\GeV$.
+        \item \textbf{Long life time and decay length} - $B$ hadrons decay via the weak
+              interaction, with a strength proportionnal to the CKM matrix elements $V_{cb}$ and $V_{ub}$
+              which are of the order of $10^{-2}$ and $10^{-3}$ respectively. Because of
+              the smallness of this parameter, the life time of $B$ hadrons is about
+              $10^{-12}~\text{s}$, corresponding to a decay length of a few tenth of millimeters
+              ($10^-4~\text{mm}$). In comparison, light hadrons have life time of the order
+              of $10^{-16}~\text{s}$.
+        \item \textbf{High charged multiplicity decay} - $B$ hadron decays typically
+              contain 5 charged particles on average, whereas other light hadrons decay
+              usually decay to 1 or 3 charge particles.
+        \item \textbf{Leptonic decay} - As the decay of $B$ hadrons involve a virtual $W$,
+              they are likely to directly decay leptonically, with a branching ratio of
+              11\% per lepton family. This fraction goes up to about 20\% if one
+              includes the full decay cascade since $C$ hadrons may also decay leptonically.
+    \end{itemize}
 
+    In the context of a $b$ jet, several particles including the $B$ hadron emerge from
+    the primary vertex where the hard scattering and hadronization occured. Due to its
+    life time, the $B$ hadron decays a few tenth of millimeters away from the primary
+    vertex, producing a secondary vertex, as represented on \reffig{fig:bTagging/jetTopology}.
+    In some decay modes, $B$ hadrons can decay to a $C$ hadrons which may fly a few tenths
+    of millimeters from the secondary vertex, possibly producing even a tertiary vertex.
+    \insertFigure{bTagging/jetTopology}{0.75}
+                 {Topology of a jet originating from the hadronization of a $b$ quark : the
+                 jet contains a neutral $B$ hadron with a decay length around $0.5~\text{mm}$,
+                 producing a secondary vertex with a high multiplicity of charged particles
+                 emerging from it.}
 
+    Provided a good enough tracking resolution, such a topology can therefore be identified
+    by looking for displaced tracks and the fact that several of them are compatible with
+    originating from a secondary vertex. Other properties may be used, such as their
+    distribution inside the jet, or the nature of the particle which left the track to target
+    the leptonic decays.
 
+    \section{$b$-tagging algorithms \label{sec:bTagAlgorithms}}
+
+    In this section, we describe the techniques used to distinguish $b$ jets from $c$ and
+    light jets. First we introduce quantities and objects that are relevant in the context
+    of $b$-tagging and then discuss the idea of each particular algorithms.
+
+    \subsection{Quantities and objects}
+
+    For a given jet, the tracks considered for $b$-tagging studies must have
+    a good quality (normalised $\chi^2 < 5$ as well as sufficient number of hits in the
+    pixel and in the tracker as a whole) and $\pT > 1\GeV$. The track must be within
+    $\Delta R < 0.3$ of the jet axis (except for the TCHP algorithm which uses $\Delta R < 0.5$).
+    The points $J$ on the track and $Q$ on the jet axis are defined as the points of closest
+    approach between the track and jet axis. In a similar way, the point $P$ is defined
+    as the point of closest approach on the track with respect to the primary vertex $V$.
+    The situation is summarize on \reffig{fig:bTagging/impactParameter}. To reject
+    contribution from pile-up and other jets that would be interpreted as displaced
+    tracks, the distance do jet axis, $JQ$, is required to be lower than $700~{\mu\text{m}}$
+    and the decay length $VQ$ is required to be lower than $5~\text{cm}$.
+
+    \insertFigure{bTagging/impactParameter}{0.75}
+                 {Representation of the computation of the impact parameter, taking as
+                 example a standard track and a track left by a particle originating from
+                 the $B$ hadron decay. The standard track has been offseted from the primary
+                 vertex to represent resolution effect.}
+
+    \subsubsection{Impact parameter}
+
+    An important quantity to characterize the displacement of tracks if the impact parameter.
+    Let's define $V$ as the primary vertex and, for a given track, $P$ as the point of
+    closest approach between the extrapolated track and the primary vertex. As represented on
+    \ref{fig:bTagging/impactParameter}, the impact parameter is defined as the distance
+    $VP$. Additionnaly, it is given the sign of the scalar product $\vec{VP} \cdot \vec{j}$
+    where $\vec{j}$ is the jet direction.
+
+    Because of their displacement, tracks left by particles originating from the decay of
+    $B$ hadrons are expected to have a large, positive impact parameter. Tracks in light
+    parton jets are instead expected to originate directly from the primary vertex and
+    therefore to have non-zero value only due to resolution effects. To integrate the
+    knowledge of the tracking resolution, the uncertainty on the impact parameter,
+    $\sigma_\text{IP}$ can be computed on a per track basis, and one can define the impact
+    parameter significance, $S_\text{IP} \definedAs \text{IP}/\sigma_\text{IP}$.
+
+    \todo{plot to illustrate the discriminating power of IP, IPsig}
+
+    \subsubsection{Secondary vertex}
+
+    One can attempt to reconstruct a secondary vertex corresponding to the common origin
+    of several tracks of the jet. This can be done using adaptive vertex fitting techniques,
+    much like for the identification of primary vertices described in \refsection{sec:trackingAndVertexing}
+    but using parameters relevant to this context and in particular to be robust against
+    outliers. Several quantities related to secondary vertex candidates can then be computed,
+    such as the distance from the primary vertex (or flight distance), the flight direction
+    and the vertex mass. $B$ hadrons are expected to have a flight distance of a few tenths
+    of millimeters, a flight direction within $\Delta R < 0.5$ of the jet direction and a
+    mass of a few $\GeV$. To reduce contamination from vertices of long-lived mesons and
+    particles interactions with the detector material, secondary vertices with a flight
+    distance higher than $2.5~\text{cm}$ or a mass compatible with the mass of $K_0$ or
+    higher than $6.5\GeV$ are rejected.
+
+    \todo{plot to illustrate the discriminating power of vertex mass, vertex decay length}
+
+    \subsubsection{Soft leptons}
+
+    Due to the leptonic decay of $B$ hadrons, a significant fraction of $b$ jets are
+    expected to contain a soft charged electron or muon. Despite the intrinsic limitation
+    due to the low branching ratio, this specificity remains useful to complement other
+    techniques and to enrich a sample of events in $b$ jets as light jets have low probability
+    to contain a lepton.
+
+    One useful variable, relating the soft lepton to the jet, is $p_T^\text{rel.}$ defined
+    as the projection of the lepton momentum to the plane perpendicular to the jet axis
+    $\vec{j}$. In this definition, the jet direction is computed by also including the lepton.
+    $p_T^\text{rel.}$ is expected to have larger values in $b$ jets compared to light jets.
+
+    Additionnaly, the impact parameter significance of the lepton can be considered to
+    characterize its deplacement with respect to the primary vertex. In that particular
+    case, the significance can benefit from the excellent resolution on muon tracking
+    provided by the detector.
+
+    \todo{plot to illustrate the discriminating power of pT rel, SIP3d}
+
+    \subsection{Algorithms}
+
+    % performance definition goes here
+
+        \subsubsection{Track counting algorithm}
+
+    The track counting algorithm is based on the impact parameter of tracks. Tracks are
+    sorted according to the value of the impact parameter significance. Because of this
+    ranking, the $S_\text{IP}$ of the first track is biased and is likely to be high even
+    for light jets. The second track offers a better compromise between background (light
+    jets) rejection and signal ($b$ jets) efficiency. A first algorithm is defined using
+    the $S_\text{IP}$ associated to this track and is called track counting high efficiency
+    (TCHE). Using the third track $S_\text{IP}$ as discriminator leads to a drop in the
+    signal efficiency but on the other hand to a very low level of background. This
+    version of the algorithm is therefore called track counting high purity (TCHP).
+
+    \todo{plot to illustrate the TCHE discriminant and perf}
+
+        \subsubsection{Jet probability}
+
+    A more elaborate technique consist in using the impact parameter significance of
+    several tracks in the jet. This can be done by computing a likelihood that all tracks
+    associated to the jet originate from the primary vertex. The starting point for this
+    is to know the distribution of $S_\text{IP}$ for prompt tracks and to compute, for
+    each given track with impact parameter significance $X$, the probability $P_\text{track} =
+    P(S_\text{IP} > X)$. To protect the algorithm from single, poorly reconstructed tracks,
+    a lower bound is put on $P_\text{track}$ at 0.005. The probability $P_\text{jet}$ is
+    then computed with the likelihood estimator, using the $N$ tracks of the jet,
+
+    \eq{JPlikelihood}
+    {
+        P_\text{jet} = \Pi \cdot \sum_{i=0}^{N-1} \frac{(-\text{ln } \Pi)^i}{i!} \text{,\hspace*{0.6cm} with \hspace*{0.6cm}} \Pi = \prod_{i=1}^{N} \text{max}(P_{\text{track }i},0.005)
+    }
+
+    The jet probability (JP) discriminator is finally defined as $- \text{ln} P_\text{jet}$
+    to have a convenient range. An alternative algorithm is called jet $B$ probability
+    (JBP) and give more weight to tracks with high $S_\text{IP}$.
+
+    \todo{plot to illustrate the JP discr and perf}
+
+        \subsubsection{Simple secondary vertex}
+
+    The simple secondary vertex (SSV) algorithm is based on secondary vertex reconstruction,
+    and in particular uses the largest flight distance significance among all secondary
+    vertices as a discriminant. As for the track counting algorithm, two versions are defined
+    to obtain either high efficiency (SSVHE) using secondary vertices with at least two
+    tracks, while the high purity version (SSVHP) requires at least three tracks. The
+    maximum efficiency achievable with these algorithms is limited by the efficiency of
+    actually reconstructing a secondary vertex which satisfies the constrains. SSVHE depends
+    on the efficiency of actually reconstructing a secondary vertices, which is about 68\%
+    for SSVHE and 52\% for SSVHP.
+
+    \todo{plot to illustrate the SSV discr and perf}
+
+        \subsubsection{Soft leptons algorithms}
+
+    One can target the $b$ jets containing soft leptons with dedicated algorithms. However,
+    as no observable exhibits a strong discriminating power, a multivariate analysis
+    has to be performed. Several discriminating observables are fed into a neural network
+    which is trained to differentiate signal jets ($b$ jets) from background jets (light jets).
+    These observables include $p_T^\text{rel.}$, the $\Delta R$ between the lepton and
+    jet axis, the relative lepton momentum, the impact parameter significance of the lepton
+    and the lepton quality. Two algorithms are defined, targetting either jets with a
+    muon (soft muon tagger, SMT) or electron (soft lepton tagger, SET). While muons are
+    well-identified object because they leave a distinct signal in the muon system,
+    electrons are more challenging due to the hadronic environment and dedicated in-jet
+    electron identification must be defined. The maximum efficiency achievable for each
+    flavor is limited by the branching ratio, about 15-20\%.
+
+    \todo{plot to illustrate the SMT or SET discr and perf}
+
+        \subsubsection{Combined secondary vertex}
+
+    Finally, one wants to combine the techniques previously described (except so far the
+    soft lepton taggers) as they complement each other. To do so, first, jets are divided
+    into categories according to whether or not a secondary vertex has been reconstructed
+    of not. An intermediate categories is designed for jets with no vertex fit but
+    with still two tracks with $S_\text{IP} > 2$, which are used to define a pseudo-vertex.
+    With the goal of improving the rejection of $c$ jets, for jets with a vertex or pseudo-vertex,
+    the tracks are ordered in according to their impact parameter significance, and the
+    $S_\text{IP}$ of the first track to raises the invariant mass of the vertex above
+    the charm treshold ($1.5~\GeV$) act as a good discriminating variable.
+
+    Likelihood are computed, based on the secondary vertex information, the energy
+    and rapidity distribution of the tracks at the secondary vertex compared to the remaining
+    tracks in the jet, as well as the $S_\text{IP}$ of each track. Two likelihood ratios
+    are defined, to discriminate between light jets and $b$ jets, and $c$ jets and $b$ jets.
+    These likelihood are then weighted appropriately.
+
+    \todo{plot to illustrate the CSV discr and perf}
+
+    \subsection{Performance discussion}
+
+    \insertFigure{bTagging/vbfHbb_Candidate}{0.8}{Illustration of $b$-tagging in an event
+    at $\sqrt{s} = 8\TeV$. The display shows the surrounding region of the primary vertex
+    and the tracks reconstructed, in a $H \rightarrow bb$ candidate event produced through
+    vector boson fusion (VBF) characterized by the two forward jets. The green tracks are
+    prompt tracks while the blue tracks have a high impact parameter significance. One
+    clearly distinguish the secondary vertices in each of the central jets which have
+    therefore a high $b$-tagging discriminant. The invariant mass of the two $b$ candidates
+    is found to be close to $125 \GeV$. \todo{HIG-13-011}
+    }
+
+    \section{$b$-tagging validation in the CMS collaboration \label{sec:bTagValidation}}
+
+    In this section, we focus on the contribution on $b$ tagging during this thesis.
+    After presenting the context of the work and dicussing statistical aspects, some
+    important validations are presented in particular related to the preparation of the
+    Run II of the LHC.
+
+        \subsection{Context}
+
+    The software of the CMS collaboration is in constant evolution.
+
+        \subsection{Efficiency estimator}
+
+        \subsection{Jet size parameter for Run II}
+
+        \subsection{Geant 4}
+
+        \subsection{Premixing}
+
+        \subsection{Alignment and calibration scenarios for Run II}
+
+        \subsection{High PU studies ?}
 
 
 
