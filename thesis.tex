@@ -1,4 +1,14 @@
 
+%\clearpage
+
+\chapternonum{Acknowledgements}
+
+\loremipsum
+
+\chapternonum{Résumé}
+
+\loremipsum
+
 \dominitoc
 \tableofcontents
 
@@ -38,7 +48,7 @@
 %
 
 %==============================================================
-\setcounter{mtc}{1}
+\setcounter{mtc}{3}
 \chapter{The Standard Model of particle physics and beyond}
 \minitoc
 \newpage
@@ -1270,7 +1280,7 @@
 
 
 %==============================================================
-\setcounter{mtc}{2}
+\setcounter{mtc}{4}
 \chapter{The Compact Muon Solenoid experiment at the LHC}
 \minitoc
 \newpage
@@ -1624,7 +1634,7 @@
         In terms of $\eta-\phi$, each crystal covers a region of approximately $0.0174
         \times 0.0174$.
 
-        \insertFigure{CMS/ECALcrystal}{0.5}{PbWO$_4$ crystal used in the ECAL with the photodiode
+        \insertFigure{CMS/ECALcrystal}{0.65}{PbWO$_4$ crystal used in the ECAL with the photodiode
         glued to the back of the crystal.}
 
         In the endcaps, to help discriminate between prompt photons and $\pi^0$ decaying
@@ -2194,7 +2204,7 @@
             simulating the whole interaction of particles with the detector material.
 
 %==============================================================
-\setcounter{mtc}{3}
+\setcounter{mtc}{5}
 \chapter{$b$-tagging techniques in CMS}
 \minitoc
 \newpage
@@ -2379,8 +2389,8 @@
     }
 
     The jet probability (JP) discriminator is finally defined as $- \text{ln} P_\text{jet}$
-    to have a convenient range. An alternative algorithm is called jet $B$ probability
-    (JBP) and give more weight to tracks with high $S_\text{IP}$.
+    to have a convenient range to work with. An alternative algorithm is called jet $B$
+    probability (JBP) and give more weight to tracks with high $S_\text{IP}$.
 
     \todo{plot to illustrate the JP discr and perf}
 
@@ -2444,8 +2454,7 @@
     prompt tracks while the blue tracks have a high impact parameter significance. One
     clearly distinguish the secondary vertices in each of the central jets which have
     therefore a high $b$-tagging discriminant. The invariant mass of the two $b$ candidates
-    is found to be close to $125 \GeV$. \todo{HIG-13-011}
-    }
+    is found to be close to $125 \GeV$. \todo{HIG-13-011}}
 
     \section{$b$-tagging validation in the CMS collaboration \label{sec:bTagValidation}}
 
@@ -2456,7 +2465,32 @@
 
         \subsection{Context}
 
-    The software of the CMS collaboration is in constant evolution.
+    The software of the CMS collaboration is constantly evolving. The development cycle
+    includes a rigorous and recurring checks by all the detector groups (DPG), physics
+    object groups (POG) and analysis groups (PAG). The frequency of the validation of the
+    changes in the software ensures an early indentification of bugs and to understand
+    the evolution of distributions and performances. The type of changes in the CMS
+    software includes, but are not limited to :
+    \begin{itemize}
+        \item \textbf{Versions of dependencies} such as \textsc{Geant4} and
+              \textsc{Root} which may in turn impact the description of particle-matter
+              interaction or statistical aspects.
+        \item \textbf{Generators and simulation workflow}, for instance for when the
+              version of tunning of the parton shower software changes, or the way pile-up
+              is simulated changes.
+        \item \textbf{Detector geometry and description}, which is likely to change during
+              long shutdowns as subdetectors may be upgraded.
+        \item \textbf{Alignement and calibration conditions} can be tuned for instance to
+              simulate early data-taking with misaligned tracker layers.
+        \item \textbf{Reconstruction techniques} are likely to evolve accross time to include
+              new methods, tune parameters or optimize performances.
+        \item \textbf{Studies for detector upgrade} can also be performed if the whole
+              scenario is implemented, including elements such as the geometry of the
+              detector and the pile-up conditions for instance.
+    \end{itemize}
+
+    In particular, $b$-tagging algorithms are highly dependent on tracking aspects,
+    particle flow algorithms, as well as jets reconstruction and kinematic and pile-up effects.
 
         \subsection{Efficiency estimator}
 
@@ -2473,7 +2507,7 @@
 
 
 %==============================================================
-\setcounter{mtc}{4}
+\setcounter{mtc}{6}
 \chapter{Search for stop pair production at $\sqrt{s} = 8\TeV$}
 \minitoc
 \newpage
