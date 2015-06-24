@@ -1,7 +1,7 @@
 MAIN = main
 TITLE = title
 TEX = pdflatex -interaction=nonstopmode
-ERROR_PARSING = grep -v "Non-PDF special ignored\|Overfull\|Underfull\|float specifier changed" | grep "\\\.box\|\!\|^l\.\|^  \|Reference" 1>&2
+ERROR_PARSING = grep -v "Fancyhdr\|minitoc\|hyperref" | grep -v "Font Warning\|contains only float\|float specifier changed\|fig:'" | grep "Warning\|Error" 1>&2
 
 pdf : $(MAIN).pdf
 

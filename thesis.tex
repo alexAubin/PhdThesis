@@ -180,7 +180,7 @@
     One of the most striking example of the application of gauge symmetry is the case of
     quantum electrodynamics using the group $U(1)$. Starting from the Dirac lagrangian
     describing massive, non-interacting electrons,
-    \eq{diracLagrangian}
+    \eq{freeElectronLagrangian}
     {
         \mathcal{L}
         =
@@ -219,7 +219,7 @@
     }
     where $g$ is an arbitrary constant we may call coupling constant, and replacing the
     derivative $\dslash$ in the Lagrangian with a covariant derivative $\Dslash$,
-    \eq{covariantDerivative}
+    \eq{Dslash}
     {
         \Dslash
         \definedAs
@@ -876,7 +876,7 @@
             be massive and have different flavor states than mass states much like down-type
             quarks and the CKM matrix. The problem of neutrino being massive is itself not
             so much a problem as it is possible to introduce right-handed neutrinos in the
-            field content of the Standard Model. However the exact mechanism depends of
+            field content of the Standard Model. However the exact mechanism depends on
             wether neutrinos are Dirac or Majorana fermions. The main source of interrogation
             is to understand why neutrinos have such a small mass compared to the other
             fermions.
@@ -1221,7 +1221,7 @@
         coupling stop-top-EW}
 
         In the $(\tilde{B}, \tilde{W}^3, \tilde{h}^0_1, \tilde{h}^0_2)$ basis,
-        \eq{charginoMixingMatrix}
+        \eq{neutralinoMixingMatrix}
         {
             M_{\tilde{\chi}^0}
             =
@@ -1290,6 +1290,8 @@
 
     \todo{explicitly explain LHC incident / + CMS run I at 7/8 TeV, run II will be at 13
     TeV + talk about the Higgs discovery at some point}
+
+    \todo{explicit link between track curvature and impact parameter}
 
     \section{The Large Hadron Collider}
 
@@ -1419,7 +1421,7 @@
         \subsection{Physics of $pp$ collisions \label{sec:physicsFromCollisionsAtTheLHC}}
 
     The number of $pp$ collisions happening per unit of time is characterized by the
-    instanteneous luminosity $L$ which depends of the bunch crossing frequency, the
+    instanteneous luminosity $L$ which depends on the bunch crossing frequency, the
     number of bunches and proton per bunches and other beam and geometry parameters.
     The two general purpose experiments, ATLAS and CMS, aim for a peak luminosity
     $ L = 10^{34} \text{cm}^{-2} \text{s}^{-1} = 10 \text{nb}^{-1} / \text{s}$. For a
@@ -1650,7 +1652,7 @@
         barrel (EB) extends to $\abseta = 1.479$, supplemented by the ECAL endcap (EC)
         up to $\abseta = 3.0$. The preshower disks cover the region $\abseta \in [1.653,2.6]$.
         Overall, the system is 7.8m long and lie within $1.2 < r < 1.8$~m.
-        The optical properties of the crystal is a crucial parameter that depends of the
+        The optical properties of the crystal is a crucial parameter that depends on the
         temperature and radiations received. To obtain accurate measurements, a cooling
         system ensure that the crystal temperature is stable at $18\pm0.05^oC$ and the
         transparency is monitored in real time via a laser system.
@@ -1680,8 +1682,8 @@
             \subsubsection{Hadronic calorimeter}
 
         The hadronic calorimeter (HCAL) role is to measure the energy of incoming charged
-        and neutral hadronic, which will be in turn a crucial information to reconstruct
-        jets and missing transverse energy.
+        and neutral hadronic particles, which will be in turn a crucial information to
+        reconstruct jets and missing transverse energy.
 
         The main technology used for the HCAL consist of layers of dense absorbers and
         scintillation tiles. The absorbers are made of steel and brass, with which
@@ -1704,7 +1706,7 @@
         therefore be more resistant to radiation and use hard quartz fiber instead of
         plastic ones.
 
-        The resolution measured on pion is
+        The resolution measured on pions is
         \eq{HCALresolution}
         {
             \left( \frac{\sigma_E}{E} \right)^2
@@ -1721,6 +1723,8 @@
             S & = 0.084~\text{GeV}^{1/2} \text{, the stochastic contribution,}\\
             C & = 0.074\text{, the constant contribution.}\nonumber
         }
+
+        \todo{note about neutral hadrons being likely to escape detection, though neutral fraction is only about 10\%}
 
             \subsubsection{Muon system}
 
@@ -1864,7 +1868,7 @@
         clustering algorithm : at first, all tracks are put in a single group, which is then
         iteratively divided in smaller groups until a given condition is met. Once it is
         done, the tracks of each group are used to fit the position of the initial vertex.
-        The resolution on the vertex position in $(x,y,z)$ depends of the number of tracks
+        The resolution on the vertex position in $(x,y,z)$ depends on the number of tracks
         associated to the vertex, being about 0.1~mm when the vertex has only 5 tracks, and
         down to 10-20~$\mu$m when it has more than 40 tracks. \reffig{fig:CMS/vertexing}
         illustrates the vertexing capabilities in an event with 78 vertices reconstructed.
@@ -2402,9 +2406,9 @@
     to obtain either high efficiency (SSVHE) using secondary vertices with at least two
     tracks, while the high purity version (SSVHP) requires at least three tracks. The
     maximum efficiency achievable with these algorithms is limited by the efficiency of
-    actually reconstructing a secondary vertex which satisfies the constrains. SSVHE depends
-    on the efficiency of actually reconstructing a secondary vertices, which is about 68\%
-    for SSVHE and 52\% for SSVHP.
+    actually reconstructing a secondary vertex which satisfies the constrains. SSV algorithms
+    depends on the efficiency of actually reconstructing a secondary vertices, which is for
+    the high-efficiency version around 65\% for $b$-jets, and around 20\% for $c$ jets.
 
     \todo{plot to illustrate the SSV discr and perf}
 
@@ -2431,7 +2435,8 @@
     soft lepton taggers) as they complement each other. To do so, first, jets are divided
     into categories according to whether or not a secondary vertex has been reconstructed
     of not. An intermediate categories is designed for jets with no vertex fit but
-    with still two tracks with $S_\text{IP} > 2$, which are used to define a pseudo-vertex.
+    with still two tracks with $S_\text{IP} > 2$, which are used to define a pseudo-vertex
+    in 15\% of the cases where no vertex is found for $b$ jets.
     With the goal of improving the rejection of $c$ jets, for jets with a vertex or pseudo-vertex,
     the tracks are ordered in according to their impact parameter significance, and the
     $S_\text{IP}$ of the first track to raises the invariant mass of the vertex above
@@ -2490,17 +2495,227 @@
     \end{itemize}
 
     In particular, $b$-tagging algorithms are highly dependent on tracking aspects,
-    particle flow algorithms, as well as jets reconstruction and kinematic and pile-up effects.
+    particle flow algorithms, as well as jets reconstruction, kinematic and pile-up contamination.
 
-        \subsection{Efficiency estimator}
+    The validation activity consist in comparing typical $b$-tagging variables and performances
+    between a new version and an older one, the reference. The reference is usually taken to
+    be the previous version to only consider the changes introduced in the new version.
 
-        \subsection{Jet size parameter for Run II}
+    \subsection{Technical constrain and impact on efficiency estimation}
 
-        \subsection{Geant 4}
+    The validation work is made on four different samples to allow to cross-check results
+    and factorize the impact of pile-up or simulation type :
+    \begin{itemize}
+        \item a QCD sample with generated partons with $50 < \pT < 120\GeV$ and full simulation
+        of the detector
+        \item a $t\bar{t}$ sample with no pile-up and full simulation of the detector
+        \item a $t\bar{t}$ sample with with pile-up and full simulation of the detector
+        \item a $t\bar{t}$ sample with no pile-up and fast simulation of the detector
+    \end{itemize}
 
-        \subsection{Premixing}
+    As the validation is a reccurent process and the production of samples takes CPU
+    ressources and disk space, each sample contains only about 9000 events. This constrains
+    impacts directly the magnitude of statistical fluctuations one will observe in
+    variable distribution and in the efficiency, in turn affecting the check of compatibility
+    between the two version. Considering the efficiency estimation $\epsilon = k/n$ from
+    observing $k$ objects passing a selection among $n$, one can define a critical efficiency
+    such that the relative error on the efficiency estimation will be higher than 10\% :
 
-        \subsection{Alignment and calibration scenarios for Run II}
+    \eq{criticalEfficiency}
+    {
+        \frac{\sigma_\epsilon}{\epsilon} = \sqrt{\frac{1}{N} \frac{1-\epsilon}{\epsilon}} > 0.1
+        \hspace*{1cm}
+        \Rightarrow
+        \hspace*{1cm}
+        \epsilon < \frac{1}{\frac{N}{100} + 1}
+    }
+
+    \reftab{tab:criticalEfficiencyBTag} presents the number of jets according to their flavor
+    and for the QCD and $t\bar{t}$ samples, as well as the critical efficiency associated
+    to these numbers. This efficiency is about $5\cdot10^{-2}$ for lights jets. In the context
+    of studying the performance of the CSV algorithm, it means that the tail of the performance
+    for light jets is likely to fluctuate significantly and can not be reliably probed below
+    the medium working point.
+
+    \begin{table}
+    \centering
+    \begin{tabular}{c|cc|cc}
+        \hline
+                         & \multicolumn{2}{c}{QCD sample} & \multicolumn{2}{c}{$t\bar{t}$ sample} \\
+        \hline
+           Jet category  & Number & Critical efficiency   & Number & Critical efficiency \\
+        \hline
+            $u,d,s,g$    & 17000  & 0.6\%                 & 19600  & 0.5\% \\
+            $c$          & 1400   & 6\%                   & 4500   & 2\%   \\
+            $b$          & 700    & 12\%                  & 13000  & 0.7\% \\
+        \hline
+    \end{tabular}
+        \caption{Typical number of selected jets per flavor category for different sample types,
+        and critical efficiency at which the relative uncertainty on the efficiency will
+        get higher than 10\%. \label{tab:criticalEfficiencyBTag}}
+    \end{table}
+
+    To avoid this problem, some validations only intended to study the impact of reconstruction
+    techniques and algorithm recycle the Monte-Carlo generation and detector simulation
+    steps of previous validation samples, in order to factorize the statistical fluctuations.
+
+        \subsection{Validation of new jet size parameter for Run II}
+
+        The preparation for the Run II of the LHC involve a change in the jet size parameter.
+        Because the jets are expected to be narrower on average due to the energy increase,
+        and to limit the pile-up contamination, this parameter is moved from $R = 0.5$ to $0.4$.
+
+        The validation of this change is made using two set of samples using the same
+        generated events and simulation to limit the effect of statistical fluctuations,
+        but reconstruction is done with the two different jet size parameters. The sample
+        used to produce the following figures is a $t\bar{t}$ sample at $\sqrt{s} = 13\TeV$
+        with pile-up.
+
+        \todo{more comments}
+
+        \insertTwoFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_kinematic}
+                         {bTagging/AK4vsAK5/TTbar_FullSim_PU/2_CSV_jetPt_GLOBAL_all}
+                         {bTagging/AK4vsAK5/TTbar_FullSim_PU/4_CSV_jetEta_GLOBAL_all}
+                         {0.49}
+                         {caption}
+
+        \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackDeltaR_GLOBAL_all}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackSumJetEtRatio_GLOBAL_all}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackSip3dSig_GLOBAL_all}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_flightDistance3dSig_GLOBAL_all}
+                          {0.49}
+                          {caption}
+
+        \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/TCHE_performance_vs_B_GLOBAL_all}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/JP_performance_vs_B_GLOBAL_all}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/SSVHE_performance_vs_B_GLOBAL_all}
+                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/CSV_performance_vs_B_GLOBAL_all}
+                          {0.49}
+                          {caption}
+
+        \subsection{Validation of \textsc{Geant4} 10.0.patch1}
+
+        A new version of \textsc{Geant4} was introduced in the CMS software v7.1.0 and
+        had to be validated. This version contained several changes related to design
+        changes and optimisations which are expected to not affect physics results,
+        and a new, better model for the multiple scattering of leptons and hadrons.
+
+        As the event generation and simulation of the detector had to be redone for
+        this validation, to limit effects due to statistics, special high statistics
+        samples were produced allowing a precise comparison of the distributions.
+
+        Overall, little changes are expected. This expectation is confirmed by the
+        good agreement between the two versions for the impact parameter significance and
+        the performances of the CSV algorithm, shown on \reffig{fig:bTagging/newGeant4}.
+
+        \insertTwoFigures{bTagging/newGeant4}
+                         {bTagging/newGeant4/TTbar_710pre4_newGeant_HS_vs_710pre4_HS_FullSim_lowLevelVariables/CSVTag_trackSip3dSig_GLOBAL_all}
+                         {bTagging/newGeant4/TTbar_710pre4_newGeant_HS_vs_710pre4_HS_FullSim/CSV_performance_vs_B_GLOBAL_all}
+                         {0.49}
+                         {caption}
+
+        \subsection{Validation of new high-PU samples for Run II}
+
+        In CMS software v7.3.0, the default pile-up level was changed from 10 to 35. As
+        tracking and $b$-tagging variables strongly depends on pile-up effects, this
+        new condition is expect to impact significantly the performances.
+
+        \reffig{fig:bTagging/newPU35/tracking} compares the efficiency and fake rate of track
+        reconstruction, as function of $\eta$, between a pile-up of 10 (\emph{old}) and
+        35 (\emph{new}). The new pile-up condition decreases the track reconstruction
+        efficiency by about 2\% in the central region, and increases the fake rate from
+        3\% to 8\%.
+
+        \insertFigure{bTagging/newPU35/tracking}{0.95}{caption}
+
+        On the $b$-tagging side, this translates to more contamination from pile-up and
+        fakes, likely to have large impact parameters or to create fake secondary vertices.
+        \reffig{fig:bTagging/newPU35/lowLevelVariables} shows the comparison of the impact
+        parameter significance and secondary vertex category between the two pile-up conditions.
+        The impact parameter distribution for tracks in light jets gets a wider peak around
+        0, from which we can expect an increase in fake rate for all algorithm based on
+        this variable. The secondary vertex categorization shows also a 5\% absolute loss
+        in $b$ jet vertexing efficiency, and an relative increase of around 35\% in light
+        jets containing a secondary vertex. From this, we can expect that algorithms based
+        on secondary vertex reconstruction will not only a higher fake rate from lights,
+        but also a lower maximum efficiency for $b$ jets.
+
+        \insertTwoFigures{bTagging/newPU35/lowLevelVariables}
+                         {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
+                         {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns_lowLevelVariables/CSVTag_vertexCategory_GLOBAL_all}
+                         {0.49}
+                         {caption}
+
+        Figure \reffig{fig:bTagging/newPU35/performances} presents the impact on the performance
+        for the four main algorithms TCHE, JP, SSVHE and CSV. The overall impact is a higher
+        fake rate from light jets by about 50\% and from $c$ jets by about 5-10\%. The
+        maximum efficiency for $b$ jets for SSVHE is decreased by about 5\%, directly
+        related to what is observed on the vertex category in \reffig{fig:bTagging/newPU35/lowLevelVariables}.
+
+        \insertFourFigures{bTagging/newPU35/performances}
+                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/TCHE_performance_vs_B_GLOBAL_all}
+                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/JP_performance_vs_B_GLOBAL_all}
+                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/SSVHE_performance_vs_B_GLOBAL_all}
+                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/CSV_performance_vs_B_GLOBAL_all}
+                          {0.49}
+                          {caption}
+
+        \subsection{Validation of the premixing technique for pile-up simulation}
+
+        In the CMS software v7 cycle, a new technique called premixing started being developped.
+        This technique concerns the simulation of pile-up : the number of particles
+        originating from pile-up is quite high and represents a large fraction of the CPU time
+        during the simulation of the detector (also called digitization).
+
+        In order to optimize
+        the time of the simulation, which in turn may allow to produce for instance more events
+        for the Monte-Carlo samples, strategy can be developped. In this case, the idea
+        is to factorize the digitization step of the pile-up from the hard-scattering.
+        By doing this, pile-up events can be digitized once for all, and overlayed
+        any hard-scattering event after that, drastically reducing the simulation time
+        per event.
+
+        In order for this to work, one must however be careful regarding the way that the
+        pile-up and hard-scattering are digitized and combined together. For instance,
+        thresholds in the subdetectors, for instance a given calorimetric tower, may
+        impact the digitization such that the hard-scattering alone, or the pile-up alone,
+        may not produce a significant signal, but the combination of the two may. To
+        work around this problem, thresholds are initially set to zero when the digitization
+        is done, and applied only after mixing of the pile-up with the hard-scattering.
+
+        Overall, one wants the premixing technique to not impact the physics at the reconstruction
+        level. $b$-tagging, as a high-level objects, is a good probe for this to check
+        the impact primarily on tracking and the hadronic calorimeter. While there were
+        several validations related to this work, this document focuses on a pathological
+        validation done in v7.4.0.
+
+        As shown on \reffig{fig:bTagging/premixing/lowLevelVariables}, the version of the
+        premixing used led to tracks having an artificially higher number of hits in the
+        pixels on average, and therefore a better track quality, which manifests as a lower
+        tail for the normalized $\chi^2$ distribution, and overall a better resolution.
+        This in turns impact the number of tracks at the vertex for light jets, and the
+        impact parameter significance.
+
+        \insertFourFigures{bTagging/premixing/lowLevelVariables}
+                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_tkNPixelHits_3D_GLOBAL_all}
+                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_tkNChiSqr_3D_GLOBAL_all}
+                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/CSVTag_vertexNTracks_GLOBAL_all}
+                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
+                          {0.49}
+                          {caption}
+
+        This impact the performances of both secondary vertex-based algorithms and impact
+        parameter-based algorithms significantly, as shown on
+        \reffig{fig:bTagging/premixing/performances} : TCHE gets up to 35\% lower fake
+        rate from lights jets while SSVHE gets about 20\% lower fake rate from $c$ jets.
+
+        \insertTwoFigures{bTagging/premixing/performances}
+                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns/TCHE_performance_vs_B_GLOBAL_all}
+                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns/SSVHE_performance_vs_B_GLOBAL_all}
+                          {0.49}
+                          {caption}
 
         \subsection{High PU studies ?}
 
@@ -3966,7 +4181,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             N^\text{pred}_\text{tail}(\text{rare})   & = & N^\text{MC}_\text{tail}(\text{rare})                                           \label{eq:predictionrare}
         \end{eqnarray}
 
-        \begin{table}[!h]
+        \begin{table}[!ht]
             \begin{center}
                 \begin{tabular}{|l|c|c|}
                     \hline
@@ -4040,7 +4255,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             \subsubsection{Uncertainty on $\SFRoneLeptonTop$ and $\SFRWjets$}
             %================================================================
 
-            As described in section \label{sec:MTtailCorrection}, the $\MT$-tail correction
+            As described in \refsection{sec:MTtailCorrection}, the $\MT$-tail correction
             scale factors for $\oneLeptonTop$ and $\Wjets$ are computed with an uncertainty
             coming from statistics in the $0\, b\text{-tag}$ control region and systematic effects
             from the template fit method itself, as well as . This uncertainty is propagated
