@@ -773,7 +773,7 @@
     the case of electrodynamics with a massive electron, the mass term is already breaking
     the chiral symmetry $U(1)_L \times U(1)_R$, but because this is a so-called soft-breaking
     term, the property should still hold in the limit where $m_e^0 \rightarrow 0$.
-    Therefore the correction cannot be proportionnal to $\Lambda$ but only to $m_e$, by
+    Therefore the correction cannot be proportional to $\Lambda$ but only to $m_e$, by
     dimensional analysis. It is common to refer to this by saying that chiral symmetry
     protects the mass of fermions from diverging. The same fact is observed for gauge
     bosons masses in the case of the electroweak symmetry breaking by the Higgs field :
@@ -836,7 +836,7 @@
     cold, that is to say that it must have low kinetic energy.
 
     If one assume that dark matter is made of a single particle $X$, a simple model gives that
-    the relic density $\Omega_X$ is proportionnal to $m_X^2 / g^4_X$ where $m_X$ is the
+    the relic density $\Omega_X$ is proportional to $m_X^2 / g^4_X$ where $m_X$ is the
     mass of the dark matter particle and $g_X$ is the coupling constant in the process
     $XX \leftrightarrow q\bar{q}$. It is remarkable to note that taking $\Omega_X = \orderOf{0.1}$
     from cosmological observations and $g_X \sim 0.6$ from the weak interaction, then
@@ -1219,7 +1219,7 @@
         its decay would violate the $R$-parity. The important consequence is that it provides
         a good candidate for dark matter, provided that this particle is neutral.
 
-        \subsubsection{Phenomenology of the chargino, neutralino and stop sector}
+        \subsubsection{Phenomenology of the chargino, neutralino and stop sector \label{sec:stopNeutralinoCharginoPheno}}
 
         \todo{explicit link between the parameters and mixing matrix + detail on
         coupling stop-top-EW}
@@ -2256,7 +2256,7 @@
               they contain a $b$ quark. This is a large mass compared to hadrons from
               light jets, typically less than $0.1 \GeV$.
         \item \textbf{Long life time and decay length} - $B$ hadrons decay via the weak
-              interaction, with a strength proportionnal to the CKM matrix elements $V_{cb}$ and $V_{ub}$
+              interaction, with a strength proportional to the CKM matrix elements $V_{cb}$ and $V_{ub}$
               which are of the order of $10^{-2}$ and $10^{-3}$ respectively. Because of
               the smallness of this parameter, the life time of $B$ hadrons is about
               $10^{-12}~\text{s}$, corresponding to a decay length of a few tenth of millimeters
@@ -2983,8 +2983,8 @@
         \todo{This theoretical subsection will be updated after being done writing
         the theoretical chapter to correctly sync things.}
 
-        One of the best assets of supersymmetry is its ability to explain the low mass
-        of the Higgs boson, since the boson-fermion symmetry introduces a mechanism to
+        One of the best assets of supersymmetry is its ability to explain why the Higgs
+        boson should be light, since the boson-fermion symmetry introduces a mechanism to
         protect the mass of the Higgs . This is illustrated on
         \reffig{fig:higgsCorrections}, showing the one-loop corrections to $m_H^2$
         from a fermionic and bosonic field coupled to the Higgs via the Lagrangian terms
@@ -3044,7 +3044,7 @@
         neutralino LSP and a light stop NLSP are relatively light ($\lesssim 1\TeV$) and
         accessible at the LHC.
 
-        \subsection{Phenomenology and signature}
+        \subsection{Phenomenology and signature \label{sec:phenoAndSignature}}
         %=======================================
 
         In this subsection, we introduce the processes and phenomenology of direct stop
@@ -3452,7 +3452,7 @@
         \label{tab:secondLeptonVetoPerformances}
     \end{table}
 
-        \subsection{Jets and missing transverse energy}
+    \subsection{Jets and missing transverse energy \label{sec:analysisJetMET}}
         %==============================================
 
        Jets are reconstructed using the anti-$k_t$ clustering algorithm with a size
@@ -3851,7 +3851,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             the decay products.
         \item $\Delta R( \ell, \text{lead. } b)$ ; In the $\lstop \rightarrow t \lneutralino$ decay mode,
             as $\deltam$ grows, the top quarks become more and more boosted and their decay products are
-            more colimated in one single direction. This variable aims to exploit this fact, expecting more
+            more collimated in one single direction. This variable aims to exploit this fact, expecting more
             signal events at lower $\Delta R$. It however offers less discriminating
             power for the $\lstop \rightarrow b \lchargino$ as
         \item $H_{T}^\text{ratio}$ ; Another way of using the $\MET$ direction is to compute the ratio of the
@@ -4767,7 +4767,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         using the CT10, NNPDF 2.1, and MSTW2009 PDF sets. \refNeeded The impact on the
         signal efficiency is about 5\%.
 
-    \section{Signal contamination handling}
+    \section{Signal contamination handling \label{sec:signalContamination}}
     %==============================================================
 
         Signal contamination occurs when a significant fraction of signal events is present in
@@ -4837,16 +4837,19 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     \section{Results and interpretation \label{sec:analysis_results}}
     %==============================================================
 
-    On the left of figures \reffig{fig:resultsCnC} and \reffig{fig:resultsBDT}, comparisons
-    of the yield between data and background prediction under the null hypothesis
-    for each signal regions of the cut-based approach and BDT approach are presented.
+    On the left of \reffig{fig:resultsCnC} and \reffig{fig:resultsBDT}, comparisons
+    of the yields between data and background prediction under the null hypothesis $H_0$
+    are presented for each signal regions of the cut-based approach and BDT approach respectively.
     A good compatibility is observed with the background-only expectation. The results
-    are therefore interpreted in terms of upper limit on $\sigma(\lstop\lstop) \times BR$
-    with a 95\% confidence level (CL).  Comparing the upper limit with the theoretical
+    are therefore interpreted in terms of upper limit on $\sigma(\lstop\lstop) \times \text{BR}$
+    with a 95\% confidence level (CL) and where BR refers to the branching ratio of the
+    decay mode considered (i.e. $\lstop \rightarrow t \lneutralino$ or $\lstop \rightarrow
+    b \lchargino$ with a given $x$). Comparing the upper limit with the theoretical
     expectation for a branching ratio of 1, one can derive limits in terms of excluded
     region of the $(\mass{\lstop}, \mass{\lneutralino})$ space, as reported on the right
-    of \reffig{fig:resultsCnC} and \reffig{fig:resultsBDT}. During the interpretation,
-    the signal hypothesis modeling is corrected to account for signal contamination.
+    of \reffig{fig:resultsCnC} and \reffig{fig:resultsBDT}. During the interpretation, the
+    background estimation is corrected to account for the signal contamination effects
+    as discussed in \refsection{sec:signalContamination}.
 
     \begin{figure}[h!]
         \centering
@@ -4858,12 +4861,12 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \includegraphics[width=0.31\textwidth]{limits/T2bw050_CC}\\
         \includegraphics[width=0.33\textwidth]{results/CnC_T2bw025/signalRegion_MTtail_yield}
         \includegraphics[width=0.31\textwidth]{limits/T2bw025_CC}\\
-        \caption{On the left : comparison of the yield of the different cut-based signal
+        \caption{On the left : comparison of the yields in the different cut-based signal
         regions between data and the background prediction under the null hypothesis. The
         grey hatching represents the systematic uncertainty, propagated on the ratio plot.
         On the right : upper limit at 95\% confidence level and exclusion in terms of
         $(\mass{\lstop},\mass{\lneutralino})$ after comparison to the theory, assuming
-        $BR = 1$. On the first row, for $\lstop \rightarrow t \lneutralino$ decay mode on
+        $BR = 1$. On the first row, for $\lstop \rightarrow t \lneutralino$ decay mode and on
         the second, third and last row for $\lstop \rightarrow b \lchargino$ decay mode
         with $x=0.75$, $0.50$ and $0.25$ respectively.}
         \label{fig:resultsCnC}
@@ -4879,39 +4882,123 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \includegraphics[width=0.31\textwidth]{limits/T2bw050_BDT}\\
         \includegraphics[width=0.33\textwidth]{results/BDT_T2bw025/signalRegion_MTtail_yield}
         \includegraphics[width=0.31\textwidth]{limits/T2bw025_BDT}\\
-        \caption{On the left : comparison of the yield of the different BDT-based signal
+        \caption{On the left : comparison of the yields in the different BDT-based signal
         regions between data and the background prediction under the null hypothesis. The
         grey hatching represents the systematic uncertainty, propagated on the ratio plot.
         On the right : upper limit at 95\% confidence level and exclusion in terms of
         $(\mass{\lstop},\mass{\lneutralino})$ after comparison to the theory, assuming
-        $BR = 1$. On the first row, for $\lstop \rightarrow t \lneutralino$ decay mode on
+        $BR = 1$. On the first row, for $\lstop \rightarrow t \lneutralino$ decay mode and on
         the second, third and last row for $\lstop \rightarrow b \lchargino$ decay mode
         with $x=0.75$, $0.50$ and $0.25$ respectively.}
         \label{fig:resultsBDT}
     \end{figure}
 
-    The BDT approach leads to limits which are usually about $50 \GeV$ futher compared to
-    the cut-based approach. For the $\lstop \rightarrow t \lneutralino$ decay mode, the
-    observed exclusion using the BDT approach goes up to $\mass{\lstop} \sim 700 \GeV$
-    and $\mass{\lneutralino} \sim 250 \GeV$ in the on-shell region and up to
-    $\mass{\lneutralino} \sim 125 \GeV$ in the off-shell region. It is however difficult
-    to exclude the region $\deltam \sim \mass{t}$ as the kinematic here is very close to
-    standard model $t\bar{t}$.
+    The comparison of the observed limits with the expected one is directly related to
+    the difference of the yields between the observed data and the background prediction :
+    for instance, in the cut-based signal regions of the $\lstop \rightarrow t \lneutralino$,
+    on top of \reffig{fig:resultsCnC}, the Off-shell loose region has a 1.5$\sigma$ excess,
+    translating to a less restrictive observed limit. On the other hand, the Medium $\deltam$
+    signal regions has a deficit of around 0.5$\sigma$, translating to a higher observed
+    limit in this region, compared to the expectation.
 
-    \todo{To be added when available (for the CnC especially) : polarized limits, branching
-    ratio variation, maybe replace BDT results by a comparison BDT <-> CnC. \\Combination
-    with 2$\ell$}
+    Overall, the BDT approach leads to limits which are typically about $50\GeV$ higher
+    compared to the cut-based approach, in terms of $\mass{\lstop}$. For the $\lstop
+    \rightarrow t \lneutralino$ decay mode, the observed exclusion using the BDT approach
+    goes up to $\mass{\lstop} \sim 700\GeV$ and $\mass{\lneutralino} \sim 250\GeV$ in the
+    on-shell region and up to $\mass{\lneutralino} \sim 125\GeV$ in the off-shell region.
+    As discussed back to \refsection{sec:phenoAndSignature}, the case with $\deltam \sim
+    \mass{t}$ is challenging as the kinematic here is very close to standard model $t\bar{t}$
+    production and cannot be efficiently probed directly. However, dedicated approach can
+    be built to indirectly probe this scenario \todo{ref to SUS-13-021 and 1407.1043v1}. The
+    decay mode $\lstop \rightarrow b \lchargino$ is also challenging in the low $x$ case
+    as decay of the two $W$'s are typically softer compared to higher $x$ cases. At low
+    $\mass{\lneutralino}$, the mass of the $\lchargino$ is also low and on average, leads
+    to less $\MET$ in the event and therefore lower selection efficiency. The final shape
+    of this limit is due to concurrence between having a high-enough signal cross-section,
+    having an off-shell $W$ to have high-$p_T$ objects to pass the selection, and
+    sufficient $\MET$ from the decay of the $\lchargino$.
 
-    Alternative exclusion in terms of $(\mass{\lstop}, \mass{\lneutralino})$ are proposed
-    for different branching ratio assumptions, as represented on \reffig{fig:}.
-    Different polarization assumptions are also being looked at on \reffig{fig:} for both
-    decay types and can have a significant impact
+    The results of this analysis have been combined with an analysis targetting the same
+    signals, this time in the dilepton channel. While this channel does not reach a
+    comparable performances at high $\deltam$, it is competitive in the low $\deltam$ cases
+    due to the lower thresholds on the lepton $\pT$ compared the semileptonic and all hadronic
+    channels. The strategy of the search is based on the variable $M_{T2}(\ell\ell)$ constructed
+    with ideas similar to the $M_{T2}^W$ discussed before. The signal regions are designed
+    with increasing cuts on this variable. In both the semileptonic and dileptonic analysis,
+    the background estimation is mainly data-driven and, provided that the overlap between
+    the analysis is close to zero, no correlation between the background systematics are
+    taken into account. However, the signal systematic uncertainties such as the uncertainties
+    on jet energy corrections, the luminosity and the ISR reweighting, are taken to
+    be correlated at 100\%. The results of the analysis are combined and interpreted
+    in terms of limits, shown on \reffig{fig:resultsCombined}. The combination allowed
+    significant improvements, in particular around the $\deltam \sim \mass{t}$ region
+    in the $\lstop \rightarrow t \lneutralino$ case, and at low $\deltam$ in the
+    $\lstop \rightarrow b \lchargino$ case with $x$ = 0.25 and 0.50.
 
-    \reffig{fig:event62838873} shows one of the most signal-like event in the
-    high-$\deltam$ signal region of the cut-based approach for $\lstop \rightarrow t \lneutralino$.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.49\textwidth]{limits/combined/T2tt}
+        \includegraphics[width=0.49\textwidth]{limits/combined/T2bw075}\\
+        \includegraphics[width=0.49\textwidth]{limits/combined/T2bw050}
+        \includegraphics[width=0.49\textwidth]{limits/combined/T2bw025}\\
+        \caption{Upper limit at 95\% confidence level after combining the semileptonic
+        and dileptonic searches, and corresponding exclusion in terms of $(\mass{\lstop},
+        \mass{\lneutralino})$ after comparison to the theory, assuming
+        $BR = 1$. On the top left, for $\lstop \rightarrow t \lneutralino$ decay mode and on
+        the top right, bottom left and bottom right for $\lstop \rightarrow b \lchargino$ decay
+        mode with $x=0.75$, $0.50$ and $0.25$ respectively.}
+        \label{fig:resultsCombined}
+    \end{figure}
+
+    Futhermore, polarization scenarios can be investigated, directly related to the mixing of
+    the stops and the mixing matrices of the neutralinos and charginos introduced in
+    \refsec{sec:stopNeutralinoCharginoPheno}. In the $\lstop \rightarrow t \lneutralino$
+    decay mode, we investigate two alternative scenarios in the on-shell case depending
+    of the handedness of the top from the decay of the stop, either purely lef-handed
+    or purely right-handed. As presented on \reffig{fig:resultsCombinedPolarized}, these
+    alternative polarization scenarios impact the limits by $\pm 50\GeV$. In the
+    $\lstop \rightarrow b \lchargino$, both the polarization of the chargino and the
+    handedness of the $W\lneutralino\lchargino$ coupling can be taken as either symmetric,
+    left or right. In particular, four cases have been investigated and compared to the
+    nominal case (i.e. unpolarized) as shown on \reffig{fig:resultsCombinedPolarized}.
+    The maximum increase in the limits reach is found for the scenario with a right-handed
+    $\lchargino$ with right-handed $W\lneutralino\lchargino$ coupling, and the maximum
+    decrease for a right-handed $\lchargino$ with left-handed $W\lneutralino\lchargino$ coupling.
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.49\textwidth]{limits/combined_pola/T2tt}
+        \includegraphics[width=0.49\textwidth]{limits/combined_pola/T2bw075}\\
+        \includegraphics[width=0.49\textwidth]{limits/combined_pola/T2bw050}
+        \includegraphics[width=0.49\textwidth]{limits/combined_pola/T2bw025}\\
+        \caption{Exclusion limits for the combined semileptonic and dileptonic searches
+        when considering alternative polarization scenarios : on the top left, for $\lstop
+        \rightarrow t \lneutralino$ decay mode with pure lef-handed or right-handed top
+        compared to the unpolarized scenario ; on the top right, bottom left and bottom
+        right for $\lstop \rightarrow b \lchargino$ decay mode with $x=0.75$, $0.50$ and
+        $0.25$ respectively.}
+        \label{fig:resultsCombinedPolarized}
+    \end{figure}
+
+    Finally, one may be tempted to directly inspect the events in the recorded data, that are the
+    most signal-like, to look for any pathological reconstruction or simply obtain a
+    better feeling of what are the remaining events after the full selection. \reffig{fig:event62838873}
+    shows one of these events in the high-$\deltam$ signal region of the cut-based approach
+    for $\lstop \rightarrow t \lneutralino$. This event contains four jets among which
+    two $b$-tagged, a muon with $\pT = 114\GeV$, $\MET = 392\GeV$ and a value of $\MT =
+    300\GeV$. For this particular event, one may find suspicious that the $\MET$ direction
+    is colinear with the highest $\pT$ jets in the event and may indicate a large mismeasurement
+    of the energy of these jets. This hypothesis is also supported by the fact that these
+    jets have pseudo-rapidities corresponding to the transition region between the barrel
+    and the endcap, in which mismeasurement are likely to occur in the tracker and hadronic
+    calorimeter. This kind of topology could be investigated further and kept in mind when
+    developping the analysis of the Run II.
 
     \insertFigure{event62838873}{0.9}
-    {One of the most signal-like event for the $\lstop \lstop^{*} \rightarrow t t \lneutralino \lneutralino$ decay-mode in the high-$\deltam$ cut-based approach. The event has one muon with $\pT = 114\GeV$, 4 jets among which 2 $b$-tag, $\MET = 392\GeV$ and $\MT = 300 \GeV$. Only tracks coming from the primary vertex are shown.}
+    {One of the most signal-like event for the $\lstop \lstop^{*} \rightarrow t t \lneutralino \lneutralino$
+    decay-mode in the high-$\deltam$ cut-based approach. The event has one muon with
+    $\pT = 114\GeV$, 4 jets among which 2 $b$-tag, $\MET = 392\GeV$ and $\MT = 300 \GeV$.
+    Only tracks coming from the primary vertex are shown.}
 
     \newpage
 
@@ -5148,10 +5235,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         One may also statistically combine the two categories (A) and (B) with multi-bins
         techniques, instead of merging them together into a single bin.
 
-        \subsection{Sensitivity and perspectives for the Run II}
-        % =====================================================
-
-            \subsubsection{Extrapolation of the sensitivity from Run I analysis}
+        \subsection{Sensitivity estimation for the Run II}
         % =====================================================
 
         One can get a basic estimation of the integrated luminosity $\mathcal{L}$ required
@@ -5174,53 +5258,86 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
         The sensitivity has been further studied on two Monte-Carlo benchmarks for the
         $\lstop \rightarrow t \lneutralino$ signal type with $(\mass{\lstop},
-        \mass{\lneutralino}) = (650,325)$ and $(850,100) \GeV$. An object selection
+        \mass{\lneutralino}) = (650,325)$ and $(850,100)\GeV$. An object selection
         strongly inspired from \refsection{sec:analysis_objectAndEventSelection}, though simplified
         for this study, was used. A similar preselection is applied, requiring one electron
         or muon with $\pT > 30\GeV$, at least four jets among which one $b$-tagged, at least
-        50 \GeV for $\MET$ and vetoing on a second lepton with $\pT > 5\GeV$. \reftab{tab:phys14Preselection}
-        shows the Monte-Carlo yields for $\mathcal{L} = 1\invfb$ obtained at preselection
-        and after cutting on $\MT > 120\GeV$.
+        $50 \GeV$ for $\MET$ and vetoing on a second lepton with $\pT > 5\GeV$. However
+        at this point, no sophisticated tool is used to, for instance, reject jets from
+        pile-up as it was the case in \refsection{sec:analysisJetMET}, nor the full second
+        lepton veto based on isolated track and hadronic $\tau$s. This directly impacts
+        the selection efficiency of the $\diLeptonTop$ process which may therefore be
+        overestimated compared to when these tools will be available.
+        \reftab{tab:phys14Preselection} shows the Monte-Carlo yields for $\mathcal{L} = 1\invfb$
+        obtained at preselection and after cutting on $\MT > 120\GeV$.
 
         \begin{table}
             \centering
             \input{../media/phys14/yieldTablePreselection}
-            \caption{\todo{To be updated with higher stat} \label{tab:phys14Preselection}}
+            \caption{Yields at preselection level and with an additional cut on $\MT > 120\GeV$,
+            using the Monte-Carlo samples for the preparation of the Run II. \label{tab:phys14Preselection}}
         \end{table}
 
-        We define three signal regions SR 1, 2 and 3 inspired from the high-$\deltam$
-        selection at $8\TeV$ using only increasing cuts on $\MET$ and $\MTTwoW$ as defined
-        on \reftab{tab:phys14Cuts}. \reftab{tab:phys14SignalRegions} shows the yield
-        obtained from Monte-Carlo assuming $\mathcal{L} = 1\invfb$.
+        We define three signal regions SR1, SR2 and SR3 inspired from the high-$\deltam$
+        selection at $8\TeV$ using a constant cut at $\MT > 160\GeV$ and increasing
+        cuts on $\MET$ and $\MTTwoW$ as defined on \reftab{tab:phys14Cuts}.
+        \reftab{tab:phys14SignalRegions} shows the yield obtained from Monte-Carlo considering
+        $\mathcal{L} = 1\invfb$. Because of the limited Monte-Carlo statistics available
+        in the $W$-jets sample, and due to the tight requirement on the jet and $b$-tag
+        multiplicity, no event is found for this background category.
 
         \begin{table}
             \centering
-            \begin{tabular}{c|cc}
-                \textbf{Signal Region} & $E_T^\text{miss}$ & $M_{T2}^W$ \\
+            \begin{tabular}{|c|ccc|}
                 \hline
-                \textbf{SR1}           & >250 & >180 \\
-                \textbf{SR2}           & >300 & >190 \\
-                \textbf{SR3}           & >350 & >200 \\
+                \textbf{Signal Region} & $\MT$ & $\MET$ & $M_{T2}^W$ \\
+                \hline
+                \textbf{SR1}           & >160  & >250 & >180 \\
+                \textbf{SR2}           & >160  & >300 & >190 \\
+                \textbf{SR3}           & >160  & >350 & >200 \\
+                \hline
             \end{tabular}
-            \caption{\todo{Write caption} \label{tab:phys14Cuts}}
+            \caption{List of cuts used to define the signal regions for the estimation of
+            sensitivity for the Run II. \label{tab:phys14Cuts}}
         \end{table}
 
         \begin{table}
             \centering
             \input{../media/phys14/yieldTableSR}
-            \caption{\todo{To be updated with higher stat} \label{tab:phys14SignalRegions}}
+            \caption{Yields obtain in the signal regions SR1, SR2 and SR3 when considering
+                     $\mathcal{L} = 1\invfb$. \label{tab:phys14SignalRegions}}
         \end{table}
 
-       Finally, the sensitivity is estimated from the results in the SR2 region, as function
-       of the integrated luminosity using $S / \sqrt{B + f^2 B^2}$ with a relative systematic
-       uncertainty of $f = 50\%$ on the background. The results are presented on \reffig{fig:}
-       and suggest that a signal with $(\mass{\lstop}, \mass{\lneutralino}) = (850,100)$
-       could be excluded with $\mathcal{L} = 4\sim5\invfb$ or put in evidence with
-       $\mathcal{L} = 10\sim15\invfb$.
+       The sensitivity is estimated from the yields in the SR3 region, as function
+       of the integrated luminosity. We express the sensitivity in terms of excluded or
+       discoverable signal strength $\mu \definedAs \sigma / \sigma_\text{theo.}$, as
+       discussed in \refsection{sec:FoMdiscussion}. The background systematic uncertainty
+       is set to 15\% . Because the $\diLeptonTop$ fraction is likely to be overestimated
+       due to the absence of the full second lepton veto and pile-up jet rejection in
+       this implementation, three scenarios are studied when lowering this fraction by 0,
+       25 and 50\%.
 
-            \insertFigure{phys14/sensitivityAsFunctionOfLumi}
-                         {0.9}
-                         {\todo{To be updated with higher stat (and maybe put discoverable/excluded signal strength instead ?)}}
+       The results are presented on \reffig{fig:phys14/sensitivityAsFunctionOfLumi}.
+       One wants to look in particular for the luminosity required to have an excluded or
+       discoverable signal strength lower than 1, meaning that the analysis is effectively
+       sensitive to what the theory predicts. In the case of the two benchmarks considered,
+       no possibility of discovery at 3$\sigma$ level is found to be possible with
+       a luminosity lower than $30\fb$. However, a $2\sigma$ exclusion can happen for
+       the (650/325) benchmark between $15$ and $30\fb$ depending of the optimism of the
+       scenario. For the (850/100) benchmark, it can also be excluded at the $2\sigma$ level
+       with $20\fb$ provided that 50\% of the $\diLeptonTop$ is sucessfully rejected.
+
+       \insertFourFigures{phys14/sensitivityAsFunctionOfLumi}
+                         {phys14/T2tt_650_325_SR3_exclusion_vartt2l}
+                         {phys14/T2tt_650_325_SR3_discovery_vartt2l}
+                         {phys14/T2tt_850_100_SR3_exclusion_vartt2l}
+                         {phys14/T2tt_850_100_SR3_discovery_vartt2l}
+                         {0.49}
+                         {Evolution of the sensitivity in terms of excludable signal strength
+                         at 2$\sigma$ level (on the left), and discoverable signal strength
+                         at 3$\sigma$ level (on the right) for the T2tt (650/325) (on the top)
+                         and T2tt (850/100) (on the bottom) benchmarks. Three scenarios are
+                         considered when lowering the $\diLeptonTop$ background by 0, 25 and 50\%.}
 
 %==============================================================
 \chapternonum{Conclusion}
