@@ -9,6 +9,9 @@ with plt.xkcd():
 
     ax.set_xlim([0,800])
 
+    # Describe decay
+    ax.text(550, 270, r'Stop $\rightarrow$ t + neutralino', fontsize=15)
+
     # Draw lines
         # deltam = 0
     ax.plot([0,   400], [0, 400], '-',  color="#777777")
@@ -44,6 +47,9 @@ with plt.xkcd():
     ax.set_xlabel("stop mass")
     ax.set_ylabel("neutralino mass")
 
-    plt.savefig('T2tt.pdf')
-    plt.savefig('T2tt.png')
+    #ax.arrow(800, -1, 1, 0, width=0.01, color="k", clip_on=False, head_width=5, head_length=5)
+    #ax.arrow(1, 400, 0, 1,  width=0.01, color="k", clip_on=False, head_width=5, head_length=5)
 
+
+    plt.savefig('T2tt.pdf')
+    plt.savefig('T2tt.png', dpi=200)
