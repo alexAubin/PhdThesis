@@ -2063,7 +2063,7 @@
 
         Events with no genuine $\MET$ provides a mean to study the resolution.
         $Z \rightarrow \mu\mu$ events fit well this purpose as muons are well-identified objects
-        with a good resolution and a constrain can be put on the invariant mass of the
+        with a good resolution and a constraint can be put on the invariant mass of the
         dimuon system to obtain a sample with good purity. \reffig{fig:METspectrum},
         on the right, shows the distribution of the reconstructed particle-flow based
         $\MET$ in such events. The maximum of the distribution is around $10-20\GeV$ and
@@ -2134,7 +2134,7 @@
             element is, for a given diagram, a number computable from the feynman rules.
             To generate events according to this simple process, one may draw random
             values of $cos(\theta)$ and $\phi$, uniformly distributed in $[-1, 1]$ and
-            $[0,2\pi]$ respectively. From the mass constrains and the direction of the
+            $[0,2\pi]$ respectively. From the mass constraint and the direction of the
             decay, it is then possible to compute the quadri-momentum of the products.
 
             The value of $d\sigma$ is directly related to the probability of this event
@@ -2212,7 +2212,7 @@
             which bits are fired rather than filtering out events at this stage. The
             simulation takes up to a few seconds per event.
 
-            Mainly for time constrains, it is in some case good enough to perform a
+            Mainly for time constraints, it is in some case good enough to perform a
             fast simulation by parametrizing the reponse of the detector instead of
             simulating the whole interaction of particles with the detector material.
 
@@ -2478,7 +2478,7 @@
     The last row of \reffig{fig:bTagging/perfTCandJPandSSV} presents the discriminant and
     performances for the different jet categories for the high efficiency of this algorithm.
     The maximum efficiency achievable is limited by the intrinsic efficiency of
-    actually finding a secondary vertex which satisfies the constrains. For this version,
+    actually finding a secondary vertex which satisfies the constraints. For this version,
     it is around 62\% for $b$-jets and 20\% for $c$ jets, while fake vertices rate (i.e.
     probability to find a vertex in light jets) is around 2\%. The $b$-jet efficiencies
     for the medium and tight working points are around 58\% and 20\% respectively.
@@ -2629,7 +2629,7 @@
     \end{itemize}
 
     As the validation is a reccurent process and the production of samples takes CPU
-    ressources and disk space, each sample contains only about 9000 events. This constrains
+    ressources and disk space, each sample contains only about 9000 events. This constraints
     impacts directly the magnitude of statistical fluctuations one will observe in
     variable distributions and in the performance estimation, in turn affecting the check of compatibility
     between the two versions.
@@ -2970,86 +2970,162 @@
     we concentrate on the context and phenomelogy of the signature while
     \refsection{sec:analysis_objectAndEventSelection} to \refsection{sec:analysis_results} discuss
     the different aspects of the analysis itself and the results. In the last
-    \refsection{sec:analysis_perspective}, some
-    of the perspectives for this analysis are presented in particular to investigate the
-    use of $W$-tagging, as well as the preparation of the Run II.
+    \refsection{sec:analysis_perspective}, some of the perspectives for this analysis
+    are discussed, in particular an investigation regarding the use of $W$-tagging, followed
+    by a sensitivity estimation for the Run II.
 
     \section{Context and phenomenology \label{sec:analysis_contextAndPheno}}
     %==============================================================
 
-        \subsection{Theoretical context and assumptions}
+        \subsection{Theoretical context and constraints}
         %==============================================================
 
-        \todo{This theoretical subsection will be updated after being done writing
-        the theoretical chapter to correctly sync things.}
+        \subsubsection{Motivation and constraints from the Higgs sector}
 
-        One of the best assets of supersymmetry is its ability to explain why the Higgs
-        boson should be light, since the boson-fermion symmetry introduces a mechanism to
-        protect the mass of the Higgs . This is illustrated on
-        \reffig{fig:higgsCorrections}, showing the one-loop corrections to $m_H^2$
-        from a fermionic and bosonic field coupled to the Higgs via the Lagrangian terms
-        $- \lambda_f H \bar{f} f$ and $\lambda_b \left| H \right|^2 \left| b \right|^2$.
-        The leading order corrections writes :
+            One of the best assets of supersymmetry is its ability to explain why the Higgs
+            boson can be light, via the boson-fermion symmetry which that protects the mass
+            of the Higgs from diverging because of its corrections. This is illustrated on
+            \reffig{fig:higgsCorrections}, showing the one-loop corrections to $m_H^2$
+            from a fermionic field $f$ and a bosonic field $b$ coupled to the Higgs via the
+            Lagrangian terms $- \lambda_f H \bar{f} f$ and $\lambda_b \left| H \right|^2 \left| b \right|^2$.
+            The leading order corrections associated to these diagrams are :
 
-        \insertTwoFigures{higgsCorrections}
-        {feynmanDiagrams/output/higgsFermionCorrection}
-        {feynmanDiagrams/output/higgsBosonCorrection}{0.4}
-        {One-loop correction to the Higgs for a fermionic field $f$ and bosonic field $b$.}
+            \insertTwoFigures{higgsCorrections}
+            {feynmanDiagrams/output/higgsFermionCorrection}
+            {feynmanDiagrams/output/higgsBosonCorrection}{0.4}
+            {One-loop correction to the Higgs for a fermionic field $f$ and a bosonic field $b$.}
 
-        \begin{equation}
-            \Delta \mass{h}^2 = - \frac{\left| \lambda_f \right|^2}{8\pi^2} \Lambda^2_{\text{UV}}
-            \, \, \, \, \, \, \, \, \, \, \text{and} \, \, \, \, \, \, \, \, \, \,
-            \Delta \mass{h}^2 =   \frac{\lambda_b}{16\pi^2} \Lambda^2_{\text{UV}}
-        \end{equation}
+            \begin{equation}
+                \Delta \mass{h}^2 = - \frac{\left| \lambda_f \right|^2}{8\pi^2} \Lambda^2_{\text{UV}}
+                \, \, \, \, \, \, \, \, \, \, \text{and} \, \, \, \, \, \, \, \, \, \,
+                \Delta \mass{h}^2 =   \frac{\lambda_b}{16\pi^2} \Lambda^2_{\text{UV}}
+            \end{equation}
+            where $\Lambda^2_{\text{UV}}$ is the ultraviolet momentum cutoff which regulates
+            the loop integral. In the most ideal case, one can have $\left| \lambda_f \right|^2
+            = \lambda_b$, which corresponds to $\mass{f} = \mass{b}$, and associate two scalars
+            to each fermion (one for each chirality) so that the corrections to cancel each others.
+            If the masses of $f$ and $b$ are not the same, however, the corrections do not
+            perfectly cancel each other and tunning has to be reintroduced to keep the
+            corrections to the Higgs mass low. Since the top quark has the biggest Yukawa coupling $\lambda$, a
+            particular attention in supersymmetry goes into the study of its superpartner
+            which should play an important role to stabilize the mass of the Higgs.
 
-        where $\Lambda^2_{\text{UV}}$ is the ultraviolet momentum cutoff which regulates
-        the loop integral. In the most ideal case, one could have $\left| \lambda_f \right|^2
-        = \lambda_b$ and associate two scalar to each fermion (one for each chirality),
-        the corrections cancel each others. \todo{should clarify link between $\lambda$ and masses..}
-        This however does not happens if the mass of the particle and its superpartner
-        are not the same, and tunning has to be reintroduced to keep the Higgs mass low.
-        This is especially important in the case of the top as the correction it introduces
-        on $\mass{h}^2$ is one of the biggest.
+            One can study the level of tunning needed as function of the mass of the superpartner
+            of the top, the stop, for the theory to keep providing a natural explanation to the hierarchy
+            problem, and use it as a guidance for experimental searches. Despite the fact
+            that such a study is highly dependent on hypotheses made on the SUSY parameters,
+            it is commonly admitted that stop quarks should have a mass below or around $1\TeV$
+            for SUSY to remain natural \refNeededd. This makes the search for stops an important channel
+            for possible SUSY discovery at the LHC.
 
-        One can estimate the level of tunning needed as function of the superpartner of
-        the top for the theory to keep providing a natural explanation to the hierarchy
-        problem, and use it as a constrain. Despite the fact that such constrain is
-        highly dependent on hypothesis made on the SUSY parameters, it is commonly admitted
-        that stop quarks should have a mass below or around $1\TeV$ for SUSY to remain natural.
-        This makes the search for stop and important channel for possible SUSY discovery.
+            In addition to the argument of naturalness, one may derive constraints on the stop
+            sector directly from the knowledge of the Higgs mass \todo{arXiv:1212.6847}. In
+            the context of supersymmetry, the Higgs mass may indeed be expressed as function
+            of the other parameters of the theory :
 
-        \todo{from arXiv:1212.6847, A light stop can be very helpful to obtain the right dark-matter relic density, which
-        is typically too large for B-ino LSP or too small for higgsino or W-ino LSP in generic
-        supersymmetric models. The process of coannihilation selects the preferred value of
-        the mass difference between stop and neutralino.}
+            \eq{higgsMassInSUSY}
+            {
+                \mass{h}^2
+                =
+                \mass{Z}^2 \text{cos}^2 2\beta
+                +
+                \frac{3 \lambda_t^2 \mass{t}^2}{4\pi^2}
+                \left[
+                    \text{log} \left( \frac{\mass{S}^2}{\mass{t}^2} \right)
+                    +
+                    X_t^2 \left( 1 - \frac{X_t^2}{12} \right)
+                \right]
+                + ...
+            }
 
-        \todo{http://arxiv.org/pdf/1211.2997v1.pdf, http://arxiv.org/pdf/1212.4856v2.pdf}
+            where $X_t \definedAs (A_t + \mu \text{cot} ) \beta) / \mass{S}$ is the stop mixing
+            parameter, i.e. it parametrizes the off-diagonal elements in the stop mixing
+            matrix, and $\mass{S} \definedAs \sqrt{\mass{\tilde{t}_1}\mass{\tilde{t}_2}}$ is the average stop
+            mass. From this computation, constraints can be put on the value of $\mass{S}$ as
+            function of $X_t$, as shown on the left of \reffig{fig:stopSectorConstraints} when assuming $tan \beta
+            = 20$. For $\mass{h}= 125\GeV$, one finds that the minimum value of $\mass{S}$ is
+            around $600\GeV$, obtained for the so-called maximal mixing value $X_t = \sqrt{6}$.
+
+        \insertTwoFigures{stopSectorConstraints}
+                         {theory/averageStopMassConstraint}
+                         {theory/constraintsFromHgg}
+                         {0.49}
+                         {Constraints on the stop sector from the Higgs measurement.
+                         On the left, constraints on $\mass{S}$ as function of $X_t$ from
+                         for different values of the Higgs mass. On the right, constraints
+                         in the $(\mass{\tilde{t}_1},\mass{\tilde{t}_2})$ space : the
+                         red area is forbidden because, as seen on the right plot, $m_S$
+                         should be higher than about 600\GeV if $\mass{h} = 125\GeV$ ;
+                         the lines corresponds to a few different values of $\Delta_t$,
+                         namely -0.05, 0, 0.05 and 0.1, with $X_t^2 > 6$ (in blue) or
+                         $X_t^2 < 6$ (in black).
+                         }
+
+            Additionally, it is remarkable that constraints on the stop sector can also be derived
+            from the loop to the decay $h \rightarrow gg$ and $h \rightarrow \gamma \gamma$
+            as described in \todo{arXiv:1212.6847}. As the photon is not massive,
+            the decay $h \rightarrow \gamma \gamma$ must involve virtual loops of massive
+            particles, such as the top, but also possibly its superpartner the stop which
+            would then affect the branching ratio $\text{BR}(h \rightarrow \gamma\gamma)$.
+            The impact can be expressed as function of the stop sector parameters $\mass{S}$,
+            $X_t$, $\mass{\tilde{t}_1}$ and $\mass{\tilde{t}_2}$ :
+
+            \eq{higgsGammaGammaStopConstraint}
+            {
+                \frac{\text{BR}(h\rightarrow\gamma\gamma)}{\text{BR}(h\rightarrow\gamma\gamma)_\text{SM}}
+                =
+                (1 - 0.28 \Delta_t)^2
+                \hspace*{0.5cm}
+                \text{with}
+                \hspace*{0.5cm}
+                \Delta_t
+                \approx
+                \frac{\mass{t}^2}{4}
+                \left(
+                    \frac{1}{\mass{\tilde{t}_1}^2}
+                    +
+                    \frac{1}{\mass{\tilde{t}_2}^2}
+                    -
+                    \frac{X_t^2}{\mass{S}^2}
+                \right)
+            }
+
+            At this point, the experimental measurement of $\text{BR}(h\rightarrow\gamma\gamma)$
+            does not allow to significantly constrain the value of $\Delta_t$. Nevertheless,
+            the lines in the right plot of \reffig{fig:stopSectorConstraints} plot illustrates
+            how a $\Delta_t$ value would constrain the $(\mass{\tilde{t}_1},\mass{\tilde{t}_2})$
+            space.
+
+        \subsubsection{Motivation from the dark matter evidence}
 
         A second appealing feature of supersymmetry is that it can provide a dark matter
-        candidate. This happens in R-parity conserving models where the lightest supersymmetric
-        particle (LSP) is a natural WIMP candidate if it is not a charged particle. In the
-        context of the MSSM, the lightest neutralino $\lneutralino$, the gravitino $\tilde{G}$
-        and the lightest sneutrino $\tilde{\nu}$ can be the LSP and therefore are dark matter
-        candidate. The lightest neutralino is the one that is most often studied. Neutralinos
-        $\tilde{\chi}$ are combination of the bino $\tilde{B}$, the two neutral higgsinos
-        $\tilde{H}_{1,2}$, and the neutral wino $\tilde{W}_3$. One can compute the relic
-        abudance of dark matter by solving the Boltzmann equation \cite{EllisDarkMatter}
-        depending essentially on the LSP mass $m_{\text{LSP}}$ and the annihilation cross-section.
-        The next-to-lightest supersymmetric particle (NLSP) mass is a crucial parameter as
-        it strongly affect the annihilation cross-section and therefore the relic abudance.
-        In particular, cosmological observations are favorizing cases where the LSP is
-        degenerated with the lightest stop quark $\lstop$ or stau $\tilde{\tau_1}$.
+        candidate. This happens in particular in R-parity conserving models, where the
+        lightest supersymmetric particle (LSP) is a good dark matter candidate if it is
+        not a charged particle. In the context of the MSSM, the lightest neutralino
+        $\lneutralino$, the gravitino $\tilde{G}$ and the lightest sneutrino $\tilde{\nu}$
+        can be the LSP. The lightest neutralino is the one that is most often studied as its
+        relation to the electroweak sector makes it the perfect WIMP candidate.
+        An advantage of the WIMP phenomenology is that their relic density can be calculated
+        precisely in the framework of standard cosmology \cite{EllisDarkMatter}.
+        Nevertheless, the sneutrino might be motivated as well in models attempting to
+        explain the mass of the neutrinos, while the gravitino as LSP appears in gravity *
+        mediated SUSY breaking (GMSB) models.
 
-        These two considerations lead to a logical interest in phenomenology where both a
-        neutralino LSP and a light stop NLSP are relatively light ($\lesssim 1\TeV$) and
-        accessible at the LHC.
+        In the context of this document, we focus on a SUSY spectra built from the
+        argument of naturalness, which motivates a stop $\lstop$ with a mass lower than around
+        $1\TeV$, together with the case for a dark matter candidate, such as the lightest
+        neutralino $\lneutralino$ being the LSP. While we could simply concentrate on these
+        two particles, we will also consider cases where the lightest chargino $\lchargino$
+        is the NLSP, i.e. has a mass higher than the neutralino $\lneutralino$ but lower
+        than the stop $\lstop$. The process targetted is the direct production of stop
+        quark pairs $\lstop \lstop$ at the LHC.
 
         \subsection{Phenomenology and signature \label{sec:phenoAndSignature}}
         %=======================================
 
-        In this subsection, we introduce the processes and phenomenology of direct stop
-        quark pair production that will be the target of the search described in
-        \refsection{sec:analysis_objectAndEventSelection} to \refsection{sec:analysis_results}.
+        In this subsection, we introduce the processes and phenomenology of the search for
+        direct stop pair production that has been introduced and will be discussed in
+        the rest of this chapter.
 
         As it is in practice impossible to scan the whole phase space of SUSY models, a
         pragmatic approach often consists in using simplified SUSY models where an
@@ -3650,10 +3726,12 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         %==============================================================
 
         This section describes the variables which are later used to define the
-        signal regions. \reffig{fig:variables} intend to represent the discriminating
-        power of the variables by comparing the background to two signal examples. However,
-        it should be kept in mind that some of them show their usefulness only after
-        cutting on other variables or in specific regions of the $(\mass{\lstop},\mass{\lneutralino})$ space.
+        signal regions. For each of them, we discuss the motivation behind the construction
+        and usage of this variable, and compare the distribution for the background
+        and two signal benchmarks. This comparison is shown at preselection level with
+        an additional cut on $\MT > 100\GeV$. However, it should be kept in mind that the
+        usefulness of some variables only shows up after cutting on other variables or in
+        specific regions of the $(\mass{\lstop},\mass{\lneutralino})$ space.
 
            \subsubsection{$\MET$ and $\MET$ significance}
 
@@ -3674,9 +3752,13 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         a low $\MET/\sqrt{H_T}$ value. On the contrary, signal with relatively low $\MET$
         can be recovered provided that the event contains a comparably low level of hadronic
         activity, making it more likely that the $\MET$ is essentially genuine.
+
         \reffig{fig:METvsSqrtHT} illustrates this fact by showing the distribution of
         $\MET$ versus $\sqrt{H_T}$ for the $\oneLeptonTop$ background and a benchmark, and
-        the line corresponding to a cut at $\MET / \sqrt{H_T} < 10$.
+        the line corresponding to a cut at $\MET / \sqrt{H_T} < 10$. The distributions
+        for $\MET$ and $\MET / \sqrt{H_T}$ are compared for backgrounds and signal on
+        \reffig{fig:variables/METandMEToverSqrtHT} and shows how the signal populates the
+        tail of both distributions.
 
         \insertTwoFigures{METvsSqrtHT}
                          {variables/METvsSqrtHT_1ltop}{variables/METvsSqrtHT_T2tt}{0.45}
@@ -3684,6 +3766,20 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
                          $\oneLeptonTop$ (on the left) and the benchmark $\lstop \rightarrow
                          t \lneutralino$ (on the right).
                          The line illustrates a cut $\MET / \sqrt{H_T} < 10$.}
+
+        \insertTwoFigures{variables/METandMEToverSqrtHT}
+                         {variables/MET}
+                         {variables/METoverSqrtHT}
+                         {0.49}
+                         {Stacked plots presenting the distribution of $\MET$ and $\MET /
+                         \sqrt{H_T}$ for the different background categories. Two
+                         signal benchmarks are superimposed, with cross section multiplied
+                         by 100, to show the discriminating power :
+                         $\lstop \rightarrow t \lneutralino$ with $(\mass{\lstop},\mass{\lneutralino})
+                         = (550,50)\GeV$ (in dashed green), and $\lstop \rightarrow b \lchargino$
+                         with $x = 0.5$ and $(\mass{\lstop}, \mass{\lneutralino}) = (550,50)\GeV$
+                         (in dashed purple). The preselection is applied as well as a cut
+                         on $M_T > 100 \GeV$.}
 
         \subsubsection{$M_{T2}^{W}$}
 
@@ -3693,7 +3789,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         one lepton missing. $M_{T2}^W$ is designed by decomposing $\vec{\MET}$ into two
         components : one corresponding to the lost leptonic $W_1$ and the other one being
         a neutrino $\nu_2$, such that $\vec{p}_{W_1} + \vec{p}_{\nu_2} = \vec{\MET}$.
-        The momentums must fit int (on the right)o the constrains that each $W$-like systems, $W_1$ and
+        The momentums must fit into the constraints that each $W$-like systems, $W_1$ and
         ($\ell + \nu_2$), should have a mass $m_W \sim 80 \GeV$. Finally, it is imposed that
         $m(b_1 + W_1) = m(b_2 + \ell_2 + \nu_2) \definedAs \mass{Y}$. The computation is
         summarized in \refequation{eq:MT2W_definition}
@@ -3723,13 +3819,23 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             \right\}
         }
 
+        The resulting distribution of $M_{T2}^W$ is shown on \reffig{fig:variables/MT2W} for
+        backgrounds and signal. The distribution exhibits a particularly good discriminating
+        power with the majority of the background, including the $\diLeptonTop$ component,
+        is found to have $M_{T2}^W < 175\GeV$ while the signal has a much broader distribution
+        from about $125$ to $350\GeV$.
+
+        \insertFigure{variables/MT2W}
+                     {0.49}
+                     {Stacked plots presenting the distribution of $M_{T2}^W$
+                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
 
         \subsubsection{Hadronic top $\chi^{2}$}
 
         An other way to reject the $\diLeptonTop$ background, complementary to the approach
         offered by $M_{T2}^{W}$, is to try to reconstruct an hadronic top from the jets
         in the event. It can be done by finding the best couple of jets, among selected jets,
-        that fits into the constrain of the mass of the $W$ and then to the mass of the top
+        that fits into the constraint of the mass of the $W$ and then to the mass of the top
         by adding a third jet. The value of the hadronic top $\chi^2$ is defined as
         \eq{hadronicChi2definition}
         {
@@ -3743,16 +3849,29 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         propagating the jet energy resolution. This value is in particular relevant to
         discriminate signal events, expected to contain an hadronic top, from $\diLeptonTop$
         and some processes of the rare category, expected to not contain an hadronic top.
+        The distribution of this variable is shown on \reffig{fig:variables/HadronicChi2}.
+
+        \insertFigure{variables/HadronicChi2}
+                     {0.49}
+                     {Stacked plots presenting the distribution of $\chi^2_\text{hadronic top}$
+                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
 
         \subsubsection{$\pT(\text{leading } b)$}
 
         The $\pT$ of the selected objects are a natural source of discriminating power as
         the signal is expected to have a larger momentum than the background on average.
         However for the $\lstop \rightarrow b \lchargino$ decay mode, the $\pT$ of the
-        $b$-jet is expected to be high (compared to the typical $\pT$ of $b$-jets in the
+        $b$-jet is expected to be particularly high (compared to the typical $\pT$ of $b$-jets in the
         background) as it originates directly from the decay of the stop. It is therefore
         interesting for the low $x$ cases, i.e. where the gap between $\lstop$ and
-        $\lchargino$ is set to be high.
+        $\lchargino$ is set to be high. The distribution of this variable is compared for
+        the background and signal on \reffig{fig:variables/leadingBPt} and illustrates the
+        good discriminating power for the $\lstop \rightarrow b \lchargino$ decay mode.
+
+        \insertFigure{variables/leadingBPt}
+                     {0.49}
+                     {Stacked plots presenting the distribution of $\pT(\text{leading } b)$
+                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
 
         \subsubsection{ISR-tagged jets}
 
@@ -3803,7 +3922,19 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         select jets that are likely to originate from ISR \todo{Ref to 0803.0019, 1101.0810}.
         In the present analysis, we define the ISR-tagging criteria as asking that
         the event contains at least five jets, among which one of them with $\pT > 200 \GeV$
-        and not $b$-tagged.
+        and not $b$-tagged. To illustrate this, \reffig{fig:variables/leadingNonBPtN5}
+        shows the distribution of the $\pT$ of the leading non $b$-tagged jet for
+        events with at least five jets. The signal benchmarks used on this plot are
+        taken with $(\mass{\lstop},\mass{\lneutralino}) = (175,50)\GeV$ % FIXME todo
+
+        \insertFigure{variables/leadingNonBPtN5}
+                     {0.49}
+                     {Stacked plots presenting the distribution of $\pT(\text{leading non }b\text{-jet})$
+                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT},
+                     except that the signal benchmarks used are with $(\mass{\lstop},
+                     \mass{\lneutralino}) = (175,50)\GeV$, i.e. in the $\deltam$ region where
+                     this variable is expected to be discriminant due to
+                     the presence of an ISR.} % FIXME todo
 
         \subsubsection{$\Delta \phi( j_{1,2}, \vec{\MET} )$ }
 
@@ -3825,16 +3956,21 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             )
         }
 
-        The
+        As illustrated on \reffig{fig:variables/deltaPhiMETJets},
         $t\bar{t}$ background tends to get low values for this variable because the
         $\nu_{\ell}$ direction is linked to the $b$ quark from the top parent. In signal
         events, $\MET$ is less correlated to the $b$-jet and can $\Delta \phi( j_{1,2},
         \vec{\MET} )$ easily get to higher values.
 
+        \insertFigure{variables/deltaPhiMETJets}
+                     {0.49}
+                     {Stacked plots presenting the distribution of $\Delta \phi( j_{1,2}, \vec{\MET} )$
+                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+
         \subsubsection{Other variables used in the BDT approach}
 
         Other variables are used for the BDT approach and are more briefly discribed in
-        this section :
+        this section. Four of them are illustrated on \reffig{fig:variables/otherVariablesForBDT}.
 
     \begin{itemize}
         \item $\pT(\ell)$, $\pT(\text{lead. jet})$, $\pT(\text{lead. } b)$ ; The $\pT$ of the
@@ -3867,6 +4003,8 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             to use the jet with the highest $b$-tagging discriminator value.
         \item $M_{3b}$ ; In a similar way, one can attempt to reconstruct the mass of the hadronic top system by considering the
             three jets most back-to-back to the selected lepton. Here again, values larger than $m_t$ can be expected in
+            the $\lstop \rightarrow b \lchargino$ signal compared to the background, as the decay chain
+            does not involve any top quark.
         \item Jet multiplicity ; The jet multiplicity also tends to provide discriminating power.
             This is related to the previous ISR discussion : in a more general case, signal
             at higher $\deltam$ will contain more jets because of ISR. The BDT is likely to
@@ -3874,24 +4012,17 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             increase its discriminating power.
     \end{itemize}
 
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.32\textwidth]{variables/leadingBPt}
-        \includegraphics[width=0.32\textwidth]{variables/HT}
-        \includegraphics[width=0.32\textwidth]{variables/deltaRLeptonB}\\
-        \includegraphics[width=0.32\textwidth]{variables/MET}
-        \includegraphics[width=0.32\textwidth]{variables/METoverSqrtHT}
-        \includegraphics[width=0.32\textwidth]{variables/deltaPhiMETJets}\\
-        \includegraphics[width=0.32\textwidth]{variables/HTratio}
-        \includegraphics[width=0.32\textwidth]{variables/MT2W}
-        \includegraphics[width=0.32\textwidth]{variables/HadronicChi2}\\
-        \includegraphics[width=0.32\textwidth]{variables/Mlb_hemi}
-        \includegraphics[width=0.32\textwidth]{variables/M3b}
-        \includegraphics[width=0.32\textwidth]{variables/leadingNonBPtN5}
-        \caption{Stacked plots representing the different discriminating variables used to design the signal region, for background and two signal examples after preselection and cut on $M_T > 100 \GeV$.
-        \todo{update plot with missing variables and/or use same benchmark as previously, ie 450/50}}
-        \label{fig:variables}
-    \end{figure}
+    \insertFourFigures{variables/otherVariablesForBDT}
+                      {variables/deltaRLeptonB}
+                      {variables/HTratio}
+                      {variables/Mlb_hemi}
+                      {variables/M3b}
+                      {0.49}
+                      {Stacked plots presenting the distribution of a subset of
+                      the other variables used in BDT, namely $\Delta R( \ell, \text{lead. } b)$
+                      (top left), $H_{T}^\text{ratio}$ (top right), $M_{\ell b}$ (bottom
+                      left) and $M_{3b}$ (bottom right), with the same conditions of
+                      \reffig{fig:variables/METandMEToverSqrtHT}}
 
     \subsection{Figure of merit and sensitivity estimation \label{sec:FoMdiscussion}}
     %==============================================================
@@ -3968,7 +4099,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
               physicist what can be expected to be excluded or discovered
               for a given counting experiment. It remains a 'number of sigmas', not an
               expected excluded cross-section.
-        \item The formula \refequation{FoM} does not contain any constrain regarding the fact that
+        \item The formula \refequation{FoM} does not contain any constraint regarding the fact that
               the observed number of events will be an integer. It will favorize a situation
               with $0.1$ signal events and expected background of $10^{-5}$ over a
               situation with 10 signal events and 1 background event, despite the fact that
@@ -4030,7 +4161,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     $M_{\ell b}$ offer lower potential.
 
     On a few signal benchmarks, we then proceed to a $n$-dimensionnal optimization of the
-    cuts on these variables. We however impose some constrain in the use of the variables.
+    cuts on these variables. We however impose some constraint in the use of the variables.
     First, either $\MET$ or $\MET/\sqrt{H_T}$ should be used, but not both at the same time.
     We allow tighter cuts on $\MT$ compared to the starting point $> 120\GeV$, but not
     tighter than $> 140\GeV$ especially to keep enough statistics for the background
@@ -4063,7 +4194,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     efficiency and the tightness of requiring a 5th jet at high $\pT$.
     In the medium and high $\deltam$ regime, cutting on $M_{T2}^W$ provides a good gain
     in sensitivity because the large $\MET$ of the signal is less likely to decomposable
-    in such a way that it fits the constrains while style yielding a light $m_Y$ mass.
+    in such a way that it fits the constraints while style yielding a light $m_Y$ mass.
     At low and medium $\deltam$ regimes for the $\lstop \rightarrow t \lneutralino$, the
     hadronic top $\chi^2$ provides a good alternative or complementary approach to $M_{T2}$
     for rejecting the $\diLeptonTop$ background. For $\lstop \rightarrow b \lchargino$,
