@@ -16,16 +16,15 @@
 \titleformat*{\subsubsection}{\bfseries}
 
 % Chapter title format
-\titleformat{\chapter}[display]{\bfseries\huge}
-{Chapter \ \thechapter}
+\titleformat{\chapter}[display]{\bfseries\huge\vspace*{-2cm}}
+{Chapter \ \thechapter\\ \rule{\textwidth}{0.5pt}\vspace*{-0.7cm} }
 {-2ex}
 { % before-code
-    \rule{\textwidth}{1pt}
     \centering
 }
 [ % after-code
     \vspace{-2ex}
-    \rule{\textwidth}{1pt}
+    \rule{\textwidth}{0.5pt}
 ]
 
 % ToC depth
@@ -43,9 +42,9 @@
 % Header and footer style
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\leftmark}
+\fancyhead[LE,RO]{\MakeUppercase{\leftmark}}
 \fancyhead[RE,LO]{}
 \fancyfoot[CE,CO]{}
 \fancyfoot[LE,RO]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}

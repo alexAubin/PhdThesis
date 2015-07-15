@@ -24,6 +24,13 @@
 {
     \chapter*{#1}
     \addcontentsline{toc}{chapter}{#1}
+    \renewcommand{\leftmark}{#1}
+}
+
+\newcommand{\chapterwithnum}[1]
+{
+    \chapter{#1}
+    \renewcommand{\leftmark}{Chapter \thechapter\, - #1}
 }
 
 % Non-numbered section
