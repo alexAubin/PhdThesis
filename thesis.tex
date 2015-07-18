@@ -1814,7 +1814,8 @@ the skin of this tiny little world. »}\\
         35 and 45~cm to cover the forward region. In total, the pixel detector contains 66
         million pixels covering about 16~m$^2$.
 
-        The rest of the tracker system is based on silicon microstrips with width ranging
+        The rest of the tracker system is based on silicon microstrips with a pitch (equal
+        to the strip width plus the space between strips) ranging
         from $80$ to $205~\mu\text{m}$ and length ranging from $10$ to $25~\text{cm}$.
         The resolution of these sensors on the hits position ranges from $23$ to $52~\mu\text{m}$
         in the transverse plane and from $230$ to $530~\mu\text{m}$ along $z$.
@@ -2001,7 +2002,7 @@ the skin of this tiny little world. »}\\
         reduce the rate from $40~$MHz to $100~$kHz, followed by the high-level trigger (HLT)
         which further reduces the rate to $400~$Hz.
 
-        \insertFigure{CMS/triggerL1}{0.8}{Architecture of the L1 trigger. \refNeeded}
+        \insertFigure{CMS/triggerL1}{0.8}{Architecture of the L1 trigger.}
 
         The L1 trigger takes information from the calorimeters and muon system as input
         and is itself composed of different stages as
@@ -2533,7 +2534,7 @@ the skin of this tiny little world. »}\\
     originating from a common secondary vertex. Other properties may be used, such as their
     distribution inside the jet, or the presence of a charged lepton.
 
-    \subsection{$b$-jet discriminating quantities and objects}
+    \subsection{$b$ jet discriminating quantities and objects}
 
     For a given jet, the tracks considered for $b$-tagging studies must have
     a good quality (normalised $\chi^2 < 5$ as well as sufficient number of hits in the
@@ -2683,7 +2684,7 @@ the skin of this tiny little world. »}\\
 
     The first row of \reffig{fig:bTagging/perfTCandJPandSSV} presents the discriminant and
     performances for the different jet categories for the high efficiency version of this
-    algorithm. The $b$-jet efficiency are around 77\%, 60\% and 18\% for the loose, medium
+    algorithm. The $b$ jet efficiency are around 77\%, 60\% and 18\% for the loose, medium
     and tight working points respectively.
 
         \subsubsection{Jet probability}
@@ -2708,7 +2709,7 @@ the skin of this tiny little world. »}\\
 
     The middle row of \reffig{fig:bTagging/perfTCandJPandSSV} presents the discriminant and
     performances for the different jet categories for the jet probability algorithm. The
-    $b$-jet efficiency are around 81\%, 55\% and 39\% for the loose, medium and tight
+    $b$ jet efficiency are around 81\%, 55\% and 39\% for the loose, medium and tight
     working points respectively.
 
         \subsubsection{Simple secondary vertex}
@@ -2718,14 +2719,14 @@ the skin of this tiny little world. »}\\
     vertices as a discriminant. As for the track counting algorithm, two versions are defined
     to obtain either high efficiency (SSVHE) using secondary vertices with at least two
     tracks, while the high purity version (SSVHP) requires at least three tracks.
-    SSVHE version, this efficiency is around 65\% for $b$-jets, and around 20\% for $c$ jets.
+    SSVHE version, this efficiency is around 65\% for $b$ jets, and around 20\% for $c$ jets.
 
     The last row of \reffig{fig:bTagging/perfTCandJPandSSV} presents the discriminant and
     performances for the different jet categories for the high efficiency of this algorithm.
     The maximum efficiency achievable is limited by the intrinsic efficiency of
     actually finding a secondary vertex which satisfies the constrains. For this version,
-    it is around 62\% for $b$-jets and 20\% for $c$ jets, while fake vertices rate (i.e.
-    probability to find a vertex in light jets) is around 2\%. The $b$-jet efficiencies
+    it is around 62\% for $b$ jets and 20\% for $c$ jets, while fake vertices rate (i.e.
+    probability to find a vertex in light jets) is around 2\%. The $b$ jet efficiencies
     for the medium and tight working points are around 58\% and 20\% respectively.
 
         \subsubsection{Soft leptons algorithms}
@@ -2744,10 +2745,10 @@ the skin of this tiny little world. »}\\
     lepton flavor is intrinsically limited by the leptonic branching ratio of $B$ hadrons,
     which is about 20\% per flavor.
 
-    In practice, the maximum $b$-jet efficiency for the the soft electron tagger is around
+    In practice, the maximum $b$ jet efficiency for the the soft electron tagger is around
     14\% compared to around 17\% for the soft muon tagger. The top row of
     \reffig{fig:bTagging/perfSMTandCSV} presents the discriminant and performances of the
-    SMT algorithm. The $b$-jet efficiencies at medium and tight working points are around
+    SMT algorithm. The $b$ jet efficiencies at medium and tight working points are around
     10\% and 5\% respectively.
 
         \subsubsection{Combined secondary vertex}
@@ -2770,11 +2771,11 @@ the skin of this tiny little world. »}\\
     These likelihood are then combined by weighting with a factor 0.75 and 0.25 respectively.
 
     \reffig{fig:bTagging/perfSMTandCSV} presents, on the bottom row, the discriminant and
-    performances of the algorithm. At the loose working point, the $b$-jet efficiency is
-    around 78\%, close to the track counting high efficiency algorithm. The $b$-jet efficiency
+    performances of the algorithm. At the loose working point, the $b$ et efficiency is
+    around 78\%, close to the track counting high efficiency algorithm. The $b$ jet efficiency
     at the medium working point is around 65\%, significantly better than track counting,
     simple secondary vertex and jet probability due to the completeness of the combined
-    secondary vertex approach. The loose working point has a $b$-jet efficiency of 40\%,
+    secondary vertex approach. The loose working point has a $b$ jet efficiency of 40\%,
     comparable to the jet probability algorithm.
 
     \begin{figure}[th!]
@@ -2788,7 +2789,7 @@ the skin of this tiny little world. »}\\
         \includegraphics[width=0.49\textwidth]{bTagging/8TeV/TTbar_PU/SSVHE_performance_vs_B_GLOBAL_all}\\
         \end{minipage}
         \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
-        the left) and corresponding performances in term of $b$-jet efficiency versus
+        the left) and corresponding performances in term of $b$ jet efficiency versus
         misidentification rate (on the right) for the track counting high efficiency
         (top row), jet probability (middle row) and simple secondary vertex high efficiency
         (bottom row) algorithms. These distributions and performances were estimated from
@@ -2805,7 +2806,7 @@ the skin of this tiny little world. »}\\
         \includegraphics[width=0.49\textwidth]{bTagging/8TeV/TTbar_PU/CSV_performance_vs_B_GLOBAL_all}\\
         \end{minipage}
         \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
-        the left) and corresponding performances in term of $b$-jet efficiency versus
+        the left) and corresponding performances in term of $b$ jet efficiency versus
         misidentification rate (on the right) for the soft muon tagger (top row), and
         combined secondary vertex high efficiency (bottom row) algorithms. These
         distributions and performances were estimated from a $t\bar{t}$ samples in 8 TeV
@@ -2924,9 +2925,9 @@ the skin of this tiny little world. »}\\
             $b$          & 700    & 22\%                  & 13000  & 1.5\% \\
         \hline
     \end{tabular}
-        \caption{Typical number of selected jets per flavor category for different sample types,
-        and critical efficiency at which the relative uncertainty on the efficiency will
-        get higher than 10\%. \label{tab:criticalEfficiencyBTag}}
+        \caption{Typical number of selected jets, per flavor category and for two sample types,
+        and critical efficiency below which effects lower than 20\% cannot be distinguished from
+        statistical fluctuations at 2$\sigma$ level. \label{tab:criticalEfficiencyBTag}}
     \end{table}
 
     To avoid this problem, some validations only intended to study the impact of reconstruction
@@ -2934,272 +2935,372 @@ the skin of this tiny little world. »}\\
     steps of previous validation samples, in order to remove the statistical fluctuations
     coming from these steps.
 
-        \subsection{Validation of new jet size parameter for Run II}
+    \subsection{Validation of new jet size parameter for Run II}
 
-        The preparation for the Run II of the LHC involve a change in the jet size parameter.
-        Because the jets are expected to be narrower on average due to the energy increase,
-        and to limit the pile-up contamination, this parameter is moved from $R = 0.5$ to $0.4$.
+    The preparation for the Run II of the LHC involves a change in the jet size parameter.
+    Because the jets are expected to be narrower on average due to the energy increase,
+    and to limit the pile-up contamination, this parameter is moved from $R = 0.5$ to $0.4$.
 
-        The validation of this change is made using two set of samples using the same
-        generated events and simulation to limit the effect of statistical fluctuations,
-        but reconstruction is done with the two different jet size parameters. The sample
-        used to produce the following figures is a $t\bar{t}$ sample at $\sqrt{s} = 13\TeV$
-        with pile-up.
+    The validation of this change is made using two sets of samples using the same
+    generated events and the same simulation to limit the effect of statistical fluctuations,
+    but reconstruction is done with the two different jet size parameters. The sample
+    used to produce the following figures is a $t\bar{t}$ sample at $\sqrt{s} = 13\TeV$
+    with pile-up.
 
-        \todo{more comments}
+    A comparison of the jets $\pT$ and $\eta$ spectra between the two reconstruction
+    is presented on \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_kinematic}. The
+    $\eta$ response is quite identical. However, small differences are seen in the $\pT$
+    spectrum which are interpreted as coming from the jet energy corrections in the
+    $R = 0.4$ being still preliminary.
 
-        \insertTwoFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_kinematic}
-                         {bTagging/AK4vsAK5/TTbar_FullSim_PU/2_CSV_jetPt_GLOBAL_all}
-                         {bTagging/AK4vsAK5/TTbar_FullSim_PU/4_CSV_jetEta_GLOBAL_all}
-                         {0.49}
-                         {Comparison of the $\pT$ (left) and $\eta$ (right) spectrum of
-                         the selected jets in the context of the validation of the new
-                         jet size parameter for Run II.}
+    \insertTwoFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_kinematic}
+                     {bTagging/AK4vsAK5/TTbar_FullSim_PU/2_CSV_jetPt_GLOBAL_all}
+                     {bTagging/AK4vsAK5/TTbar_FullSim_PU/4_CSV_jetEta_GLOBAL_all}
+                     {0.49}
+                     {Comparison of the $\pT$ (left) and $\eta$ (right) spectrum of
+                     the selected jets in the context of the validation of the new
+                     jet size parameter for Run II.}
 
-        \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackDeltaR_GLOBAL_all}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackSumJetEtRatio_GLOBAL_all}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_flightDistance3dSig_GLOBAL_all}
-                          {0.49}
-                          {Comparison of the $\DeltaR(\text{track},\text{jet axis})$ (top left),
-                          ratio of track sum to jet energy (top right), impact parameter
-                          significance (bottom left) and flight distance significance (bottom
-                          right) in the context of the validation of the new jet size
-                          parameter for Run II.}
+    \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables} on the top left
+    presents on the distribution of the $\Delta R$ between a given track and the jet
+    axis. Small differences are observed
+    at low $\Delta R(\text{track},\text{jet axis})$, pointing towards tracks being slightly
+    closer to jet axis in $R = 0.4$ compared to $R = 0.5$. This is interpreted as coming
+    from the fact that the jet axis is more likely to be perturbated by particles near
+    the edge of the cone with $R = 0.5$ compared to $0.4$.
+    On the top right, the comparison is done for the ratio of the energy of the sum
+    of the tracks and the jet energy. This distribution exhibits a clear shift towards
+    1 for $R = 0.4$ compared to 0.5. This is interpreted as coming from the fact that
+    the selected tracks (i.e. in $R < 0.3$) represents a more significant fraction of
+    the total jet energy in $R = 0.4$ compared to 0.5.
 
-        \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/TCHE_performance_vs_B_GLOBAL_all}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/JP_performance_vs_B_GLOBAL_all}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/SSVHE_performance_vs_B_GLOBAL_all}
-                          {bTagging/AK4vsAK5/TTbar_FullSim_PU/CSV_performance_vs_B_GLOBAL_all}
-                          {0.49}
-                          {Comparison of the algorithm performances for the track counting high
-                          efficiency (top left), jet probability (top right), simple
-                          secondary vertex (bottom left) and combined secondary vertex
-                          (bottom right) in the context of the validation of the new jet size
-                          parameter for Run II.}
+    Two of the $b$-tagging variables are presented on the bottom of
+    \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables}, namely the
+    impact parameter significance and the flight distance of secondary vertices. Overall,
+    a little improvement is observed in the distribution of the impact parameter significance
+    for $b$ jets as a lower fraction of the tracks ends up with negative values. The
+    flight distance of secondary vertices is stable.
 
-        \subsection{Validation of \textsc{Geant4} 10.0.patch1}
+    \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackDeltaR_GLOBAL_all}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackSumJetEtRatio_GLOBAL_all}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_flightDistance3dSig_GLOBAL_all}
+                      {0.49}
+                      {Comparison of the $\Delta R(\text{track},\text{jet axis})$ (top left),
+                      ratio of track sum to jet energy (top right), impact parameter
+                      significance (bottom left) and flight distance significance of the
+                      secondary vertex (bottom right) in the context of the validation
+                      of the new jet size parameter for Run II. On the bottom of the plots,
+                      the histogram corresponds
+                      to the ratio of the distribution between $R = 0.4$ and $R = 0.5$.}
 
-        A new version of \textsc{Geant4} was introduced in the CMS software v7.1.0 and
-        had to be validated. This version contained several changes related to design
-        changes and optimisations which are expected to not affect physics results,
-        and a new, better model for the multiple scattering of leptons and hadrons.
+    The impact on the performances is presented on \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
+    for four algorithms, TCHE, JP, SSVHE and CSV. The peformances for TCHE and SSVHE
+    are relatively stable while JP, dependent of the exact shape of the impact parameter
+    sgnificance, has a $b$ jet efficiency improved by a few percents attributed to the
+    observed small change in the impact parameter distribution. This also propagates to the
+    performance of CSV where, at constant $b$ jet efficiency, the fake rate is lowered
+    by about 20\%.
 
-        As the event generation and simulation of the detector had to be redone for
-        this validation, to limit effects due to statistics, special high statistics
-        samples were produced allowing a precise comparison of the distributions.
+    \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU/TCHE_performance_vs_B_GLOBAL_all}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU/JP_performance_vs_B_GLOBAL_all}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU/SSVHE_performance_vs_B_GLOBAL_all}
+                      {bTagging/AK4vsAK5/TTbar_FullSim_PU/CSV_performance_vs_B_GLOBAL_all}
+                      {0.49}
+                      {Comparison of the algorithm performances for the track counting high
+                      efficiency (top left), jet probability (top right), simple
+                      secondary vertex (bottom left) and combined secondary vertex
+                      (bottom right) in the context of the validation of the new jet size
+                      parameter for Run II. On the bottom of the plots, the histogram corresponds
+                      to the ratio of the distribution between $R = 0.4$ and $R = 0.5$.
+                      }
 
-        Overall, little changes are expected. This expectation is confirmed by the
-        good agreement between the two versions as illustrated in \reffig{fig:bTagging/newGeant4}
-        showing the impact parameter significance and the performances of the CSV algorithm.
+    To conclude, as the observations in this validation are well understood from a physics
+    point of view and make sense, the change of jet size parameter has been validated for
+    the $b$-tag aspects.
 
-        \insertTwoFigures{bTagging/newGeant4}
-                         {bTagging/newGeant4/TTbar_710pre4_newGeant_HS_vs_710pre4_HS_FullSim_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
-                         {bTagging/newGeant4/TTbar_710pre4_newGeant_HS_vs_710pre4_HS_FullSim/CSV_performance_vs_B_GLOBAL_all}
-                         {0.49}
-                         {Comparison of the impact parameter significance (left) and
-                         performances of the combined secondary vertex algorithm (right)
-                         in the context of the validation of \textsc{Geant4} 10.0.patch1.}
+%    \subsection{Validation of \textsc{Geant4} 10.0.patch1}
 
-        \subsection{Validation of new default PU rate for Run II validation samples}
+%    A new version of \textsc{Geant4} was introduced in the CMS software v7.1.0 and
+%    had to be validated. This version contained several changes related to design
+%    changes and optimisations which are expected to not affect physics results,
+%    and a new, better model for the multiple scattering of leptons and hadrons.
 
-        In CMS software v7.3.0, the default pile-up level was changed from 10 to 35. As
-        tracking and $b$-tagging variables strongly depends on pile-up effects, this
-        new condition is expected to impact significantly the performances.
+%    As the event generation and simulation of the detector had to be redone for
+%    this validation, to limit effects due to statistics, special high statistics
+%    samples were produced allowing a precise comparison of the distributions.
 
-        \reffig{fig:bTagging/newPU35/tracking} compares the efficiency and fake rate of track
-        reconstruction, as function of $\eta$, between a pile-up of 10 (\emph{old}) and
-        35 (\emph{new}). The new pile-up condition decreases the track reconstruction
-        efficiency by about 2\% in the central region, and increases the fake rate from
-        3\% to 8\%.
+%    Overall, little changes are expected. This expectation is confirmed by the
+%    good agreement between the two versions as illustrated in \reffig{fig:bTagging/newGeant4}
+%    showing the impact parameter significance and the performances of the CSV algorithm.
 
-        \insertFigure{bTagging/newPU35/tracking}{0.95}{Comparison of the tracking
-        performances as function of $\eta$ between the pile-up level of 10 (old) and 35 (new).
-        The left plot shows the efficiency for real tracks while the right plot shows
-        the fake and duplicate rate.}
+%    \insertTwoFigures{bTagging/newGeant4}
+%                     {bTagging/newGeant4/TTbar_710pre4_newGeant_HS_vs_710pre4_HS_FullSim_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
+%                     {bTagging/newGeant4/TTbar_710pre4_newGeant_HS_vs_710pre4_HS_FullSim/CSV_performance_vs_B_GLOBAL_all}
+%                     {0.49}
+%                     {Comparison of the impact parameter significance (left) and
+%                     performances of the combined secondary vertex algorithm (right)
+%                     in the context of the validation of \textsc{Geant4} 10.0.patch1.}
 
-        On the $b$-tagging side, this translates to more contamination from pile-up and
-        fakes, likely to have large impact parameters or to create fake secondary vertices.
-        \reffig{fig:bTagging/newPU35/lowLevelVariables} shows the comparison of the impact
-        parameter significance and secondary vertex category between the two pile-up conditions.
-        The impact parameter distribution for tracks in light jets gets a wider peak around
-        0, from which we can expect an increase in fake rate for all algorithm based on
-        this variable. The secondary vertex categorization shows also a 5\% absolute loss
-        in $b$ jet vertexing efficiency, and an relative increase of around 35\% in light
-        jets containing a secondary vertex. From this, we can expect that algorithms based
-        on secondary vertex reconstruction will not only a higher fake rate from lights,
-        but also a lower maximum efficiency for $b$ jets.
+    \subsection{Validation of new default pile-up rate for Run II validation samples}
 
-        \insertTwoFigures{bTagging/newPU35/lowLevelVariables}
-                         {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
-                         {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns_lowLevelVariables/CSVTag_vertexCategory_GLOBAL_all}
-                         {0.49}
-                         {Comparison of the impact parameter significance (on the left)
-                         and vertex category for the CSV algorithm (on the right) in the
-                         context of the validation of the new default pile-up rate.}
+    As of the version v7.3.0 of the CMS software, the default pile-up rate for the validation
+    samples was changed from 10 to 35. This should be differentiate from the pile-up rate
+    used for analysis samples which follows a particular pile-up distribution.
+    As tracking and $b$-tagging variables strongly depends on pile-up effects, this
+    new condition is expected to impact significantly the performances.
 
-        \reffig{fig:bTagging/newPU35/performances} presents the impact on the performance
-        for the four main algorithms TCHE, JP, SSVHE and CSV. The overall impact is a higher
-        fake rate from light jets by about 50\% and from $c$ jets by about 5-10\%. The
-        maximum efficiency for $b$ jets for SSVHE is decreased by about 5\%, directly
-        related to what is observed on the vertex category in \reffig{fig:bTagging/newPU35/lowLevelVariables}.
+    In this document, we investigate this change using a $t\bar{t}$ sample at $\sqrt{s} = 13\TeV$
+    with pile-up. Because of the change in pile-up, the simulation step had to be performed
+    separately for the two samples to be compared.
 
-        \insertFourFigures{bTagging/newPU35/performances}
-                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/TCHE_performance_vs_B_GLOBAL_all}
-                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/JP_performance_vs_B_GLOBAL_all}
-                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/SSVHE_performance_vs_B_GLOBAL_all}
-                          {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/CSV_performance_vs_B_GLOBAL_all}
-                          {0.49}
-                          {Comparison of the impact parameter significance (on the left)
-                          and vertex category for the CSV algorithm (on the right) in the
-                          context of the validation of the new default pile-up rate.}
+    \reffig{fig:bTagging/newPU35/tracking} compares the efficiency and fake rate of track
+    reconstruction, as function of $\eta$, between a pile-up rate of 10 (\emph{old}) and
+    35 (\emph{new}). The new pile-up condition decreases the track reconstruction
+    efficiency by about 2\% in the central region, and increases the fake rate from
+    3\% to 8\%.
 
-        \subsection{Validation of the premixing technique for pile-up simulation}
+    \insertFigure{bTagging/newPU35/tracking}{0.95}{Comparison of the tracking
+    performances as function of $\eta$ between the pile-up level of 10 (old) and 35 (new).
+    The left plot shows the efficiency for real tracks while the right plot shows
+    the fake and duplicate rate \refNeeded.}
 
-        In the CMS software v7 cycle, a new technique called premixing started being developped.
-        This technique concerns the simulation of pile-up : the number of particles
-        originating from pile-up is quite high and represents a large fraction of the CPU time
-        during the simulation of the detector (also called digitization).
+    On the $b$-tagging side, this translates to more contamination from pile-up and
+    fakes, likely to have large impact parameters or to create fake secondary vertices.
+    \reffig{fig:bTagging/newPU35/lowLevelVariables} shows the comparison of the impact
+    parameter significance and secondary vertex category between the two pile-up conditions.
+    The impact parameter distribution for tracks in light jets gets a wider peak around
+    0, from which we can expect an increase in fake rate for all algorithm based on
+    this variable. The secondary vertex categorization shows also a 5\% absolute loss
+    in vertexing efficiency for $b$ jets, and an relative increase of around 35\% for light
+    jets containing a secondary vertex. From this, we can expect that algorithms based
+    on secondary vertex reconstruction will not only a higher fake rate from lights,
+    but also a lower maximum efficiency for $b$ jets.
 
-        In order to optimize
-        the time of the simulation, which in turn may allow to produce for instance more events
-        for the Monte-Carlo samples, strategy can be developped. In this case, the idea
-        is to factorize the digitization step of the pile-up from the hard-scattering.
-        By doing this, pile-up events can be digitized once for all, and overlayed
-        any hard-scattering event after that, drastically reducing the simulation time
-        per event.
+    \insertTwoFigures{bTagging/newPU35/lowLevelVariables}
+                     {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
+                     {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns_lowLevelVariables/CSVTag_vertexCategory_GLOBAL_all}
+                     {0.49}
+                     {Comparison of the impact parameter significance (on the left)
+                     and vertex category for the CSV algorithm (on the right) in the
+                     context of the validation of the new default pile-up rate.}
 
-        In order for this to work, one must however be careful regarding the way that the
-        pile-up and hard-scattering are digitized and combined together. For instance,
-        thresholds in the subdetectors, for instance a given calorimetric tower, may
-        impact the digitization such that the hard-scattering alone, or the pile-up alone,
-        may not produce a significant signal, but the combination of the two may. To
-        work around this problem, thresholds are initially set to zero when the digitization
-        is done, and applied only after mixing of the pile-up with the hard-scattering.
+    \reffig{fig:bTagging/newPU35/performances} presents the impact on the performance
+    for the four main algorithms TCHE, JP, SSVHE and CSV. The overall impact is a higher
+    fake rate from light jets by about 50\% and from $c$ jets by about 5-10\%. The
+    maximum efficiency for $b$ jets for SSVHE is decreased by about 5\%, directly
+    related to what is observed on the vertex category in \reffig{fig:bTagging/newPU35/lowLevelVariables}.
 
-        Overall, one wants the premixing technique to not impact the physics at the reconstruction
-        level. $b$-tagging, as a high-level objects, is a good probe for this to check
-        the impact primarily on tracking and the hadronic calorimeter. While there were
-        several validations related to this work, this document focuses on a pathological
-        validation done in v7.4.0.
+    \insertFourFigures{bTagging/newPU35/performances}
+                      {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/TCHE_performance_vs_B_GLOBAL_all}
+                      {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/JP_performance_vs_B_GLOBAL_all}
+                      {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/SSVHE_performance_vs_B_GLOBAL_all}
+                      {bTagging/newPU35/TTbar_730pre1NewPU_vs_730pre1_FullSim_PU25ns/CSV_performance_vs_B_GLOBAL_all}
+                      {0.49}
+                      {Comparison of the algorithm performances for the track counting high
+                      efficiency (top left), jet probability (top right), simple
+                      secondary vertex (bottom left) and combined secondary vertex
+                      (bottom right) in the context of the validation of the new pile-up
+                      rate. On the bottom of the plots, the histogram corresponds
+                      to the ratio of the distribution between $PU = 10$ and $PU = 35$.}
 
-        As shown on \reffig{fig:bTagging/premixing/lowLevelVariables}, the version of the
-        premixing used led to tracks having an artificially higher number of hits in the
-        pixels on average, and therefore a better track quality, which manifests as a lower
-        tail for the normalized $\chi^2$ distribution, and overall a better resolution.
-        This in turns impact the number of tracks at the vertex for light jets, and the
-        impact parameter significance.
+    \subsection{Validation of the premixing technique for pile-up simulation}
 
-        \insertFourFigures{bTagging/premixing/lowLevelVariables}
-                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_tkNPixelHits_3D_GLOBAL_all}
-                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_tkNChiSqr_3D_GLOBAL_all}
-                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/CSVTag_vertexNTracks_GLOBAL_all}
-                          {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
-                          {0.49}
-                          {comparison of the number of pixel hits (top left), track $\chi^2$
-                          (top right), number of tracks at vertex (bottom left) and
-                          impact parameter significance (bottom right) in the context
-                          of the premixing validation.}
+    In the CMS software v7 cycle, a new technique, called premixing, started being developped.
+    The motivation for this technique starts from the observation that, when generating and
+    simulating events, the simulation of the detector response to the pile-up represents
+    a large fraction of the CPU time, compared to one single hard-scattering.
 
-        This impact the performances of both secondary vertex-based algorithms and impact
-        parameter-based algorithms significantly, as shown on
-        \reffig{fig:bTagging/premixing/performances} : TCHE gets up to 35\% lower fake
-        rate from lights jets while SSVHE gets about 20\% lower fake rate from $c$ jets.
+    In order to reduce the CPU cost of simulation, strategies can be developped. In the
+    case of premixing, the idea is to factorize the simulation of the interaction with the
+    detector coming from, on one hand, the pile-up, and on the other hand, the hard-scattering
+    of interest. By doing so, the pile-up particles interaction can be computed once for
+    all, and their contribution to the signal in the sensors can be overlayed to any
+    hard-scattering event, drastically reducing the simulation time per event.
+    \refNeeded
 
-        \insertTwoFigures{bTagging/premixing/performances}
-                         {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns/TCHE_performance_vs_B_GLOBAL_all}
-                         {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns/SSVHE_performance_vs_B_GLOBAL_all}
-                         {0.49}
-                         {Comparison of the algorithm performance of track counting high
-                         efficiency (left) and simple secondary vertex high efficiency (right).}
+    In order for this to work, one must however be careful regarding the way that the
+    pile-up and hard-scattering are digitized and combined together. For instance,
+    thresholds in the subdetectors (e.g. a given calorimetric tower), may
+    impact the digitization such that the hard-scattering alone, or the pile-up alone,
+    may not produce a significant signal, but the combination of the two may. To
+    work around this problem, thresholds are initially set to zero when the digitization
+    is done, and applied only after mixing of the pile-up with the hard-scattering.
 
-        \subsection{Studies of high pile-up scenario for Phase 2}
+    Overall, one wants the premixing technique to not impact the physics at the reconstruction
+    level. $b$-tagging, as a high-level technique, is highly sensitive to the description
+    of tracks and calorimeters and therefore allows an overall check that premixing does
+    not introduce any unphysical behavior. While there were several validations related to
+    this work, this document focuses on a pathological validation done in version 7.4.0
+    of the CMS software.
 
-        This validation relates to one of the early investigation of $b$-tagging at high
-        pile-up ($\orderOf(150)$ interactions per bunch crossing). Such conditions are
-        foreseen for the operation of the LHC in the Phase I, after the second long shut
-        down (LS2), in the data-taking period between 2019 and 2022, and for the following
-        Phase II and high-luminosity LHC (HL-LHC). Such prospective work is therefore
-        crucial to obtain a first idea of the performance of the detector in these conditions,
-        anticipate possible problems and guide the orientation of the development for object
-        reconstruction.
+    Validation results are shown on \reffig{fig:bTagging/premixing/lowLevelVariables} from
+    a $t\bar{t}$ sample with pile-up included and full simulation. The version of the
+    premixing used led to tracks having an artificially higher number of hits in the
+    pixels on average, and therefore a better track quality, which manifests as a lower
+    tail for the normalized $\chi^2$ distribution, and overall a better resolution.
+    This in turn impacts the number of tracks at the secondary vertex for light jets, and the
+    impact parameter significance.
 
-        The reference used for this validation is a $t\bar{t}$ sample generated with $\sqrt{s}
-        = 14\TeV$. The detector is simulated with the expected geometry for Phase I with
-        a pile-up of 50, and the conditions of the technical design report (TDR). The
-        comparison is made with a sample with a pile-up of 140.
+    \insertFourFigures{bTagging/premixing/lowLevelVariables}
+                      {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_tkNPixelHits_3D_GLOBAL_all}
+                      {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_tkNChiSqr_3D_GLOBAL_all}
+                      {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/CSVTag_vertexNTracks_GLOBAL_all}
+                      {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
+                      {0.49}
+                      {Comparison of the number of pixel hits (top left), track $\chi^2$
+                      (top right), number of tracks at the secondary vertex (bottom left) and
+                      impact parameter significance (bottom right) in the context
+                      of the premixing validation. On the bottom of the plots, the histogram corresponds
+                      to the ratio of the distribution between premixing and standard mixing. }
 
-        \reffig{fig:bTagging/highPU/kinematic} presents the comparison of the kinematic
-        distributions of the jet. The first observation is that the increase of pile-up
-        significantly bias the $\pT$ spectrum of the jets towards higher values, while the
-        generated energy of the underlying partons are expected to have the same spectrum
-        between the two releases. It is therefore interpreted as polution from the pile-up
-        and lack of strategy used in the reconstruction (at this point) to efficiently
-        correct this effect. The higher pile-up rate also create a significantly higher
-        number of jets in the central region in $\eta$, contributing to the gluon jet
-        category.
+    This impacts the performances of both impact parameter-based algorithms and
+     secondary vertex-based algorithms significantly, as shown on
+    \reffig{fig:bTagging/premixing/performances} : TCHE gets up to 35\% lower fake
+    rate from lights jets in the medium working point region while SSVHE gets about 20\%
+    lower fake rate from $c$ jets.
 
-        \insertTwoFigures{bTagging/highPU/kinematic}
-                         {bTagging/highPU/pT}
-                         {bTagging/highPU/eta}
-                         {0.49}
-                         {Comparison of the $\pT$ and $\eta$ spectrum of the selected jets
-                         in the context of the studies of high pile-up scenario for Phase 2.}
+    \insertTwoFigures{bTagging/premixing/performances}
+                     {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns/TCHE_performance_vs_B_GLOBAL_all}
+                     {bTagging/premixing/TTbar_740pre6premix_vs_740pre6_FullSim_PU50ns/SSVHE_performance_vs_B_GLOBAL_all}
+                     {0.49}
+                     {Comparison of the algorithm performance of track counting high
+                      efficiency (left) and simple secondary vertex high efficiency (right).
+                      On the bottom of the plots, the histogram corresponds
+                      to the ratio of the distribution between premixing and standard mixing. }
 
-        \reffig{fig:bTagging/highPU/kinematic} shows track level information, namely the
-        distribution of the number of selected tracks per jets, and the distribution of the
-        impact parameter significance for these tracks. In the high pile-up scenario, the
-        number of selected tracks is significantly lower for all tracks category. In particular
-        for the $b$-jet category, the distribution peaks around 7 or 8 selected tracks per
-        jet, compared to around 10 in the TDR conditions. From this observation, one
-        can expect a significant decrease in the $b$-jet efficiency. The distribution of
-        the impact parameter significance also exhibits a worserning of the discriminating
-        power. First, the distribution for light jets exhibits a much wider peak and
-        increase of the fraction with large positive values. Secondly, the ratio of the
-        distribution for the $b$-jets shows a trend in the positive-tail such that the
-        distribution in high pile-up conditions is less in favor of $b$-jets discrimination.
+    This validation has therefore contributed to the identification of the problems with
+    this version of the premixing. Since then, premixing has been developed further and
+    proved to be in agreement with the standard, and became part of the CMS workflow.
 
-        \insertTwoFigures{bTagging/highPU/lowLevel}
-                         {bTagging/highPU/nSelTracks}
-                         {bTagging/highPU/ips}
-                         {0.49}
-                         {Comparison of the number of selected tracks per jet (left) and
-                         impact parameter significance (right) in the context of the
-                         studies of high pile-up scenario for Phase 2.}
+    \subsection{Studies of high pile-up scenario for Phase 2}
 
-        \reffig{fig:bTagging/highPU/perf} shows the comparison of the performances curves
-        obtained for the two scenarios for the four main algorithms : track counting high
-        efficiency, simple secondary vertex, jet probability and combined secondary vertex.
-        Track counting and jet probability, both relying essentially on the impact parameter
-        significance distribution, show a dramatic increase of the fake rate by a factor
-        5 to 10 in the high PU scenario. The maximum efficiency achievable for $b$ jets
-        with these two algorithms, around $85\sim90$\% is interpreted as a significant
-        fraction of the $b$ jets not having the requirements to actually compute the
-        discriminator value, such as at least two selected tracks.
+    This validation study relates to one of the early investigations of $b$-tagging at high
+    pile-up rate ($\orderOf{150}$). Such conditions are
+    foreseen for the high-luminosity LHC (HL-LHC) program, also called Phase 2, which
+    should start around 2027. Such prospective work is therefore crucial to obtain a first
+    idea of the performance of the detector in these conditions, anticipate possible
+    problems and guide the orientation of the development for object reconstruction.
 
-        The maximum $b$ jet efficiency for simple secondary vertex is also significantly
-        affected and gets down to about 55\%, while the fake rate for is only increased by
-        a factor between 2 and 5.
+    The reference used for this validation is a $t\bar{t}$ sample generated with $\sqrt{s}
+    = 14\TeV$. The detector is simulated with the expected geometry for Phase 1 with
+    a pile-up of 50, and the conditions of the technical design report (TDR). The
+    comparison is made with a sample with a Phase 1 aged geometry, a pile-up of 140, and
+    the process considered is $t\bar{t}$.
 
-        The combined secondary vertex performances finally gives information to what can be
-        expected from combining the techniques together. The fake rate for light jets
-        is overall increased by a factor 5 to 10 while it is increased by a factor 2 for $c$ jets.
-        The $b$ jets efficiency in the high pile-up scenario becomes 65\%, 42\% and about 20\%
-        for the loose, medium and tight working points respectively.
+    \reffig{fig:bTagging/highPU/kinematic} presents the comparison of the kinematic
+    distributions of the jets between the two samples. The first observation is that the increase of pile-up
+    significantly bias the $\pT$ spectrum of the jets towards higher values, while the
+    generated energy of the underlying partons are expected to have the same spectrum
+    between the two releases. This is interpreted as coming from the jet energy corrections
+    which are not yet adapted for the pile-up conditions of Phase 2, and points to
+    a necessity of improving the mitigation of pile-up in jet reconstruction in general.
+    The higher pile-up rate also creates a significantly higher
+    number of jets in the central region ($\abseta < 0.7$), contributing to the gluon jet
+    category.
 
-        \insertFourFigures{bTagging/highPU/perf}
-                          {bTagging/highPU/TCHEperf}
-                          {bTagging/highPU/SSVHEperf}
-                          {bTagging/highPU/JPperf}
-                          {bTagging/highPU/CSVperf}
-                          {0.49}
-                          {Comparison of the performances for track counting high efficiency
-                          (top left), simple secondary vertex high efficiency (top right),
-                          jet probability (bottom left) and combined secondary vertex
-                          (bottom right) in the context of the studies of high-pile-up
-                          scenario for Phase 2.}
+    \insertTwoFigures{bTagging/highPU/kinematic}
+                     {bTagging/highPU/pT}
+                     {bTagging/highPU/eta}
+                     {0.49}
+                     {Comparison of the $\pT$ and $\eta$ spectra of the selected jets
+                     in the context of the studies of high pile-up scenario for Phase 2.
+                     On the bottom of the plots, the histogram corresponds
+                     to the ratio of the distribution between the PU = 140 and PU = 50
+                     scenario.
+                     (Note that the color code is different from the previous plots.)}
+
+    \reffig{fig:bTagging/highPU/lowLevel} shows track level information, namely the
+    distribution of the number of selected tracks per jet, and the distribution of the
+    impact parameter significance for these tracks. In the high pile-up scenario, the
+    number of selected tracks is significantly lower for all tracks category, interpreted
+    as coming from the simulated aging of the pixel detector. In particular
+    for the $b$ jet category, the distribution peaks around 7 or 8 selected tracks per
+    jet in the Phase 2 scenario, compared to around 10 in the Phase 1. From this observation, one
+    can expect a significant decrease in the $b$ jet efficiency. The distribution of
+    the impact parameter significance also exhibits a worserning of the discriminating
+    power. First, the distribution for light jets exhibits a much wider peak and
+    increase of the fraction with large positive values. Secondly, the ratio of the
+    distribution for the $b$ jets shows a trend in the positive-tail such that the
+    distribution in high pile-up conditions is less in favor of $b$ jets discrimination.
+
+    \insertTwoFigures{bTagging/highPU/lowLevel}
+                     {bTagging/highPU/nSelTracks}
+                     {bTagging/highPU/ips}
+                     {0.49}
+                     {Comparison of the number of selected tracks per jet (left) and
+                     impact parameter significance (right) in the context of the
+                     studies of high pile-up scenario for Phase 2.
+                     On the bottom of the plots, the histogram corresponds
+                     to the ratio of the distribution between the PU = 140 and PU = 50
+                     scenario.
+                     (Note that the color code is different from the previous plots.)
+                     }
+
+    \reffig{fig:bTagging/highPU/perf} shows the comparison of the performances curves
+    obtained for the two scenarios for the four main algorithms : track counting high
+    efficiency, simple secondary vertex high efficiency, jet probability and combined secondary vertex.
+    Track counting and jet probability, both relying essentially on the impact parameter
+    significance distribution, show a dramatic increase of the fake rate by a factor
+    5 to 10 in the high PU scenario.
+    The maximum $b$ jet efficiency for simple secondary vertex is also significantly
+    affected and gets down to about 55\%, while the fake rate for is only increased by
+    a factor between 2 and 5.
+    The combined secondary vertex performances finally gives information to what can be
+    expected from combining the techniques together. The fake rate for light jets
+    is overall increased by a factor 5 to 10 while it is increased by a factor 2 for $c$ jets.
+    The $b$ jets efficiency in the high pile-up scenario becomes 65\%, 42\% and about 20\%
+    for the loose, medium and tight working points respectively.
+
+    \insertFourFigures{bTagging/highPU/perf}
+                      {bTagging/highPU/TCHEperf}
+                      {bTagging/highPU/SSVHEperf}
+                      {bTagging/highPU/JPperf}
+                      {bTagging/highPU/CSVperf}
+                      {0.49}
+                      {Comparison of the performances for track counting high efficiency
+                      (top left), simple secondary vertex high efficiency (top right),
+                      jet probability (bottom left) and combined secondary vertex
+                      (bottom right) in the context of the studies of high-pile-up
+                      scenario for Phase 2. On the bottom of the plots, the histogram corresponds
+                      to the ratio of the distribution between the PU = 140 and PU = 50
+                      scenario. (Note that the color code is different from the previous plots.) }
+
+    Moreover, all these algorithms (with a particular case for simple secondary vertex)
+    shows a maximum $b$-tagging efficiency around 80-85\% which is much unexpected. This
+    was later tracked down as coming from the misidentification of the right primary vertex
+    in the event due to the high level of pile-up. We recall that the primary vertex
+    is typically choosen as the vertex with higher $\sum_\text{tracks} \pT^2$. However,
+    as shown on \reffig{fig:bTagging/highPU/TP} on the left in open green triangles, this
+    technique becomes quite less efficient at high pile-up, with an efficiency between 80 and 90\%
+    for events with a leading jet with $100 < \pT < 200 \GeV$. To solve this issue, a new
+    technique has been developped. This technique starts clustering tracks to create jets,
+    and the choice of the primary vertex is based on $\sum_\text{jets} \pT^2$ (though also
+    including unclustered tracks to the sum). This new technique allows to significantly
+    recover the vertex choice efficiency as shown with filled green triangles.
+
+    Furthermore, an investigation of the performances using this time the foreseen Phase 2
+    geometry has been pursued. On \reffig{fig:bTagging/highPU/TP} on the right, the
+    performances are compared for three scenarios, namely Phase 1 geometry with a pile-up
+    rate of 50, aged Phase 1 geometry with a pile-up of 140, and Phase 2 geometry with
+    a pile-up of 140. The Phase 2 geometry allows to significantly reduce the fake rate
+    from light jets to obtain performances comparable to Phase 1 with a pile-up rate of 50.
+
+    \insertTwoFigures{bTagging/highPU/TP}
+                     {bTagging/highPU/PVidentification}
+                     {bTagging/highPU/CSVperf_2}
+                     {0.49}
+                     {Comparison of the primary vertex choice efficiency as function of the
+                     leading jet $\pT$, for different scenario corresponding to Phase 1
+                     with a pile-up rate of 50 (blue squares),
+                     Phase 1 aged detector with pile-up rate of 140 using the old (open
+                     green triangles) or new (filled green triangles) vertex choice
+                     technique, and Phase 2 detector with a pile-up rate of 140 (red dots). \todo{ref to FTR-14-011}}
+
+
+
 
 
 %==============================================================
@@ -3815,7 +3916,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
        $b$-tagged jets are defined by, on top of the previous requirements, using the
        medium working point of the Combined Secondary Vertex (CSV) tagging algorithm \cite{bTaggingPerf8TeV}.
-       The efficiency of this tagger is typically around 60\% for $b$-jets while the fake
+       The efficiency of this tagger is typically around 60\% for $b$ jets while the fake
        rate of light jets is around 1\%. The value of the CSV discriminant is corrected in
        the simulation via a reshaping technique, function of the $\pT$, $\eta$ and flavor
        of the jet to account for known data/MC discrepancies.
@@ -4128,7 +4229,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         The $\pT$ of the selected objects are a natural source of discriminating power as
         the signal is expected to have a larger momentum than the background on average.
         However for the $\lstop \rightarrow b \lchargino$ decay mode, the $\pT$ of the
-        $b$-jet is expected to be particularly high (compared to the typical $\pT$ of $b$-jets in the
+        $b$ jet is expected to be particularly high (compared to the typical $\pT$ of $b$ jets in the
         background) as it originates directly from the decay of the stop. It is therefore
         interesting for the low $x$ cases, i.e. where the gap between $\lstop$ and
         $\lchargino$ is set to be high. The distribution of this variable is compared for
@@ -4220,7 +4321,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         As illustrated on \reffig{fig:variables/deltaPhiMETJets},
         $t\bar{t}$ background tends to get low values for this variable because the
         $\nu_{\ell}$ direction is linked to the $b$ quark from the top parent. In signal
-        events, $\MET$ is less correlated to the $b$-jet and can $\Delta \phi( j_{1,2},
+        events, $\MET$ is less correlated to the $b$ jet and can $\Delta \phi( j_{1,2},
         \vec{\MET} )$ easily get to higher values.
 
         \insertFigure{variables/deltaPhiMETJets}
@@ -4255,7 +4356,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             hadronic activity in the same hemisphere as the $\MET$ compared to the total hadronic activity of the event,
             $H_T$. Because the visible energy recoils on the LSP in signal events, this variable tends to have
             low values for signal while being around 0.5 for background.
-        \item $M_{\ell b}$, $M'_{\ell b}$ ; We consider also the invariant mass of the $\ell$+leading $b$-jet system. This variable
+        \item $M_{\ell b}$, $M'_{\ell b}$ ; We consider also the invariant mass of the $\ell$+leading $b$ jet system. This variable
             is a simple attempt to reconstruct the mass of the leptonic top system despite missing
             the information of the neutrino. This variable is useful in the search for $\lstop \rightarrow
             b \lchargino$ as there is no end point at $m_t$ for this variable because there is no
@@ -4466,7 +4567,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     at low and medium $x$, the $\pT$ of the leading $b$ is an important feature, related
     to the high $\lstop-\lchargino$ gap. Finally, in almost all signal regions,
     $\Delta\phi(j_{1,2},\vec{\MET})$ proves to be useful by providing a way to reject the
-    $\oneLeptonTop$ component where $\vec{\MET}$ is expected to be close to a $b$-jet.
+    $\oneLeptonTop$ component where $\vec{\MET}$ is expected to be close to a $b$ jet.
 
     \reffig{fig:cutAndCountPerformances} shows the best performing set accross the
     $(\mass{\lstop},\mass{\lneutralino})$ plane as well as the corresponding FoM. While
@@ -4642,8 +4743,8 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     and correct the tail of $\MT$ for these two components as described in \refsection{sec:MTtailCorrection}.
     While it might seem counterintuitive that $\oneLeptonTop$ represents a significant
     contribution in this region, it can easily be explained by noticing that with a rough
-    60\% $b$-jet efficiency of the $b$-tagging working point, there is rough 10\% probability
-    that both $b$-jet won't be tagged. Overall, without applying any signal region cuts,
+    60\% $b$ jet efficiency of the $b$-tagging working point, there is rough 10\% probability
+    that both $b$ jet won't be tagged. Overall, without applying any signal region cuts,
     the proportion of $\Wjets$ and $\oneLeptonTop$ in this region is around 60\% and 27\%
     respectively.
 
@@ -4783,7 +4884,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     the $\oneLeptonTop$, $\Wjets$ and rare backgrounds originates more from the
     misreconstruction of the magnitude of the $\MET$ rather than its direction. Small
     features are however observed in the $\Delta \phi$ spectra which can originate from
-    other sources of genuine $\MET$ in the event such as neutrinos inside $b$-jets.
+    other sources of genuine $\MET$ in the event such as neutrinos inside $b$ jets.
 
     So far, the method used to correct the discrepancy is to compute ad-hoc scale factors
     using a template fit that estimate separately the contribution of $\oneLeptonTop$ and
@@ -5215,7 +5316,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
         This ratio $R$ is found to be sometimes higher than an arbitrary threshold value of 15$\sim$20\%.
         This is especially true when considering the low $\deltam$ region of the $(\mass{\lstop},
-        \mass{\lneutralino})$ plane, as the signal is likely to get smaller values of $\MT$ and the $b$-jets
+        \mass{\lneutralino})$ plane, as the signal is likely to get smaller values of $\MT$ and the $b$ jets
         are less likely to be selected or correctly $b$-tagged as their momentum decrease. This is illustrated
         on \reffig{fig:signalContaminationIllustration} which shows the differences in shape of $\MT$ and
         $b$-tagged jet multiplicity for two benchmarks of the $\lstop \rightarrow t \lneutralino$ decay mode.
