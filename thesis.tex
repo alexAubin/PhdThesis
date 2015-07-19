@@ -49,6 +49,8 @@ where it came from, and where it is going ...\,»}\\
 
 \todo{check le temps global de la these present/passe ?}
 
+\todo{section title in odd pages}
+
 \chapternonum{Introduction}
 
 \begin{center}
@@ -145,7 +147,7 @@ The thesis is organized as followed. In the first chapter, we will go through a 
 discussion of the key principles behind quantum field theory and the Standard Model. The
 shortcomings of the Standard Model will be discussed to finally introduce supersymmetry
 and in particular the Minimal Supersymmetric Standard Model. Secondly, a search is not to
-be improvised without a good knowledge of the experimental setup : the second chapter will
+be improvised without a good knowledge of the experimental setup: the second chapter will
 describe the LHC and the CMS detector along with the techniques used to reconstruct and
 analyze the collisions. The third chapter describes in more detail the technique known
 as $b$-tagging which aims to identify jets originating from $b$ quarks. This technique is
@@ -182,7 +184,7 @@ at the beginning of Run II.
 \begin{center}
 \begin{minipage}{0.95\textwidth}
 \emph{« It’s like when you’re a kid. The first time they tell you that the world’s turning and you just can’t
-quite believe it ’cause everything looks like it’s standing still.. I can feel it : the turn of the Earth.
+quite believe it ’cause everything looks like it’s standing still.. I can feel it: the turn of the Earth.
 The ground beneath our feet is spinning at 1,000 miles an hour and the entire planet is hurtling around
 the sun at 67,000 miles an hour, and I can feel it. We’re falling through space, you and me, clinging to
 the skin of this tiny little world. »}\\
@@ -250,7 +252,7 @@ the skin of this tiny little world. »}\\
     a core element as it summarize all the dynamic of the fields.
 
     Free fields with spin zero, also called scalar fields are usually noted $\phi$ and
-    their dynamic is described by Klein-Gordon's lagrangian :
+    their dynamic is described by Klein-Gordon's Lagrangian:
     \eq{kleinGordonLagrangian}
     {
         \mathcal{L}_\text{free scalar} = \partial_\mu \phi \partial^\mu\phi - m^2 \phi^\dagger \phi.
@@ -266,7 +268,7 @@ the skin of this tiny little world. »}\\
         \bar{\psi} = \psi^\dagger \gamma^0
     }
     where $\gamma^\mu$ are the Dirac matrics. Finally, free fields with spin one are called
-    vector fields, usually denoted $A_\mu$, and are described by Maxwell's lagrangian :
+    vector fields, usually denoted $A_\mu$, and are described by Maxwell's Lagrangian:
     \eq{maxwellLagrangian}
     {
         \mathcal{L}_\text{free vector} = -\frac{1}{4} F_{\mu\nu} F^{\mu\nu}
@@ -280,7 +282,7 @@ the skin of this tiny little world. »}\\
     It is also possible to describe fields with spin three half or two, but these are beyond
     the scope of this document.
 
-    The structure of the lagrangian $\mathcal{L}$ can be easily analyzed knowing that
+    The structure of the Lagrangian $\mathcal{L}$ can be easily analyzed knowing that
     a term with the form $m^2 \phi^\dagger \phi$ corresponds to a mass $m$ for the field $\phi$,
     and a product $k \cdot \phi_1 \phi_2 \phi_3$ corresponds to an interaction
     between the fields $\phi_{i=1,2,3}$ with strength $k$. It is convenient to
@@ -307,7 +309,7 @@ the skin of this tiny little world. »}\\
 
     However, a particular interest goes into studying internal symmetries of the field,
     called gauge symmetries. Gauge transformations are transformations built from a gauge
-    group and acting on the fields.They take the form :
+    group and acting on the fields.They take the form:
     \eq{gaugeTransformation}
     {
         \psi(x^\mu)
@@ -318,7 +320,7 @@ the skin of this tiny little world. »}\\
     said to be global, while if it does depend on $x^\mu$, the gauge is said to be local.
 
     One of the most striking example of the application of gauge symmetry is the case of
-    quantum electrodynamics using the group $U(1)$. Starting from the Dirac lagrangian
+    quantum electrodynamics using the group $U(1)$. Starting from the Dirac Lagrangian
     describing massive, non-interacting electrons,
     \eq{freeElectronLagrangian}
     {
@@ -365,7 +367,7 @@ the skin of this tiny little world. »}\\
         \definedAs
         \dslash - i \cdot q_e g \cdot \gamma^\mu A_\mu
     }
-    The lagrangian becomes, after expansion,
+    The Lagrangian becomes, after expansion,
     \eq{QEDLagrangian}
     {
         \mathcal{L}
@@ -414,22 +416,22 @@ the skin of this tiny little world. »}\\
     %====================================================================================
 
     The Standard Model reflects our current understanding of particle physics. It is
-    a quantum field theory constructed with the following ingredients :
+    a quantum field theory constructed with the following ingredients:
     \begin{itemize}
         \item the fermionic fields and their properties ;
         \item the gauge symmetries corresponding to interactions ;
-        \item one scalar field leading to spontanneous symmetry breaking, called the
+        \item one scalar field leading to spontaneous symmetry breaking, called the
               Higgs field.
     \end{itemize}
 
-    The Standard Model includes two interactions : electroweak and strong. The electroweak
+    The Standard Model includes two interactions: electroweak and strong. The electroweak
     sector is described by the gauge group $U(1)_Y \times SU(2)_L$ where $Y$ and $L$
     stands for weak hypercharge and weak isospin. A notable property is how it affects
     differently left-handed fermions from right-handed ones. This interaction is
     spontaneously broken by the Higgs field, leading to the known electromagnetism.
     The gauge group describing the strong interaction is $SU(3)_C$, where $C$ stands for
     color. This is an unbroken symmetry with $3^2-1 = 8$ associated gauge bosons. The
-    symmetries of the Standard Model can be summarized under this form :
+    symmetries of the Standard Model can be summarized under this form:
     \eq{symmetriesStandardModel}
     {
         \underbrace{SU(3)_C}_{\text{strong}}
@@ -448,7 +450,7 @@ the skin of this tiny little world. »}\\
     }
 
     The fermionic fields of the Standard Model are categorized according to their
-    properties : quarks are fields that carry both electroweak charges and colors, whereas
+    properties: quarks are fields that carry both electroweak charges and colors, whereas
     leptons carry only electroweak charges. They are grouped into three families called
     flavour, or generations, sharing the same charges as shown on \reftab{tab:StandardModelFields}.
 
@@ -504,10 +506,10 @@ the skin of this tiny little world. »}\\
 
     The keystone of the Standard Model is the succesful application of this idea to the
     the electroweak symmetry $U(1)_Y \times SU(2)_L$ to obtain massive gauge bosons and
-    massive fermions, via a spontanneous breaking of this symmetry first introduced by
+    massive fermions, via a spontaneous breaking of this symmetry first introduced by
     Robert Brout, François Englert and Peter Higgs.
 
-    \subsubsection{Spontanneous breaking of the electroweak interaction}
+    \subsubsection{Spontaneous breaking of the electroweak interaction}
 
     Let's introduce a complex scalar $SU(2)$ doublet $\phi$ with $L_\phi = 1$ and $Y_\phi
     = 1$,
@@ -597,7 +599,7 @@ the skin of this tiny little world. »}\\
             g_W W_\mu^+                                                         & - g_{WB} Z_\mu    \\
         \end{pmatrix} \phi.
     }
-    where we introduced :
+    where we introduced:
     \eqalign{DefinitionAZW}
     {
         g_{WB}     & = \sqrt{g^2_W + g^2_B} \nonumber\\
@@ -616,7 +618,7 @@ the skin of this tiny little world. »}\\
         \end{pmatrix}
     }
 
-    Expanding the kinetic term of $\phi$, one find the following terms appearing :
+    Expanding the kinetic term of $\phi$, one find the following terms appearing:
     \eqalign{HiggsFieldKinetic}
     {
     D_\mu \phi D^\mu \phi & = \underbrace{\frac{1}{2}\partial_\mu \phi \partial^\mu \phi}_{h \text{ kinetic}}
@@ -667,7 +669,7 @@ the skin of this tiny little world. »}\\
     \emph{not} be introduced as they would break the $SU(3)_C$ invariance. However, we can
     introduce terms of the form $E^i_R\phi^\dagger\Lambda^j_L$. Notice how $i$ is not
     necessarily equal to $j$, meaning that there can be mixing between two different generations.
-    All the terms for leptons can be written with the form :
+    All the terms for leptons can be written with the form:
     \eqalign{YukawaCoupling}
     {
         \mathcal{L}_{\text{Yukawa}}
@@ -683,7 +685,7 @@ the skin of this tiny little world. »}\\
 
     The matrix $y^{ij}$ is not necessarily diagonal. However we can redefine the flavor
     eigenstates $\Lambda_R$ and $E^i_R$ such that $y^{ij}$ is diagonal. Let's label these
-    eigenstates $(e,\mu,\tau)$. We simply obtain :
+    eigenstates $(e,\mu,\tau)$. We simply obtain:
     \eqalign{YukawaCoupling2}
     {
         \mathcal{L}_{\text{Yukawa}}
@@ -741,7 +743,7 @@ the skin of this tiny little world. »}\\
     study of this interaction. As $SU(3)$ is a non-abelian group, the gluons are also
     carrying color and interact with each other.
     The name \emph{strong} comes from the value of the coupling constant, being larger
-    than the weak interaction by a factor $\orderOf{100}$. The Lagrangian writes :
+    than the weak interaction by a factor $\orderOf{100}$. The Lagrangian writes:
 
     \eq{QCDLagrangian}
     {
@@ -752,27 +754,28 @@ the skin of this tiny little world. »}\\
     {
         G^a_{\mu\nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g f_{abc} A^b_\mu A^c_\nu
     }
-    \todo{where is the CP phase in this...}
 
     $SU(3)$ is unbroken and therefore its associated gauge bosons, the gluons, are massless.
     Because of this, one could conclude that the range of the strong interaction is infinite
-    just like electromagnetism is. However, when computing the evolution of the strong coupling
-    as function of the energy scale, it is found to tend to zero at high energies
-    and tend to infinity at low energies. This leads to the two following key features of the strong
+    just like electromagnetism is. However, it was found that the strong coupling constant
+    $\alpha_S$ tends to zero at high-energies and to infinity at low energies.
+    This leads to the two following key and rather counterintuitive features of the strong
     interaction.
 
-    At high energies, i.e. short distances, two colored particles are not much
-    affected by each other presence. This is referred to as assymptotic freedom. In comparison,
-    the same situation in electromagnetism with two particles close to each other feel important
-    attraction or repulsion and are therefore not free.
+    At high energies, i.e. short distances, two colored particles are not much affected by
+    each other presence. This is referred to as assymptotic freedom. In comparison, if one
+    would consider the analagous situation in electromagnetism, two particles close to
+    each other feel important attraction or repulsion and are therefore not free. In this
+    regime, $\alpha_S$ is small and predictions can be performed using perturbative QCD.
 
-    At low energies, i.e. long distances, the intensity of the interaction grows. Therefore
-    to split a hadron into individual quarks, someone will need to give energy to the
-    system up to the situation where this energy will be converted into new coloured
-    particles that will form new hadrons. This phenomena is called confinment and explains
-    why it is not possible to observe free quarks or gluon in nature. Interestingly,
-    confinment is a property which is still not completely demonstrated from a mathematical
-    point of view.
+    At low energies, i.e. long distances, the intensity of the interaction grows. As a
+    cosequence,  to split a hadron into individual quarks, someone will need to give energy
+    to the system up to the point where this energy will be converted into new coloured
+    particles coming out of vaccuum, and will form new hadrons. This leads to the concept of
+    confinment and explains why it is not possible to observe free quarks or gluon in nature.
+    Interestingly, confinment is a property which is still not completely demonstrated from
+    a mathematical point of view. Moreover, this results in hadrons, such as protons,
+    having a structure that cannot be computed from perturbative QCD.
 
     In the context of high energy physics, confinment translates into the production of
     jets of hadrons when quarks or gluons are produced in collisions. Jet physics is
@@ -781,13 +784,16 @@ the skin of this tiny little world. »}\\
     During the previous section, we have seen how the particle masses arises from the
     introduction of the Higgs field breaking the symmetry. However it is remarkable to notice
     that the mass of hadrons, which ultimately composes everyday matter, comes essentially
-    from the kinetic and binding energy holding the quarks and not from the quark masses
-    themselvesi \todo{relate this to chiral symmetry breaking}.
+    from the kinetic and binding energy holding the quarks, and not from the quark masses
+    themselves. This is related to the fact that, in a simple model with two quarks $u$ and
+    $d$, the mass term of the quarks, $m\bar{q}q = m(\bar{q}_L q_R + \bar{q}_R q_L)$, breaks
+    the $SU(2)_L \times SU(2)_R$ invariance of the QCD Lagrangian, down to a isospin symmetry
+    $SU(2)_V$.
 
     \subsection{The success of the Standard Model \label{sec:standardModelSuccess}}
     %====================================================================================
 
-    The Standard Model includes 19 free parameters : ten fermion and one scalar mass, three
+    The Standard Model includes 19 free parameters: ten fermion and one scalar mass, three
     coupling parameters, four quark mixing matrix parameters, the Higgs vaccum expectation
     value and the strong CP-violating phase.
 
@@ -874,8 +880,8 @@ the skin of this tiny little world. »}\\
     interested to diagrams that contribute to the propagator. An example of diagram contributing
     to the propagator of the electron is given in \reffig{fig:feynmanDiagrams/output/electronPropagator}. We may
     express the observable mass $m_e$ of the electron as the sum of the bare mass $m^0_{e}$,
-    that is to say the actual parameter inside the lagrangian, and $\Delta m_e$ representing
-    the contributions from the quantum corrections :
+    that is to say the actual parameter inside the Lagrangian, and $\Delta m_e$ representing
+    the contributions from the quantum corrections:
 
     \eq{electronMassCorrection}
     {
@@ -890,7 +896,7 @@ the skin of this tiny little world. »}\\
     to play a significant role. In the case of \reffig{fig:feynmanDiagrams/output/electronPropagator}, this mean
     that we shall integrate over all momentum inside the loop up to the scale $\Lambda$.
     For instance, if one considers electrodynamics as an effective theory of electroweak,
-    at one-loop level :
+    at one-loop level:
 
     \eq{electronMassCorrection2}
     {
@@ -905,19 +911,19 @@ the skin of this tiny little world. »}\\
     when the scale grows.
 
     There is a remarkable and more general property behind this term which is that a
-    gauge invariant lagrangian cannot generate corrections that are breaking the symmetry. In
+    gauge invariant Lagrangian cannot generate corrections that are breaking the symmetry. In
     the case of electrodynamics with a massive electron, the mass term is already breaking
     the chiral symmetry $U(1)_L \times U(1)_R$, but because this is a so-called soft-breaking
     term, the property should still hold in the limit where $m_e^0 \rightarrow 0$.
     Therefore the correction cannot be proportional to $\Lambda$ but only to $m_e$, by
     dimensional analysis. It is common to refer to this by saying that chiral symmetry
     protects the mass of fermions from diverging. The same fact is observed for gauge
-    bosons masses in the case of the electroweak symmetry breaking by the Higgs field :
+    bosons masses in the case of the electroweak symmetry breaking by the Higgs field:
     here, the gauge bosons are protected by the gauge invariance preventing the mass terms.
 
     Looking at the mass of the Higgs boson, it is found that the Standard Model does not include
     any mechanism that prevent the mass of a scalar boson from diverging. The actual
-    computation for the correction from a fermion loop gives :
+    computation for the correction from a fermion loop gives:
 
     \eq{higgsMassCorrectionFromFermion}
     {
@@ -1024,7 +1030,7 @@ the skin of this tiny little world. »}\\
 
     \begin{itemize}
         \item \textbf{Strong CP problem} - As introduced before, there is a term allowed in
-            the QCD lagrangian that introduces CP-violation via a phase $\theta$. The value
+            the QCD Lagrangian that introduces CP-violation via a phase $\theta$. The value
             of this parameter has been so far found to be very close to zero despite
             lack of theoretical arguments for it not to be of the order of 1. This is a situation
             similar to the hierarchy problem where we can expect that there is a mechanism
@@ -1046,7 +1052,7 @@ the skin of this tiny little world. »}\\
             Finally, there are conceptual interrogations about the fact that the quarks have
             such different masses, in particular regarding the top quark as it is the
             heaviest known particle. The same kind of conceptual interrogations goes about
-            the number of fermion families : is there any fundamental reason to have three
+            the number of fermion families: is there any fundamental reason to have three
             families instead of one, two, or an infinity of them ? More generally, there
             are numerous fact about the Standard Model parameters and field content that
             feel arbitrary and may hide an underlying, more fundamental pattern.
@@ -1122,13 +1128,15 @@ the skin of this tiny little world. »}\\
 
             \subsubsection{Additional or modified field content}
 
+        \todo{say that it's not trivial to add a fourth generation of fermions}
+
         A third possibility is to introduce new ad-hoc fields of modify existing ones
         to address the shortcomings of the Standard Model.
 
         One first elegant idea following this principle is to explain the lightness of the
         Higgs by considering it is a composite object. This idea is inspired from QCD where
         light scalars are encountered and do not exhibit a naturalness problem. Pions,
-        for example, can be seen as Goldstone bosons of the spontanneous breaking of chiral
+        for example, can be seen as Goldstone bosons of the spontaneous breaking of chiral
         symmetry, and therefore are massless. However in practice, chiral symmetry is not exact as
         the underlying quarks do have mass, thus pions are only pseudo-Goldstone boson and get a mass,
         but they are still protected by the approximate chiral symmetry from being heavy.
@@ -1157,6 +1165,8 @@ the skin of this tiny little world. »}\\
 
             \subsubsection{The anthropic principle}
 
+        \todo{re-read this carefully}
+
         Finally, one of the alternative to theories beyond the Standard Model is to
         simply accept the Standard Model as it is. This is strongly related to Einstein's
         interrogation regarding if Nature had any choice at teh creation of the universe.
@@ -1169,58 +1179,62 @@ the skin of this tiny little world. »}\\
         The anthropic principle states that when studying the universe, it
         should be taken into account that conscious life is possible in it. It might be
         that our universe is simply one realization of universe among many others in what
-        is called a multiverse. What appears as to be fine-tunning would in fact be
+        is called a multiverse. What appears to be fine-tunning would in fact be
         equivalent to natural selection at the scale of the mutiverse where the observed
         universes can only be the one allowing conscious life.
 
-        This view is however controversial as it yields very little if no testable
-        prediction except understanding how likely life would be if the parameters of
+        This view is however controversial as it yields very little, if it not no testable
+        prediction, except understanding how likely life would be if the parameters of
         the Universe would have been different \todo{0807.3697v1}.
 
-        \subsection{Supersymmetry}
+        \subsection{Supersymmetry \label{sec:SUSY}}
 
         \subsubsection{General idea and motivations}
 
-        Here, we propose to have a dedicated look at the idea of Supersymmetry. Supersymmetry,
-        abbreviated SUSY, emerged around the 70's and designates a symmetry between bosons
-        and fermions. Mathematically, we can write such a transformation :
+        Here, we propose to have a dedicated look at the idea of Supersymmetry. Supersymmetry
+        (SUSY), emerged around the 70's. At this time, Gol'fand and Likhtman, two
+        russians mathematicians were working with the space-time symmetries of the Poincaré
+        group \refNeeded. The usual space-time symmetries, i.e. translations, boosts and rotations,
+        are all bosonic symmetries. They noticed that another type of space-time symmetry
+        with fermionic (i.e. spin 1/2) generators could also exist. Such a symmetry $Q$,
+        the supersymmetry, would therefore relate the different representations of the
+        Lorentz group, that is to say fermions ($f$) and bosons ($b$):
         \eqalign{SUSYtransformation}
         {
-            Q \rvert \text{F} \rangle \rightarrow \rvert \text{B} \rangle \nonumber
+            Q \rvert \text{f} \rangle \rightarrow \rvert \text{b} \rangle \nonumber
             \\
-            Q \rvert \text{B} \rangle \rightarrow \rvert \text{F} \rangle
+            Q \rvert \text{b} \rangle \rightarrow \rvert \text{f} \rangle
         }
-        where the subscript $f$ and $b$ refer to fermion and boson. Here, $Q$ is a \emph{global}
-        symmetry, i.e. it does not depend of space-time, and is therefore not a gauge
-        symmetry. As it relates two states with different spins, it must itself have a
-        spin 1/2. This means \todo{but why...} that SUSY is a space-time symmetry
-        in the sense that it is a non-trivial extension of the Poincaré algebra. This is
-        an important consideration : it has been demonstrated by Colemand and Mandula \todo{ref} that
-        the only possible symmetry of Nature are the Poincaré symmetry and the gauge
-        symmetries. Haag, Lopuszanski and Sohnius later relaxed this theorem by
-        noticing that another type of symmetry is possible and precisely corresponds to
-        supersymmetry. \todo{Haag, Lopuszanski, Sohnius, 1975}
+        $Q$ is therefore a non-trivial extension of the
+        Poincaré algebra. This is an important consideration: it has been demonstrated by
+        Colemand and Mandula \todo{ref} that the only possible symmetry of Nature are the
+        Poincaré symmetry and the gauge symmetries. Nevertheless, Haag, Lopuszanski and
+        Sohnius later relaxed this theorem by noticing that another type of symmetry is
+        possible and precisely corresponds to supersymmetry. \todo{Haag, Lopuszanski, Sohnius, 1975}
 
-        A remarkable property of SUSY is that trying to gauge it, meaning making the
-        transformation space-time dependent, yields a description of gravitation called
-        supergravity or, abbreviated, SUGRA. Supersymmetry also provides a link with
-        string theory which is a candidate of theory of everything.
+        Here, we have introduced $Q$ as a \emph{global} symmetry, i.e. a transformation
+        that does not depend of space-time, and is therefore not a gauge symmetry.
+        However, a remarkable feature in SUSY is that trying to gauge $Q$, meaning making
+        the transformation space-time dependent, yields a description of gravitation called
+        supergravity (SUGRA). Supersymmetry also provides a link with string theory which
+        is a candidate for the « theory of everything\, ».
 
-        To each fermion is therefore associated a boson with same charges, to each boson
-        is associated a fermion. The particule associated to another by SUSY is called
-        superpartner, and can be put together in a superfield. To ensure the consistency
-        of the theory\todo{check this}, superpartners of vector bosons have spin 1/2 and superpartners
-        of fermions have spin 0.  SUSY alone predicts that a particle and its superpartner
+        To each fermion is therefore associated a boson with same quantum numbers (apart
+        from spin), and similarly to each boson
+        is associated a fermion. The particule associated to an other by SUSY is called
+        its superpartner, and can be put together in a superfield. To ensure the consistency
+        of the theory, superpartners of vector bosons have spin 1/2 and superpartners
+        of fermions have spin 0. SUSY alone predicts that a particle and its superpartner
         should have the same mass. However this cannot be the case in pratice as no
         such thing has been observed by experiments, meaning that supersymmetry must be
         a broken symmetry.
 
-        There are several mechanism that are candidate to spontanneously break SUSY. Some
-        are based on a gravity mediated supersymmetry breaking, others involve a gauge
-        mediated mechanism, and another possibility is to have an anomaly mediated breaking.
-        Since the exact mechanism is unknown at the moment, one solution is to simply add
-        a $\mathcal{L}_\text{soft}$ component to the lagrangian that includes all allowed
-        terms and corresponding new parameters.
+        There are several mechanisms that are candidates to spontaneously break SUSY. Some
+        are based on a gravity mediated supersymmetry breaking (such as minimal SUGRA),
+        others involve a gauge mediated mechanism (GMSB), and another possibility is to
+        have an anomaly mediated breaking (AMSB). Since the exact mechanism is unknown at
+        the moment, one solution is to simply add a $\mathcal{L}_\text{soft}$ component to
+        the Lagrangian, that includes all allowed terms and corresponding new parameters.
 
         One of the main motivation for supersymmetry is to provide a mechanism that
         protects the mass of scalar bosons, thus answering the hierarchy problem. In the
@@ -1228,9 +1242,9 @@ the skin of this tiny little world. »}\\
         that if the superpartners have equal masses, then the quadratic divergences
         introduced in \refequation{eq:higgsMassCorrectionFromFermion} cancel each other and
         it gets natural for the Higgs to have a mass much lower than the Planck scale.
-        If SUSY is only softly broken, as for chiral and gauge symmetry, then the
-        boson-fermion symmetry still prevents to have a quadratic divergence. Instead,
-        we are left with a mild logarithmic divergence :
+        If SUSY is only softly broken (i.e. broken spontaneously), as for chiral and gauge
+        symmetries, then the boson-fermion symmetry still prevents to have a quadratic
+        divergence. Instead, we are left with a mild logarithmic divergence:
         \eq{higgsMassCorrectionInSUSY}
         {
             \Delta m_h^2 \, \propto \, (m_f^2 - m_b^2) \, \text{ln}\left(\frac{\Lambda}{m_b}\right).
@@ -1238,18 +1252,20 @@ the skin of this tiny little world. »}\\
         But this alone does not solves everything. If one consider the most massive
         fermion, that is the top quark $t$, then the mass ratio with its superpartner the
         stop $\tilde{t}$, $r = m_{\tilde{t}} / m_t$ cannot be too large. For instance, if
-        $r = 100$ then we are left with corrections $\Delta m_h = \orderOf{100 \cdot m_t}$
+        we assume $r = 100$, then we are left with a correction $\Delta m_h = \orderOf{100 \cdot m_t}$
         which is still large considering that we seek $\orderOf{m_h} = \orderOf{m_t}$.
         Therefore, we would need to reintroduce a certain level of fine-tunning to the
-        parameter of the model for the corrections to cancel, and we want to avoid that
-        to keep the theory natural. Hence, the naturalness of SUSY is strongly related to
-        the mass of the superpartners of heavy fermions such as the top and bottom quarks.
+        parameters of the theory for the corrections to cancel each others, and we want
+        to avoid that in order to keep the theory natural. Hence, the naturalness of SUSY
+        is strongly related to the mass of the superpartners, and can be used as an indication
+        for experimental searches.
 
         \subsubsection{The MSSM}
 
         The most studied realization of supersymmetry is the minimal supersymmetric standard
         model, or MSSM, corresponding to adding the minimum number of fields to the Standard
-        Model for it to become supersymmetric. \todo{ref to The Minimal Supersymmetric
+        Model for it to become supersymmetric. \todo{ref to 1201.0334 (Intro to MSSM), also
+        The Minimal Supersymmetric
         Standard Model / Jorge C. Romao, and  hep-ph/9612229 SUSY and Such / Dawson}
         Since the MSSM breaks SUSY with ad-hoc terms, it is to be seen as an effective
         theory up to $\Lambda_{\text{SUSY breaking}}$.
@@ -1261,15 +1277,17 @@ the skin of this tiny little world. »}\\
         each chirality of the electron. These are usually noted $\tilde{e}_R$ and $\tilde{e}_L$
         to associate them easily with their fermion partner, even though they are spinless.
         Regarding the Higgs sector, it is necessary to add not only a superpartner called
-        higgsinos, but a second Higgs field to ensure the concistency of the theory.
+        higgsinos, but a second Higgs $SU(2)$ doublet to avoid a gauge anomaly.
 
         As shown in the case of the Standard Model, the mass eigenstates are not
         necessarily the flavor eigenstates. This is still true in the MSSM, especially
         because of the SUSY breaking terms, and is an important consideration for the
-        phenomenology. In particular, masses eigenstates are formed by the combinations of
+        phenomenology. The introduction of second Higgs $SU(2)$ doublet leads to four addtional
+        physical Higgs states noted $H^0$, $A$ and $H^\pm$.
+        In the supersymmetric sector, masses eigenstates are formed by the combinations of
         the Higgsinos and electroweak gauginos and are called charginos and neutralinos.
-        For the fermions, mixing terms are authorized in $\mathcal{L}_soft$ between the
-        left and right-handed superpartners and are especially important for the
+        For the fermions, mixing terms are authorized in $\mathcal{L}_\text{soft}$ between
+        the left and right-handed superpartners and are especially important for the
         phenomenology of the third generation. The masses eigenstates can be determined
         by diagonalizing the mass matrices. The resulting particles spectrum is given on
         \reftab{tab:MSSMsuperpartners}.
@@ -1342,10 +1360,10 @@ the skin of this tiny little world. »}\\
                 \hline
             \end{tabular}
             \end{tabular}
-            \caption{Superpartners of the fermions and bosons of the standard model,
-            categorized according to flavor eigenstates (on the left) and masses eigenstates
+            \caption{Superpartners of the fermions and bosons of the Standard Model,
+            categorized according to flavor eigenstates (on the left) and mass eigenstates
             (on the right). A symbol " indicates that the mass eigenstate is identical to
-            flavor eigenstate. \label{tab:MSSMsuperpartners}}
+            the flavor eigenstate. \label{tab:MSSMsuperpartners}}
         \end{table}
 
         By design, the MSSM conservs a quantum number called R-parity defined as \todo{define J and B}:
@@ -1353,73 +1371,118 @@ the skin of this tiny little world. »}\\
         {
             R = (-1)^{2J + 3B + L}.
         }
-        $R$ is 1 for the particles of the standard model and -1 for their superpartners.
+        $R$ is 1 for the particles of the Standard Model and -1 for their superpartners.
         As it is conserved, this means that supersymmetric particles can only be
         pair-produced and only decay to an odd number of supersummetric particles. In
-        particular, this means that the lightest supersymmetric particle is stable as
+        particular, this means that the lightest supersymmetric particle (LSP) is stable as
         its decay would violate the $R$-parity. The important consequence is that it provides
         a good candidate for dark matter, provided that this particle is neutral.
 
+        The construction of the MSSM leads to the introduction of more than 100 additional
+        parameters compared to the Standard Model, with more than 50 coming from $\mathcal{L}_\text{soft}$.
+        Dealing with such a large number of
+        parameters is quite inconvenient in terms of phenomenological and experimental analysis.
+        The phenomenological MSSM (pMSSM) reduces this number of parameter by assuming that
+        there is no new source of CP violation, that the lightest neutralino $\lneutralino$
+        is the LSP, and other assumptions on the sfermion masses, trilinear couplings and
+        flavor violation. This reduces the number of new parameters to 19, namely :
+        \begin{itemize}
+            \item the ratio of the Higgs vaccuum expectation values, and $\text{tan}\, \beta \definedAs v_2 / v_1$ (with $0 \leq \beta \leq \frac{\pi}{2}$) ;
+            \item the higgsino mass parameter $\mu$ and pseudo-scalar Higgs mass $\mass{A}$ ;
+            \item the soft gaugino masses, $\masstilde{\tilde{B}}$, $\masstilde{\tilde{W}}$ and $\masstilde{\tilde{g}}$ (usually noted $M_1$, $M_2$ and $M_3$ in the literature) ;
+            \item the first and second generation sfermion masses $\masstilde{\tilde{q}}$, $\masstilde{\tilde{u}}$, $\masstilde{\tilde{d}}$, $\masstilde{\tilde{l}}$ an $\masstilde{\tilde{e}}$ ;
+            \item the third generation sfermion masses $\masstilde{\tilde{Q}}$, $\masstilde{\tilde{t}}$, $\masstilde{\tilde{b}}$, $\masstilde{\tilde{L}}$ and $\masstilde{\tilde{\tau}}$ ;
+            \item the trilinear couplings $A_t$, $A_b$ and $A_\tau$.
+        \end{itemize}
+        Note that we wrote $\masstilde{}$ instead of simply $\mass{}$ to highlight that these
+        masses comes from the SUSY breaking Lagrangian $\mathcal{L}_\text{soft}$ and not
+        from the electroweak symmetry breaking.
+        One can go one step further and reduce this number of parameter to 5 in the case
+        of the constrained MSSM, noted cMSSM (or mSUGRA), by assuming that at grand unification scale, all the
+        scalar particles have the same mass $m_0$, all gauginos have the same mass $m_{1/2}$,
+        and all the trilinear couplings are the same with value $A_0$. The remaining
+        two parameters are $\text{tan}$ and the sign of $\mu$. Although the assumptions
+        of the pMSSM and cMSSM can be seen as arbitrary, one can also simply take them as
+        guidance to reduce the parameter space in the context of  phenomenology and
+        experimental studies.
+
         \subsubsection{Phenomenology of the chargino, neutralino and stop sector \label{sec:stopNeutralinoCharginoPheno}}
 
-        \todo{explicit link between the parameters and mixing matrix + detail on
-        coupling stop-top-EW}
+        To get a better and concrete idea of the phenomenology of the neutralino, chargino
+        and stop sector, which is of interest in this document, let's write down explicitly
+        the mass matrices in the context of the MSSM and discuss their implications. By mass matrices, we refer to
+        the same kind of matrix that arised when we described the electroweak symmetry
+        breaking and which led to the introduction of the physical states $W^\pm$, $Z$ and
+        $\gamma$.
 
-        In the $(\tilde{B}, \tilde{W}^3, \tilde{h}^0_1, \tilde{h}^0_2)$ basis,
-        \eq{neutralinoMixingMatrix}
+        The chargino sector arises from the mixing between the winos $\tilde{W}_i$ and charged
+        higgsinos $\tilde{h}^\pm$. In the ($\tilde{W}^\pm$,$\tilde{h}^\pm$) basis,
+        the mass matrix is
+        \eq{charginoMixingMatrix}
         {
-            M_{\tilde{\chi}^0}
+            \mathcal{M}_{\tilde{\chi}^\pm}
             =
             \begin{pmatrix}
-                \tilde{m}_{\tilde{B}} & 0                     & - m_Z \,\text{cos}\, \beta \,\text{sin}\, \theta_W &   m_Z \,\text{sin}\, \beta \,\text{sin}\, \theta_W
+                \masstilde{\tilde{W}}
+                &
+                \sqrt{2} m_W \,\text{sin}\, \beta
                 \\
-                0                     & \tilde{m}_{\tilde{W}} &   m_Z \,\text{cos}\, \beta \,\text{cos}\, \theta_W & - m_Z \,\text{sin}\, \beta \,\text{cos}\, \theta_W
+                \sqrt{2} m_W \,\text{cos}\, \beta
+                &
+                -\mu
+            \end{pmatrix}
+        }
+        and the mass of the charginos $\tilde{\chi}_{1,2}^\pm$ are obtained by diagonalizing
+        this matrix. The chargino sector is therefore only described by $\masstilde{\tilde{W}}$,
+        $\beta$ and $\mu$. For very large values of $\text{tan}\, \beta$, it is straightforward
+        to see that the mass of the charginos tends to $\masstilde{\tilde{W}}$ and $\mu$.
+
+        The neutralino sector arises from mixing between the bino $\tilde{B}$, the wino
+        $\tilde{W}^3$ and the two neutral higgsinos $\tilde{h}^0_1$ and $\tilde{h}^0_2$.
+        In the corresponding basis, ($\tilde{B}$,$\tilde{W}^3$, $\tilde{h}^0_1$, $\tilde{h}^0_2$),
+        the mass matrix is
+        \eq{neutralinoMixingMatrix}
+        {
+            \mathcal{M}_{\tilde{\chi}^0}
+            =
+            \begin{pmatrix}
+                \masstilde{\tilde{B}} & 0                     & - m_Z \,\text{cos}\, \beta \,\text{sin}\, \theta_W &   m_Z \,\text{sin}\, \beta \,\text{sin}\, \theta_W
+                \\
+                0                     & \masstilde{\tilde{W}} &   m_Z \,\text{cos}\, \beta \,\text{cos}\, \theta_W & - m_Z \,\text{sin}\, \beta \,\text{cos}\, \theta_W
                 \\
                 - m_Z \,\text{cos}\, \beta \,\text{sin}\, \theta_W  &   m_Z \,\text{cos}\, \beta \,\text{sin}\, \theta_W & 0 & \mu
                 \\
                   m_Z \,\text{sin}\, \beta \,\text{sin}\, \theta_W  & - m_Z \,\text{sin}\, \beta \,\text{cos}\, \theta_W & \mu & 0
             \end{pmatrix}
         }
+        where $\theta_W$ is the weak mixing angle. The neutralino masses therefore only
+        depends on $\masstilde{\tilde{B}}$, $\masstilde{\tilde{W}}$, $\beta$ and $\mu$.
+        For example, for $\masstilde{\tilde{B}}$ and $\masstilde{\tilde{W}} \gg \mu$, the two lightest
+        neutralinos are essentially higgsino-like.
 
-        In the $(\tilde{W}^\pm, \tilde{h}^\pm)$ basis
-        \eq{charginoMixingMatrix}
-        {
-            M_{\tilde{\chi}^\pm}
-            =
-            \begin{pmatrix}
-                \tilde{m}_{\tilde{W}}
-                &
-                \sqrt{2} m_W \,\text{cos}\, \beta
-                \\
-                \sqrt{2} m_W \,\text{sin}\, \beta
-                &
-                \mu
-            \end{pmatrix}
-        }
-
-        In the $(\tilde{t}_L, \tilde{t}_R)$ basis,
+        Finally, in the stop sector, $\tilde{t}_L$ and $tilde{t}_R$ are not necessarily
+        the mass eigenstates, noted $\tilde{t}_1$ and $\tilde{t}_2$. They are determined
+        from the mass matrix
         \eq{stopMixingMatrix}
         {
-            M_{\tilde{t}}
+            \mathcal{M}_{\tilde{t}}
             =
             \begin{pmatrix}
-                \tilde{m}^2_{\tilde{t}_L} + m^2_t + m^2_Z(\frac{1}{2} - \frac{2}{3} \,\text{sin}^2 \theta_W) \,\text{cos}\, 2\beta
+                \masstilde{{\tilde{t}_L}}^2 + m^2_t + m^2_Z(\frac{1}{2} - \frac{2}{3} \,\text{sin}^2 \theta_W) \,\text{cos}\, 2\beta
                 &
-                m_t ( X_{\tilde{t}} + \mu \,\text{cot}\, \beta)
+                m_t ( A_{t} + \mu \,\text{cot}\, \beta)
                 \\
-                m_t ( X_{\tilde{t}} + \mu \,\text{cot}\, \beta)
+                m_t ( A_{t} + \mu \,\text{cot}\, \beta)
                 &
-                \tilde{m}^2_{\tilde{t}_R} + m^2_t + \frac{2}{3} m^2_Z \,\text{sin}^2 \theta_W \,\text{cos}\, 2 \beta
+                \masstilde{\tilde{t}_R}^2 + m^2_t + \frac{2}{3} m^2_Z \,\text{sin}^2 \theta_W \,\text{cos}\, 2 \beta
             \end{pmatrix}
         }
-        with :
-        \begin{itemize}
-            \item $\tilde{m}_p$ the mass terms for $p$ coming from the soft-breaking SUSY terms
-            \item $m_p$ the mass term for $p$ coming from the electroweak symmetry breaking
-            \item $X_{\tilde{t}}$ characterizing the trilinear coupling between the top partners and the Higgs field
-            \item $\text{cos}\,\theta_W \definedAs m_W / m_Z$ defines the weak mixing angle
-            \item $\mu$ and $\text{tan}\, \beta \definedAs v_2 / v_1$ relates the Higgs sector
-        \end{itemize}
+        where $A_{t}$ characterizes the trilinear coupling appearing in $\mathcal{L}_\text{soft}$
+        and $\masstilde{\tilde{t}_{L,R}}$ are the soft stop masses.
+        The mixing between $\tilde{t}_L$ and $\tilde{t}_R$ is characterized by the off-diagonal
+        terms and it's usually convenient to introduce the stop mixing parameter
+        $X_t \definedAs ( A_{t} + \mu \,\text{cot}\, \beta)$.
+
 
 
 
@@ -1445,7 +1508,7 @@ the skin of this tiny little world. »}\\
     There are several approaches one can take toward new physics. For instance, using already
     available measurements of observables and exploiting the fact described in
     \refsection{sec:standardModelSuccess} that observables are impacted through loops by
-    the entire Nature's lagrangian, it is possible to infer information or limits regarding
+    the entire Nature's Lagrangian, it is possible to infer information or limits regarding
     yet-unknown physics. Historically, this has been proved to be successful numerous times,
     for instance to predict the mass of the top quark from the $W$ and $Z$ bosons mass
     measurements \cite{discoveryOfTopQuark}. Similarly, a smoking-gun for some supersymmetric
@@ -1523,7 +1586,7 @@ the skin of this tiny little world. »}\\
     powerful enough to bend the trajectory of the protons at such high energies. To do
     so, superconducting magnets made of a niobium-titanium alloy are used and are able to
     produce a magnetic field of up to $8.33$ T. The operating temperature of such magnets
-    is only a few Kelvins : in the context of the LHC, they are required to be cooled using
+    is only a few Kelvins: in the context of the LHC, they are required to be cooled using
     a complex system of superfluid $^4$He at 1.9K. It is remarkable to note that this
     temperature is actually cooler than the cosmic microwave background at around $2.7~\text{K}$.
 
@@ -1548,7 +1611,7 @@ the skin of this tiny little world. »}\\
                      {On the top, cross-section of a cryodipole of the LHC
                      showing the magnet coils around the two beam pipes, and the cooling system \cite{LHC}.
                      On the bottom, technician working on an interconnection between two LHC
-                     sections (credit : Anna Pantelia, CERN).}
+                     sections (credit: Anna Pantelia, CERN).}
 
     The pipes of the LHC consist of about 1200 dipole sections represented on
     \reffig{fig:LHCpipe}, each $15$ m long, whose role are to bend the beam using dipole
@@ -1606,7 +1669,7 @@ the skin of this tiny little world. »}\\
     geometry parameters. The two general purpose experiments, ATLAS and CMS, are designed
     for a typical luminosity $L_\text{instant.} = 10^{34}~\text{cm}^{-2}
     \text{s}^{-1} = 10~\text{nb}^{-1} / \text{s}$. For a given process, one can compute
-    the number of expected events :
+    the number of expected events:
 
     $$ n_\text{event} = L \times \sigma_\text{process} $$
 
@@ -1619,7 +1682,7 @@ the skin of this tiny little world. »}\\
     total inelastic cross section is about 60 mb. At an instantaneous luminosity of
     $10~\text{nb}^{-1} / \text{s}$ and with a bunch crossing every 25 ns, this corresponds
     to an average of 15 inelastic interactions per bunch crossing. This is what is behind
-    the notion of pile-up : one event, or bunch crossing, contains $\orderOf{10-30}$ interactions
+    the notion of pile-up: one event, or bunch crossing, contains $\orderOf{10-30}$ interactions
     with generally only one is of interest, such as the production of a $W$ or $Z$ boson.
     The quantity of pile-up obviously scales with the instantaneous luminosity which
     is likely to go as high as $30~\text{nb}^{-1} / \text{s}$ corresponding to roughly 45
@@ -1755,7 +1818,7 @@ the skin of this tiny little world. »}\\
         cylindrical symmetry, it is convenient to work with the azimuthal angle $\phi$
         between the momentum $\vec{p}$ of a particle and the $x$ axis in the transverse
         plane. The projection of $\vec{p}$ in the transverse plane is called $\vec{p}_T$.
-        Additionnaly, the pseudo-rapidinity $\eta$ is defined as :
+        Additionnaly, the pseudo-rapidinity $\eta$ is defined as:
 
         $$ \eta \definedAs - \text{ln}(\text{tan}\frac{\theta}{2}) $$
 
@@ -1944,7 +2007,7 @@ the skin of this tiny little world. »}\\
         \insertFigure{CMS/muon}{0.7}{Layout of the muon system.}
 
         Three different gas-based technologies are used, whose choice was driven by the
-        large surface to be covered and the differents radiation environment :
+        large surface to be covered and the differents radiation environment:
         \begin{itemize}
             \item \textbf{Drift tubes} (DT) - This technology uses streched wiries within
                 a gas volume. Charged particles travelling through the gas ionize atoms,
@@ -2020,7 +2083,7 @@ the skin of this tiny little world. »}\\
         on them, such as a muon plus several jets. Generally speaking, the total rate of
         a given signature decreases as the variety and number of objects it contains increases.
         It is therefore possible to put lower threshold on complex selections compared to
-        simpler ones : for instance, the $\pT$ thresholds for an $e+\mu$ trigger can typically
+        simpler ones: for instance, the $\pT$ thresholds for an $e+\mu$ trigger can typically
         be set to lower values compared to a dimuon trigger for the same rate, itself having
         lower thresholds than a single muon trigger.
 
@@ -2086,7 +2149,7 @@ the skin of this tiny little world. »}\\
         the associated uncertainty coming from the track measurement. Then, a deterministic
         annealing algorithm \cite{DAclustering} is used to cluster the tracks into vertices. Compared to the
         traditional jet algorithm that will be discussed later, this algorithm is a divisive
-        clustering algorithm : at first, all tracks are put in a single group, which is then
+        clustering algorithm: at first, all tracks are put in a single group, which is then
         iteratively divided in smaller groups until a given condition is met. Once it is
         done, the tracks of each group are used to fit the position of the initial vertex.
         The resolution on the vertex position in $(x,y,z)$ depends on the number of tracks
@@ -2100,11 +2163,11 @@ the skin of this tiny little world. »}\\
                          {CMS/trackingPtResolution}
                          {CMS/vertexingZResolution}
                          {0.49}
-                         {On the left : relative resolution in $\pT$ and as function $\pT$ for the
+                         {On the left: relative resolution in $\pT$ and as function $\pT$ for the
                          tracking of isolated muons in the different $\abseta$ intervals corresponding
                          to the barrel,
                          the transition region and the endcap ; the solid and open dots correspond respectively
-                         to half-width of 68\% and 90\%. On the right : absolute resolution on the
+                         to half-width of 68\% and 90\%. On the right: absolute resolution on the
                          primary position as function of the number of tracks of the vertex,
                          and for two kinds of events. \cite{CMStracking})}
 
@@ -2118,7 +2181,7 @@ the skin of this tiny little world. »}\\
         to a development before the data taking, it has quickly become the most common
         method of reconstruction used to physics analysis such as cross-section measurements
         and searches for new physics. Particle flow is especially relevant in the context
-        of jet clustering that will be presented in the next section : the tracker provides
+        of jet clustering that will be presented in the next section: the tracker provides
         key information such as the direction at the vertex for low $\pT$ charged particles
         whereas the calorimeters are better suited for high $\pT$ regime and neutral particles.
 
@@ -2165,7 +2228,7 @@ the skin of this tiny little world. »}\\
         (quarks or gluons) after they fragment and hadronize. Reconstructing jets can
         therefore yields information regarding quarks or gluons produced in the event.
         However, it can not be stressed enough that there is no direct equivalence between
-        a jet and a parton : a jet is fundamentally an ambigous object as one parton
+        a jet and a parton: a jet is fundamentally an ambigous object as one parton
         shower can overlap with another, and their definition is given by the choice
         of algorithm to reconstruct them. Moreover, a jet can be contaminated by other
         hadronic activity in the event, such as pile-up, which can degrade the energy
@@ -2173,7 +2236,7 @@ the skin of this tiny little world. »}\\
         in itself, which goes from theoretical QCD to models of hadronization, jet
         reconstruction, calibration and study of the jet substructure.
 
-        Two main categories of algorithms exist to build jets : cone-based algorithm and
+        Two main categories of algorithms exist to build jets: cone-based algorithm and
         incremental clustering algorithm. CMS mainly use two incremental clustering
         algorithms. The starting point is the definition of the metric between objects in the
         event, which may be for instance the energy deposits in the calorimeters or the
@@ -2250,7 +2313,7 @@ the skin of this tiny little world. »}\\
         of such particles via the energy-momentum conservation in the transverse plane\footnote{The
         longitudinal plane can however not be used, since the two incoming partons carry
         different momenta.}. A significant imbalance may reveal the momentum carried by
-        the sum of invisible particles. We define the missing transverse energy as :
+        the sum of invisible particles. We define the missing transverse energy as:
         \eq{ETmissDefinition}
         {
             \MET \definedAs - \sum_{\text{objects}} \vec{\pT}.
@@ -2258,7 +2321,7 @@ the skin of this tiny little world. »}\\
         In this formula, one must define what are the objects to consider and this choice
         leads to several possible reconstruction, such as calorimeter-based, track-based
         or PF-based $\MET$. Several effects may lead to articial $\MET$ in addition to the
-        actual contribution of invisible particles, which can be classified in two categories :
+        actual contribution of invisible particles, which can be classified in two categories:
         intrinsec condition and resolution of the detector, for instance the jet energy
         resolution ; and misreconstruction of the events or mismeasurement in the
         operation of the detector, for instance in the operating of the laser correction
@@ -2524,7 +2587,7 @@ the skin of this tiny little world. »}\\
     In the cases where $B$ hadrons decay to a $C$ hadron, a tertiary vertex might
     be produced due to the life time of $C$ hadrons.
     \insertFigure{bTagging/jetTopology}{0.75}
-                 {Topology of a jet originating from the hadronization of a $b$ quark : the
+                 {Topology of a jet originating from the hadronization of a $b$ quark: the
                  jet contains a neutral $B$ hadron with a decay length around $0.5~\text{mm}$,
                  producing a secondary vertex with a high multiplicity of charged particles
                  emerging from it.}
@@ -2838,7 +2901,7 @@ the skin of this tiny little world. »}\\
     object groups (POG) and analysis groups (PAG). The frequency of such a validation procecure
     of the software ensures an early indentification of bugs and to understand
     the evolution of distributions and performances. The type of changes in the CMS
-    software includes, but are not limited to :
+    software includes, but are not limited to:
     \begin{itemize}
         \item \textbf{Versions of dependencies} such as \textsc{Geant4} and
               \textsc{Root} which may in turn impact the description of particle-matter
@@ -2865,7 +2928,7 @@ the skin of this tiny little world. »}\\
     \subsection{Sample size and impact on performance estimation}
 
     The validation work is made on four different samples to allow to cross-check results
-    and factorize the impact of pile-up or simulation type :
+    and factorize the impact of pile-up or simulation type:
     \begin{itemize}
         \item a QCD sample with generated partons with $50 < \pT < 120\GeV$ and full simulation
         of the detector
@@ -2895,7 +2958,7 @@ the skin of this tiny little world. »}\\
     $\sigma^\text{rel.}_\epsilon < 7\%$. Considering the efficiency estimation $\epsilon
     = k/n$ from observing $k$ objects passing a selection among $n$, one can define a
     critical efficiency such that the relative uncertainty on the efficiency estimation
-    will be higher than 7\% :
+    will be higher than 7\%:
 
     \eq{criticalEfficiency}
     {
@@ -3158,7 +3221,7 @@ the skin of this tiny little world. »}\\
 
     This impacts the performances of both impact parameter-based algorithms and
      secondary vertex-based algorithms significantly, as shown on
-    \reffig{fig:bTagging/premixing/performances} : TCHE gets up to 35\% lower fake
+    \reffig{fig:bTagging/premixing/performances}: TCHE gets up to 35\% lower fake
     rate from lights jets in the medium working point region while SSVHE gets about 20\%
     lower fake rate from $c$ jets.
 
@@ -3240,7 +3303,7 @@ the skin of this tiny little world. »}\\
                      }
 
     \reffig{fig:bTagging/highPU/perf} shows the comparison of the performances curves
-    obtained for the two scenarios for the four main algorithms : track counting high
+    obtained for the two scenarios for the four main algorithms: track counting high
     efficiency, simple secondary vertex high efficiency, jet probability and combined secondary vertex.
     Track counting and jet probability, both relying essentially on the impact parameter
     significance distribution, show a dramatic increase of the fake rate by a factor
@@ -3285,8 +3348,9 @@ the skin of this tiny little world. »}\\
     geometry has been pursued. On \reffig{fig:bTagging/highPU/TP} on the right, the
     performances are compared for three scenarios, namely Phase 1 geometry with a pile-up
     rate of 50, aged Phase 1 geometry with a pile-up of 140, and Phase 2 geometry with
-    a pile-up of 140. The Phase 2 geometry allows to significantly reduce the fake rate
-    from light jets to obtain performances comparable to Phase 1 with a pile-up rate of 50.
+    a pile-up of 140. The Phase 2 geometry has been demonstrated to significantly reduce
+    the fake rate from light jets to obtain performances comparable to Phase 1 with a
+    pile-up rate of 50.
 
     \insertTwoFigures{bTagging/highPU/TP}
                      {bTagging/highPU/PVidentification}
@@ -3338,73 +3402,87 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
         \subsubsection{Motivation and constrains from the Higgs sector}
 
-            One of the best assets of supersymmetry is its ability to explain why the Higgs
-            boson can be light, via the boson-fermion symmetry which protects the mass
-            of the Higgs from diverging because of its quantum corrections. This is illustrated on
-            \reffig{fig:higgsCorrections}, showing the one-loop corrections to $m_h^2$
-            from a fermionic field $f$ and a bosonic field $b$ coupled to the Higgs via the
-            Lagrangian terms $- \lambda_f h \bar{f} f$ and $\lambda_b \left| h \right|^2 \left| b \right|^2$.
+        \todo{add ref to 1112.2703}
 
-            \insertTwoFigures{higgsCorrections}
-            {feynmanDiagrams/output/higgsFermionCorrection}
-            {feynmanDiagrams/output/higgsBosonCorrection}{0.4}
-            {One-loop correction to the Higgs for a fermionic field $f$ and a bosonic field $b$.}
+        As introduced in \refsection{sec:SUSY}, one of the best assets of supersymmetry is its ability to explain why the Higgs
+        boson can be light, via the boson-fermion symmetry which protects the mass
+        of the Higgs from diverging because of quantum corrections. This is illustrated on
+        \reffig{fig:higgsCorrections}, showing the one-loop corrections to $m_h^2$
+        from a fermionic field $f$ and a bosonic field $b$ coupled to the Higgs via the
+        Lagrangian terms $- \lambda_f h \bar{f} f$ and $\lambda_b \left| h \right|^2 \left| b \right|^2$.
 
-            The leading order corrections associated to these diagrams are :
+        \insertTwoFigures{higgsCorrections}
+        {feynmanDiagrams/output/higgsFermionCorrection}
+        {feynmanDiagrams/output/higgsBosonCorrection}{0.4}
+        {One-loop correction to the Higgs for a fermionic field $f$ and a bosonic field $b$.}
 
-            \begin{equation}
-                \Delta \mass{h}^2 = - \frac{\left| \lambda_f \right|^2}{8\pi^2} \Lambda^2_{\text{UV}}
-                \, \, \, \, \, \, \, \, \, \, \text{and} \, \, \, \, \, \, \, \, \, \,
-                \Delta \mass{h}^2 =   \frac{\lambda_b}{16\pi^2} \Lambda^2_{\text{UV}}
-            \end{equation}
-            where $\Lambda^2_{\text{UV}}$ is the ultraviolet momentum cutoff which regulates
-            the loop integral. In the most ideal case, one can have $\left| \lambda_f \right|^2
-            = \lambda_b$, which corresponds to $\mass{f} = \mass{b}$, and associate two scalars
-            to each fermion (one for each chirality) so that the corrections cancel each others.
-            If the masses of $f$ and $b$ are not the same, however, the corrections do not
-            perfectly cancel each other and tunning has to be reintroduced to keep the
-            corrections to the Higgs mass low. Since the top quark has the biggest Yukawa coupling $\lambda$, a
-            particular attention in supersymmetry goes into the study of its superpartner
-            which should play an important role to stabilize the mass of the Higgs.
+        The leading order corrections associated to these diagrams are:
+        \begin{equation}
+            \Delta \mass{h}^2 = - \frac{\left| \lambda_f \right|^2}{8\pi^2} \Lambda^2_{\text{UV}}
+            \, \, \, \, \, \, \, \, \, \, \text{and} \, \, \, \, \, \, \, \, \, \,
+            \Delta \mass{h}^2 =   \frac{\lambda_b}{16\pi^2} \Lambda^2_{\text{UV}}
+        \end{equation}
+        where $\Lambda^2_{\text{UV}}$ is the ultraviolet momentum cutoff which regulates
+        the loop integral. In the most ideal case, one can have $\left| \lambda_f \right|^2
+        = \lambda_b$, which corresponds to $\mass{f} = \mass{b}$, and associate two scalars
+        to each fermion (one for each chirality) so that the corrections cancel each others.
+        If the masses of $f$ and $b$ are not the same, however, the corrections do not
+        perfectly cancel each other and tunning has to be reintroduced to keep the
+        corrections to the Higgs mass low. Since the top quark has the biggest Yukawa coupling $\lambda$, a
+        particular attention in supersymmetry goes into the study of its superpartner
+        which is expected to play an important role in stabilizing the mass of the Higgs.
 
-            One can study the level of tunning needed as a function of the mass of the superpartner
-            of the top, called the stop, for the theory to keep providing a natural explanation to the hierarchy
-            problem, and use it as a guidance for experimental searches. Despite the fact
-            that such a study is highly dependent on hypotheses made on the SUSY parameters,
-            it is commonly admitted that stop quarks should have a mass below or around $1\TeV$
-            for SUSY to remain natural \cite{TheMoreMinimalSSM, NaturalSusyEndures}. This makes the search for
-            stops an important channel to constrain naturalness or possibly discover SUSY
-            at the LHC.
+        One can study the level of tunning needed as a function of the mass of the superpartner
+        of the top, called the stop, for the theory to keep providing a natural explanation to the hierarchy
+        problem, and use it as a guidance for experimental searches. It is possible to quantify
+        fine-tunning by studying how the quantity of interest, in our case the Higgs mass,
+        varies as function of the parameters of the theory:
+        \eq{}
+        {
+            \Delta \mass{h}
+            \definedAs
+            \text{max}_i
+            \left|
+                 \frac
+                 {\partial \text{ln}\, \mass{h}^2}
+                 {\partial \text{ln}\, p_i}
+            \right|
+        }.
+        Despite the fact that such a study is highly dependent on hypotheses made on the SUSY parameters,
+        it is commonly admitted that stop quarks should have a mass below or around $1\TeV$
+        for SUSY to remain natural \cite{TheMoreMinimalSSM, NaturalSusyEndures}. This makes the search for
+        stops an important channel to constrain naturalness or possibly discover SUSY
+        at the LHC.
 
-            In addition to the argument of naturalness, one may derive constrains on the stop
-            sector directly from the knowledge of the Higgs mass \cite{TheLightStopWindow}. In
-            the context of supersymmetry, the Higgs mass may indeed be expressed as function
-            of the other parameters of the theory :
-
-            \eq{higgsMassInSUSY}
-            {
-                \mass{h}^2
-                =
-                \mass{Z}^2 \text{cos}^2 2\beta
+        In addition to the argument of naturalness, one may derive constrains on the stop
+        sector directly from the knowledge of the Higgs mass \cite{TheLightStopWindow}. In
+        the context of supersymmetry, the Higgs mass may indeed be expressed as function
+        of the other parameters of the theory:
+        \eq{higgsMassInSUSY}
+        {
+            \mass{h}^2
+            =
+            \mass{Z}^2 \text{cos}^2 2\beta
+            +
+            \frac{3 \lambda_t^2 \mass{t}^2}{4\pi^2}
+            \left[
+                \text{log} \left( \frac{\mass{S}^2}{\mass{t}^2} \right)
                 +
-                \frac{3 \lambda_t^2 \mass{t}^2}{4\pi^2}
-                \left[
-                    \text{log} \left( \frac{\mass{S}^2}{\mass{t}^2} \right)
-                    +
-                    X_t^2 \left( 1 - \frac{X_t^2}{12} \right)
-                \right]
-                + ...
-            }
-
-            where $\text{tan}\, \beta \definedAs v_2/v_1$ is the ratio of the neutral
-            Higgses vaccuum expectation values,
-            $X_t \definedAs (A_t + \mu\, \text{cot} \beta) / \mass{S}$ is the stop mixing
-            parameter, i.e. it parametrizes the off-diagonal elements in the stop mixing
-            matrix, and $\mass{S} \definedAs \sqrt{\mass{\tilde{t}_1}\mass{\tilde{t}_2}}$ is the average stop
-            mass. From this computation, constrains can be put on the value of $\mass{S}$ as
-            function of $X_t$, as shown on the left of \reffig{fig:stopSectorConstraints} when assuming $\text{tan}\, \beta
-            = 20$. For $\mass{h}= 125\GeV$, one finds that the minimum value of $\mass{S}$ is
-            around $600\GeV$, obtained for the so-called maximal mixing value $X_t = \sqrt{6}$.
+                X_t^2 \left( 1 - \frac{X_t^2}{12} \right)
+            \right]
+            + ...
+        }
+        where $\text{tan}\, \beta \definedAs v_2/v_1$ is the ratio of the neutral
+        Higgses vaccuum expectation values,
+        $X_t \definedAs (A_t + \mu\, \text{cot} \beta) / \mass{S}$ is the stop mixing
+        parameter, i.e. it parametrizes the off-diagonal elements in the stop mixing
+        matrix, and $\mass{S} \definedAs \sqrt{\mass{\tilde{t}_1}\mass{\tilde{t}_2}}$ is the average stop
+        mass. From this computation, constrains can be put on the value of $\mass{S}$ as
+        function of $X_t$, as shown on the left of \reffig{fig:stopSectorConstraints} when assuming $\text{tan}\, \beta
+        = 20$. For $\mass{h}= 125\GeV$, one finds that the minimum value of $\mass{S}$ is
+        around $600\GeV$, obtained for the so-called maximal mixing value $X_t = \sqrt{6}$.
+        Interestingly enough, the observed Higgs mass therefore points to relativly ``heavy''
+        stops compared to the naturalness argument favorizing light stops.
 
         \insertTwoFigures{stopSectorConstraints}
                          {theory/averageStopMassConstraint}
@@ -3413,7 +3491,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
                          {Constrains on the stop sector from the Higgs measurement \cite{TheLightStopWindow}.
                          On the left, constrains on $\mass{S}$ as function of $X_t$ from
                          for different values of the Higgs mass. On the right, constrains
-                         in the $(\mass{\tilde{t}_1},\mass{\tilde{t}_2})$ space : the
+                         in the $(\mass{\tilde{t}_1},\mass{\tilde{t}_2})$ space: the
                          red area is forbidden because, as seen on the left plot, $m_S$
                          should be higher than about 600\GeV for $\mass{h} = 125\GeV$ ;
                          the lines corresponds to a few different values of $\Delta_t$,
@@ -3421,40 +3499,40 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
                          $X_t^2 < 6$ (in black).
                          }
 
-            Additionally, it is remarkable that constrains on the stop sector can also be derived
-            from the loop to the decay $h \rightarrow gg$ and $h \rightarrow \gamma \gamma$
-            as described in \cite{TheLightStopWindow}. As the photon is not massive,
-            the decay $h \rightarrow \gamma \gamma$ must involve virtual loops of massive
-            particles, such as the top, but also possibly its superpartner the stop which
-            would then affect the branching ratio $\text{BR}(h \rightarrow \gamma\gamma)$.
-            The impact can be expressed as function of the stop sector parameters $\mass{S}$,
-            $X_t$, $\mass{\tilde{t}_1}$ and $\mass{\tilde{t}_2}$ :
+        Moreover, it is remarkable that constrains on the stop sector can also be derived
+        from the loop to the decay $h \rightarrow gg$ and $h \rightarrow \gamma \gamma$
+        as described in \cite{TheLightStopWindow}. As the photon is not massive,
+        the decay $h \rightarrow \gamma \gamma$ must involve virtual loops of massive
+        particles, such as the top, but also possibly its superpartner the stop which
+        would then affect the branching ratio $\text{BR}(h \rightarrow \gamma\gamma)$.
+        The impact can be expressed as function of the stop sector parameters $\mass{S}$,
+        $X_t$, $\mass{\tilde{t}_1}$ and $\mass{\tilde{t}_2}$:
 
-            \eq{higgsGammaGammaStopConstraint}
-            {
-                \frac{\text{BR}(h\rightarrow\gamma\gamma)}{\text{BR}(h\rightarrow\gamma\gamma)_\text{SM}}
-                =
-                (1 - 0.28 \Delta_t)^2
-                \hspace*{0.5cm}
-                \text{with}
-                \hspace*{0.5cm}
-                \Delta_t
-                \approx
-                \frac{\mass{t}^2}{4}
-                \left(
-                    \frac{1}{\mass{\tilde{t}_1}^2}
-                    +
-                    \frac{1}{\mass{\tilde{t}_2}^2}
-                    -
-                    \frac{X_t^2}{\mass{S}^2}
-                \right)
-            }
+        \eq{higgsGammaGammaStopConstraint}
+        {
+            \frac{\text{BR}(h\rightarrow\gamma\gamma)}{\text{BR}(h\rightarrow\gamma\gamma)_\text{SM}}
+            =
+            (1 - 0.28 \Delta_t)^2
+            \hspace*{0.5cm}
+            \text{with}
+            \hspace*{0.5cm}
+            \Delta_t
+            \approx
+            \frac{\mass{t}^2}{4}
+            \left(
+                \frac{1}{\mass{\tilde{t}_1}^2}
+                +
+                \frac{1}{\mass{\tilde{t}_2}^2}
+                -
+                \frac{X_t^2}{\mass{S}^2}
+            \right)
+        }
 
-            At this point, the experimental measurement of $\text{BR}(h\rightarrow\gamma\gamma)$
-            does not allow to significantly constrain the value of $\Delta_t$. Nevertheless,
-            the lines in the right plot of \reffig{fig:stopSectorConstraints} plot illustrate
-            how given values of $\Delta_t$ would in turn constrain the
-            $(\mass{\tilde{t}_1},\mass{\tilde{t}_2})$ space.
+        At this point, the experimental measurement of $\text{BR}(h\rightarrow\gamma\gamma)$
+        does not allow to significantly constrain the value of $\Delta_t$. Nevertheless,
+        the lines in the right plot of \reffig{fig:stopSectorConstraints} plot illustrate
+        how given values of $\Delta_t$ would in turn constrain the
+        $(\mass{\tilde{t}_1},\mass{\tilde{t}_2})$ space.
 
         \subsubsection{Motivation from the dark matter evidence}
 
@@ -3471,7 +3549,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         than around $300 \GeV$ and could therefore be accessible at the LHC. Nevertheless,
         scenarios with a sneutrino as LSP might be
         studied as well, in particular in models attempting to explain the mass of the
-        neutrinos, while the gravitino as LSP appears in gravity mediated SUSY breaking (GMSB) models.
+        neutrinos, while the gravitino as LSP appears in gravity mediated SUSY breaking models.
 
         \subsection{Phenomenology and signature \label{sec:phenoAndSignature}}
         %=======================================
@@ -3494,14 +3572,14 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         As it is in practice impossible to perform such a search accross the whole phase
         space of SUSY models, a pragmatic approach often consists in using simplified SUSY
         models where an
-        effective lagrangian introduces a limited set of new physics features. In such
+        effective Lagrangian introduces a limited set of new physics features. In such
         simplified models, the free parameters are usually taken to be experimentally
         meaningful quantities, such as the masses of the SUSY particles. This makes
         it possible for experimental searches to produced generic results that can later
         be reinterpreted in specific realizations of SUSY \cite{LiemSMS, SmodelS}
         or other BSM theories. In our case, let's consider the existence of only the three
         particles\footnote{The remaining SUSY particles can be assumed to be too heavy to
-        have any significant impact on what is discussed here.} : the lightest stop quark
+        have any significant impact on what is discussed here.}: the lightest stop quark
         $\lstop$, the lightest neutralino $\lneutralino$ and the lightest chargino $
         \lchargino$.
 
@@ -3585,7 +3663,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         on-shell top, and the top is therefore off-shell. This type of kinematic is also
         called a three-body decay of the stop. Around the $\deltam \sim \mass{t}$ limit,
         the kinematic is quite challenging as the signal looks almost identifical to
-        the standard model $t\bar{t}$ production. Because of this, this region is called
+        the Standard Model $t\bar{t}$ production. Because of this, this region is called
         stealthy as such a signal is difficult to bring out. In the part of the phase space
         corresponding to $\deltam > \mass{t}$, the top is on-shell. The $\MET$ from $\lneutralino$,
         as well as the $\pT$ of the visible decay products, are expected to grow as function of
@@ -3627,7 +3705,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     After the decay of the tops or charginos, each $W$ can decay hadronically (i.e. into
     a pair of quarks, $W \rightarrow q\bar{q}$) or leptonically (i.e. into a charged
     lepton and a neutrino, $W \rightarrow \ell \nu_{\ell}$). It is common to refer to
-    the channel of interest via the number of charged leptons in the final state : 0-lepton
+    the channel of interest via the number of charged leptons in the final state: 0-lepton
     (or fully hadronic) channel, 1-lepton (semi-leptonic) channel or 2-lepton (di-leptonic)
     channel. In \refsection{sec:analysis_overview} to \refsection{sec:analysis_results}, we focus on
     a search in the 1-lepton channel. This channel has the advantage to be less sensitive
@@ -3695,7 +3773,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     during the Run I of the LHC at $8\TeV$, with a total integrated luminosity
     $\mathcal{L} = 19.5\invfb$.
 
-    Background samples are generated from Monte-Carlo simulations : the $t\bar{t}$ and
+    Background samples are generated from Monte-Carlo simulations: the $t\bar{t}$ and
     single top processes are simulated using \textsc{Powheg} \cite{Powheg} while $W$+jets,
     Drell-Yan, diboson, triboson, $t\bar{t}W$ and $t\bar{t}Z$ simulations are performed
     using \textsc{MadGraph} \cite{Madgraph}. For all the background samples, the
@@ -3755,7 +3833,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         %==============================================================
 
     After full reconstruction of the events, further criteria are applied on the lepton
-    candidates. In the context of this analysis, we define two categories of leptons :
+    candidates. In the context of this analysis, we define two categories of leptons:
     the first one, called \emph{selected} leptons, corresponds to well-identified high-$\pT$
     isolated leptons ; the second one is a category meant to be used to veto events with
     a lost second lepton, and is constructed from the particle-flow candidates directly,
@@ -3795,7 +3873,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     To characterize the problem, the dileptonic $t\bar{t}$ events passing a selection
     requiring exactly one selected lepton and at least three jets are classified according
     to the nature and kinematics of the lost lepton taken from the Monte-Carlo truth. Five
-    categories are considered :
+    categories are considered:
     \begin{itemize}
         \item ($e/\mu$) Electrons or muons with $\pT > 5\GeV$, $\abseta < 2.5$ ;
         \item ($\tau \rightarrow e/\mu$) Taus decaying to an electron or muon with $\pT > 5\GeV$, $\abseta < 2.5$ ;
@@ -3903,7 +3981,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
        Jets are reconstructed using the anti-$k_t$ clustering algorithm with a size
        parameter $R = 0.5$ on the particle-flow candidates. Three types of corrections
-       are applied sequentially : an energy offset, a $\eta$ and $\pT$ dependent correction,
+       are applied sequentially: an energy offset, a $\eta$ and $\pT$ dependent correction,
        and a residual correction accounting for remaining discrepancies between data and simulation.
 
        Selected jets are required to have $\pT > 30 \GeV$ and $\abseta < 2.4$. They also
@@ -3945,7 +4023,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         if the muon $\pT$ is between $20$ and $26\GeV$ otherwise the single muon trigger
         is used.
 
-        We group the backgrounds in four categories : $\oneLeptonTop$, $\Wjets$, $\diLeptonTop$
+        We group the backgrounds in four categories: $\oneLeptonTop$, $\Wjets$, $\diLeptonTop$
         and rare. The $\oneLeptonTop$ category consists of semi-leptonic $t\bar{t}$
         production and single top production ($s$ and $t$ modes). The $\Wjets$
         category is the production of a $W$ decaying leptonically, associated with the
@@ -4139,7 +4217,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
                          {Stacked plots presenting the distribution of $\MET$ and $\MET /
                          \sqrt{H_T}$ for the different background categories. Two
                          signal benchmarks are superimposed, with cross section multiplied
-                         by 100, to show the discriminating power :
+                         by 100, to show the discriminating power:
                          $\lstop \rightarrow t \lneutralino$ with $(\mass{\lstop},\mass{\lneutralino})
                          = (550,50)\GeV$ (in dashed green), and $\lstop \rightarrow b \lchargino$
                          with $x = 0.5$ and $(\mass{\lstop}, \mass{\lneutralino}) = (550,50)\GeV$
@@ -4155,7 +4233,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         often called $M_{T2}$. Here, we make use of $M_{T2}^W$ which is specifically
         designed for the topology of the $\diLeptonTop$ background, with
         one lepton missing. $M_{T2}^W$ is designed by decomposing $\vec{\MET}$ into two
-        components : one corresponding to the lost leptonic $W_1$ and the other one being
+        components: one corresponding to the lost leptonic $W_1$ and the other one being
         a neutrino $\nu_2$, such that $\vec{p}_{W_1} + \vec{p}_{\nu_2} = \vec{\MET}$.
         The momentums must fit into the constrains that each $W$-like systems, $W_1$ and
         ($\ell + \nu_2$), should have a mass $m_W \sim 80 \GeV$. Finally, it is imposed that
@@ -4304,7 +4382,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         between the direction of the $\MET$ and the two leading jets, $j_1$ and $j_2$.
         $\Delta \phi( j_{1,2}, \vec{\MET} )$ is defined as the minimum of $\Delta \phi$
         between the $\MET$ direction and the leading jet, and $\Delta \phi$ between the
-        $\MET$ direction and the next-to-leading jets :
+        $\MET$ direction and the next-to-leading jets:
 
         \eq{deltaPhij1j2METDefinition}
         {
@@ -4368,7 +4446,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             the $\lstop \rightarrow b \lchargino$ signal compared to the background, as the decay chain
             does not involve any top quark.
         \item Jet multiplicity ; The jet multiplicity also tends to provide discriminating power.
-            This is related to the previous ISR discussion : in a more general case, signal
+            This is related to the previous ISR discussion: in a more general case, signal
             at higher $\deltam$ will contain more jets because of ISR. The BDT is likely to
             be able to exploit the correlation between this variable and the others to
             increase its discriminating power.
@@ -4422,7 +4500,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     i.e. the probability to observe a background-like realization in the data, if the
     signal exists. It is sometimes more pratical to express this potential in term of a
     significance $\mathcal{S}$, that is to say by expressing the distance $\mu[H_0] -
-    \mu[H_1]$ in terms of standard deviations $\sigma[H_1]$ :
+    \mu[H_1]$ in terms of standard deviations $\sigma[H_1]$:
 
     $$ \mathcal{S}_\text{exclu.} = \frac{\mu[H_0] - \mu[H_1]}{\sigma[H_1]}$$.
 
@@ -4432,20 +4510,20 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     5\% and 0.3\% for $\mathcal{S} = 1$, $2$ and $3$ respectively.
     Considering that $H_0$ and $H_1$ have (mean, standard deviation) being respectively
     $(B,\sqrt{B})$ and $(S+B,\sqrt{S+B})$ as in \reffig{fig:interpretation}, one ends up
-    with :
+    with:
 
     $$ \mathcal{S}_\text{exclu.} = \frac{S}{\sqrt{S+B}}$$.
 
     The same reasoning can be applied to the point of view of a discovery claim, where
     one is interested in $p(N > \mu[H_1]|H_0)$, i.e. the probability to observe a
     signal-like realization in the data, if the signal doesn't exist. Assuming the situation
-    sketched in \reffig{fig:interpretation}, one obtains a significance :
+    sketched in \reffig{fig:interpretation}, one obtains a significance:
 
     $$ \mathcal{S}_\text{disc.} = \frac{S}{\sqrt{B}}$$.
 
     This significance definition can be easily used as a figure of merit when optimizing
     cuts. The picture may be completed by incoporating systematic uncertainties on the
-    background to $\sigma[H_0]$ and $\sigma[H_1]$, leading to :
+    background to $\sigma[H_0]$ and $\sigma[H_1]$, leading to:
 
     \begin{equation}
        \mathcal{S}_\text{disc.} = \frac{S}{\sqrt{B+f^2 \cdot B^2}}
@@ -4457,7 +4535,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     where $f$ represents an estimate of the relative systematic uncertainty on the background.
 
     While both $\mathcal{S}_\text{disc.}$ and $\mathcal{S}_\text{exclu.}$ sometimes give a reasonable estimate of the true
-    sensitivity of a counting experiment, one should remain conscious of their caveats \cite{Punzi} :
+    sensitivity of a counting experiment, one should remain conscious of their caveats \cite{Punzi}:
 
     \begin{enumerate}
       \item Their interpretation is not straightforward as it does not tell the
@@ -4481,7 +4559,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     Caveat 1 can be addressed by reinterpreting $\mathcal{S}$ in terms of excludable
     (or discoverable) signal strength $\mu$ or cross-section $\sigma$. Replacing
     $S$ with $\epsilon \times \sigma \times \mathcal{L}$, and introducing the discovery
-    and exclusion threshold $a$ and $b$ (typically set to 5 and 2) yields :
+    and exclusion threshold $a$ and $b$ (typically set to 5 and 2) yields:
 
     \begin{equation}
         \mathcal{\sigma}_\text{disc.} = a \cdot \frac{\sqrt{B+f^2B^2}}{\epsilon \cdot \mathcal{L}}
@@ -4804,8 +4882,8 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     the lepton identification efficiency and the luminosity.
 
     To separate the effect of the second lepton veto, the  normalization is done in two
-    steps : first, a scale factor $\SFpre$ is computed before the application of the
-    second lepton veto, substracting the rare component :
+    steps: first, a scale factor $\SFpre$ is computed before the application of the
+    second lepton veto, substracting the rare component:
 
     \begin{equation}
         \SFpre \definedAs \left( \frac{N(\text{data}) - N(\text{rare})}{N(\oneLeptonTop) + N(\Wjets) + N(\diLeptonTop)} \right)
@@ -4814,7 +4892,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
     $\SFpre$ is used to normalize only the $\diLeptonTop$ component. Another scale factor,
     $\SFpost$ is used after application of the second lepton veto, substracting the rare
-    and the corrected $\diLeptonTop$ component :
+    and the corrected $\diLeptonTop$ component:
 
     \begin{equation}
         \SFpost \definedAs \left( \frac{N(\text{data}) - N(\text{rare}) - \SFpre \times N(\diLeptonTop)}{N(\oneLeptonTop) + N(\Wjets)} \right)
@@ -4837,7 +4915,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     $\oneLeptonTop$ components. Before looking at the tail, however, we start by normalizing
     the background in the $\MT$ peak of this control region, in a similar fashion to what
     is done in \refsection{sec:MTpeakNormalization}. This is done by introducing $\SFnobtag$,
-    used to normalize the $\Wjets$ and $\oneLeptonTop$ contributions :
+    used to normalize the $\Wjets$ and $\oneLeptonTop$ contributions:
 
     \begin{equation}
         \SFnobtag \definedAs \left( \frac{N(\text{data}) - N(\text{rare}) - N(\diLeptonTop)}{N(\oneLeptonTop) + N(\Wjets)} \right)
@@ -4912,7 +4990,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     performed both in the $\MT$ peak and tail regions and we extract $SFR = SF^{\text{tail}}
     / SF^{\text{peak}}$ for both processes, representing the discrepancy in the tail
     independently from the peak normalization. Different sources of systematic uncertainty
-    are considered : the jet energy scale, the normalization of the rare background, the
+    are considered: the jet energy scale, the normalization of the rare background, the
     Monte-Carlo statistics, the choice of the minimizer algorithm, the choice of the
     initial fit conditions, the generator setup for $t\bar{t}$ (using \textsc{Powheg} or
     \textsc{MadGraph}, varying the matching parameters, RGE scale, top mass, applying or
@@ -5043,7 +5121,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
                 \includegraphics[width=0.325\textwidth]{controlPlots/2leptons_noMTCut/MT2W}\\
                 \caption{A few control plots, showing the data/MC comparison for $\MT$ (left column),
                         $\MET$ (middle column) and $M_{T2}^W$ (right column) in the different control
-                        regions : $\MT$-peak (first row), $0\, b\text{-tag}$ (second row), reversed veto (third
+                        regions: $\MT$-peak (first row), $0\, b\text{-tag}$ (second row), reversed veto (third
                         row) and 2 leptons (fourth row). The $\MT$-peak normalization and $\MT$-tail
                         correction scale factors are propagated where relevant.}
                         \label{fig:preselControlPlots}
@@ -5201,7 +5279,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             %========================================================
 
             Other sources of uncertainties are taken into account though being small compared
-            to the ones described in the previous subsections :
+            to the ones described in the previous subsections:
             \begin{itemize}
                 \item To cover the modeling of ISR and FSR jets, the $N_\text{jets}$
                       distribution is studied in the 2 leptons control region. An
@@ -5226,7 +5304,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             uncertainties that are considered, at preselection level and the range of them
             for the two kinds of signal regions. The relative importance of the individual
             systematics varies depending on the signal regions as the composition of the
-            backgrounds itself varies : at preselection level, the importance of the
+            backgrounds itself varies: at preselection level, the importance of the
             $\SFRoneLeptonTop$ uncertainty is high as the $\oneLeptonTop$ component is still large.
             However for some signal regions, the $\diLeptonTop$ is the dominant contribution and
             uncertainty from the $\MT$-tail modeling becomes the leading systematic source.
@@ -5307,7 +5385,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
         The signal contamination level is studied across the $(\mass{\lstop},\mass{\lneutralino})$
         plane by computing the $C \definedAs S/B$ in the $\MT$-peak control region and 0 $b$-tag
-        control region and comparing it to the signal purity, $P \definedAs S/B$, in the signal region :
+        control region and comparing it to the signal purity, $P \definedAs S/B$, in the signal region:
 
         \begin{equation}
             R \definedAs \frac{C}{P} = \frac{(S/B)_\text{control region}}{(S/B)_\text{signal region}}
@@ -5334,7 +5412,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         To do this, the data-driven aspects are corrected by including the signal when computing the scale factors for the
         $\MT$-peak normalization and $\MT$-tail correction. In the case of $\SFpre$ and $\SFpost$, the scale factors
         are corrected by substracting alo the signal component to the data when normalizing the $\oneLeptonTop$, $\Wjets$
-        and $\diLeptonTop$ components :
+        and $\diLeptonTop$ components:
 
         \begin{equation}
             \SFpreTilde \definedAs \left( \frac{N(\text{data}) - N(\text{rare}) - N(\text{signal}))}{N(\oneLeptonTop) + N(\Wjets) + N(\diLeptonTop)} \right)
@@ -5392,10 +5470,10 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \includegraphics[width=0.31\textwidth]{limits/T2bw050_CC}\\
         \includegraphics[width=0.33\textwidth]{results/CnC_T2bw025/signalRegion_MTtail_yield}
         \includegraphics[width=0.31\textwidth]{limits/T2bw025_CC}\\
-        \caption{On the left : comparison of the yields in the different cut-based signal
+        \caption{On the left: comparison of the yields in the different cut-based signal
         regions between data and the background prediction under the null hypothesis. The
         grey hatching represents the systematic uncertainty, propagated on the ratio plot.
-        On the right : upper limit on $\sigma(\lstop\lstop) \times \text{BR}$ at 95\% confidence level and exclusion in terms of
+        On the right: upper limit on $\sigma(\lstop\lstop) \times \text{BR}$ at 95\% confidence level and exclusion in terms of
         $(\mass{\lstop},\mass{\lneutralino})$ after comparison to the theory, assuming
         $BR = 1$. On the first row, for $\lstop \rightarrow t \lneutralino$ decay mode and on
         the second, third and last row for $\lstop \rightarrow b \lchargino$ decay mode
@@ -5413,10 +5491,10 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \includegraphics[width=0.31\textwidth]{limits/T2bw050_BDT}\\
         \includegraphics[width=0.33\textwidth]{results/BDT_T2bw025/signalRegion_MTtail_yield}
         \includegraphics[width=0.31\textwidth]{limits/T2bw025_BDT}\\
-        \caption{On the left : comparison of the yields in the different BDT-based signal
+        \caption{On the left: comparison of the yields in the different BDT-based signal
         regions between data and the background prediction under the null hypothesis. The
         grey hatching represents the systematic uncertainty, propagated on the ratio plot.
-        On the right : upper limit on $\sigma(\lstop\lstop) \times \text{BR}$ at 95\% confidence level and exclusion in terms of
+        On the right: upper limit on $\sigma(\lstop\lstop) \times \text{BR}$ at 95\% confidence level and exclusion in terms of
         $(\mass{\lstop},\mass{\lneutralino})$ after comparison to the theory, assuming
         $BR = 1$. On the first row, for $\lstop \rightarrow t \lneutralino$ decay mode and on
         the second, third and last row for $\lstop \rightarrow b \lchargino$ decay mode
@@ -5425,7 +5503,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     \end{figure}
 
     The comparison of the observed limits with the expected one is directly related to
-    the difference of the yields between the observed data and the background prediction :
+    the difference of the yields between the observed data and the background prediction:
     for instance, in the cut-based signal regions of the $\lstop \rightarrow t \lneutralino$,
     on top of \reffig{fig:resultsCnC}, the Off-shell loose region has a 1.5$\sigma$ excess,
     translating to a less restrictive observed limit. On the other hand, the Medium $\deltam$
@@ -5438,7 +5516,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     goes up to $\mass{\lstop} \sim 700\GeV$ and $\mass{\lneutralino} \sim 250\GeV$ in the
     on-shell region and up to $\mass{\lneutralino} \sim 125\GeV$ in the off-shell region.
     As discussed back to \refsection{sec:phenoAndSignature}, the case with $\deltam \sim
-    \mass{t}$ is challenging as the kinematic here is very close to standard model $t\bar{t}$
+    \mass{t}$ is challenging as the kinematic here is very close to Standard Model $t\bar{t}$
     production and cannot be efficiently probed directly. However, dedicated approach can
     be built to indirectly probe this scenario \cite{SUS-13-021, ClosingStopGap}. The
     decay mode $\lstop \rightarrow b \lchargino$ is also challenging in the low $x$ case
@@ -5511,7 +5589,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \includegraphics[width=0.49\textwidth]{limits/combined_pola/T2bw050}
         \includegraphics[width=0.49\textwidth]{limits/combined_pola/T2bw025}\\
         \caption{Exclusion limits for the combined semileptonic and dileptonic searches
-        when considering alternative polarization scenarios : on the top left, for $\lstop
+        when considering alternative polarization scenarios: on the top left, for $\lstop
         \rightarrow t \lneutralino$ decay mode with pure left-handed or right-handed top
         compared to the unpolarized scenario ; on the top right, bottom left and bottom
         right for $\lstop \rightarrow b \lchargino$ decay mode with $x=0.75$, $0.50$ and
@@ -5580,7 +5658,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
              between boosted $W$ decays and fakes.
 
              \reffig{fig:genWPtForSignal} illustrates the interest that these techniques might have to
-             select the signal : on the left plot, the mean $\pT$ of the generated
+             select the signal: on the left plot, the mean $\pT$ of the generated
              $W$ bosons for the signal accross the $(\mass{\lstop}, \mass{\lneutralino})$
              space grows as function of $\deltam$. For $\deltam > 650\GeV$, the
              mean $\pT$ is about $200\GeV$ and we can expect a large fraction of boosted $W$.
@@ -5591,9 +5669,9 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
              \insertTwoFigures{genWPtForSignal}
                               {wTagging/T2tt_meanGenWPt}{wTagging/genWPt_backgroundVsSignal}{0.4}
-                              {On the left : mean $\pT$ of the generated $W$ for the
+                              {On the left: mean $\pT$ of the generated $W$ for the
                               signal across the $(\mass{\lstop}, \mass{\lneutralino})$ space.
-                              On the right : comparison of the $\pT$ spectra of the generated
+                              On the right: comparison of the $\pT$ spectra of the generated
                               hadronic $W$ for the $\oneLeptonTop$ and rare backgrounds, and
                               the signal benchmark $(\mass{\lstop}, \mass{\lneutralino}) = (700,25) \GeV$.
                               The $\diLeptonTop$ and $\Wjets$ backgrounds are not represented
@@ -5641,7 +5719,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             \refsection{sec:analysis_objectAndEventSelection}. We however allow events with at
             least three regular (i.e. based on the anti$k_T$ algorithm with a size parameter 0.5) jets
             instead of four. $W$ candidates are matched to generated
-            hadronically-decaying $W$ : if the candidate is within $\Delta R < 0.4$, it
+            hadronically-decaying $W$: if the candidate is within $\Delta R < 0.4$, it
             is considered as matched, whereas candidates which are in $\Delta R > 2$ are
             considered to be fakes originating from quark or gluons.
             The quantity investigated are the pruned mass of the jet,
@@ -5711,7 +5789,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             To answer this question, we consider the analysis (noted `ref.') that makes
             no use of $W$-tagging
             and relies only on optimized cuts on $\MT$, $\MET$ and $M_{T2}^{W}$. In parallel,
-            we consider two populations of events : the first one, (1W), passing the preselection,
+            we consider two populations of events: the first one, (1W), passing the preselection,
             but also allowing events with three regular jets to pass, and requiring at least
             one CA8 $W$-tagged jet with $\pT > 250\GeV$ ; the second one (0W) passing the
             preselection (with at least four jets) and requiring that no CA8 jet is $W$-tagged.
@@ -5822,7 +5900,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
         One can get a basic estimation of the integrated luminosity $\mathcal{L}$ required
         at 13 TeV to obtain equivalent sensitivity compared to 8 TeV, starting from the
-        following equation :
+        following equation:
 
         $$ \left( \frac{S}{\sqrt{B}} \right)_{8\TeV} = \left( \frac{S}{\sqrt{B}} \right)_{13\TeV}  $$
 
