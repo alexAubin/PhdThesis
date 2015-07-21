@@ -1,10 +1,7 @@
 
-
-\begin{thebibliography}{2}
-
-\addcontentsline{toc}{chapter}{Bibliography}
-
-\singlespace
+% ====================================
+% Theory
+% ====================================
 
 \addReference{Polonyi}
 {J. Polonyi}
@@ -15,6 +12,11 @@
 {L. H. Ryder}
 {Quantum field theory}
 {ISBN 978-0521749091}
+
+\addReference{Peskin}
+{M. E. Peskin, D. V. Schroeder}
+{An Introduction To Quantum Field Theory}
+{ISBN 978-0201503975}
 
 \addReference{Glashow}
 {S. L. Glashow}
@@ -37,9 +39,9 @@
 {\doi{10.1103/PhysRevLett.13.508}}
 
 \addReference{LectureStandardModelHiggsBoson}
-             {I. van Vulpen, A. Castelli}
-             {Lecture on Particle Physics, The Standard Model Higgs Boson}
-             {\href{http://www.nikhef.nl/~ivov/Ivo_teaching.html}{Lectures at the University of Amsterdam}}
+{I. van Vulpen, A. Castelli}
+{Lecture on Particle Physics, The Standard Model Higgs Boson}
+{\href{http://www.nikhef.nl/~ivov/Ivo_teaching.html}{Lectures at the University of Amsterdam}}
 
 \addReference{GFitter}
 {The GFitter group}
@@ -172,16 +174,19 @@ different fundamental constants}
 {The Minimal Supersymmetric Standard Model}
 {\href{http://porthos.ist.utl.pt/~romao/homepage/publications/}{Personal page on Porthos website}}
 
+% ====================================
+% Detector
+% ====================================
+
 \addReference{discoveryOfTopQuark}
 {C. Campagnari, M. Franklin}
 {The discovery of the top quark}
-{Reviews of Modern Physics, Vol. 69, No 1, January 1997}
+{\arXiv{hep-ex/9608003}}
 
 \addReference{BsToMuMu}
 {A. Arbey, M. Battaglia, F. Mahmoudi, D. Martinez Santos}
 {Supersymmetry confronts $B_s \rightarrow \mu^+ \mu^-$ Present and future status}
 {\arXiv{1212.4887}}
-
 
 \addReference{PolarizedHelium}
 {A. K. Petukhov, G. Pignol, D. Jullien, K. H. Andersen}
@@ -226,12 +231,12 @@ different fundamental constants}
 \addReference{ppCrossSectionsStirling}
 {W. J. Stirling}
 {Parton luminosity and cross section plots}
-{\href{http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html}{Personnal webpage}}
+{\href{http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html}{Personal webpage}}
 
 \addReference{XibBaryon}
 {The CMS Collaboration}
 {Observation of a new Xi(b) baryon}
-{\arXiv{1204.5955}}
+{\arXiv{1204.5955}, \cds{1444180}}
 
 \addReference{CMSHiggs}
 {The CMS Collaboration}
@@ -251,7 +256,7 @@ different fundamental constants}
 \addReference{CMStracking}
 {The CMS Collaboration}
 {Description and performance of track and primary-vertex reconstruction with the CMS tracker}
-{\arXiv{1405.6569}}
+{\arXiv{1405.6569}, \cds{1704291}}
 
 \addReference{DAclustering}
 {K. Rose}
@@ -261,7 +266,7 @@ different fundamental constants}
 \addReference{particleFlow}
 {The CMS Collaboration}
 {Particle–Flow Event Reconstruction in CMS and Performance for Jets, Taus, and $\MET$}
-{CMS Public Analysis Summary PFT-19-001}
+{\pas{PFT-09-001}, \cds{1194487}}
 
 \addReference{GSFelectrons}
 {W. Adam, R. Frühwirth, A. Strandlie, T. Todorov}
@@ -296,7 +301,7 @@ different fundamental constants}
 \addReference{MCGenLesHouches}
 {M.A. Dobbs et al.}
 {Les Houches Guidebook to Monte Carlo Generators for Hadron Collider Physics}
-{\arXiv{hep-ph/0403045}
+{\arXiv{hep-ph/0403045}}
 
 \addReference{MCGenPDG}
 {Particle Data Group}
@@ -308,324 +313,342 @@ different fundamental constants}
 {The Fast Simulation of the CMS Experiment}
 {\doi{10.1088/1742-6596/513/2/022012}}
 
+% ====================================
+% b-tagging
+% ====================================
+
+\addReference{HIG-13-011}
+{The CMS Collaboration}
+{Search for the standard model Higgs boson produced in
+vector boson fusion, and decaying to bottom quarks}
+{\pas{HIG-13-011}, \cds{1547579}}
+
+\addReference{BTagging7TeV}
+{The CMS Collaboration}
+{Identification of b-quark jets with the CMS experiment}
+{\pas{BTV-12-001}, \cds{1494669}, \arXiv{1211.4462}}
+
+\addReference{BTagging8TeV}
+{The CMS Collaboration}
+{Performance of b tagging at $\sqrt{s} = 8\TeV$ in multijet, $\bar{t}t$ and boosted topology events}
+{\pas{BTV-13-001}, \cds{1581306}}
+
+\addReference{AdaptiveVertexFitting}
+{W. Waltenberger, R. Fruhwirth and P. Vanlaer}
+{Adaptive vertex fitting}
+{\doi{10.1088/0954-3899/34/12/N01}}
+
+\addReference{SoftLeptonAN}
+{The CMS Collaboration}
+{Tagging $b$-jets with electrons and muons in 8 TeV pp collisions at CMS}
+{\an{2013/142}}
+
+\addReference{TrackingNewPUComparison}
+{CMS Tracking group}
+{730 release validation}
+{CMS internal report}
+
+\addReference{Premixing}
+{J. Goh, M. Hildreth}
+{A New Pileup Mixing Framework for CMS}
+{21st International Conference on Computing in High Energy and Nuclear Physics (CHEP2015)}
+
+\addReference{Phase2TDR}
+{The CMS Collaboration}
+{Technical Proposal for the Phase-II upgrade of the Compact Muon Solenoid}
+{\pasNoPub{TDR-15-002}}
+
+% ====================================
+% Analysis
+% ====================================
+
 \addReference{TheMoreMinimalSSM}
-             {A. G. Cohen, D. B. Kaplan, A. E. Nelson}
-             {The More Minimal Supersymmetric Standard Model}
-             {\arXiv{hep-ph/9607394}}}
+{A. G. Cohen, D. B. Kaplan, A. E. Nelson}
+{The More Minimal Supersymmetric Standard Model}
+{\arXiv{hep-ph/9607394}}}
 
 \addReference{NaturalSusyEndures}
-             {M. Papucci, J. T. Ruderman, A. Weiler}
-             {Natural SUSY Endures}
-             {\arXiv{1110.6926}}
+{M. Papucci, J. T. Ruderman, A. Weiler}
+{Natural SUSY Endures}
+{\arXiv{1110.6926}}
+
+\addReference{ANaturalSUSYHiggs}
+{L. J. Hall, D. Pinner, J. T. Ruderman}
+{A Natural SUSY Higgs Near 125 GeV}
+{\arXiv{1112.2703}}
 
 \addReference{TheLightStopWindow}
-             {A. Delgado, G. F. Giudice, G. Isidori, M. Pierini, A. Strumia}
-             {The light stop window}
-             {\arXiv{1212.6847}}
+{A. Delgado, G. F. Giudice, G. Isidori, M. Pierini, A. Strumia}
+{The light stop window}
+{\arXiv{1212.6847}}
 
 \addReference{EllisDarkMatter}
-             {J. Ellis, K. A. Olive}
-             {Supersymmetric Dark Matter Candidates}
-             {\arXiv{1001.3651}}
+{J. Ellis, K. A. Olive}
+{Supersymmetric Dark Matter Candidates}
+{\arXiv{1001.3651}}
 
 \addReference{LiemSMS}
-             {S. Liem}
-             {Constraining Supersymmetry using Simplified Models}
-             {Master thesis, urn:nbn:se:su:diva-91365}
+{S. Liem}
+{Constraining Supersymmetry using Simplified Models}
+{Master thesis, \href{http://urn.kb.se/resolve?urn=urn\%3Anbn\%3Ase\%3Asu\%3Adiva-91365}{urn:nbn:se:su:diva-91365}}
 
 \addReference{SmodelS}
-             {S. Kraml et al.}
-             {SModelS: a tool for interpreting simplified-model results from the LHC and its application to supersymmetry}
-             {\arXiv{1312.4175v3}}
+{S. Kraml et al.}
+{SModelS: a tool for interpreting simplified-model results from the LHC and its application to supersymmetry}
+{\arXiv{1312.4175}}
 
 \addReference{Prospino}
-             {W. Beenakker, R. Hopker, M. Spira, P.M. Zerwas}
-             {Squark and Gluino Production at Hadron Colliders}
-             {\arXiv{9610490}}
+{W. Beenakker, R. Hopker, M. Spira, P.M. Zerwas}
+{Squark and Gluino Production at Hadron Colliders}
+{\arXiv{9610490}}
 
-%========
 %Analysis
-%========
 
 \addReference{SUS-12-023-PAS}
-             {The CMS Collaboration}
-             {Search for direct top squark pair production in events with a single isolated lepton, jets and missing transverse energy at sqrt(s) = 8 TeV}
-             {CMS Physics Analysis Summary SUS-12-023}
+{The CMS Collaboration}
+{Search for direct top squark pair production in events with a single isolated lepton, jets and missing transverse energy at sqrt(s) = 8 TeV}
+{\pas{SUS-12-023}, \cds{1494074}}
 
 \addReference{SUS-13-011-PUB}
-             {The CMS Collaboration}
-             {Search for top-squark pair production in the single-lepton final state in pp collisions at sqrt(s) = 8 TeV}
-             {Eur. Phys. J. C 73 (2013) 2677. arXiv:1308.1586}
+{The CMS Collaboration}
+{Search for top-squark pair production in the single-lepton final state in pp collisions at sqrt(s) = 8 TeV}
+{\pas{SUS-13-011}, \cds{1547550}, \arXiv{1308.1586}}
 
 \addReference{SUS-14-015-PAS}
-             {The CMS Collaboration}
-             {Search for direct stop pair production in the single lepton channel at sqrt(s)=8 TeV}
-             {CMS Physics Analysis Summary SUS-14-015}
+{The CMS Collaboration}
+{Search for direct stop pair production in the single lepton channel at sqrt(s)=8 TeV}
+{\pasNoPub{SUS-14-015}}
 
-%=======================
 % Generator, setup
-%=======================
 
 \addReference{Powheg}
-             {S. Frixione, P. Nason, C. Oleari}
-             {Matching NLO QCD computations with Parton Shower simulations: the POWHEG method}
-             {\arXiv{0709.2092}}
+{S. Frixione, P. Nason, C. Oleari}
+{Matching NLO QCD computations with Parton Shower simulations: the POWHEG method}
+{\arXiv{0709.2092}}
 
 \addReference{Madgraph}
-             {J. Alwall et al.}
-             {MadGraph 5 : Going Beyond}
-             {\arXiv{1106.0522}}
+{J. Alwall et al.}
+{MadGraph 5 : Going Beyond}
+{\arXiv{1106.0522}}
 
 \addReference{Pythia}
-             {T. Sjostrand, S. Mrenna, P. Skands}
-             {Pythia 6.4 Physics and Manual}
-             {\arXiv{hep-ph/0603175}}
+{T. Sjostrand, S. Mrenna, P. Skands}
+{Pythia 6.4 Physics and Manual}
+{\arXiv{hep-ph/0603175}}
 
 \addReference{FastSim}
-             {A. Giammanco}
-             {The Fast Simulation of the CMS Experiment}
-             {\doi{10.1088/1742-6596/513/2/022012}}
+{A. Giammanco}
+{The Fast Simulation of the CMS Experiment}
+{\doi{10.1088/1742-6596/513/2/022012}}
 
 \addReference{topPtReweighting}
-             {The CMS Collaboration}
-             {Measurement of differential top-quark pair production
-             cross sections in pp collisions at sqrt(s) = 7 TeV}
-             {\arXiv{1211.2220}}
+{The CMS Collaboration}
+{Measurement of differential top-quark pair production
+cross sections in pp collisions at sqrt(s) = 7 TeV}
+{\pas{TOP-11-013}, \cds{1493228}, \arXiv{1211.2220}}
 
 \addReference{ISRmodelingDominick}
-             {The CMS Collaboration}
-             {Hadronic Recoil Studies of Heavy Boosted Systems}
-             {CMS Analysis Note 2013/059}
+{The CMS Collaboration}
+{Hadronic Recoil Studies of Heavy Boosted Systems}
+{\an{2013/059}}
 
-%===================
 % POG and PAG stuff
-%===================
 
 \addReference{MuonID}
-             {The CMS Collaboration}
-             {Single Muon efficiencies in 2012 Data}
-             {CMS Detector Performance Summary 2013/009}
+{The CMS Collaboration}
+{Single Muon efficiencies in 2012 Data}
+{CMS-DP-2013-009, \cds{1536406}}
 
 \addReference{ElectronID}
-             {The CMS Collaboration}
-             {Electron performance with 19.6 fb$^{-1}$ of data collected at $\sqrt{s}=8\TeV$ with the CMS detector}
-             {CMS Detector Performance Summary 2013/003}
+{The CMS Collaboration}
+{Electron performance with 19.6 fb$^{-1}$ of data collected at $\sqrt{s}=8\TeV$ with the CMS detector}
+{CMS-DP-2013-003, \cds{1523273}}
 
 \addReference{TauID}
-             {The CMS Collaboration}
-             {Tau reconstruction and identification in CMS during LHC run 1}
-             {CMS Physics Analysis Summary TAU-14-001}
+{The CMS Collaboration}
+{Tau reconstruction and identification in CMS during LHC run 1}
+{\pasNoPub{TAU-14-001}}
 
 \addReference{JetID}
-             {The CMS Collaboration}
-             {Jet and MET Commissioning Results from 7 TeV Collision Data}
-             {CMS Detector Performance Summary 2010/014}
+{The CMS Collaboration}
+{Jet and MET Commissioning Results from 7 TeV Collision Data}
+{\href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?type=DP&year=2010&files=DP2010_014.pdf}{CMS-DP-2010-014}}
 
 \addReference{PUJetID}
-             {The CMS Collaboration}
-             {Pileup Jet Identification}
-             {CMS Physics Analysis Summary JME-13-005}
-
-\addReference{bTaggingPerf8TeV}
-             {The CMS Collaboration}
-             {Performance of b tagging at $\sqrt{s} = 8\TeV$ in multijet, $t\bar{t}$ and
-             boosted topology events}
-             {CMS Physics Analysis Summary BTV-13-001}
+{The CMS Collaboration}
+{Pileup Jet Identification}
+{\pas{JME-13-005}, \cds{1581583}}
 
 \addReference{METperf8TeV}
-             {The CMS Collaboration}
-             {Performance of the CMS missing transverse energy reconstruction in pp data at sqrt(s) = 8 TeV}
-             {\arXiv{1411.0511}}
+{The CMS Collaboration}
+{Performance of the CMS missing transverse energy reconstruction in pp data at sqrt(s) = 8 TeV}
+{\pas{JME-13-003}, \cds{1966665}, \arXiv{1411.0511}}
 
-%==========
 %MET/sqrt(HT), MET significance
-%==========
 
 \addReference{METsignificanceMirman}
-             {N. Mirman, Y. Wang, J. Alexander}
-             {Missing transverse energy significance at CMS}
-             {\arXiv{1409.3028v1}}
+{N. Mirman, Y. Wang, J. Alexander}
+{Missing transverse energy significance at CMS}
+{\arXiv{1409.3028}}
 
 \addReference{MT2variables}
-             {Y. Bai, H. Cheng, J. Gallicchio, J. Gu}
-             {Stop the Top Background of the Stop Search}
-             {\arXiv{1203.4813}}
+{Y. Bai, H. Cheng, J. Gallicchio, J. Gu}
+{Stop the Top Background of the Stop Search}
+{\arXiv{1203.4813}}
 
-%========
 %ISR-related
-%========
 
 \addReference{EXOmonojet}
-             {The CMS Collaboration}
-             {Search for dark matter, extra dimensions, and unparticles in monojet events in proton-proton collisions at $\sqrt{s} = 8\TeV$}
-             {\arXiv{1408.3583}}
+{The CMS Collaboration}
+{Search for dark matter, extra dimensions, and unparticles in monojet events in proton-proton collisions at $\sqrt{s} = 8\TeV$}
+{\pas{EXO-12-048}, \cds{1750264}, \arXiv{1408.3583}}
 
 \addReference{SUScompressedStop}
-             {The CMS Collaboration}
-             {Search for supersymmetry in events with soft leptons, low
-             jet multiplicity, and missing transverse momentum in
-             proton-proton collisions at $\sqrt{s} = 8\TeV$}
-             {CMS Physics Analysis Summary SUS-14-021}
+{The CMS Collaboration}
+{Search for supersymmetry in events with soft leptons, low
+jet multiplicity, and missing transverse momentum in
+proton-proton collisions at $\sqrt{s} = 8\TeV$}
+{\pas{SUS-14-021}, \cds{2010110}}
 
 \addReference{ISRGluinoTevatron}
-             {J. Alwall et al.}
-             {Searching for Directly Decaying Gluinos at the Tevatron}
-             {\arXiv{0803.0019}}
+{J. Alwall et al.}
+{Searching for Directly Decaying Gluinos at the Tevatron}
+{\arXiv{0803.0019}}
 
 \addReference{ISRtagging}
-             {D. Krohn, L. Randall, L. Wang}
-             {On the Feasibility and Utility of ISR Tagging}
-             {\arXiv{1101.0810}}
+{D. Krohn, L. Randall, L. Wang}
+{On the Feasibility and Utility of ISR Tagging}
+{\arXiv{1101.0810}}
 
-%=======================
 %FOM-related, statistics
-%=======================
 
 \addReference{CLs}
-             {A. L. Read}
-             {Presentation of search results: the CLs technique}
-             {\doi{10.1088/0954-3899/28/10/313}}
+{A. L. Read}
+{Presentation of search results: the CLs technique}
+{\doi{10.1088/0954-3899/28/10/313}}
 
 \addReference{Punzi}
-             {G. Punzi}
-             {Sensitivity of searches for new signals and its optimization}
-             {\arXiv{physics/0308063v2}}
+{G. Punzi}
+{Sensitivity of searches for new signals and its optimization}
+{\arXiv{physics/0308063}}
 
 \addReference{FOMCousins}
-             {R. D. Cousins, J. T. Linnemann, J. Tucke}
-             {Evaluation of three methods for calculating
-             statistical significance when incorporating a
-             systematic uncertainty into a test of the
-             background-only hypothesis for a Poisson
-             process}
-             {\arXiv{physics/0702156}}
+{R. D. Cousins, J. T. Linnemann, J. Tucke}
+{Evaluation of three methods for calculating
+statistical significance when incorporating a
+systematic uncertainty into a test of the
+background-only hypothesis for a Poisson
+process}
+{\arXiv{physics/0702156}}
 
 \addReference{FOMLinnemann}
-             {J. T. Linnemann}
-             {Measures of Significance in HEP and Astrophysics}
-             {\arXiv{physics/0312059}}
+{J. T. Linnemann}
+{Measures of Significance in HEP and Astrophysics}
+{\arXiv{physics/0312059}}
 
 \addReference{FOMCowan}
-             {G. Cowan, K. Cranmer, E. Gross, O. Vitells}
-             {Asymptotic formulae for likelihood-based tests of new physics}
-             {\arXiv{1007.1727}}
+{G. Cowan, K. Cranmer, E. Gross, O. Vitells}
+{Asymptotic formulae for likelihood-based tests of new physics}
+{\arXiv{1007.1727}}
 
-%==============================
 % MT tail disagreement
-%==============================
 
 \addReference{WjetsDifferentialCrossSection}
-             {The CMS Collaboration}
-             {$W$+jets differential cross section measurement at $8\TeV$}
-             {CMS Analysis Note 2014/114}
+{The CMS Collaboration}
+{$W$+jets differential cross section measurement at $8\TeV$}
+{\an{2014/114}}
 
 \addReference{LeptonicMonotop}
-             {The CMS Collaboration}
-             {Search for monotop in the muon channel in proton-proton collisions at $\sqrt{s} = 8\TeV$}
-             {CMS Analysis Note 2014/279}
+{The CMS Collaboration}
+{Search for monotop in the muon channel in proton-proton collisions at $\sqrt{s} = 8\TeV$}
+{\an{2014/279}}
 
 \addReference{B2GttMET}
-             {The CMS Collaboration}
-             {Search for the production of dark matter in association with top-quark pairs
-             in the single-lepton final state in proton-proton collisions at $\sqrt{s} = 8\TeV$}
-             {\arXiv{1504.03198}}
+{The CMS Collaboration}
+{Search for the production of dark matter in association with top-quark pairs
+in the single-lepton final state in proton-proton collisions at $\sqrt{s} = 8\TeV$}
+{\pas{B2G-14-004}, \cds{1749153}, \arXiv{1504.03198}}
 
 \addReference{RooFit}
-             {W. Verkerke, D. Kirkby}
-             {The RooFit toolkit for data modeling}
-             {\arXiv{physics/0306116}}
+{W. Verkerke, D. Kirkby}
+{The RooFit toolkit for data modeling}
+{\arXiv{physics/0306116}}
 
-% Systeamatics
+% Systematics
 
 \addReference{AN-2013-89}
-             {The CMS Collaboration}
-             {Search for Direct Top Squark Pair Production in the Single Lepton Channel
-             with Transverse Mass at 8 TeV}
-             {CMS Analysis Note 2013/89}
+{The CMS Collaboration}
+{Search for Direct Top Squark Pair Production in the Single Lepton Channel
+with Transverse Mass at 8 TeV}
+{\an{2013/89}}
 
 \addReference{PDF4LHC}
-             {M. Botje et al.}
-             {The PDF4LHC Working Group Interim Recommendations}
-             {\arXiv{1101.0538}}
+{M. Botje et al.}
+{The PDF4LHC Working Group Interim Recommendations}
+{\arXiv{1101.0538}}
 
 % Limits discussion
 
 \addReference{stopDilepton}
-             {The CMS Collaboration}
-             {Search for scalar top quark pair production in the dilepton
-             final state at $\sqrt{s} = 8\TeV$ with the CMS detector}
-             {CMS Physics Analysis Summary SUS-13-025}
+{The CMS Collaboration}
+{Search for scalar top quark pair production in the dilepton
+final state at $\sqrt{s} = 8\TeV$ with the CMS detector}
+{\pasNoPub{SUS-13-025}}
 
 \addReference{SUS-13-021}
-             {The CMS Collaboration}
-             {Search for Direct Top Squark Pair Production with Higgs Bosons in the Final
-             State in pp Collisions at $\sqrt{s} = 8\TeV$}
-             {CMS Physics Analysis Summary SUS-13-021}
+{The CMS Collaboration}
+{Search for Direct Top Squark Pair Production with Higgs Bosons in the Final
+State in pp Collisions at $\sqrt{s} = 8\TeV$}
+{\pas{SUS-13-021}, \cds{1631339}}
 
 \addReference{ClosingStopGap}
-             {Michal Czakon et al.}
-             {Closing the stop gap}
-             {\arXiv{1407.1043}}
+{Michal Czakon et al.}
+{Closing the stop gap}
+{\arXiv{1407.1043}}
 
 \addReference{polarization1}
-             {M. Perelstein, A. Weiler}
-             {Polarized Tops from Stop Decays at the LHC}
-             {\arXiv{0811.1024v2}}
+{M. Perelstein, A. Weiler}
+{Polarized Tops from Stop Decays at the LHC}
+{\arXiv{0811.1024v2}}
 
 \addReference{polarization2}
-             {Ian Low}
-             {Polarized Charginos (and Tops) in Stop Decays}
-             {\arXiv{1304.0491v2}}
+{Ian Low}
+{Polarized Charginos (and Tops) in Stop Decays}
+{\arXiv{1304.0491v2}}
 
 % W Tagging
 
 \addReference{SUS-12-024}
-             {The CMS Collaboration}
-             {Search for heavy resonances in the W/Z-tagged dijet mass
-             spectrum in pp collisions at 8 TeV}
-             {\arXiv{1405.1994}}
+{The CMS Collaboration}
+{Search for heavy resonances in the W/Z-tagged dijet mass
+spectrum in pp collisions at 8 TeV}
+{\arXiv{1405.1994}}
 
 \addReference{jetSubstructureSalam}
-             {G. Salam}
-             {Jets and jet substructure 4 : substructure}
-             {Lecture in Theoretical Advanced Study Institute in elementary particle physics,
-             University of Colorado}
+{G. Salam}
+{Jets and jet substructure 4 : substructure}
+{Lecture in Theoretical Advanced Study Institute in elementary particle physics,
+University of Colorado}
 
 \addReference{jetClusteringComparison}
-             {S. D. Ellis, C. K. Vermilion, J. R. Walsh}
-             {Techniques for improved heavy particle searches with jet substructure}
-             {\arXiv{0903.5081}}
+{S. D. Ellis, C. K. Vermilion, J. R. Walsh}
+{Techniques for improved heavy particle searches with jet substructure}
+{\arXiv{0903.5081}}
 
 \addReference{JME-13-006}
-             {The CMS Collaboration}
-             {Identification techniques for highly boosted W bosons that decay into hadrons}
-             {\arXiv{1410.4227}}
+{The CMS Collaboration}
+{Identification techniques for highly boosted W bosons that decay into hadrons}
+{\pas{JME-13-006}, \cds{1955546}, \arXiv{1410.4227}}
 
 \addReference{HATSatLPC}
-             {}
-             {Jet-substructure hands-on tutorial session (HATS) at LPC}
-             {12 June 2013}
+{}
+{Jet-substructure hands-on tutorial session (HATS) at LPC}
+{12 June 2013}
 
 \addReference{N-subjettiness}
-             {J. Thaler, K. Tilburg}
-             {Identifying Boosted Objects with N-subjettiness}
-             {\arXiv{1011.2268}}
-
-
-             %\addReference{TMVA}
-%             {A. Hoecker et al.}
-%             {TMVA - Toolkit for Multivariate Data Analysis}
-%             {\arXiv{physics/0703039}}
-
-
-
-%=============
-% Polarization
-%=============
-
-
-
-\end{thebibliography}
+{J. Thaler, K. Tilburg}
+{Identifying Boosted Objects with N-subjettiness}
+{\arXiv{1011.2268}}
 
 
 
