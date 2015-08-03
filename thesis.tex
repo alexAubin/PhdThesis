@@ -18,10 +18,6 @@ where it came from, and where it is going ...\,»}\\
 
 \loremipsum
 
-\chapternonum{Résumé}
-
-\loremipsum
-
 \newpage
 \null
 \newpage
@@ -41,7 +37,7 @@ where it came from, and where it is going ...\,»}\\
 
 \todo{also mention that in natural scenario, expect 'light' gluinos ?}
 
-\chapternonum{\vspace*{-1cm}Introduction}
+\chapternonum{Introduction}
 
 \begin{center}
 \begin{minipage}{0.95\textwidth}
@@ -71,7 +67,8 @@ notes on a piano is able to affect it? And what does it all mean for our existen
 Among all these questions, the nature of the fundamental bricks composing everything we
 see is a fascinating and captivating interrogation for the human mind. What are the principles
 and laws guiding their organization? How can we learn about them? And will we ever be
-able to understand Nature for what it really is? The first theories attempting to describe
+able to understand Nature for what it really is? Physics attempt to answer part of these
+questions using the scientific method. The first theories attempting to describe
 the fundamental bricks date back to the Classical Greece when Aristotle proposed that
 everything is made of a combination of the four elements earth, water, air and fire.
 Humanity has since well progressed in this understanding, with the discovery of the basic
@@ -82,14 +79,16 @@ remarkable and unexpected properties of Nature at short distances, and on the ot
 the discovery of special and general relativity, revealing the relations between energy,
 mass, space, time and gravitation.
 
-The modern particle physics arised from the development of quantum field theory in the
-middle of the 20$^\text{th}$ century, effectively combining the understanding of the
-quantum world with classical field theory and special relativity. In the following decades,
-many experiments investigated the properties of mesons and baryons, which eventually led
-to the discovery of quarks. In parallel, the Higgs mechanism was proposed as a way to explain
-the short range of the weak interaction and unify it with electromagnetism. Both these
-elements helped build in the modern Standard Model of particle physics which has since
-been recognized to be one of the most successful scientific theory in the history of sciences.
+The modern particle physics arised from the development of quantum field theory during
+the 20$^\text{th}$ century, effectively combining the understanding of the
+quantum world with classical field theory and special relativity. Around 1920 came the first
+formulation of quantum electrodynamics which turned out to yield quite reliable predictions.
+In parallel, during the middle of the century, many experiments investigated the properties
+of mesons and baryons, which eventually led to the discovery of quarks. Finally, around
+1965, the Higgs mechanism was proposed as a way to explain the short range of the weak
+interaction and unify it with electromagnetism. Together, these elements helped build the
+modern Standard Model of particle physics which has since been recognized to be one of the
+most successful scientific theory in the history of sciences.
 
 After the discovery of the top quark in 1995 at the Tevatron by the CDF and D0 experiments,
 and the discovery of the tau neutrino in 2000 at Fermilab,
@@ -100,7 +99,7 @@ $125\GeV$. Nevertheless, scientists have reasons to believe that the Standard Mo
 the end of the story despite its stunning success. As much as we have progressed in our
 understanding of the fundamental bricks of the Universe, many puzzles arose with it. In
 particular, we do not yet understand why the electroweak scale should be many orders of
-magnitude lower than the scale of gravitation, a problem known as the hierarchy
+magnitude lower than the Planck scale, a problem known as the hierarchy
 problem. Furthermore, the existence of dark matter, a type of matter which seems to interact
 essentially through gravitation, is now a well established fact in modern cosmology, but
 its nature is not explained by the Standard Model of particle physics.
@@ -128,7 +127,7 @@ the so-called natural supersymmetry, in which no extensive fine-tunning of the p
 the theory is needed to explain the observed value of the Higgs mass. The naturalness
 argument indicates that the scalar top quark (or stop), the superpartner of the top, should have
 a mass below around $1\TeV$, and higgsinos-like neutralinos, which would be dark matter
-candidates, shoud be below around $500\GeV$. The existence of such particles can be probed
+candidates, shoud be below around $300\GeV$. The existence of such particles can be probed
 at the LHC, and their discovery would be a spectacular breakthrough for particle physics.
 The core of this thesis therefore relates to a search for stop pair production at the LHC,
 with a decay chain involving a neutralino being a dark matter candidate and leaving a
@@ -167,7 +166,7 @@ neutralino masses, and secondly to investigate the sensitivity of the analysis a
 of the Run II.
 
 %==============================================================
-\setcounter{mtc}{3}
+\setcounter{mtc}{2}
 \chapterwithnum{The Standard Model of particle physics and beyond}
 \vspace*{-0.7cm}
 \begin{center}
@@ -185,7 +184,17 @@ little world. »}\\
 \newpage
 %==============================================================
 
-    \section{Fields and symmetries}
+    In this chapter, we go through the key points of modern particle physics. In
+    \refsection{sec:fieldsAndSymmetries}, we recall the main idea of quantum field theory
+    and the relation between gauge symmetries and interactions. In \refsection{sec:standardModel},
+    we present the Standard Model of particles physics with a particular attention given
+    to the spontaneous electroweak symmetry breaking via the Higgs mechanism. Then,
+    \refsection{sec:standardModelShortcomings} discuss the shortcomings of the Standard
+    Model with a particular focus on the hierarchy problem and dark matter. Finally,
+    \refsection{sec:beyondTheStandardModel} introduces the theories beyond the Standard
+    Model that attempt to adress these shortcomings, and in particular supersymmetry.
+
+    \section{Fields and symmetries \label{sec:fieldsAndSymmetries}}
 
         \subsection{Quantum field theory}
 
@@ -196,7 +205,7 @@ little world. »}\\
     description of many-particle systems with relativistic interactions, something that
     classical mechanics was not able to achieve.
 
-    Quantum field theory \cite{Polonyi, Ryder} apply the idea of quantum mechanics to fields, by treating the
+    Quantum field theory \cite{Polonyi, Ryder} applies the idea of quantum mechanics to fields, by treating the
     field $\phi$ as an operator subject to commutation relations analogous to those of
     quantum mechanics algebra. The quantum field can then be expressed as a Fourrier sum of quanta
     creation and quanta annihilation operators. In such a theory, a particle is a quanta
@@ -205,7 +214,7 @@ little world. »}\\
     does not have any classical correspondance. Virtual particles can be interpreted as
     disturbances, or energy transiting through the field. A simple illustration is to
     consider two electrons being repelled, which is understood as coming from the
-    exchange of virtual photons. Virtual particles are not observable per se, but are a
+    exchange of virtual photons. Virtual particles are not observable \emph{per se}, but are a
     crucial element in the computations of physical observables such as process cross sections
     or masses.
 
@@ -218,14 +227,14 @@ little world. »}\\
         =
         T(\phi,\partial_\mu \phi) - V(\phi,\partial_\mu \phi)
     }
-    where the terms $T$ and $V$ describe respectively the kinetic and potential of the
+    where the terms $T$ and $V$ describe respectively the kinetics and potential of the
     field $\phi$. The least action principle states that one can obtain the equation of
     motion of a system by requiring that the action, defined as
     \eq{actionDefinition}
     {
         \mathcal{S}
         =
-        \int_V \mathcal{L}(\phi,\partial_\mu \phi) d^4x
+        \int_V \mathcal{L}(\phi,\partial_\mu \phi) d^4x,
     }
     is stationnary with respect to an infinitesimal variation $\phi \rightarrow \phi +
     \delta\phi$. This principle yields the Euler-Lagrange equation:
@@ -276,7 +285,7 @@ little world. »}\\
     the scope of this document.
 
     The structure of the Lagrangian $\mathcal{L}$ can be easily analyzed knowing that
-    a term with the form $\phi \phi$ corresponds to a mass term for the field $\phi$,
+    a term with the form $\phi^\dagger \phi$ (or $\bar{\psi}\psi$) corresponds to a mass term for the field $\phi$,
     and a term with the form $k \cdot \phi_1 \phi_2 \phi_3$ corresponds to an interaction
     between the fields $\phi_{i=1,2,3}$ with strength $k$. It is convenient to
     represent such an interaction using Feynman diagrams which provide a graphical and
@@ -286,14 +295,14 @@ little world. »}\\
     which fields exist, what their properties are and how they couple with each other.
 
     \insertFigure{feynmanDiagramExample}{0.3}
-                 {Example of vertex corresponding to a Lagrangian term
+                 {Example of vertex corresponding to the Lagrangian term
                  $k \cdot \phi_1 \phi_2 \phi_3$.}
 
         \subsection{Noether's theorem and gauge symmetries}
 
     A big part of the theoretical work in particle physics is related to the studies of
     the symmetries of the Lagrangian. One of the most remarkable theorem in physics is
-    called the Noether theorem, stating that to every transformation of the space-time
+    called the Noether theorem \cite{Noether}, stating that to every transformation of the space-time
     coordinates and fields that let the Lagrangian invariant, there are two quantities
     called current and charge which are conserved. This is a very powerful theorem as it
     creates a direct link between symmetries and the laws of Nature. Using this theorem on
@@ -348,7 +357,7 @@ little world. »}\\
 
     Local gauge invariance can be obtained by introducing a vector field $A_\mu$ which
     transforms according to
-    \eq{covariantDerivative}
+    \eq{photonTransformation}
     {
         A_\mu
         \rightarrow
@@ -382,13 +391,13 @@ little world. »}\\
     {
         F_{\mu\nu} \definedAs \frac{i}{g} [D_\mu, D_\nu] = \partial_\mu A_\nu - \partial_\nu A_\mu.
     }
-    There are now two kinematic terms, a mass term and an interaction term with strength $q_e g$
+    There are now two kinetic terms, a mass term and an interaction term with strength $q_e g$
     between $\psi_e$, the electron field, and $A_\mu$, identified as the photon field. The
     constant $q_e$ is interpreted as the electron charge, and $g$ is the coupling constant
     of the interaction. To summarize, imposing a local gauge symmetry has led to introduce interaction between
     the two fields and the theory we obtained corresponds to quantum electrodynamics (QED).
 
-    This remarkable result was generalized to non-abelian groups $SU(n)$ by Yang and Mills.
+    This remarkable result was generalized to non-abelian groups $SU(n)$ by Yang and Mills \cite{YangMills}.
     In the Yang-Mills theory, fields are associated to a representation in $SU(n)$, which
     determines how they transform \cite{Peskin}. Fields either belong to the trivial (or singlet) representation
     which are left unaffected by the gauge transformation, or to the fundamental
@@ -402,7 +411,7 @@ little world. »}\\
     where $\theta^k$ are arbitrary values and $t_k$ are the $n^2-1$ generators of $SU(n)$ satisfying the
     Lie algebra commutation relations. To get an invariance with respect to this
     transformation, one is forced to introduce $n^2 - 1$ vector gauge bosons $A^k_\mu$ which
-    belongs to the adjoint representation of $SU(n)$. The covariant derivative for the
+    belong to the adjoint representation of $SU(n)$. The covariant derivative for the
     fields in the fundamental representation becomes
     \eq{CovariantDerivativeSUn}
     {
@@ -410,11 +419,11 @@ little world. »}\\
         =
         \dslash - i \cdot g \cdot \gamma^\mu t_k A^k_\mu.
     }
-    An important feature of non-abelian groups is that additional terms appears because
+    An important feature of non-abelian groups is that additional terms appear because
     the matrices $t_k$ do not commute, and correspond to interaction terms between the gauge
     bosons $A^k_\mu$.
 
-    \section{The Standard Model of particle physics}
+    \section{The Standard Model of particle physics \label{sec:standardModel}}
     %====================================================================================
 
     The Standard Model \cite{Glashow, Weinberg} reflects our current understanding of particle physics. It is
@@ -441,13 +450,13 @@ little world. »}\\
         \,\,\,\,
         \underbrace{SU(2)_L \times U(1)_Y}_{\text{electroweak}}
         \,\,\,\,
-        \xrightarrow{\text{Higgs field}}
+        \xrightarrow[\text{mechanism}]{\text{Higgs}}
         \,\,\,\,
         \underbrace{SU(3)_C}_{\text{strong}}
         \,\,\,\,
         \times
         %\,\,\,\,
-        \underbrace{U(1)_Q}_{\text{electromagnetism}}
+        \underbrace{U(1)_Q}_{\text{electromagnetism}}.
     }
 
     The fermionic fields of the Standard Model are categorized according to their
@@ -487,17 +496,19 @@ little world. »}\\
     \subsection{The electroweak sector}
     %====================================================================================
 
-    One of the big challenge of particle physics around the 50's was to understand why
-    the weak interaction was short-range whereas the electromagnetic interaction is
-    infinite-range. To be able to describe an interaction with range $\orderOf{d}$, one
-    would need a massive mediator with a mass $m \sim d^{-1}$. Attempting to describe the
-    weak interaction with an $SU(2)_L$ gauge symmetry alone proved unsuccessful as mass terms
-    for the gauge bosons break the symmetry. For instance, one cannot have a massive photon
-    in quantum electrodynamic because it is not invariant by gauge transformation:
+    From the way gauge bosons behave with respect to a gauge transformation, as seen in
+    \refequation{eq:photonTransformation}, it can be deduced that a gauge boson can not
+    be massive as the corresponding term would break gauge invariance :
     \eq{massivePhoton}
     {
         m^2 A_\mu A^\mu \neq m^2  (A_\mu + \frac{1}{g} \partial_\mu \theta)(A^\mu + \frac{1}{g} \partial^\mu \theta).
     }
+    Following this remark, one of the big challenge of particle physics around the 50's
+    was to understand why the weak interaction was short-range whereas the electromagnetic
+    interaction is infinite-range. To be able to describe an interaction with range
+    $\orderOf{d}$, one would need a massive mediator with a mass $m \sim d^{-1}$. Attempting
+    to describe the weak interaction with an $SU(2)_L$ gauge symmetry alone therefore proved
+    unsuccessful.
 
     Nevertheless, a remarkable property of some physical systems is how their symmetry can
     be spontaneously broken. To understand this, a straightforward experience is to
@@ -510,13 +521,13 @@ little world. »}\\
 
     The keystone of the Standard Model is the succesful application of this idea to the
     the electroweak symmetry $U(1)_Y \times SU(2)_L$ to obtain massive gauge bosons and
-    massive fermions, via a spontaneous breaking of this symmetry first introduced by
-    Robert Brout, François Englert and Peter Higgs \cite{EnglertAndBrout,Higgs}.
+    massive fermions, via a spontaneous breaking of this symmetry introduced by
+    R. Brout, F. Englert \cite{EnglertAndBrout} and P. Higgs \cite{Higgs}.
 
-    \subsubsection{Spontaneous breaking of the electroweak symmetry}
+    \subsubsection{Spontaneous breaking of the electroweak symmetry \label{sec:spontanneousElectroweakSymmetryBreaking}}
 
-    In this section, we describe explicitly how the introduction of the Higgs field leads
-    to the spontaneous breaking o the electroweak symmetry \cite{LectureStandardModelHiggsBoson}.
+    In this subsection, we propose to describe explicitly how the introduction of the Higgs field leads
+    to the spontaneous breaking of the electroweak symmetry \cite{LectureStandardModelHiggsBoson}.
     Let's introduce a complex scalar $\phi$, which has a charge $+1$ under $U(1)_Y$, is a
     doublet under $SU(2)_L$ and a singlet under $SU(3)_C$. As a $SU(2)_L$ doublet,
     $\phi$ may be written:
@@ -532,7 +543,8 @@ little world. »}\\
           h_2 \cdot e^{i\theta_2}
         \end{pmatrix}.
     }
-    The Lagrangian of $\phi$ can be written under the form
+    According to \refequation{eq:lagrangianForm}, the Lagrangian of $\phi$ can be written
+    with the kinetic on one hand, and potential on the other hand :
     \eq{higgsLagrangian}
     {
         \mathcal{L}
@@ -543,7 +555,8 @@ little world. »}\\
         \,\,\,\,\,\,\,\,
         V(\phi) = \mu^2 \left| \phi \right| + \lambda \left| \phi \right|^2.
     }
-    For $\mu^2 < 0$ and $\lambda > 0$, one gets a non-trivial shape for the potential,
+    The key point here is to choose the right shape for the potential $V$. For $\mu^2 < 0$
+    and $\lambda > 0$, one gets a non-trivial shape sketched on \reffig{fig:theory/higgsPotential},
     with a degenerated minima for $V(\phi)$ satisfying
     \eq{higgsSolutions}
     {
@@ -580,9 +593,10 @@ little world. »}\\
                  {Representation of the Higgs potential with $\mu^2 < 0$ and $\lambda > 0$.
                  The factor $1/\sqrt{2}$ is ommited for clarity.}
 
-    To understand how this field impacts the physics of $SU(2)_L \times U(1)_Y$ let us
+    To understand how this field impacts the physics of $SU(2)_L \times U(1)_Y$, let us
     look at the covariant derivative. We may note $W^{i=1,2,3}$ and $B$ the gauge bosons
     and $g_W$ and $g_B$ the coupling constants associated to $SU(2)_L$ and $U(1)_Y$ respectively.
+    The covariant derivative writes
     \eqalign{CovariantDerivativeSU2U1}
     {
         D_\mu \phi
@@ -594,7 +608,7 @@ little world. »}\\
             g_W  W_\mu^3 + g_B  B_\mu    &   g_W (W_\mu^1 - i  W_\mu^2) \\
             g_W (W_\mu^1 + i   W_\mu^2)  & - g_W W_\mu^3 + g_B  B_\mu   \\
         \end{pmatrix}
-        \phi\\
+        \phi.
     }
     This covariant derivative can be rewritten under the form
     \eqalign{CovariantDerivativeSU2U1NewForm}
@@ -605,7 +619,7 @@ little world. »}\\
         \begin{pmatrix}
             \frac{g_W^2 - g_B^2}{g_{WB}} Z_\mu + \frac{2 g_W g_B}{g_{WB}} A_\mu & g_W W_\mu^-       \\
             g_W W_\mu^+                                                         & - g_{WB} Z_\mu    \\
-        \end{pmatrix} \phi.
+        \end{pmatrix} \phi,
     }
     where we introduced:
     \eqalign{DefinitionAZW}
@@ -623,7 +637,7 @@ little world. »}\\
         \end{pmatrix}
         \begin{pmatrix}
             W^3 \\ B
-        \end{pmatrix}
+        \end{pmatrix}.
     }
 
     Expanding the kinetic term of $\phi$, one find the following terms appearing:
@@ -637,7 +651,7 @@ little world. »}\\
                             & + \underbrace{(v g_W) h W_\mu W^\mu}_{hWW \text{ interaction}}
                             + \underbrace{(v g_{WB}) h Z_\mu Z^\mu}_{hZZ \text{ interaction}}
                             + \underbrace{(\frac{g_W^2}{2}) hh W_\mu W^\mu}_{hhWW \text{ interaction}}
-                            + \underbrace{(\frac{g_{WB}^2}{2}) hh Z_\mu Z^\mu}_{hhZZ \text{ interaction}}
+                            + \underbrace{(\frac{g_{WB}^2}{2}) hh Z_\mu Z^\mu}_{hhZZ \text{ interaction}}.
     }
     And the potential term yields, up to a constant,
     \eq{HiggsFieldPotential}
@@ -653,7 +667,7 @@ little world. »}\\
     Lagrangian that break the invariance under $SU(2)_L \times U(1)_Y$, namely the mass
     terms of $W$ and $Z$ bosons which are the mass eigenstates of the $W^i$ and $B$ bosons.
     This can be summarized by saying that the breaking of the symmetry leads to four massless
-    Goldstone bosons, one for each degree of freedom of the Higgs field, and three of them
+    Goldstone bosons, one for each degree of freedom of the Higgs field. Three of them
     are absorbed by the $W^i$ and $B$ bosons which get massive. The last degree of freedom
     leads to the Higgs field $h$.
 
@@ -683,7 +697,7 @@ little world. »}\\
         \mathcal{L}_{\text{Yukawa}}
         & =
         - \sum_{i,j} (y^{ij} \bar{E}^i_R \phi^\dagger \Lambda^j_L + \text{h.c.})
-        \,\,\,\,\,\,
+        \hspace*{2cm}
         \text{with } \Lambda_L = \begin{pmatrix} N_L \\ E_L \end{pmatrix}
         \,\,\,\,\,\,
         \nonumber\\
@@ -691,7 +705,7 @@ little world. »}\\
         - \frac{v+h}{\sqrt{2}}\sum_{i,j} (y^{ij} \bar{E}^i_R E^j_L + \text{h.c.})
     }
     where h.c. is the conjugate hamiltonian. The matrix $y^{ij}$ is not necessarily diagonal. However we can redefine the flavor
-    eigenstates $\Lambda_R$ and $E^i_R$ such that $y^{ij}$ is diagonal. Let's label these
+    eigenstates $\Lambda_L$ and $E^i_R$ such that $y^{ij}$ is diagonal. Let's label these
     eigenstates $(e,\mu,\tau)$. We simply obtain:
     \eqalign{YukawaCoupling2}
     {
@@ -703,7 +717,7 @@ little world. »}\\
     The first line shows how the vacuum expectation value $v$ leads to mixing between
     the apriori unrelated $e_L$ and $e_R$ fields. We may simply summarize the situation
     by saying that the field $e = (e_R, e_L)$ obtains a mass term $\frac{y_e v}{\sqrt{2}}
-    \bar{e} e$. Additionnaly, the field $e$ couples to the Higgs boson with strength
+    \bar{e} e$. Additionnaly, on the second line, the field $e$ couples to the Higgs boson with strength
     $\frac{y_e}{\sqrt{2}}$. The remaining component of the $\Lambda^i_L$ are relabelled
     $(\nu_{e,L},\nu_{\mu,L},\nu_{\tau,L})$ and remain massless as they don't have any
     $\nu_R$ counterpart to mix with. The reader should also notice how these mass terms
@@ -722,7 +736,7 @@ little world. »}\\
     \reftab{tab:StandardModelFieldsAfterElectroweakBreaking} summarizes the observable
     fermions after breaking the electroweak symmetry and their associated charges.
 
-    \begin{table}
+    \begin{table}[b]
         \centering
         \begin{tabular}{|ccc||cc|}
             \hline
@@ -745,7 +759,7 @@ little world. »}\\
     \subsection{The strong interaction \label{sec:strongInteraction}}
     %====================================================================================
 
-    The group $SU(3)$ corresponds to the strong interaction and affect quarks. The
+    The group $SU(3)$ corresponds to the strong interaction which affects quarks. The
     associated gauge bosons are called the gluons and the charge is called color, which
     is at the origin of the name quantum chromodynamic (QCD), in analogy to quantum
     electrodynamic. As $SU(3)$ is a non-abelian group, the gluons are also
@@ -774,36 +788,38 @@ little world. »}\\
     would consider the analagous situation in electromagnetism, two charged particles close to
     each other feel important attraction or repulsion and are therefore not free. In this
     regime, $\alpha_S$ is small and a reasonnably good understanding and predictions can
-    be obtained from perturbative QCD.
+    be obtained from perturbative QCD. \refNeeded
 
     At low energies, i.e. long distances, the intensity of the interaction grows. As a
-    cosequence, to split a hadron into individual quarks, someone will need to give energy
+    consequence, to split a hadron into individual quarks, someone will need to give energy
     to the system up to the point where this energy will be converted into new colored
-    particles coming out of vaccuum, and will form new hadrons. This leads to the concept of
+    particles coming out of vacuum, and will form new hadrons. This leads to the concept of
     confinment and explains why it is not possible to observe free quarks or gluon in nature.
     Interestingly, confinment is a property which is still not completely demonstrated from
     a mathematical point of view. Moreover, confinment results in hadrons, such as the
     proton, having a structure that cannot be computed from perturbative QCD. One must
-    instead rely on experimental measurements.
+    instead rely on experimental measurements. \refNeeded
 
     In the context of high energy physics, confinment translates into the production of
     jets of hadrons when quarks or gluons are produced in collisions. Jet physics is
     therefore a crucial aspect when reconstructing an event in a particle collider.
 
-    In the previous section, we have seen how the particle masses arises from the
+    In the previous section, we have seen how the particle masses arise from the
     introduction of the Higgs field breaking the symmetry. It is remarkable to notice
-    that the mass of hadrons, which ultimately composes everyday matter, comes essentially
+    that the masses of hadrons, which ultimately composes everyday matter, come essentially
     from the kinetic and binding energy holding the quarks, and not from the quark masses
     themselves. This is related to the fact that, in a simple model with two quarks $u$ and
     $d$, the mass term of the quarks, $m\bar{q}q = m(\bar{q}_L q_R + \bar{q}_R q_L)$, breaks
-    the $SU(2)_L \times SU(2)_R$ invariance of the QCD Lagrangian, down to a isospin symmetry
+    the $SU(2)_L \times SU(2)_R$ invariance of the QCD Lagrangian, down to an isospin symmetry
     $SU(2)_V$.
 
     \subsection{The success of the Standard Model \label{sec:standardModelSuccess}}
     %====================================================================================
 
-    The Standard Model includes 19 free parameters: nine fermions masses, one scalar mass,
-    three coupling parameters, four quark mixing matrix parameters, the Higgs vaccum expectation
+    \todo{phrase de liaison}
+
+    The Standard Model includes 19 free parameters: nine fermion masses, one scalar mass,
+    three coupling parameters, four quark mixing matrix parameters, the Higgs vacuum expectation
     value and the strong CP-violating phase.
 
     The physical observables such as the cross-section associated to a given process
@@ -811,7 +827,7 @@ little world. »}\\
     of the processus $e^+ e^- \rightarrow \mu^+ \mu^-$ in a theory containing only a $U(1)_Q$
     interaction is given by the superimposition of several processes as represented on
     \reffig{fig:perturbativeDevelopment}. A given observable can be computed at leading-order
-    (LO) by considering only the first diagram in the development, or next-to-leading-order (NLO)
+    (LO) by considering only the first diagram in the development, or next-to-leading-order (NLO) \todo{clarify in terms of $\alpha$}
     and so on with increasing accuracy. As one consider higher orders diagrams, one may start
     to be sensitive to other parts of the Lagrangian. For instance, if we now include QCD in
     the previous example, and consider higher order diagrams, we will eventually have diagrams
@@ -847,20 +863,21 @@ little world. »}\\
 
     In this perspective, the parameters and the consistency of the Standard
     Model have been extensively measured and tested in several experiments, in particular
-    at the LEP experiments, the Belle and BaBar experiments, and at the Tevatron collider. In 2012,
+    at the LEP collider \refNeeded, the Belle and BaBar experiments \refNeeded, and at the Tevatron collider \refNeeded. In 2012,
     the CMS and ATLAS experiments at the LHC discovered the last remaining particle of the
-    Standard Model, the Higgs Boson with a mass $\mass{h} \sim 125\GeV$. The mass
+    Standard Model, the Higgs Boson with a mass $\mass{h} \sim 125\GeV$ \cite{CMSHiggs,ATLASHiggs}. The mass
     spectrum of the particles of the Standard Model is summarized on \reffig{fig:theory/fermionMasses} and
     shows a clear hierarchy between the different fermion generations.
 
-    \reffig{fig:theory/standardModelFit} shows the result of a global fit of Standard
-    Model observables \cite{GFitter}. In such a fit, one observable at a time is set free
-    while others are taken from experiment. The value of the free observable is then
-    predicted from the model, and compared to its experimentally measured value. The
-    difference is finally compared to the experimental uncertainty. This allows to have a
-    global test of the consistency of the model, as any significant deviation between the
-    predicted and measured value would indicated a flaw. The results indicate that the theory
-    is consistent, as no deviation larger than 3$\sigma$ is found.
+    \reffig{fig:theory/standardModelFit} shows the result of a global fit of the electroweak
+    Standard Model observables \cite{GFitter}. In such a procedure, the observables are
+    fitted simultaneously according to the model, using as input the experimental measurements.
+    After the fit, the resulting values for each observable ($O_\text{fit}$) is compared to
+    the experimental measurement ($O_\text{meas.}$). The difference is finally compared to
+    the experimental uncertainty. This allows to have a global test of the consistency of
+    the model, as any significant deviation between the predicted and measured values would
+    indicate a flaw. The results indicate that the theory is quite consistent, as no deviation
+    larger than 3$\sigma$ is found.
 
     \insertFigure{theory/fermionMasses}{0.6}
                  {Masses of the fermions and bosons of the Standard Model. The photon
@@ -868,14 +885,14 @@ little world. »}\\
                  are massless in the context of the Standard Model.}
 
     \insertFigure{theory/standardModelFit}{0.46}
-                 {Global fit of observables of the Standard Model \cite{GFitter}.}
+                 {Global fit of observables of the electroweak Standard Model \cite{GFitter}.}
 
-    \section{Shortcomings of the Standard Model}
+    \section{Shortcomings of the Standard Model \label{sec:standardModelShortcomings}}
     %====================================================================================
 
     Despite its success, the Standard Model contains theoretical open questions and unexplained
     experimental facts. For these reasons, it is considered as incomplete or as an effective
-    theory valid only at low energy and hiding a higher degree of symmetry at high energy.
+    theory valid only at low energy and hiding a larger theory at high energy.
     In this section, we focus especially on the hierarchy problem and dark matter as they
     will be the most relevant one in the context of this document, and discuss briefly
     other open questions.
@@ -890,44 +907,42 @@ little world. »}\\
     integrate over all possible quantum corrections related to this parameter. In the case
     of the cross-section of a process, this means considering all loops and diagrams
     with the same initial and final states. In the case of the mass of a particle, one is
-    interested to diagrams that contribute to the propagator. An example of diagram contributing
+    interested in diagrams that contribute to the propagator. An example of diagram contributing
     to the propagator of the electron is given in \reffig{fig:feynmanDiagrams/output/electronPropagator}. We may
     express the observable mass $m_e$ of the electron as the sum of the bare mass $m^0_{e}$,
-    that is to say the actual parameter inside the Lagrangian, and $\Delta m_e$ representing
+    that is to say the actual parameter one writes in the Lagrangian, and $\Delta m_e$ representing
     the contributions from the quantum corrections:
-
     \eq{electronMassCorrection}
     {
-        m^2_e \, = \, {m_e^0}^2 + \Delta m_e^2
+        m^2_e \, = \, {m_e^0}^2 + \Delta m_e^2.
     }
 
     \insertFigure{feynmanDiagrams/output/electronPropagator}{0.4}
                  {Example of contribution to the electron propagator.}
 
-    For effective theories, the computation of quantum corrections is done with respect to
+    In effective theories, the computation of quantum corrections is done with respect to
     an energy cutoff $\Lambda$, representing the scale at which new physics is expected
-    to play a significant role. In the case of \reffig{fig:feynmanDiagrams/output/electronPropagator}, this mean
-    that we shall integrate over all momentum inside the loop up to the scale $\Lambda$.
-    For instance, if one considers electrodynamics as an effective theory of electroweak
-    symmetry, at one-loop level:
-
+    to play a significant role. In the case of \reffig{fig:feynmanDiagrams/output/electronPropagator},
+    this means that we shall integrate over all momentum inside the loop, up to the scale $\Lambda$.
+    For instance, if one considers electrodynamics as an effective theory of the electroweak
+    symmetry, at one-loop level, the correction is given by:
     \eq{electronMassCorrection2}
     {
-        \Delta m_e \, \simeq \, \frac{\alpha}{4\pi} \, m_e^0 \, \text{ln}\left(\frac{\Lambda}{m_e^0}\right)
+        \Delta m_e \, \simeq \, \frac{\alpha}{4\pi} \, m_e^0 \, \text{ln}\left(\frac{\Lambda}{m_e^0}\right).
     }
 
     With $\Lambda = \Lambda_{\text{electroweak}} = \orderOf{100\GeV}$, we find that
     $\frac{\Delta m_e}{m_e} \sim 20\%$. It is a relatively small correction, in the sense
     that it is not surprising to have a mass for the electron that is $\orderOf{1\GeV} \ll \Lambda_{\text{electroweak}}$.
     The most important feature in \refequation{eq:electronMassCorrection2} is the fact that $\Delta m_e$
-    is proportional to $m_e^0$ and not $\Lambda$ as it means the mass will not diverge
-    when the scale grows.
+    is proportional to $m_e^0$ and not $\Lambda$ as it means the mass will not skyrocket
+    as $\Lambda$ grows.
 
-    There is a remarkable and more general property behind this term which is that a
+    There is a remarkable and more general property behind this term, which is that a
     gauge invariant Lagrangian cannot generate corrections that break the symmetry. In
     the case of electrodynamics with a massive electron, the mass term is already breaking
     the chiral symmetry $U(1)_L \times U(1)_R$, but because this is a so-called soft-breaking
-    term (i.e. from spontanneous symmetry breaking), the property should still hold in
+    term (i.e. from spontaneous symmetry breaking), the property should still hold in
     the limit where $m_e^0 \rightarrow 0$. Therefore the correction cannot be proportional to
     $\Lambda$ but only to $m_e$, by dimensional analysis. It is common to refer to this by
     saying that chiral symmetry protects the mass of fermions from diverging. The same fact
@@ -936,29 +951,25 @@ little world. »}\\
     the mass of gauge bosons from diverging.
 
     Regarding the mass of the Higgs boson,  the Standard Model does not include
-    any mechanism that prevent the mass of a scalar boson from diverging. The actual
+    any mechanism that prevents the mass of a scalar boson from diverging. The actual
     computation for the correction from a fermion loop gives:
-
     \eq{higgsMassCorrectionFromFermion}
     {
         \Delta m_h^2 \, \propto \, m_f^2 \Lambda^2,
     }
-
-    which diverge with $\Lambda$. If one is confident that the Standard Model is valid
-    up to the Planck scale, where gravity will obviously play a significant role, then
-    the observable Higgs mass is
-
+    which diverges with $\Lambda$. If one believes that the Standard Model is valid
+    up to the Planck scale, where gravity is expected to play a significant role, then
+    the observable Higgs mass can be written as
     \eq{higgsMassCorrectionTotal}
     {
         m_h^2 \, \simeq \, {m_h^0}^2 + \kappa \cdot m^2_\text{Planck}
     }
-
-    where $\kappa$ is a function of the Standard Model coupling and masses. The
+    where $\kappa$ is a function of the Standard Model parameters. The
     three quantities $m_h^0$, $\kappa$, and $m_\text{Planck}$ are \emph{a priori} unrelated
-    to each other from the point of view of the theory. Unless the parameters of the
+    to each other from the point of view of the theory. Hence, unless the parameters of the
     Standard Model conspire with each other and are \emph{fine-tuned} at twenty decimal
-    places, there is no reason to expect that $m_h \ll m_\text{Planck}$. However we know
-    that $m_h \sim \orderOf{10^2\GeV} \ll m_\text{Planck} \sim \orderOf{10^{19}\GeV}$ which
+    places, there is no reason to expect that $m_h \ll m_\text{Planck}$. However, we observe
+    that $m_h \sim \orderOf{10^2\GeV} \ll m_\text{Planck} \sim \orderOf{10^{19}\GeV}$, which
     is not natural. This is referred to as the hierarchy problem, as from these considerations
     there is no reason to expect such a large hierarchy between the electroweak scale and
     the Planck scale.
@@ -966,19 +977,19 @@ little world. »}\\
         \subsection{Dark matter}
 
     Dark matter is one of the greatest mystery in cosmology and fundamental physics at present time.
-    The first main observation leading to the dark matter hypothesis came from the measurement
-    of rotation curves of galaxies. These curves showed the evolution of the orbital velocity
-    of stars inside the galaxy as function of their distance to the galactic center. One
-    can predict such curves by infering the galaxy's mass repartition from models and
-    spectrometry, and applying Newton's law of gravitation. The observed curves are
-    well-described for the central region of the galaxy but then instead of decreasing
-    with distance, stayed approximately constant \cite{Begeman}.
+    The first observation leading to the dark matter hypothesis came from the measurement
+    of rotation curves of galaxies \cite{Begeman}. These curves showed the evolution of
+    the orbital velocity of stars inside galaxies as function of their distance to the
+    galactic center. One can predict such curves by infering the galaxy's mass repartition
+    from models and spectrometry, and applying Newton's law of gravitation. The observed
+    curves are well-described for the central region of the galaxy but then instead of
+    decreasing with distance, were found to stay approximately constant.
 
     This observation suggested that there is a halo of invisible matter around
     galaxies, interacting gravitationaly but not electromagnetically with the rest of the
-    matter, hence the denomination \emph{dark} matter. Further experimental measurements
-    provided indirect evidences for the existence of such dark matter \cite{DMPrimer}. Among them,
-    ones is using the technique of gravitational lensing that allows the observer to
+    matter, hence the denomination of \emph{dark} matter. Further experimental measurements
+    provided indirect evidences for the existence of such dark matter \cite{DMPrimer}.
+    Among them, the technique of gravitational lensing allows the observer to
     infer the distribution of the mass inside a galaxy or a cluster from the bending of
     the light emitted by an object further in the background. Nowadays, dark matter is
     part of the standard model of cosmology as there are many astrophysical and cosmological
@@ -988,18 +999,18 @@ little world. »}\\
     However the nature of dark matter is still unknown and it has not been directly observed.
     Dark matter candidates must be gravitationally interacting,
     not be short-lived and must not be baryonic. Last but not least, it must also be
-    cold, that is to say that it must have low kinetic energy, which rules out neutrinos
+    cold, meaning that it must have low kinetic energy, which rules out neutrinos
     as dark matter candidates \cite{NeutrinoNotDM}. It is now commonly admitted that there is no suitable
     candidate for it in the Standard Model.
 
     If one assumes that dark matter is made of a single particle $X$ thermally produced
     in the early universe, then it is possible, using the Boltzmann equation, to compute
-    the relic density $\Omega_X$ \cite{DMPrimer, NeutralinoRelic, WIMPRelic}. The
+    the relic density $\Omega_X$ \cite{DMPrimer, NeutralinoRelic, WIMPRelic}. This
     relic density is proportional to $m_X^2 / g^4_X$ where $m_X$ is the mass of the dark matter particle
-    and $g_X$ is the coupling constant in co-annihilaion process $XX \leftrightarrow f\bar{f}$.
+    and $g_X$ is the coupling constant in the co-annihilation process $XX \leftrightarrow f\bar{f}$.
     It is remarkable to note that taking $\Omega_X = \orderOf{0.1}$ from cosmological
-    observations and $g_X \sim 0.6$ from the weak interaction, then we expect $m_X =
-    \orderOf{100\GeV}$. This encourage physicist to look for weakly interacting massive
+    observations and $g_X \sim 0.6$ from the weak interaction, we expect $m_X =
+    \orderOf{100\GeV}$. This encourages physicists to look for weakly interacting massive
     particles (or WIMPs) which are predicted by many models beyond the Standard Model.
 
         \subsection{Other open questions and criticism}
@@ -1009,7 +1020,7 @@ little world. »}\\
 
     \begin{itemize}
         \item \textbf{Dark energy} - The standard model of cosmology, so-called $\Lambda$CDM model,
-            contains a non-null cosmological constant called $\Lambda$. The cosmological
+            contains a non-null cosmological constant $\Lambda$. The cosmological
             constant is initially an additional authorized term in Einstein's equation
             which relates space-time curvature to energy-momentum. Such term is necessary
             to explain the observed accelerated expansion of the universe from the study
@@ -1020,12 +1031,12 @@ little world. »}\\
             between the small measured value of $\Lambda$ and its prediction
             by quantum field theory. This is often called the vacuum catastrophe or the worst
             prediction in the history of physics. A big challenge of current physics therefore
-            consists in understanding the nature of dark energy and why it is so small
-            compared to prediction.
+            consists in understanding the nature of dark energy and the reason why it is so small
+            compared to predictions.
         \item \textbf{Matter-antimatter asymmetry} - It is a well established fact that
             the baryonic content of the Universe is made of matter. Because matter and antimatter
             should have been produced in equal proportion during the big bang, there must
-            be sources of asymmetry that led to a state dominated by matter. Sakharoved
+            be sources of asymmetry that led to a state dominated by matter. Sakharov
             established a set of conditions that would
             induce such an asymmetry. Among them is the violation of the symmetries C (charge)
             and CP (charge-parity). The Standard Model
@@ -1034,7 +1045,7 @@ little world. »}\\
             these sources are not important enough to explain the magnitude of the baryon
             asymmetry.
         \item \textbf{Neutrino masses} - It has been measured by experiments that neutrinos
-            can oscillate from one flavor to another. This indicate that neutrinos should
+            can oscillate from one flavor to another. This indicates that neutrinos should
             be massive and have different flavor states than mass states much like down-type
             quarks and the CKM matrix. The problem of neutrinos being massive is itself not
             so much a problem as it is possible to introduce right-handed neutrinos in the
@@ -1045,9 +1056,9 @@ little world. »}\\
         \item \textbf{Strong CP problem} - As introduced before, there is a term allowed in
             the QCD Lagrangian that introduces CP-violation via a phase $\theta$. The value
             of this parameter has been so far found to be very close to zero despite
-            lack of theoretical arguments for it not to be of the order of 1. This is a situation
-            similar to the hierarchy problem where we can expect that there is a hidden mechanism
-            protecting this phase to be too different from zero.
+            lack of theoretical arguments for it not to be of the order of 1. This situation
+            is similar to the hierarchy problem for which we can expect that a
+            hidden mechanism protects this phase to be too different from zero.
         \item \textbf{Quantum gravity description} - Gravitation is currently not described
             by the Standard Model. The underlying problem, which is to know how to unify general
             relativity with quantum field theory, is one of the biggest problem of modern
@@ -1071,7 +1082,7 @@ little world. »}\\
     \end{itemize}
 
 
-    \section{Theories beyond the Standard Model}
+    \section{Theories beyond the Standard Model \label{sec:beyondTheStandardModel}}
     %====================================================================================
 
         \subsection{Zoology of Standard Model extensions}
@@ -1114,40 +1125,45 @@ little world. »}\\
         \subsubsection{Additional dimensions}
 
         The second possibility is to add extra space-time dimensions. While everyday's life
-        is only composed of 3+1 (space and time) dimensions, theoretical mechanisms have been
-        discovered that could explain why additional dimensions are not noticeable at our scale.
-        The extra dimension is usually considered to be a space-like dimension, as an
+        is only composed of 3+1 (space and time) dimensions, theoretical mechanisms can
+        explain why additional dimensions are not noticeable at our scale.
+        The extra dimensions are usually considered to be space-like dimensions, as an
         additional time-like dimension would break causality. Extra dimensions theories
         are of particular interest to unify interactions with gravitation and answering
         the hierarchy problem.
 
-        Large extra dimensions (ADD) \cite{ADD} theories are based on the idea that the Standard Model
-        interactions take place only in the four dimensions and gravity would be
-        allowed to travel in the extra dimensions. At large distances, gravity would
-        be diluted while at low distances (i.e. high energies) the Standard Model interactions
-        and gravitation would have coupling constants that are of the same order. A phenomenological
-        consequence is that microscopic black holes could be produced in high-energy collisions
-        provided that the collision probe distances lower than the Schwarzschild radius.
+        A first idea is that extra dimensions are compactified such that they are not
+        noticeable at macroscopic scales. An useful analogy to understand the
+        compactification concept is to consider that, for instance, a guitar string
+        seen from very far looks like a one-dimensional object, whereas if one looks at it
+        closesly, it exhibits a second periodic dimension around the string axis because of its
+        thickness. When adding such compactified, periodic dimension, one must therefore
+        state the radius of this dimension.
 
-        The Randall-Sundrum (RS) \cite{RS} scenarios consider a five dimensions universe made of two
-        four-dimensions branes separated by an extremely warped fifth dimension. One of
-        the brane corresponds to the Standard Model physics while the other brane would correspond
-        to the realm of gravity. The distance separating the two branes is directly linked to
-        the difference of energy scales between the Standard Model sector and the gravitation
-        sector. A phenomenological prediction of these models is the production of gravitation
-        excitations at the TeV scale.
+        Large extra dimensions (ADD) \cite{ADD} theories are based on the idea that the
+        Standard Model interactions take place only in the four well-known dimensions and
+        gravity would be allowed to travel extra, compactified dimensions. As a consequence,
+        at large distances, gravity would be diluted while at low distances (i.e. high
+        energies) the Standard Model interactions and gravitation would have coupling
+        constants that are of the same order. A phenomenological consequence is that microscopic
+        black holes could
+        be produced in high-energy collisions provided that the collision probe distances
+        lower than the Schwarzschild radius. Alternatively, universal extra dimensions
+        (UED) \cite{UED} theories assume that all interactions may travel through the extra
+        dimensions. Phenomenologically, one would observe in that case a discrete mass
+        spectra for the Standard Model particles corresponding to excitations along the
+        compactified dimensions.
 
-        Finally, universal extra dimensions (UED) \cite{UED} theories are based on the idea that
-        the extra dimensions are compactified such that they are not noticeable at macroscopic
-        scales. An useful analogy to understand the compactification of a dimension is
-        consider that, for instance, a guitar string seen from very far looks like a one-dimensional
-        object whereas if seen from very close exhibits a second periodic dimension around
-        the string axis because of its thickness. The additional dimensions are therefore
-        parametrized as function of a radius. Phenomenologically, one would observe a discrete
-        mass spectra for the Standard Model particles corresponding to excitations along
-        the compactified dimensions.
+        An other idea, found in Randall-Sundrum scenarios (RS) \cite{RS}, considers a five
+        dimensions universe made of two four-dimension branes separated by an extremely
+        warped fifth dimension. One of the brane corresponds to the Standard Model physics
+        while the other brane would correspond to the realm of gravity. The distance
+        separating the two branes is directly linked to the difference of energy scales
+        between the Standard Model sector and the gravitation sector. A phenomenological
+        prediction of these models is the production of graviton excitations at the TeV
+        scale.
 
-            \subsubsection{Additional or modified field content}
+        \subsubsection{Additional or modified field content}
 
         A third possibility is to introduce new ad-hoc fields or modify existing ones
         to address the shortcomings of the Standard Model.
@@ -1164,29 +1180,31 @@ little world. »}\\
         cases would explain why left-handed neutrinos have such a low mass, for instance
         in the context of the See-Saw mechanism \cite{Seesaw}.
 
-        Alternativly, focusing exclusively on the dark matter problem, it has been proposed
+        Alternatively, focusing exclusively on the dark matter problem, it has been proposed
         that dark matter is not made of just one, but several kind of particles regrouped
         in the concept of an hidden sector. There are several possibilities to describe
         the link between the Standard Model and this hidden sector, for instance by assuming
         that the Higgs boson relates the two sectors, or by introducing a new $U(1)_H$ gauge
-        group whose gauge boson would be a ``dark'' photon.
+        group whose gauge boson would be a ``dark'' photon \refNeeded.
 
-        Finally, one elegant idea to try to explain the lightness of the
-        Higgs is to consider it as a composite object \cite{LittleHiggs, CompositeHiggs}.
-        This idea is inspired from QCD where
-        light scalars are encountered and do not exhibit a naturalness problem. Pions,
-        for example, can be seen as Goldstone bosons of the spontaneous breaking of chiral
-        symmetry, and therefore are massless. However in practice, chiral symmetry is not exact as
-        the underlying quarks do have mass,
-        thus pions are only pseudo-Goldstone boson and get a mass,
-        but they are still protected from being heavy by the approximate chiral symmetry.
-        Applying the same idea to the Higgs would therefore answer the hierarchy problem.
-        This also means that there would be a new interaction whom the Higgs would
-        be just the lightest hadron-like state and other states could be seen at higher
-        energy. Another indication of compositeness would also come from different couplings
-        to gauge bosons.
+        Finally, one elegant idea to try to explain the lightness of the Higgs boson is to
+        consider it as a composite object \cite{LittleHiggs, CompositeHiggs}. This idea is
+        inspired from QCD where light scalars are encountered and do not exhibit a naturalness
+        problem. Pions for example, in the massless quark limit, are massless Goldstone
+        bosons coming from the breaking of the chiral symmetry by the QCD vacuum, composed
+        of the chiral condensate $\left<\bar{q}_L q_R\right>$. However in practice,
+        chiral symmetry is not exact as the quarks are massive, and thus pions are only
+        pseudo-Goldstone boson and get a mass - though they are still protected from being
+        heavy by the approximate chiral symmetry. This idea can be applied to the Higgs,
+        which would be a Goldstone boson of a new strongly-interacting sector above the
+        weak scale, and would solve the hierarchy problem. Phenomenologically, different
+        signatures exist depending on the exact model considered, but can involve different
+        couplings to gauge bosons compared to the Standard Model, and the existence of new
+        particles such as top partners.
 
             \subsubsection{The anthropic principle}
+
+        \todo{add ref from antoine}
 
         Finally, one of the alternative to theories beyond the Standard Model is to
         simply accept the Standard Model as it is. This is strongly related to Einstein's
@@ -1194,7 +1212,7 @@ little world. »}\\
         the universe. It can be argued that most of the shortcomings of the Standard Model
         are related to gravitation and cosmology and might simply be unsolvable at scales accessible
         by particle physics experiments. The most important remaining issues are related to
-        the fine-tunning in the hierarchy problem and the arbitrariness of the other parameters
+        fine-tunning in the hierarchy problem and the arbitrariness of the other parameters
         of the theory.
 
         The anthropic principle states that when studying the universe, it
@@ -1202,7 +1220,7 @@ little world. »}\\
         that our universe is simply one realization of universe among many others in what
         would be called a multiverse. What appears to be fine-tunning would in fact be
         equivalent to natural selection at the scale of the mutiverse where the observed
-        universes can only be the one allowing conscious life.
+        universes can only be the ones allowing conscious life.
 
         This view is however controversial as it yields very little, if not no, testable
         prediction apart, for instance, understanding how likely life would be if the parameters of
@@ -1214,22 +1232,22 @@ little world. »}\\
 
         Here, we propose to have a dedicated look at the idea of supersymmetry. supersymmetry
         (SUSY), emerged around the 70's. At this time, Gol'fand and Likhtman, two
-        russians mathematicians were working with the space-time symmetries of the Poincaré
+        russian mathematicians, were working with the space-time symmetries of the Poincaré
         group. The usual space-time symmetries, i.e. translations, boosts and rotations,
         are all bosonic symmetries. They noticed that another type of space-time symmetry
         with fermionic (i.e. spin 1/2) generators could also exist \cite{FirstSUSYPaper}.
         Such a symmetry $Q$,
         the supersymmetry, would therefore relate the different representations of the
-        Lorentz group, that is to say fermions ($f$) and bosons ($b$):
+        Lorentz group, namely fermions ($f$) and bosons ($b$):
         \eqalign{SUSYtransformation}
         {
             Q \rvert \text{f} \rangle \rightarrow \rvert \text{b} \rangle \nonumber
             \\
-            Q \rvert \text{b} \rangle \rightarrow \rvert \text{f} \rangle
+            Q \rvert \text{b} \rangle \rightarrow \rvert \text{f} \rangle.
         }
         $Q$ is therefore a non-trivial extension of the
         Poincaré algebra. This is an important consideration: it has been demonstrated by
-        Colemand and Mandula \cite{ColemandMandula} that the only possible symmetry of Nature are the
+        Colemand and Mandula \cite{ColemandMandula} that the only possible symmetries of Nature are the
         Poincaré symmetry and the gauge symmetries. Nevertheless, Haag, Lopuszanski and
         Sohnius later relaxed this theorem \cite{HaagLopuszanskiSohnius} by noticing that another type of symmetry is
         possible and precisely corresponds to supersymmetry \cite{SUSYPrimer, Dawson}.
@@ -1243,7 +1261,7 @@ little world. »}\\
 
         To each fermion is therefore associated a boson with same quantum numbers (apart
         from spin), and similarly to each boson
-        is associated a fermion. The particule associated to an other by SUSY is called
+        is associated a fermion. The particle associated to another one by SUSY is called
         its superpartner, and can be put together in a superfield. To ensure the consistency
         of the theory, superpartners of vector bosons have spin 1/2 and superpartners
         of fermions have spin 0. SUSY alone predicts that a particle and its superpartner
@@ -1258,12 +1276,12 @@ little world. »}\\
         the moment, one solution is to simply add a $\mathcal{L}_\text{soft}$ component to
         the Lagrangian, that includes all allowed terms and corresponding new parameters.
 
-        One of the main motivation for supersymmetry is to provide a mechanism that
+        One of the main motivations for supersymmetry is to provide a mechanism that
         protects the mass of scalar bosons, thus answering the hierarchy problem. In the
         case of the Higgs boson, one can show
         that if the superpartners have equal masses, then the quadratic divergences
         introduced in \refequation{eq:higgsMassCorrectionFromFermion} cancel each other and
-        it gets natural for the Higgs to have a mass much lower than the Planck scale.
+        it becomes natural for the Higgs boson to have a mass much lower than the Planck scale.
         If SUSY is only softly broken (i.e. broken spontaneously), as for chiral and gauge
         symmetries, then the boson-fermion symmetry still prevents to have a quadratic
         divergence. Instead, we are left with a mild logarithmic divergence:
@@ -1272,11 +1290,11 @@ little world. »}\\
             \Delta m_h^2 \, \propto \, (m_f^2 - m_b^2) \, \text{ln}\left(\frac{\Lambda}{m_b}\right).
         }
         But this alone does not solves everything. If one consider the most massive
-        fermion, that is the top quark $t$, then the mass ratio with its superpartner the
-        stop $\tilde{t}$, $r = m_{\tilde{t}} / m_t$ cannot be too large. For instance, if
-        we assume $r = 100$, then we are left with a correction $\Delta m_h = \orderOf{100 \cdot m_t}$
-        which is still large considering that we seek $\orderOf{m_h} = \orderOf{m_t}$.
-        Therefore, we would need to reintroduce a certain level of fine-tunning to the
+        fermion, i.e. the top quark $t$, then the mass ratio with its superpartner the
+        stop $\tilde{t}$, $r = m_{\tilde{t}} / m_t$ cannot be too large. For instance,
+        we assuming $r = 100$, then we are left with a correction $\Delta m_h = \orderOf{100 \cdot m_t}$
+        which is still large considering as we seek $\orderOf{m_h} = \orderOf{m_t}$.
+        Therefore, we would need to reintroduce a certain level of fine-tunning in the
         parameters of the theory for the corrections to cancel each others, and we want
         to avoid that in order to keep the theory natural. Hence, the naturalness of SUSY
         is strongly related to the mass of the superpartners, and can be used as an indication
@@ -1285,7 +1303,7 @@ little world. »}\\
         \subsubsection{The MSSM}
 
         The most studied realization of supersymmetry is the minimal supersymmetric standard
-        model, or MSSM, corresponding to adding the minimum number of fields to the Standard
+        model (MSSM), corresponding to adding the minimum number of fields to the Standard
         Model for it to become supersymmetric \cite{Dawson, Vempati, Romao}.
         Since the MSSM breaks SUSY with ad-hoc terms, it is to be seen as an effective
         theory up to $\Lambda_{\text{SUSY breaking}}$.
@@ -1297,18 +1315,19 @@ little world. »}\\
         each chirality of the electron. These are usually noted $\tilde{e}_R$ and $\tilde{e}_L$
         to associate them easily with their fermion partner, even though they are spinless.
         Regarding the Higgs sector, it is necessary to add not only a superpartner called
-        higgsinos, but a second Higgs $SU(2)$ doublet to avoid a gauge anomaly.
+        higgsino, but a second Higgs $SU(2)$ doublet to avoid a gauge anomaly.
 
         As shown in the case of the Standard Model, the mass eigenstates are not
         necessarily the flavor eigenstates. This is still true in the MSSM, especially
         because of the SUSY breaking terms, and is an important consideration for the
-        phenomenology. The introduction of second Higgs $SU(2)$ doublet leads to four addtional
-        physical Higgs states noted $H^0$, $A$ and $H^\pm$.
-        In the supersymmetric sector, masses eigenstates are formed by the combinations of
-        the Higgsinos and electroweak gauginos and are called charginos and neutralinos.
+        phenomenology. The introduction of a second Higgs $SU(2)$ doublet leads to four
+        additional physical Higgs states noted $H^0$, $A$ and $H^\pm$.
+        In the supersymmetric sector, mass eigenstates are formed by the combinations of
+        the higgsinos and electroweak gauginos and are called charginos $\tilde{\chi}^\pm$
+        and neutralinos $\tilde{\chi}^0$.
         For the fermions, mixing terms are authorized in $\mathcal{L}_\text{soft}$ between
         the left and right-handed superpartners and are especially important for the
-        phenomenology of the third generation. The masses eigenstates can be determined
+        phenomenology of the third generation. The mass eigenstates can be determined
         by diagonalizing the mass matrices. The resulting particles spectrum is given on
         \reftab{tab:MSSMsuperpartners}.
 
@@ -1386,13 +1405,14 @@ little world. »}\\
             the flavor eigenstate. \label{tab:MSSMsuperpartners}}
         \end{table}
 
-        By design, the MSSM conservs a quantum number called R-parity defined as:
+        By design, the MSSM conserves a quantum number called R-parity defined as:
         \eq{RparityDefinition}
         {
             R = (-1)^{2S + 3B + L}.
         }
-        where $S$ is the spin, $B$ the baryon number, and $L$ is the lepton number. $R$ is 1 for the particles of the Standard Model and -1 for their superpartners.
-        As it is conserved, this means that supersymmetric particles can only be
+        where $S$ is the spin, $B$ the baryon number, and $L$ is the lepton number. $R$ is i
+        equal to 1 for the particles of the Standard Model and -1 for their superpartners.
+        As it is conserved, supersymmetric particles can only be
         pair-produced and only decay into an odd number of supersymmetric particles. In
         particular, this means that the lightest supersymmetric particle (LSP) is stable as
         its decay would violate the $R$-parity. The important consequence is that it provides
@@ -1402,14 +1422,14 @@ little world. »}\\
         parameters compared to the Standard Model, with more than 50 coming from $\mathcal{L}_\text{soft}$.
         Dealing with such a large number of
         parameters is quite inconvenient in terms of phenomenological and experimental analysis.
-        The phenomenological MSSM (pMSSM) reduces this number of parameter by assuming that
+        The phenomenological MSSM (pMSSM) reduces this number of parameters by assuming that
         there is no new source of CP violation, that the lightest neutralino $\lneutralino$
         is the LSP, and other assumptions on the sfermion masses, trilinear couplings and
         flavor violation. This reduces the number of new parameters to 19, namely:
         \begin{itemize}
-            \item the ratio of the Higgs vaccuum expectation values, and $\text{tan}\, \beta \definedAs v_2 / v_1$ (with $0 \leq \beta \leq \frac{\pi}{2}$) ;
             \item the higgsino mass parameter $\mu$ and pseudo-scalar Higgs mass $\mass{A}$ ;
-            \item the soft gaugino masses $M_1$, $M_2$ and $M_3$, corresponding respectively to the bino, wino and gluino masses\footnote{One can notice that the index in $M_{1,2,3}$ refers to the gauge groups $U(1)$, $SU(2)$ and $SU(3)$, which makes it easier to remember which gaugino it refers to.} ;
+            \item the ratio of the Higgs vacuum expectation values, $\text{tan}\, \beta \definedAs v_2 / v_1$ (with $0 \leq \beta \leq \frac{\pi}{2}$) ;
+            \item the soft gaugino masses $M_1$, $M_2$ and $M_3$, corresponding respectively\footnote{One can notice that the index in $M_{1,2,3}$ refers to the gauge groups $U(1)$, $SU(2)$ and $SU(3)$, which makes it easier to remember which gaugino it refers to.} to the bino $\tilde{B}$, wino $\tilde{W}$ and gluino $\tilde{g}$ masses ;
             \item the first and second generation sfermion masses $\masstilde{\tilde{q}}$, $\masstilde{\tilde{u}}$, $\masstilde{\tilde{d}}$, $\masstilde{\tilde{l}}$ an $\masstilde{\tilde{e}}$ ;
             \item the third generation sfermion masses $\masstilde{\tilde{Q}}$, $\masstilde{\tilde{t}}$, $\masstilde{\tilde{b}}$, $\masstilde{\tilde{L}}$ and $\masstilde{\tilde{\tau}}$ ;
             \item the trilinear couplings $A_t$, $A_b$ and $A_\tau$.
@@ -1417,10 +1437,10 @@ little world. »}\\
         Note that we wrote $\masstilde{}$ instead of simply $\mass{}$ to highlight that these
         masses comes from the SUSY breaking Lagrangian $\mathcal{L}_\text{soft}$ and not
         from the electroweak symmetry breaking.
-        One can go one step further and reduce this number of parameter to 5 in the case
+        One can go one step further and reduce this number of parameters to 5 in the case
         of the constrained MSSM, noted cMSSM (or mSUGRA), by assuming that at grand unification scale, all the
         scalar particles have the same mass $m_0$, all gauginos have the same mass $m_{1/2}$,
-        and all the trilinear couplings are the same with value $A_0$. The remaining
+        and all the trilinear couplings are equal to $A_0$. The remaining
         two parameters are $\text{tan}$ and the sign of $\mu$. Although the assumptions
         of the pMSSM and cMSSM can be seen as arbitrary, one can also simply take them as
         guidance to reduce the parameter space in the context of  phenomenology and
@@ -1428,15 +1448,15 @@ little world. »}\\
 
         \subsubsection{Phenomenology of the chargino, neutralino and stop sector \label{sec:stopNeutralinoCharginoPheno}}
 
-        To get a better and concrete idea of the phenomenology of the neutralino, chargino
+        To get a better and concrete idea of the phenomenology of the chargino, neutralino
         and stop sector, which is of interest in this document, let's write down explicitly
         the mass matrices in the context of the MSSM and discuss their implications. By mass matrices, we refer to
-        the same kind of matrix that arised when we described the electroweak symmetry
-        breaking and which led to the introduction of the physical states $W^\pm$, $Z$ and
-        $\gamma$.
+        the same kind of matrices that arised when we described the electroweak symmetry
+        breaking in \refsection{sec:spontanneousElectroweakSymmetryBreaking} and which led
+        to the introduction of the physical states $W^\pm$, $Z$ and $\gamma$.
 
         The chargino sector arises from the mixing between the winos $\tilde{W}_i$ and charged
-        higgsinos $\tilde{h}^\pm$. In the ($\tilde{W}^\pm$,$\tilde{h}^\pm$) basis,
+        higgsinos $\tilde{h}^\pm$. In the ($\tilde{W}^\pm$, $\tilde{h}^\pm$) basis,
         the mass matrix is
         \eq{charginoMixingMatrix}
         {
@@ -1476,7 +1496,7 @@ little world. »}\\
             \end{pmatrix}
         }
         where $\theta_W$ is the weak mixing angle. The neutralino masses therefore only
-        depends on $M_1$, $M_2$, $\beta$ and $\mu$.
+        depend on $M_1$, $M_2$, $\beta$ and $\mu$.
         For example, for $M_1$ and $M_2 \gg \mu$, the two lightest
         neutralinos are essentially higgsino-like.
 
@@ -1508,7 +1528,7 @@ little world. »}\\
 
 
 %==============================================================
-\setcounter{mtc}{4}
+\setcounter{mtc}{3}
 \chapterwithnum{The Compact Muon Solenoid experiment at the LHC}
 \vspace*{-0.7cm}
 \hspace*{0.39\textwidth}
@@ -2500,7 +2520,7 @@ little world. »}\\
             via a gluonic string being stretched, its potential energy growing at
             the expense of its kinetic energy. When its potential energy becomes of the
             order of the mass of two quarks, this string is likely to break and pull
-            out a pair of quarks out of vaccuum. This process goes on until
+            out a pair of quarks out of vacuum. This process goes on until
             hadrons are formed, which may in turn decay according to known branching
             fractions.
 
@@ -2548,7 +2568,7 @@ little world. »}\\
 %
 
 
-\setcounter{mtc}{5}
+\setcounter{mtc}{4}
 \chapterwithnum{$b$-tagging techniques and validation in CMS}
 \hspace*{0.49\textwidth}
 \begin{minipage}{0.47\textwidth}
@@ -3463,7 +3483,7 @@ The Doctor: I threw it in a supernova. »}
                      technique, and Phase 2 detector with a pile-up rate of 140 (red dots) \cite{Phase2TDR}.}
 
 %==============================================================
-\setcounter{mtc}{6}
+\setcounter{mtc}{5}
 \chapterwithnum{Search for stop pair production at $\sqrt{s} = 8\TeV$}
 \vspace*{-0.7cm}
 \begin{center}
@@ -3566,7 +3586,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
             + ...
         }
         where $\text{tan}\, \beta \definedAs v_2/v_1$ is the ratio of the neutral
-        Higgses vaccuum expectation values,
+        Higgses vacuum expectation values,
         $X_t \definedAs (A_t + \mu\, \text{cot} \beta) / \mass{S}$ is the stop mixing
         parameter, i.e. it parametrizes the off-diagonal elements in the stop mixing
         matrix, and $\mass{S} \definedAs \sqrt{\mass{\tilde{t}_1}\mass{\tilde{t}_2}}$ is the average stop
@@ -3878,7 +3898,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     using \textsc{MadGraph} with up to two additional partons generated in the hard scattering,
     and the decay of the stops and parton shower is done with \textsc{Pythia6}. Because
     of the number of benchmarks considered and ressource constraints, the detector
-    response is simulated using the CMS fast simulation package \cite{FastSim}.
+    response is simulated using the CMS fast simulation package \cite{Fastsim}.
 
     Simulated events are weighted to match the integrated luminosity and pile-up distribution
     of the recorded collisions. Additionally, $t\bar{t}$ events are weighted as function of
@@ -4102,7 +4122,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
        particle-flow-based $\MET$ is also checked to be consistent with a calorimeter-based
        approach and we veto events were the difference is higher than $1.5~\text{rad}$.
        Finally, we filters events that suffer from high noise, anomalous subdetector operation
-       or known misreconstruction issues that lead to unphysical $\MET$ \cite{METperf8TeV}.
+       or known misreconstruction issues that lead to unphysical $\MET$ \cite{METperf}.
 
         \subsection{Events selection}
         %==============================================================
@@ -4277,7 +4297,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         in \reffig{fig:phenoMET}. However, signal
         at low $\deltam$ is more challenging because of the lower $\MET$. To address this
         particular region of the ($\mass{\lstop}$,$\mass{\lneutralino}$) space, one
-        can turn to the significance of $\MET$ \cite{METperf8TeV, METsignificanceMirman}. The
+        can turn to the significance of $\MET$ \cite{METperf, METsignificanceMirman}. The
         uncertainty on $\MET$ is, in the gaussian approximation, $\sqrt{\sum_\text{particles} E_T}$,
         which can be approximated by $\sqrt{H_T}$ with $H_T \definedAs \sum_\text{jets} p_T$.
         The variable $\MET / \sqrt{H_T}$ can therefore be used as an approximation of the
@@ -6096,7 +6116,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
                          considered when lowering the $\diLeptonTop$ background by 0, 25 and 50\%.}
 
 %==============================================================
-\chapternonum{\vspace*{-1cm}Conclusion}
+\chapternonum{Conclusion}
 \vspace*{-1cm}
 \hspace*{0.37\textwidth}
 \begin{minipage}{0.62\textwidth}
@@ -6104,7 +6124,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 \hspace*{0.6\textwidth} Elbert Hubbard
 \end{minipage}
 
-\vspace*{0.5cm}
+\vspace*{1.5cm}
 
 During the Run I of the LHC, collisions of proton-proton were produced at the
 energy of $\sqrt{s} = 7$ and $8\TeV$. The analysis of the $5+20\invfb$ of integrated luminosity
