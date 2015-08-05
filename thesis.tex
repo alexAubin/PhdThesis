@@ -192,7 +192,7 @@ little world. »}\\
     \refsection{sec:standardModelShortcomings} discuss the shortcomings of the Standard
     Model with a particular focus on the hierarchy problem and dark matter. Finally,
     \refsection{sec:beyondTheStandardModel} introduces the theories beyond the Standard
-    Model that attempt to adress these shortcomings, and in particular supersymmetry.
+    Model that attempt to address these shortcomings, and in particular supersymmetry.
 
     \section{Fields and symmetries \label{sec:fieldsAndSymmetries}}
 
@@ -1118,7 +1118,7 @@ little world. »}\\
         ends up with a strong CP phase being naturally zero. This theory predicts a new
         particle, the axion, which turns out to be a good dark matter candidate.
         Axions would have masses lower than $\orderOf{1~\text{eV}}$ while still satisfying
-        criteria to be cold dark matter candidates. In particular, axions are predicted to
+        the criterion to be cold dark matter candidates. In particular, axions are predicted to
         form a Bose-Einstein condensate, which offers an opportunity to distinguish them
         from other dark matter candidates such as WIMPs \cite{AxionBoseEinstein}.
 
@@ -1540,25 +1540,34 @@ little world. »}\\
 \newpage
 %==============================================================
 
-    \section{The Large Hadron Collider}
+    In this chapter, we introduce the Large Hadron Collider (LHC) and the Compact Muon Solenoid
+    Experiment (CMS). In \refsection{sec:LHCintro}, we introduce the LHC apparatus,
+    its scientific motivation and the physics of proton-proton collisions. In \refsection{sec:CMSexperiment},
+    we introduce the CMS experiment by describing the layout and technologies used for each
+    subdetectors, as well as their performances. We will also go through the main techniques
+    used to reconstruct the objects produced in the collisions. Finally in \refsection{sec:simu},
+    we describe the principles behind the production of Monte-Carlo events, in particular
+    the Monte-Carlo generation of collisions, the hadronization and the detector simulation.
+
+    \section{The Large Hadron Collider \label{sec:LHCintro}}
 
     \subsection{Scientific context and challenges}
 
-    There are several approaches one can take toward new physics. For instance, using already
+    There are several approaches one can follow toward new physics. For instance, using already
     available measurements of observables and exploiting the fact described in
     \refsection{sec:standardModelSuccess} that observables are impacted through loops by
     the entire Nature's Lagrangian, it is possible to infer information or limits regarding
     yet-unknown physics. Historically, this has been proved to be successful numerous times,
     for instance to predict the mass of the top quark from the $W$ and $Z$ bosons mass
     measurements \cite{discoveryOfTopQuark}. Similarly, a smoking-gun for some supersymmetric
-    model is the enhancement of the branching ratio BR($B_s \rightarrow \mu^+\mu^-$)
+    models is the enhancement of the branching ratio BR($B_s \rightarrow \mu^+\mu^-$)
     \cite{BsToMuMu}. However,
     despite the fact this approach provides valuable information, it can be criticized as
     only providing indirect evidences and not a clear window to new phenomena. Moreover,
     the statistics and detector resolution required to increase the accuracy of the
-    prediction grow exponentially.
+    prediction grow drastically.
 
-    The most attractive and popular approach is the direct production and observation of
+    Another approach, probably the most attractive and informative, is the direct production and observation of
     new phenomena. One often forgotten fact is that new physics might not appear at high
     energies but at low energies instead. This is motivated for intance by axions
     theories and some hidden sector theories which predict particles with sub-eV masses
@@ -1567,25 +1576,25 @@ little world. »}\\
     higher energies, particle colliders have been
     built with increasing center of mass energies ($\sqrt{s}$) during the last decades.
     Two famous ones are the Large Electron-Positron (LEP) collider \cite{LEP} and the
-    Tevatron \cite{Tevatron}. The
+    Tevatron collider \cite{Tevatron}. The
     LEP was an $e^+e^-$ collider which operated at a maximum of $\sqrt{s} \approx 200\GeV$
     at CERN in the 90's and allowed precise measurements of the electroweak $Z$ and $W$
-    bosons and test the robustness of the Standard Model. The Tevatron was a $p\bar{p}$
+    bosons and tested the robustness of the Standard Model. The Tevatron was a $p\bar{p}$
     collider which operated at a maximum $\sqrt{s} \approx 2\TeV$ at Fermilab until 2011
     and led to the discovery of the top quark and first measurements of its properties.
-    Nowadays, the only high energy collider in operation is the Large Hadron Collider (LHC)
+    Nowadays, the only high energy collider in operation is the Large Hadron Collider
     at CERN.
 
     The LHC \cite{LHC} is a circular hadron collider built at CERN, near Geneva. One of its physics
-    goal is the production high-energy proton-proton ($pp$) collisions to uncover the mechanism
+    goals is the production of high-energy proton-proton ($pp$) collisions to uncover the mechanism
     of electroweak symmetry breaking, to test the validity of the Standard Model, and more
-    generally to explore physics around $1\sim10 \TeV$ and possibly discover new
+    generally to explore physics around $0.1 \sim 10\TeV$ and possibly discover new
     physics. It is also capable of producing heavy ions (PbPb) collisions or proton-ion
-    collision ($p$Pb) in order to study quark matter at high density and high temperature,
+    collision ($p$Pb) in order to study quark matter at high temperature,
     and in particular the properties of quark-gluon plasma. The rest of this document will
     focus on $pp$ collisions.
 
-    The LHC collider has been built using the same tunnel as the LEP. The beam energy at
+    The LHC collider has been built in the same tunnel as the LEP. The beam energy at
     the LEP was largely limited by the energy loss from synchrotron radiation. This loss
     is proportional to $E^4 / (m^{4} r^{2})$ with $E$ and $m$ being the energy and mass of the
     particle, and $r$ the radius of the tunnel. As $m_p$ is much larger than $m_e$, it is
@@ -1598,12 +1607,12 @@ little world. »}\\
     \subsection{Beam injection, control and acceleration}
 
     The creation and first acceleration of the proton beam work as follow. Protons are initially
-    obtained by heating low-pressure $H_2$ gas which produces $H^+ (= p)$ and $e^-$ and
+    obtained by heating low-pressure $H_2$ gas which produces $H^+ (= p)$ and $e^-$, and
     isolating the protons using high voltages. The protons are fed to an acceleration
     chain made of consecutive accelerators which use radiofrequencies to create an acceleration
     gradient. At the end of the chain, in the Super Proton Synchrotron (SPS), the
     beam acquires an energy of $450\GeV$ before being injected in the LHC ring. The LHC
-    ring is a tunnel of 27 kilometers built between $50$ and $200$ m underground. The
+    ring is a tunnel of 27 kilometers built between $50$ and $200$~m underground. The
     project was originally designed to accelerate the proton beam up to $7\TeV$ per beam,
     corresponding to a center of mass energy $\sqrt{s} = 14\TeV$. Four main experiments are
     installed along the ring, at each collision point. Two of them, ATLAS and CMS, are
@@ -1621,18 +1630,18 @@ little world. »}\\
                      eight octants, with some of them dedicated to collisions but also
                      injection, acceleration (RF) and beam dump.}
 
-    One of the biggest challenge of the LHC was the construction and operation of magnets
+    One of the biggest challenges of the LHC was the design and operation of magnets
     powerful enough to bend the trajectory of the protons at such high energies. To do
     so, superconducting magnets made of a niobium-titanium alloy are used and are able to
-    produce a magnetic field of up to $8.33$ T. The operating temperature of such magnets
+    produce a magnetic field of up to $8.33~\text{T}$. The operating temperature of such magnets
     is only a few Kelvins: in the context of the LHC, they are required to be cooled using
-    a complex system of superfluid $^4$He at 1.9K. It is remarkable to note that this
+    a complex system of superfluid $^4$He at $1.9~\text{K}$. It is remarkable to note that this
     temperature is actually cooler than the cosmic microwave background at around $2.7~\text{K}$.
 
-    Operating superconducting magnets require a good control and understanding of quenches.
-    A magnet quench occurs when a part of the superconducting material loose its superconducting
+    Operating superconducting magnets requires a good control and understanding of quenches.
+    A magnet quench occurs when a part of the superconducting material looses its superconducting
     property and starts to heat because of Joule effect. Because the critical temperature
-    is usually low, this can create a chain reaction as the heat spread. Quenches are
+    is usually low, this can create a chain reaction as the heat spreads. Quenches are
     not such unusual events, and the LHC employs a sophisticated system to detect them and protect
     the magnetic system by automatically dumping the beam, mitigating the effect of the
     quench and extracting the energy stored inside the magnet \cite{LHCmagnets}.
@@ -1643,15 +1652,6 @@ little world. »}\\
     punctured the cryogenic fluid enclosure and vaporized a fraction of the fluid causing
     important damages to the installation \cite{LHCindicent}.
 
-    \insertTwoFigures{LHCpipe}
-                     {LHC/dipoleCrossSection2}
-                     {LHC/pipePhoto2}
-                     {0.7}
-                     {On the top, cross-section of a cryodipole of the LHC
-                     showing the magnet coils around the two beam pipes, and the cooling system \cite{LHC}.
-                     On the bottom, technician working on an interconnection between two LHC
-                     sections (credit: Anna Pantelia, CERN).}
-
     The pipes of the LHC consist of about 1200 dipole sections represented on
     \reffig{fig:LHCpipe}, each $15$ m long, whose role are to bend the beam using dipole
     magnets. In addition, about 400 quadrupole magnets are used to squeeze the
@@ -1659,8 +1659,17 @@ little world. »}\\
     the beam. The effective bending radius, created from the $17.6$ km of dipoles is
     $r \approx 2.8$ km, to be compared to the radius of the full apparatus being about $4.3~\text{km}$.
 
-    The beam is organized in bunches of protons separated by a time interval of 50 or
-    25 ns depending of the machine configuration. Each bunch is made of about $10^{11}$
+    \insertTwoFigures{LHCpipe}
+                     {LHC/dipoleCrossSection2}
+                     {LHC/pipePhoto2}
+                     {0.7}
+                     {On the top, cross-section of a cryodipole of the LHC
+                     showing the magnet coils around the two beam pipes, and the cooling system \cite{LHC}.
+                     On the bottom, technician working on an interconnection between two LHC
+                     sections (credits: Anna Pantelia, CERN).}
+
+    Each beam is organized in bunches of protons separated by a time interval of 50 or
+    25~ns depending of the machine configuration. Each bunch is made of about $10^{11}$
     protons. The LHC uses radiofrequency cavities to increase the energy of the beam by
     about 0.5 MeV per rotation, or $5.4\GeV$ per second. At $7\TeV$ per beam with 25 ns
     between bunches, the total energy of the beam is about 360 MJ and the energy stored
@@ -1675,11 +1684,11 @@ little world. »}\\
     quarks and gluons. At a given moment, partons in the proton only carries a fraction
     of the total proton momentum. Because of the properties of quantum chromodynamic, the
     structure of the proton can not easily be derived from first principles given our current
-    capabilities. Instead, we must rely on the parton distribution functions (PDF),
-    characterizing the probably to find a parton with a fraction of momentum $x$, depending
-    of its nature. Two examples of PDF are given on
-    \reffig{fig:partonDistributionFunctionsExample}. The shape of this
-    distribution implies that, in a collision, the center of mass energy of the two incoming
+    capabilities. Instead, we must rely on the parton distribution functions (PDF), determined
+    from experiment, characterizing the probably to find a parton with a fraction of
+    momentum $x$, depending of its nature. Two examples of PDF are given on
+    \reffig{fig:partonDistributionFunctionsExample}. The shape of these
+    distributions implies that, in a collision, the center of mass energy of the two incoming
     partons is generally much lower than the beam energy.  Each incoming parton may also
     radiate partons right before the interaction, a processus called initial state radiation
     (ISR), leading to additional jets in the event. Similarly, radiations from quarks or
@@ -1691,66 +1700,68 @@ little world. »}\\
     objects.
 
     \insertFigure{partonDistributionFunctionsExample}{0.85}{Example of PDFs
-    for two different energy scale $Q$, provided by the MSTW group \cite{MSTWpdfs}. At lower energies,
+    for two different energy scales $Q$, provided by the MSTW group \cite{MSTWpdfs}. At lower energies,
     one clearly distinguish the large fraction of momentum $x$ carried by $u$ and $d$ valence
     quarks while other species are only present in the parton sea and less probable as
     their mass increases. As $Q^2$ grows, the probability to probe sea partons increases. }
 
     \insertFigure{LHC/ppCollision}{0.7}{Feynman diagram showing the complexity of a
     single proton-proton collision. Two partons from the incoming protons partipate
-    to the hard scattering leading to a $\gamma^*/Z$ resonance which decays into two
+    to the hard scattering leading to a $Z/\gamma^*$ resonance which decays into two
     quarks. In both the initial and final states, the colored particles may radiate gluons
     (or a gluon may split into a quark pair), leading to initial and final state radiations.}
 
     In the context of the LHC, the number of $pp$ collisions happening per unit of time is
-    proportional to the instantaneous luminosity $L_\text{instant.}$ which depends on the bunch crossing
+    proportional to the instantaneous luminosity $L_\text{inst.}$ which depends on the bunch crossing
     frequency, the number of bunches, the number of proton per bunches and other beam and
     geometry parameters. The two general purpose experiments, ATLAS and CMS, are designed
-    for a typical luminosity $L_\text{instant.} = 10^{34}~\text{cm}^{-2}
-    \text{s}^{-1} = 10~\text{nb}^{-1} / \text{s}$. For a given process, one can compute
-    the number of expected events:
-
-    $$ n_\text{event} = L \times \sigma_\text{process} $$
-
-    where $\sigma_\text{process}$ is the cross-section of the process and $n$ a number
-    of events per unit of time. Later, we may refer to the integrated luminosity over all
-    data-taking which relates to $N$, the total number of events produced.
+    for a typical luminosity $L_\text{inst.} = 10^{34}~\text{cm}^{-2}
+    \text{s}^{-1} = 10~\text{nb}^{-1} / \text{s}$. For a given process, one can compute $n$
+    the number of expected events per unit of time:
+    \eq{numberOfEventInst}
+    {
+        n & = L_\text{inst.} \times \sigma_\text{process} \\
+    }
+    where $\sigma_\text{process}$ is the cross-section of the process considered. Later, we may refer
+    to the integrated luminosity $L_\text{integr.}$ over a defined period of data-taking,
+    which relates to $N$, the total number of expected events during that time:
+    \eq{totalNumberOfEvents}
+    {
+        N & = L_\text{integr.} \times \sigma_\text{process}
+    }
 
     \reffig{fig:LHC/ppCrossSections} shows the evolution of the cross section of different
     processes such as $W$, $Z$, top or Higgs production as function of $\sqrt{s}$. The
-    total inelastic cross section is about 60 mb. At an instantaneous luminosity of
-    $10~\text{nb}^{-1} / \text{s}$ and with a bunch crossing every 25 ns, this corresponds
+    total inelastic cross section is about 60~mb. At an instantaneous luminosity of
+    $10~\text{nb}^{-1} / \text{s}$ and with a bunch crossing every 25~ns, this corresponds
     to an average of 15 inelastic interactions per bunch crossing. This is what is behind
     the notion of pile-up: one event, or bunch crossing, contains $\orderOf{10-30}$ interactions
-    with generally only one is of interest, such as the production of a $W$ or $Z$ boson.
-    The quantity of pile-up obviously scales with the instantaneous luminosity which
-    is likely to go as high as $30~\text{nb}^{-1} / \text{s}$ corresponding to roughly 45
-    inelastic interactions.
+    with generally at most one of interest, e.g. the production of a $W$ or $Z$ boson.
 
     \insertFigure{LHC/ppCrossSections}{0.6}{Evolution of the cross sections of typical
     processes for $p\bar{p}$/$pp$ collisions as function of $\sqrt{s}$. Two vertical
     lines corresponds to the center of mass energy of the Tevatron ($\sqrt{s} \approx 2\TeV$)
-    and the LHC ($\sqrt{s} = 14\TeV$) \cite{ppCrossSectionsStirling}}
+    and the LHC ($\sqrt{s} =$ 7, 8 and 14$\TeV$) \cite{ppCrossSectionsStirling}.}
 
-    This is a crucial point in the context of $pp$ collisions, as inelastic hadron collisions
-    naturally produce jets arising from the parton showering and hadronization of gluons
-    and quarks. Therefore, a lot of particles will pollute the environment of each event,
-    affecting the number of hits in the tracking detector and the energy measurement in
-    calorimeters. It is thus needed to develop methods to mitigate the effect of pile-up.
+    The concept of pile-up have crucial implications for the study of $pp$ collisions : the
+    additional inelastic hadron collisions naturally produce jets of particles, which
+    pollute the environment of each event, affecting the number of hits in the tracking
+    detectors and the energy measurement in calorimeters. It is thus needed to develop
+    methods to mitigate the effect of pile-up.
 
     \subsection{LHC timeline and roadmap}
 
     \reftab{tab:LHCtimeline} presents the timeline and roadmap of the LHC. Because of the
     incident that happened in 2008, the machine had to be repaired and collisions could
-    only be provided at energies $\sqrt{s} = 7$ and $8\TeV$ during the Run I, while waiting for consolitions
+    only be provided at energies $\sqrt{s} = 7$ and $8\TeV$ during the Run I, while waiting for consolidations
     of the machine. An integrated luminosity of respectively $5$ and $20\invfb$ was recorded
     at these energies. During 2015 and until the end of 2018, the LHC is expected to work
     at $13$ or $14\TeV$ and to provide about $100\invfb$ of integrated luminosity. After
-    the run III from 2021 and to the end of 2023, the LHC is expected to be upgraded,
+    the run III, foreseen to take place from 2021 and to the end of 2023, the LHC is expected to be upgraded,
     which would be the start of the high-luminosity LHC (HL-LHC) program. During this period,
-    the LHC will still function at $14\TeV$ but with an instantenous luminosity around
+    the LHC will still operate at $14\TeV$ but with an instantenous luminosity around
     100$~\text{nb}^{-1} / \text{s}$ corresponding to a pile-up around 150. To be able to
-    sustain such a condition, the LHC experiments will need to be significantly upgraded.
+    sustain such conditions, the LHC experiments will need to be significantly upgraded.
 
     \begin{table}[h]
         \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -1774,31 +1785,32 @@ little world. »}\\
         \caption{Timeline and roadmap of the LHC (as of July 2015).\label{tab:LHCtimeline}}
     \end{table}
 
-    \section{The Compact Muon Solenoid experiment}
+    \section{The Compact Muon Solenoid experiment \label{sec:CMSexperiment}}
 
-        The Compact Muon Experiment (CMS) experiment is one of the four experiments installed
+        The Compact Muon Experiment experiment \refNeeded is one of the four experiments installed
         at the collision points of the LHC. It is a general purpose experiment, though mostly dedicated
         to the study of $pp$ collisions, in particular to test the validity of the Standard
         Model at the TeV scale, to understand the electroweak symmetry breaking, and to search for new physics. From this
         perspective, CMS is in scientific cooperation and competition with ATLAS, the
         other general purpose experiment. In the context of the search for new physics,
-        having two experiments independently studying the same phenomenons is both
+        having two experiments independently studying the same phenomena is
         stimulating but also crucial to have robust claims. It is indeed highly desirable
         from a scientific point of view to be able to cross-check any possible discovery
         by one experiment with another one as independent as possible from the first.
 
-        So far, the CMS experiment, through the analysis of the Run I data at
-        $7$ and $8\TeV$, allowed significant improvements on the precision measurements
+        \todo{rework this paragraph} So far, the CMS experiment, through the analysis of the Run I data at
+        $\sqrt{s} = 7$ and $8\TeV$, allowed significant improvements on the precision measurements
         of the Standard Model, and complemented the measurements of ALICE on heavy-ions
         and LHCb on flavor physics. In April 2012, the collaboration reported the discovery
         of the excited neutral $\Xi^{*0}_b$ baryon \cite{XibBaryon}.
         In July 2012, CMS and ATLAS claimed evidence for a Standard Model-like Higgs boson
-        at a mass around $125\GeV$ \cite{CMSHiggs}.
+        at a mass around $125\GeV$ \cite{CMSHiggs, ATLASHiggs}.
 
-        In this section, the CMS detector will first be introduced generally before inspecting
-        each subsystems. Then, the trigger system that aims to select which collisions to
-        record will be presented. Finally, it will be explained how the physics objects
-        can be reconstructed from the information recorded by the detector.
+        In this followin subsections, the CMS detector is first introduced generally before inspecting
+        each subsystems individually. Then follows the presentation of the trigger system
+        that aims to select which collisions to record will be presented. Finally, it is
+        explained how the physics objects can be reconstructed from the information
+        recorded by the detector.
 
         \subsection{The CMS detector}
 
@@ -1808,19 +1820,19 @@ little world. »}\\
         the LHC machine while providing good measurements for physics purpose.
         The subsystems of the detector must indeed have a time response of the order of 25 ns,
         corresponding to the design bunch crossing frequency, and to be synchronized with
-        each other. The detector must also allow the physicist to disentangle between the
+        each other. The detector must also allow the physicists to disentangle between the
         several collisions occuring at each bunch-crossing by being able to
         reconstruct the collision vertices with good precision. Last but not least,
         the quantity of data per event is such that all events cannot be recorded. The
         detector must then decide in real time which events to keep, and which to reject
         from a fast analysis of each event.
 
-        Among the many physics signatures CMS was designed to look for, the discovery and study of a
+        Among all the physics signatures CMS was designed to look for, the discovery and study of a
         light ($\orderOf{125 \GeV}$) Higgs boson in the channels $h\rightarrow\gamma\gamma$
-        and $h\rightarrow ZZ \rightarrow 4\ell$ require good resolution of the photons,
+        and $h\rightarrow ZZ \rightarrow 4\ell$ requires good resolution on the photons,
         electrons and muons energy-momentum. Furthemore, from the perspective of final
-        states involving dark matter candidates, one needs to obtain a good measurement
-        of the energy escaping detection. This requires a good and as hermetic as
+        states involving dark matter candidates, one must be able to measure
+        the energy escaping detection. This requires a good and as hermetic as
         possible measurement of the repartition of the hadronic and electromagnetic energy
         in each event.
 
@@ -1828,9 +1840,9 @@ little world. »}\\
 
         The CMS detector is a quasi-hermetic, cylinder-shaped detector consisting of
         several complementary layers\footnote{While this structure is found in three of the four
-        main experiments at the LHC, other structures exists in particle physics detectors,
-        for instance for the LHCb experiment or the AMS detector, composed of successive
-        layers.}
+        main experiments at the LHC, other structures exist in particle physics detectors,
+        for instance the LHCb detector and AMS detector are composed of successive
+        transversal layers.}
         as represented on \reffig{fig:CMS/detectorOverview}.
         The CMS design is centered around a superconducting magnet delivering a field of
         3.8~T using the same technology than the LHC, a nobium-titanium alloy. The strong
@@ -1838,14 +1850,14 @@ little world. »}\\
         measurement of their momentum with an accuracy inversely proportionnal to the value
         of the field.
         Near the interaction point is found the tracker system, dedicated to
-        the detection of hits left by charged particles. It is a fully silicon system composed of pixel detectors
+        the detection of hits left by charged particles. It is a fully silicon system composed of pixel detector
         layers and microstrip layers. Around the tracker is the electromagnetic
         calorimeter, whose aim is to measure the energy of photons and electrons using
         scintillation crystals. The next layer, the hadronic calorimeter, aims to measure
         the energy carried by hadrons produced in the collisions. It is a scintillator made
         of brass and plastic sandwich. Finally, the muon system uses three different gas-based
         technologies to record the hits of muons. \reffig{fig:CMS/detectorPhoto}
-        shows a photography of the actual detector during its assembly.
+        shows a photography of the detector during its assembly.
 
         \insertFigure{CMS/detectorPhoto}{0.75}{Photography of the CMS detector, showing some
         of the muon system, the magnet and the return yoke, and the HCAL barrel during
@@ -1857,10 +1869,11 @@ little world. »}\\
         cylindrical symmetry, it is convenient to work with the azimuthal angle $\phi$
         between the momentum $\vec{p}$ of a particle and the $x$ axis in the transverse
         plane. The projection of $\vec{p}$ in the transverse plane is called $\vec{p}_T$.
-        Additionnaly, the pseudo-rapidinity $\eta$ is defined as:
-
-        $$ \eta \definedAs - \text{ln}(\text{tan}\frac{\theta}{2}) $$
-
+        Additionnaly, the pseudo-rapidity $\eta$ is defined as:
+        \eq{etaDefinition}
+        {
+            \eta \definedAs - \text{ln}(\text{tan}\frac{\theta}{2})
+        }
         where $\theta$ is the polar angle with respect to the $z$ axis. $\eta$ is equal
         to 0 for particles produced in
         the transverse plane, about 0.88 for $\theta = \pi/4$ and tends to $\infty$ in the
@@ -1875,10 +1888,10 @@ little world. »}\\
 
             \subsubsection{Tracking system}
 
-        The tracker system is the subdetector closest to the interaction point. Its goal
-        is to reconstruct hits left by charged particles to estimate its direction
+        The tracker is the subdetector closest to the interaction point. Its goal
+        is to reconstruct hits left by charged particles to estimate their direction
         and momentum, and to identify not only the primary interaction vertices, but also
-        secondary vertices found in, for example, the hadronization of $b$-quarks. This requires
+        secondary vertices found in, for example, the hadronization of $b$ quarks. This requires
         a precision on the vertex to less than one milimeter.
 
         While achieving this level of accuracy, the instrument must be able to handle the conditions of
@@ -1911,7 +1924,7 @@ little world. »}\\
         in modules, as represented in \reffig{fig:CMS/tracker}. At the center, the pixel module
         uses silicon pixel sensors of $100 \times 150~\mu\text{m}^2$, providing a resolution
         on the position of hits around $10~\mu\text{m}$ in the transverse plane and
-        $20~\mu\text{m}$ in $z$. The barrel module is composed of three 53 cm layers in the
+        $20~\mu\text{m}$ in $z$. The barrel module is composed of three layers long of 53 cm in the
         region $r < 10$ cm, supplemented by two disk layers placed at $\left|z\right| \approx$
         35 and 45~cm to cover the forward region. In total, the pixel detector contains 66
         million pixels covering about 16~m$^2$.
@@ -1919,7 +1932,7 @@ little world. »}\\
         The rest of the tracker system is based on silicon microstrips with a pitch (equal
         to the strip width plus the space between strips) ranging
         from $80$ to $205~\mu\text{m}$ and length ranging from $10$ to $25~\text{cm}$.
-        The resolution of these sensors on the hits position ranges from $23$ to $52~\mu\text{m}$
+        The resolution of these sensors on the hit position ranges from $23$ to $52~\mu\text{m}$
         in the transverse plane and from $230$ to $530~\mu\text{m}$ along $z$.
         This strip tracker is divided in two barrel subdetectors, the tracker inner barrel
         (TIB) and outer barrel (TOB), supplemented by two endcap modules, the tracker inner
@@ -1929,7 +1942,7 @@ little world. »}\\
 
             \subsubsection{Electromagnetic calorimeter}
 
-        The electromagnetic calorimeter (ECAL) role is to measure the energy of incoming electrons
+        The role of the electromagnetic calorimeter (ECAL) is to measure the energy of incoming electrons
         and photons. The specifications of this subdetector are particularly oriented for
         the search for the Higgs boson in the $h \rightarrow \gamma \gamma$ channel. The resolution on the
         invariant mass of the diphoton system depends directly on the energy and angular
@@ -1940,7 +1953,7 @@ little world. »}\\
         tungstate is a very dense scintillation material, about 8.3~g/cm$^3$, with a short
         radiation length 0.89~cm, making it an appropriate choice for a compact calorimeter.
         On the other hand, the light output is relatively low, about 4.5 photoelectrons
-        per MeV, and thus requires the use of photomultipliers to improve the accuracy.
+        per MeV, and thus requires the use of photomultipliers to improve the signal collection.
         In the barrel, the calorimeter uses crystals with a size of $2.2\times2.2~\text{cm}^2$
         for the front face and 23~cm in length, as represented on \reffig{fig:CMS/ECALcrystal}.
         In terms of $\eta-\phi$, each crystal covers a region of approximately $0.0174
@@ -1952,7 +1965,7 @@ little world. »}\\
         In the endcaps, to help to discriminate between prompt photons and $\pi^0$ decaying
         to two directionnaly close photons, two preshower disks are placed in front of the
         ECAL. Their role is to initiate electromagnetic showers and provide a finer granularity
-        with silicon strips 0.2~cm wide to be compared to the $\sim2\times2~cm^2$ faces
+        with silicon strips 0.2~cm wide, to be compared to the $\sim2\times2~cm^2$ faces
         of the crystals.
 
         \insertFigure{CMS/ECAL}{0.7}{Layout of the electromagnetic calorimeter. Each of the
@@ -1963,7 +1976,7 @@ little world. »}\\
         up to $\abseta = 3.0$. The preshower disks cover the region $\abseta \in [1.653,2.6]$.
         Overall, the system is $7.8~\text{m}$ long and lie within $1.2 < r < 1.8~\text{m}$
         in the barrel.
-        The optical properties of the crystal is a crucial parameter that depends on the
+        The optical properties of the crystal are crucial parameters that depends on the
         temperature and radiations received. To obtain accurate measurements, a cooling
         system ensure that the crystal temperature is stable at $18\pm0.05^oC$ and the
         transparency is monitored in real time via a laser system.
@@ -2011,10 +2024,10 @@ little world. »}\\
         in the barrel which is 25 times coarser than ECAL. A last layer of the HCAL called
         the HCAL outer (HO) uses the magnet coil as an absorption layer. HO is exclusively
         made of scintillation tiles and complements the measurement of the HB. Finally, to
-        measure hadrons produce in the high-forward region, two calorimeters are located at
+        measure hadrons produced in the high-forward region, two calorimeters (HF) are located at
         $\left|z\right| \approx 11.2$~m to cover $\abseta$ up to 5.2. As they receive a high flux of
         particles coming from underlying events, the material for these calorimeters must
-        therefore be more resistant to radiation and use hard quartz fibers instead of
+        be able to endure the higher level of radiations and use hard quartz fibers instead of
         plastic ones.
 
         The resolution measured on pions is
@@ -2046,15 +2059,15 @@ little world. »}\\
         \insertFigure{CMS/muon}{0.7}{Layout of the muon system.}
 
         Three different gas-based technologies are used, whose choice was driven by the
-        large surface to be covered and the differents radiation environment:
+        large surface to be covered and the radiation environments:
         \begin{itemize}
-            \item \textbf{Drift tubes} (DT) - This technology uses streched wiries within
+            \item \textbf{Drift tubes} (DT) - This technology uses streched wires within
                 a gas volume. Charged particles travelling through the gas ionize atoms,
                 leaving a cloud of electron along the track. These electrons then drift
                 in the tube and are collected by the positively-charged wires. By knowing
                 the point where the electron were collected along the wire, and the
                 drift time, it is possible to infer the position of the hit in the drift tube.
-            \item \textbf{Cathode strips chambers} (CSC) - Cathode strips chambers are
+            \item \textbf{Cathode strip chambers} (CSC) - Cathode strip chambers are
                 made of array of anode wires crossing cathode strips within a gas volume.
                 A charged particle travelling through the gas ionizes atoms and provokes an
                 avalanche of electrons. The electrons and ions move to the anode and
@@ -2063,7 +2076,7 @@ little world. »}\\
             \item \textbf{Resistive plate chambers} (RPC) - Resistive plate chambers are
                 made of two plates of high-resistivity platic acting as cathode and anode
                 separated by a gas volume. After ionization of the gas causing an
-                electron avalanche, the chages travel through the plastic plates to be
+                electron avalanche, the charges travel through the plastic plates to be
                 collected by strips situated behind them.
         \end{itemize}
 
@@ -2084,7 +2097,7 @@ little world. »}\\
 
         The CMS detector must sustain a rythm of one bunch crossing each 50 or 25 ns, depending
         of the condition of the LHC machine. The raw output of the detector is therefore
-        about $40~$MHz. It is unrealistic to consider storing and reconstructing all these events
+        about $20\sim40$~MHz. It is unrealistic to consider storing and reconstructing all these events
         considering the speed of the link to the network, the memory and the computing power
         it would require. Therefore, a selection must be applied online to reduce the rate
         to a more realistic one, set to about $400~$Hz.
@@ -2092,7 +2105,7 @@ little world. »}\\
         The system in charge of this task is called the trigger \cite{CMStrigger}. The reduction of the rate
         is done by performing a minimalist identification of the features in the event (such
         as significant calorimeter deposits, or hits in the muon system), followed by a more
-        complete reconstruction of the objects, and apply thresholds at each steps to
+        complete reconstruction of the objects, and applying thresholds at each steps to
         decide quickly whether the event might be or not relevant for physics analysis.
         The design of these thresholds must be done carefully to have an adequate balance
         between keeping the rate low, while maintaining a high efficiency for the relevant
@@ -2101,7 +2114,7 @@ little world. »}\\
         reconstruction to efficiently use the available ressources.
 
         The trigger system of CMS is composed of two levels. The level 1 (L1) trigger first
-        reduce the rate from $40~$MHz to $100~$kHz, followed by the high-level trigger (HLT)
+        reduces the rate from $40~$MHz to $100~$kHz, followed by the high-level trigger (HLT)
         which further reduces the rate to $400~$Hz.
 
         \insertFigure{CMS/triggerL1}{0.8}{Architecture of the L1 trigger.}
@@ -2120,69 +2133,81 @@ little world. »}\\
         for instance single electron triggers, to
         selection requiring the coincidence of several objects with topological conditions
         on them, such as a muon plus several jets. Generally speaking, the total rate of
-        a given signature decreases as the variety and number of objects it contains increases.
+        a given signature decreases as the variety and number of objects it contains increase.
         It is therefore possible to put lower threshold on complex selections compared to
         simpler ones: for instance, the $\pT$ thresholds for an $e+\mu$ trigger can typically
         be set to lower values compared to a dimuon trigger for the same rate, itself having
         lower thresholds than a single muon trigger.
 
         If the events pass any of the selection in the L1 menu, it is handled to the HLT.
-        The HLT selection consists of a much larger list of path compared to L1.
+        The HLT selection consists of a much larger list of paths compared to the L1.
         It is done on a computer farm able to perform a full reconstruction
         of the objects present in the event, including the information from the tracker.
         This reconstruction aims to be as close and accurate as possible as compared to the
         offline reconstruction described in the next sections.
         However, some particular techniques may not be used if they are too expensive in
-        terms of CPU. Furthermore, the processing steps are carefully designed in order to
+        terms of CPU ressources. Furthermore, the processing steps are carefully designed in order to
         optimize the processing time, especially by working as much as possible with steps
         of increasing complexity and possibly filtering some of the events in the middle
         of the procedure. For instance, selection steps involving only calorimeters and
-        muon detectors are performed before any tracking reconstruction is required, as it
-        is a CPU intensive step. Once an event is selected, it is stored to be used in
+        muon detectors are performed before any tracking reconstruction is required, as this
+        last step is CPU intensive. Once an event is selected, it is stored to be used in
         offline physics analysis.
 
         \subsection{Object and event reconstruction}
 
-        After recording an event, the outputs of each subdetectors
+        After recording an event, the outputs of each subdetector
         are analyzed to identify the nature and properties of particles produced in the
         event. Ultimately, one want to reduce step by step the complexity of an event to
         something physically understandable. Here, we briefly present some of the
         cornerstones of the CMS reconstruction. First, the tracking and vertexing steps
         correspond to the identification of tracks left by charged particles in the tracker
         and the collision vertices. This step is a crucial point for the second part, the
-        particle flow algorithm which combines measurement from the tracker, muon systems
+        particle flow algorithm, which combines measurements from the tracker, muon systems
         and calorimeters to produce a collection of reconstructed particles. In a third step,
         jets of particles can be constructed using clustering algorithms to reach the original
         parton momentum and direction, and a general momentum imbalance can be computed
-        to sign the production of particles that escapted detections.
+        to sign the production of particles that escaped detection.
 
             \subsubsection{Tracking and vertexing \label{sec:trackingAndVertexing}}
 
-        The challenge to which the tracking step must respond to find and reconstruct
-        tracks left by thousands of particles produced in each bunch crossing, among the
-        many hits in each layers. If badly designed, this step can lead to increased
-        computing time because of the large possible combination of hits one has to try,
-        or a high fake rate. The tracking algorithm must therefore be efficient in time,
-        but also have a good reconstruction efficiency and a low fake rate.
+        The challenge that the tracking step must address is to use the hits in the
+        tracker layers to find and reconstruct the tracks of the $\orderOf{1000}$ charged
+        particles produced in each bunch crossing. If badly designed, this step can lead
+        to increased computing time because of the large possible combination of hits one
+        has to try, or a high fake rate. The tracking algorithm must therefore be efficient
+        in time, but also have a good reconstruction efficiency and a low fake rate.
 
         The CMS tracking algorithm \cite{CMStracking} starts by constructing seeds from pairs or triplets of hits
         in the pixel detector, compatible with the beamspot. Then, assuming that these
         hits are coming from a charged particle, the trajectory is extrapolated to the
         next layers. If a hit is found compatible with the extrapolation, it is used to
-        update the track parameters estimation. Finally, once some criterias are reached,
+        update the track parameters estimation. Finally, once some criteria are reached,
         such as no more hits to be expected in the detector, the algorithm stops and a
         final fit is performed to determine the track parameters. Then, an iterative procedure removes the
         hits associated to reconstructed tracks, and repeats the track reconstruction
-        from new seeds with looser criterias.
+        from new seeds with looser criteria.
         The track reconstruction efficiency for muons is found to be very good as it is
         higher than 99\% up to $\abseta \sim 2.4$, whereas for pions the efficiency varies
         between 85 and 95\% depending on $\pT$ and $\eta$. \reffig{fig:trackingAndVertexingPerf}
         shows on the left the relative resolution on the $\pT$ of isolated muons, which
         is typically about 1-2\% in the barrel and for $10 < \pT < 100\GeV$.
 
-        Reconstructed tracks are used to identify collision vertices, or primary vertices
-        (as opposed to secondary vertices which occur for example in the hadronization of $b$ quarks).
-        Only good quality tracks are used in the process, based on their
+        \insertTwoFigures{trackingAndVertexingPerf}
+                         {CMS/trackingPtResolution}
+                         {CMS/vertexingZResolution}
+                         {0.49}
+                         {On the left: relative resolution in $\pT$, as function of the $\pT$, for the
+                         tracking of isolated muons in the different $\abseta$ intervals corresponding
+                         to the barrel,
+                         the transition region and the endcap ; the solid and open dots correspond respectively
+                         to a half-width of 68\% and 90\%. On the right: absolute resolution on the
+                         primary position as function of the number of tracks of the vertex,
+                         for two kinds of events \cite{CMStracking}.}
+
+        Reconstructed tracks are used to identify collision vertices, called primary
+        vertices\footnote{As opposed to secondary vertices which occur for example in the
+        hadronization of $b$ quarks.}. Only good quality tracks are used in the process, based on their
         compatibility with the beam spot, the number of hits and their fit quality. A
         metric is defined from the closest approach of the track to the $z$-axis and
         the associated uncertainty coming from the track measurement. Then, a deterministic
@@ -2198,31 +2223,20 @@ little world. »}\\
         78 vertices reconstructed. Finally, the primary collision vertex is defined as the
         vertex with highest $\sum_\text{tracks} ({\pT}^2)$.
 
-        \insertTwoFigures{trackingAndVertexingPerf}
-                         {CMS/trackingPtResolution}
-                         {CMS/vertexingZResolution}
-                         {0.49}
-                         {On the left: relative resolution in $\pT$ and as function $\pT$ for the
-                         tracking of isolated muons in the different $\abseta$ intervals corresponding
-                         to the barrel,
-                         the transition region and the endcap ; the solid and open dots correspond respectively
-                         to half-width of 68\% and 90\%. On the right: absolute resolution on the
-                         primary position as function of the number of tracks of the vertex,
-                         and for two kinds of events. \cite{CMStracking})}
-
-        \insertFigure{CMS/vertexing}{0.7}{Zoom on the beamspot region of an impressing event
+        \insertFigure{CMS/vertexing}{0.8}{Zoom on the beamspot region of an impressing event
         containing 78 reconstructed vertices.}
 
             \subsubsection{Particle flow algorithm}
 
-        The particle flow algorithm \cite{particleFlow} role is to efficiently combine the output of each
-        subdetectors to reconstruct each single particles according to their nature. Thanks
+        The role of the particle flow algorithm \cite{particleFlow} is to efficiently combine the output of each
+        subdetector to reconstruct each kind of particle according to its nature. Thanks
         to a development before the data taking, it has quickly become the most common
-        method of reconstruction used to physics analysis such as cross-section measurements
+        method of reconstruction used for physics analysis such as cross-section measurements
         and searches for new physics. Particle flow is especially relevant in the context
         of jet clustering that will be presented in the next section: the tracker provides
         key information such as the direction at the vertex for low $\pT$ charged particles
-        whereas the calorimeters are better suited for high $\pT$ regime and neutral particles.
+        whereas the calorimeters are better suited in the high $\pT$ regime and for neutral
+        particles.
 
         To combine the outputs of the subdetectors, links are created between elements
         to create blocks. Given the granularity of the detector, blocks are typically made
@@ -2252,9 +2266,9 @@ little world. »}\\
         \cite{GSFelectrons} which takes this phenomena into account. The final identification
         involve criteria on the tracking, calorimetric and compatibility variables.
 
-        After the charged leptons identification, criterias are applied on the remaining
+        After the charged leptons identification, criteria are applied on the remaining
         tracks and those are considered to be charged hadron candidates. Their energy
-        and momentum is computed either from the track alone assuming a charged pion
+        and momentum are computed either from the track alone assuming a charged pion
         hypothesis, or by combining the track and calorimeter information which is relevant
         in particular at high $\pT$ or large $\eta$ where the tracker resolution is
         degraded. Finally, after substracting the energy deposits from charged particles
@@ -2265,10 +2279,10 @@ little world. »}\\
 
         The concept of jets refer to collimated bunches of stable hadrons coming from partons
         (quarks or gluons) after they fragment and hadronize. Reconstructing jets can
-        therefore yields information regarding quarks or gluons produced in the event.
+        therefore yield information regarding quarks or gluons produced in the event.
         However, it can not be stressed enough that there is no direct equivalence between
-        a jet and a parton: a jet is fundamentally an ambigous object as one parton
-        shower can overlap with another, and their definition is given by the choice
+        a jet and a parton: the interpretation of a jet is fundamentally ambiguous as one
+        parton shower can overlap with another, and their definition is given by the choice
         of algorithm to reconstruct them. Moreover, a jet can be contaminated by other
         hadronic activity in the event, such as pile-up, which can degrade the energy
         and angular resolution. Jet physics is therefore a very rich topic and a field
@@ -2276,23 +2290,22 @@ little world. »}\\
         reconstruction, calibration and study of the jet substructure.
 
         Two main categories of algorithms exist to build jets: cone-based algorithm and
-        incremental clustering algorithm. CMS mainly use two incremental clustering
+        incremental clustering algorithm. CMS mainly uses two incremental clustering
         algorithms. The starting point is the definition of the metric between objects in the
         event, which may be for instance the energy deposits in the calorimeters or the
         particle flow collection. The main algorithm is called anti-$k_T$ \cite{antiKt} and uses a metric
         defined by
         \eq{jetClusteringMetric}
         {
-            d_{ij} \definedAs \text{min}(p^{2p}_{T,i},p^{2p}_{T,j}) \frac{\Delta R^2}{r^2}
+            d_{ij} \definedAs \text{min}(p^{2p}_{T,i},p^{2p}_{T,j}) \frac{\Delta R^2_{ij}}{r^2}
         }
         where $p = -1$ for anti-$k_T$, $p_{T,i}$ (resp. $p_{T,j}$) is the value of the transverse momentum of
-        the $i$-ish (resp. $j$-ish) oject, and $r$ is a size parameter, analogous to the size of a cone and
-        typically equal to 0.5 for CMS during Run I. Objects with the smallest
-        $d_{ij}$ in the event and the corresponding objects are merged together into a
-        jet. The procedure is repeated until all the objects have larger $d_{ij}$ than
-        $r$. In the
+        the $i$-ish (resp. $j$-ish) object, and $r$ is a size parameter, analogous to the size of a cone and
+        typically equal to 0.5 for CMS during Run I. Objects with the smallest $d_{ij}$ are
+        merged together into a protojet. The procedure is repeated until all the objects have
+        larger $d_{ij}$ than $r$. In the
         simple case with one high-$\pT$ object surrounded by several softer objects, this
-        object will aggregate all the softer ones and the result is a cone-like jet. When
+        leading object will aggregate all the softer ones and the result is a cone-like jet. When
         there are two or more high-$\pT$ objects in the event, they either get merged into
         a single jet ($\Delta R < r$) with a cone-like shape around their barycenter, or
         lead to two separated jets ($\Delta R > r$) where the dominant object will first
@@ -2323,7 +2336,7 @@ little world. »}\\
         calorimeter-based jets. In terms of $\pT$ resolution, the reconstructed $\pT$ is
         roughly within $90\% \pm 15\%$ of the generated $\pT$ for the particle-flow jets
         when $40 < \pT^\text{gen.} < 60\GeV$, whereas it is within $50\% \pm 15\%$ for
-        calorimeted-based jets. This bias in the reconstructed transverse momentum, called
+        calorimeted-based jets \cite{particleFlow}. This bias in the reconstructed transverse momentum, called
         jet energy scale, is typically due to thresholds and inefficiencies in the calorimeters
         and can be measured and corrected after the jet reconstruction. This correction is
         typically parametrized as function of $\pT$ and $\eta$.
@@ -2331,8 +2344,8 @@ little world. »}\\
         \insertTwoFigures{jetEfficiencies}
         {CMS/jetMatchingEfficiency}
         {CMS/jetResolution}{0.49}
-        {Comparison \cite{particleFlow} of some performances for the jet reconstruction using particle flow as
-        input compared to a calorimeter-based approach. On the left, jet matching efficiency
+        {Comparison of some performances for the jet reconstruction using particle flow as
+        input compared to a calorimeter-based approach \cite{particleFlow}. On the left, jet matching efficiency
         as function of the generated $\pT$ in the central region $\abseta < 1.5$, effectively
         corresponding to the probability of succesfully reconstructing a jet within
         $\Delta R < 0.1$ of the generated parton. On the right, relative difference between
@@ -2351,21 +2364,22 @@ little world. »}\\
         It is possible to infer information about the production
         of such particles via the energy-momentum conservation in the transverse plane\footnote{The
         longitudinal plane can however not be used, since the two incoming partons carry
-        different momenta.}. A significant imbalance may reveal the momentum carried by
-        the sum of invisible particles. We define the missing transverse energy as:
+        different, unknown momenta.}. A significant imbalance may reveal the momentum carried by
+        the sum of invisible particles. We define the missing transverse energy as the
+        sum of transverse momenta:
         \eq{ETmissDefinition}
         {
-            \MET \definedAs - \sum_{\text{objects}} \vec{\pT}.
+            \vec{\MET} \definedAs - \sum_{\text{objects}} \vec{\pT}.
         }
         In this formula, one must define what are the objects to consider and this choice
-        leads to several possible reconstruction, such as calorimeter-based, track-based
-        or PF-based $\MET$. Several effects may lead to articial $\MET$ in addition to the
-        actual contribution of invisible particles, which can be classified in two categories:
+        leads to several possible reconstructions, such as calorimeter-based, track-based
+        or PF-based $\MET$. Several effects may lead to artificial $\MET$, in addition to the
+        genuine $\MET$ from invisible particles, which can be classified in two categories:
         intrinsec condition and resolution of the detector, for instance the jet energy
         resolution ; and misreconstruction of the events or mismeasurement in the
         operation of the detector, for instance in the operating of the laser correction
-        of the ECAL. One of the challenge of $\MET$ reconstruction is therefore to identify
-        and understand the different sources of unphysical missing energy as well as bias and
+        of the ECAL. One of the challenges of $\MET$ reconstruction is therefore to identify
+        and understand the different sources of unphysical missing energy as well as biases and
         smearing, and either correct them to improve the resolution or veto the corresponding
         events.
         \reffig{fig:METspectrum}, on the left, shows how sources of unphysical $\MET$
@@ -2377,10 +2391,10 @@ little world. »}\\
             \centering
             \includegraphics[width=0.53\textwidth]{CMS/MET/cleaning}
             \includegraphics[width=0.45\textwidth]{CMS/MET/spectrumInZmumu}
-            \caption{On the left, comparison \cite{METperf} of data with simulation of the
+            \caption{On the left, comparison of data with simulation of the
             particle-flow based $\MET$ distribution, before and after cleaning of the events
             likely to contain unphysical $\MET$. On the right, distribution of $\MET$ in
-            a $Z \rightarrow \mu\mu$ enriched sample. }
+            a $Z \rightarrow \mu\mu$ enriched sample \cite{METperf}. }
             \label{fig:METspectrum}
         \end{figure}
 
@@ -2396,10 +2410,10 @@ little world. »}\\
         system due to initial state radiations, and also as function of the pile-up in the
         event, as presented on \reffig{fig:METresolution}. We introduce $\vec{q_T}$,
         the measurement of the energy-momentum of the $Z$ from the dimuon system, i.e.
-        $\vec{q_T} \definedAs (\vec{p}_{\mu_1} + \vec{p}_{\mu_2})$. We use all the other
-        reconstructed particles in the event to define $\vec{u}_T \definedAs \sum_{\text{non-}\mu} \vec{p}_i$,
+        $\vec{q_T} \definedAs (\vec{p}_{T,\mu_1} + \vec{p}_{T,\mu_2})$. We use all the other
+        reconstructed particles in the event to define $\vec{u}_T \definedAs \sum_{\text{non-}\mu} \vec{p}_{T,i}$,
         which in the ideal case should correspond to the energy momentum of the sum of the
-        ISR and perferctly balance with $\vec{q}_T$. Finally, we introduce $u_{||}$ as the
+        ISR and perfectly balance with $\vec{q}_T$. Finally, we introduce $u_{||}$ as the
         projection of $\vec{u}_T$ on the axis defined by $\hat{q}_T \definedAs \vec{q}_T
         / q_T$, i.e. $u_{||} \definedAs \vec{u}_T . \hat{q}_T$.
 
@@ -2410,8 +2424,8 @@ little world. »}\\
             \caption{On the left, measurement of the ratio $-u_{||}/q_T$ as function of $q_T$
             in $Z\rightarrow\mu\mu$, $Z\rightarrow e e$ and $\gamma$+jets events using
             the particle-flow based $\MET$. On the right, measurement of the resolution of
-            $u_{||}$ as function of the number of reconstructed vertices, for
-            $Z\rightarrow\mu\mu$ events.}
+            $u_{||}$ as function of the number of reconstructed primary vertices, for
+            $Z\rightarrow\mu\mu$ events \cite{METperf}.}
             \label{fig:METresolution}
         \end{figure}
 
@@ -2422,7 +2436,7 @@ little world. »}\\
         pile-up activity since more hadronic activity tends to increase jet energy
         mismeasurement.
 
-        \section{Collisions and detector simulations}
+        \section{Collisions and detector simulations \label{sec:simu}}
 
             After registering the events from the detector, and reconstructing the particles
             produced, one needs a mean to compare the experiment with theories. Given
@@ -2430,7 +2444,7 @@ little world. »}\\
             underlying events and pile-up, and the complexity of the detector, the distribution
             of observables can not in the general case be predicted analytically. One must
             instead rely on Monte-Carlo generations and an accurate detector simulation.
-            Such simulation can also help in designing the detector in the first place, for
+            Such a tool can also help in designing the detector in the first place, for
             instance by studying the performances on a given process, all the way
             from the hard scattering to the objects after reconstruction.
 
@@ -2438,11 +2452,12 @@ little world. »}\\
             is implemented and the feynman rules associated to the Lagrangian are computed.
             Then, for a given process, a Monte-Carlo generator computes all possible
             feynman diagrams up to a given order, and randomly generates hard-scatterings.
-            To these hard-scatterings are added the underlying event, initial and
+            To these hard-scatterings are added the underlying event as well as initial and
             final state radiations, and the quarks are hadronized. Finally the particles
-            are propagated to the detector and its response is simulated.
+            are propagated to the detector and its response is simulated, after which
+            the reconstruction process is essentially the same as for data.
 
-            \subsection{Monte-Carlo generations of the hard scattering}
+            \subsection{Monte-Carlo generation of the hard scattering}
 
             To get a better idea on how Monte-Carlo event generation of the hard scattering
             is performed, it is useful to take a simple example such as the diagram
@@ -2463,7 +2478,7 @@ little world. »}\\
             element is, for a given diagram, a number computable from the feynman rules.
             To generate events according to this simple process, one may draw random
             values of $cos(\theta)$ and $\phi$, uniformly distributed in $[-1, 1]$ and
-            $[0,2\pi]$ respectively. From the mass constraint and the directions of the
+            $[0,2\pi]$ respectively. From the masses constraints and the directions of the
             decay products, it is then possible to compute the quadri-momentum of the products.
 
             The value of $d\sigma$ is directly related to the probability for this event
@@ -2487,20 +2502,19 @@ little world. »}\\
             induces an exponentially growing number of diagrams to consider, and one must
             find adequate ways to implement this from a purely software point of view.
 
-            Finally, this description focused on tree-level diagrams, but a more accurate
+            Finally, the previous description focused on tree-level diagrams, but a more accurate
             description of the processus can be obtained if one is able to take into account higher order
             diagrams (NLO, NNLO, ...). Generally speaking, NLO is more difficult to
-            automatize and, even though software are now able to handle NLO generation, is
+            automatize and, even though softwares are now able to handle NLO generation, it is
             currently an active field of development.
 
+            \subsection{Hadronization}
 
-            \subsection{Hadronization and hadron decays}
-
-            Partons are affected by the strong interaction and cannot exist in free state, as discussed in
-            \refsection{sec:strongInteraction}. If partons move away from each other
-            with a sufficient energy, this energy will be used to create new colored
+            Partons are affected by the strong interaction and cannot exist in free state,
+            as discussed in \refsection{sec:strongInteraction}. If partons move away from
+            each other with a sufficient energy, this energy will be used to create new colored
             particles and bind into hadrons forming a jet of particles collimated in the
-            direction of the initial partons. This processus is referred to as hadronization,
+            direction of the initial partons. This process is referred to as hadronization,
             and is a crucial point of event generation as it determines the structure
             of generated jets.
 
@@ -2511,7 +2525,7 @@ little world. »}\\
             the parton showering (so-called soft emission) may correspond to an additional
             parton during the generation of the hard process (so-called hard emission),
             ultimately causing double counting and biasing the event set. To solve this
-            problem, a factorization prescription, called a matching scheme, must be define
+            problem, a factorization prescription, called a matching scheme, must be defined
             to remove this double counting.
 
             There are different techniques to simulate hadronization \cite{MCGenPDG}. In particular, the
@@ -2527,14 +2541,14 @@ little world. »}\\
             So far, however, hadronization models contain free parameters which are not known,
             essentially due to our lack of understanding at this point of non-perturbative
             QCD. Therefore, the free parameters in these models must be tuned according to
-            experiment.
+            experiments.
 
             \subsection{Detector simulation}
 
             Now knowing the final state after hadronization and decay of the hadrons, we
             want to put the events in the context of a bunch crossing at the LHC. In
             particular, we need to take into account the pile-up. To do so, a number of
-            PU collisions is drawn according to distribution similar to the
+            pile-up collisions is drawn according to a distribution similar to the
             one expected in the data. Pile-up collisions are added to the event from a
             set of pre-generated and hadronized events.
 
@@ -2554,10 +2568,10 @@ little world. »}\\
             directly to the hits in the tracker and muon systems, and to the showers
             in the calorimeter towers. Hence, the same low-level information as for the
             full simulation is obtained, i.e. hits and energy deposits as measured by
-            the electronics, but avoiding the CPU-intensive simulation of the radiation-matter interaction
-            from \textsc{Geant4}, and the same reconstruction algorithms can be applied.
-            Overall, the detector simulation is sped up by a factor 100-400 depending whehter
-            pile-up is included or not.
+            the electronics, and the same reconstruction algorithms can be applied.
+            Overall, avoiding the CPU-intensive simulation of the radiation-matter interaction
+            in \textsc{Geant4} allows to speed up the simulation by a factor 100-400
+            depending whether pile-up is included or not.
 
 %==============================================================
 
@@ -2727,7 +2741,7 @@ The Doctor: I threw it in a supernova. »}
     \subsubsection{Secondary vertex}
 
     As discussed in \refsection{sec:trackingAndVertexing}, the resolution on the primary
-    vertex position varies between 100 and 10~$\mum$. This is less than the typical decay length
+    vertex position varies between 100 and 10~$\mu$m. This is less than the typical decay length
     of a $B$ hadron, which makes it possible to attempt to reconstruct the corresponding
     secondary vertex. This can be done using adaptive vertex fitting techniques \cite{AdaptiveVertexFitting},
     similar to the technique used for primary vertices identification, but using parameters
@@ -3049,9 +3063,9 @@ The Doctor: I threw it in a supernova. »}
     The validation work is made on four different samples in order to cross-check results
     and factorize the impact of pile-up or simulation type:
     \begin{itemize}
-        \item a $t\bar{t}$ sample with with pile-up and full simulation of the detector
-        \item a $t\bar{t}$ sample with no pile-up and full simulation of the detector
-        \item a $t\bar{t}$ sample with no pile-up and fast simulation of the detector
+        \item a $t\bar{t}$ sample with pile-up, and full simulation of the detector
+        \item a $t\bar{t}$ sample without pile-up, and full simulation of the detector
+        \item a $t\bar{t}$ sample without pile-up, and fast simulation of the detector
         \item a QCD sample with $50 < \hat{\pT} < 120\GeV$, with $\hat{\pT}$ characterizing
             the energy of the process, and full simulation of the detector
     \end{itemize}
@@ -3932,7 +3946,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     The single electron trigger requires an electron candidate with $\pT > 27\GeV$. Because
     the reconstruction of electron is more challenging and subject to fakes than muons,
-    criterias are applied on the shower shape, the matching between track and supercluster,
+    criteria are applied on the shower shape, the matching between track and supercluster,
     and the ratio between hadronic and electromagnetic energy. In the context of this analysis,
     the efficiency of this trigger ranges from 86\% to 97\% depending on the $\pT$ of the
     electron.
@@ -4099,7 +4113,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
        Selected jets are required to have $\pT > 30 \GeV$ and $\abseta < 2.4$. They also
        have to be separated from lepton candidates in $\Delta R > 0.4$ and to pass a jet
-       identification criteria with loose requirements on the neutral and
+       identification criterion with loose requirements on the neutral and
        charged fractions, charged multiplicity and number of constituents \cite{JetID}.
        Furthermore, a pile-up identification algorithm is used which combine the vertex
        compatibility, the topology of the jet shape and the jet object multiplicity into
@@ -4470,9 +4484,9 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
                          preselection requiring at least 1 high-$\pT$ electron or muon,
                          and at least three jets has been applied.}
 
-        To take advantage of this phenomenological aspect, one can design criterias to
+        To take advantage of this phenomenological aspect, one can design criteria to
         select jets that are likely to originate from ISR \cite{ISRGluinoTevatron, ISRtagging}.
-        In the present analysis, we define the ISR-tagging criteria as asking that
+        In the present analysis, we define the ISR-tagging criterion as asking that
         the event contains at least five jets, among which one of them with $\pT > 200 \GeV$
         and not $b$-tagged. To illustrate this, \reffig{fig:variables/leadingNonBPtN5}
         shows the distribution of the $\pT$ of the leading non $b$-tagged jet for
