@@ -35,7 +35,7 @@
 \hspace*{0.3cm}I... A universe of atoms,\\
 \hspace*{0.3cm}An atom in the universe. »}\\
 \vspace*{0.4cm}
-\hspace*{2cm}Richard Feynman
+\hspace*{1cm}Richard P. Feynman
 \end{minipage}
 
 \emptypage
@@ -63,7 +63,7 @@ personnal Yoda when it comes to computer science ; A-S. Cordan and Y. Leroy for 
 on quantum physics and scientific computing, and the internship with them ; B. Fuks for its
 excellent lecture on the theory of the Standard Model
 
-I also want to give warm thanks to my two supervisors, who are among the best supervisors
+I want to give warm thanks to my two supervisors, who are among the best supervisors
 one can wish to have: Caroline, for her communicative cheerfulness, her encouragments and
 for always making sure the work is recognized - and Eric, for his implication, his rigor
 and calm that became a model, and the many interesting discussions. Both of them provided
@@ -72,11 +72,12 @@ me with continous, crucial feedbacks to make me progress on all the aspects of t
 
 Thanks also to Michael, who have been my officemate for more than two years and whom with
 I had many professionnal and unprofessional discussions, allowing me to step back from
-my own work and not becoming crazy about it :). I will certainly miss the fellowship of
-the coffee break, in particular the legendary \emph{c'est pas facile} of Jeremy (or
-as he calls himself, Jean-Remy :D), the mythical expressions of Xavier, the ambiguous and
-witty puns of Pierre and Thierry, the unswerving generosity of Jean-Eric, the enthusiasm
-of Nicolas, the serenity of Jean-Laurent, the spicy political anecdotes of Jean-Marie,
+my own work and not becoming crazy about it :). Congratulations on your astonishing imitation
+of Abu from Aladdin ! I will certainly miss the fellowship of
+the coffee break, in particular the legendary \emph{c'est pas facile} of Jeremy (Jean-Remy :D),
+the mythical expressions of Xavier, the ambiguous and witty puns of Pierre and Thierry,
+the unswerving generosity of Jean-Eric, the enthusiasm of Nicolas, the serenity of
+Jean-Laurent, the spicy political anecdotes of Jean-Marie,
 
 
 Lorenzo
@@ -99,12 +100,13 @@ and reminding me why I decided to do research in the first place.
 \emptypage
 \thispagestyle{empty}
 
+\singlespace
 \dominitoc
 \renewcommand{\leftmark}{Contents}
 \tableofcontents
+\onehalfspacing
 
-%\emptypage
-\newpage
+\emptypage
 
 \setcounter{page}{1}
 \pagenumbering{arabic}
@@ -856,21 +858,22 @@ little world. »}\\
     interaction.
 
     At high energies, i.e. short distances, two colored particles are not much affected by
-    each other presence, a phenomenon referred to as asymptotic freedom. In comparison, if one
+    each other presence, a phenomenon referred to as asymptotic freedom \cite{AsymptoticFreedom}. In comparison, if one
     would consider the analogous situation in electromagnetism, two charged particles close to
     each other feel important attraction or repulsion and are therefore not free. In this
     regime, $\alpha_S$ is small and a reasonably good understanding and predictions can
-    be obtained from perturbative QCD. \refNeeded
+    be obtained from perturbative QCD.
 
     At low energies, i.e. long distances, the intensity of the interaction grows. As a
     consequence, to split a hadron into individual quarks, someone will need to give energy
     to the system up to the point where this energy will be converted into new colored
     particles coming out of vacuum, and will form new hadrons. This leads to the concept of
-    confinement and explains why it is not possible to observe free quarks or gluon in nature.
+    confinement and explains why it is not possible to observe free quarks or gluon in nature
+    \cite{QCDConfinment}.
     Interestingly, confinement is a property which is still not completely demonstrated from
     a mathematical point of view. Moreover, confinement results in hadrons, such as the
     proton, having a structure that cannot be computed from perturbative QCD. One must
-    instead rely on experimental measurements. \refNeeded
+    instead rely on experimental measurements.
 
     In the context of high energy physics, confinement translates into the production of
     jets of hadrons when quarks or gluons are produced in collisions. Jet physics is
@@ -888,22 +891,25 @@ little world. »}\\
     \subsection{The success of the Standard Model \label{sec:standardModelSuccess}}
     %====================================================================================
 
-    \todo{phrase de liaison}
-
-    The Standard Model includes 19 free parameters: nine fermion masses, one scalar mass,
-    three coupling parameters, four quark mixing matrix parameters, the Higgs vacuum expectation
-    value and the strong CP-violating phase.
+    Let us now brielfly review the success of the Standard Model. It includes 19 free
+    parameters: nine fermion masses, one scalar mass, three coupling parameters, four quark
+    mixing matrix parameters, the Higgs vacuum expectation value and the strong CP-violating
+    phase.
 
     The physical observables such as the cross-section associated to a given process
     can be predicted following a perturbative development. For instance, the observation
     of the process $e^+ e^- \rightarrow \mu^+ \mu^-$ in a theory containing only a $U(1)_Q$
     interaction is given by the superimposition of several processes as represented on
     \reffig{fig:perturbativeDevelopment}. A given observable can be computed at leading-order
-    (LO) by considering only the first diagram in the development, or next-to-leading-order (NLO) \todo{clarify in terms of $\alpha$}
-    and so on with increasing accuracy. As one consider higher orders diagrams, one may start
+    (LO) by considering only the first diagram in the development or next-to-leading-order (NLO)
+    and so on with increasing accuracy. For instance on \reffig{fig:perturbativeDevelopment},
+    if $\alpha$ characterize the strength of the $ee\gamma$ and $\mu\mu\gamma$ vertex, then
+    the LO diagrams corresponds to terms proportionnal to $\alpha^2$ while NLO diagrams
+    corresponds to terms proportionnal to $\alpha^4$. As one consider higher orders diagrams,
+    one may start
     to be sensitive to other parts of the Lagrangian. For instance, if we now include QCD in
     the previous example, and consider higher order diagrams, we will eventually have diagrams
-    containing gluon loops to top loops. This makes virtually any observable sensitive,
+    containing gluon loops or top loops. This makes virtually any observable sensitive,
     to some extent, to all Nature's Lagrangian. Therefore, precise measurements of observables
     allow to check the consistency of the theory, and any significant deviation between
     theory and experiment could be interpreted as caused by a missing piece in the theory.
@@ -935,7 +941,7 @@ little world. »}\\
 
     In this perspective, the parameters and the consistency of the Standard
     Model have been extensively measured and tested in several experiments, in particular
-    at the LEP collider \refNeeded, the Belle and BaBar experiments \refNeeded, and at the Tevatron collider \refNeeded. In 2012,
+    at the LEP collider \cite{LEP}, the Belle and BaBar experiments \cite{BelleAndBabar}, and at the Tevatron collider \cite{Tevatron}. In 2012,
     the CMS and ATLAS experiments at the LHC discovered the last remaining particle of the
     Standard Model, the Higgs Boson with a mass $\mass{h} \sim 125\GeV$ \cite{CMSHiggs,ATLASHiggs}. The mass
     spectrum of the particles of the Standard Model is summarized on \reffig{fig:theory/fermionMasses} and
@@ -1257,7 +1263,7 @@ little world. »}\\
         in the concept of an hidden sector. There are several possibilities to describe
         the link between the Standard Model and this hidden sector, for instance by assuming
         that the Higgs boson relates the two sectors, or by introducing a new $U(1)_H$ gauge
-        group whose gauge boson would be a ``dark'' photon \refNeeded.
+        group whose gauge boson would be a ``dark'' photon \cite{darkPhoton}.
 
         Finally, one elegant idea to try to explain the lightness of the Higgs boson is to
         consider it as a composite object \cite{LittleHiggs, CompositeHiggs}. This idea is
@@ -1285,19 +1291,17 @@ little world. »}\\
         fine-tunning in the hierarchy problem and the arbitrariness of the other parameters
         of the theory.
 
-        The anthropic principle states that when studying the universe, it
-        should be taken into account that conscious life is possible in it. It might be
-        that our universe is simply one realization of universe among many others in what
-        would be called a multiverse. What appears to be fine-tunning would in fact be
-        equivalent to natural selection at the scale of the multiverse where the observed
-        universes can only be the ones allowing conscious life.
+        The anthropic principle states that when studying the universe, it should be taken
+        into account that conscious life is possible in it. It might be that our universe
+        is simply one realization of universe among many others in what would be called a
+        multiverse. What appears to be fine-tunning would in fact be equivalent to natural
+        selection at the scale of the multiverse where the observed universes can only be
+        the ones allowing conscious life \cite{AnthropicPrincipleBarrow, StarsInOtherUniverses}.
 
-        This view is however controversial as it yields very little, if not no, testable
-        prediction apart, for instance, understanding how likely life would be if the parameters of
-        the Universe would have been different \cite{StarsInOtherUniverses}.
-
-        \todo{ref Aurélien Barrau - Quelques éléments de physique et de philosophie des
-        multivers}
+        This view is however controversial, as it is not clear at this point what kind of
+        testable prediction such an idea can provide. It nevertheless remains a legitimate
+        hypothesis and questions the place and origin of the universe. A more extensive
+        and interesting discussion can be found in \cite{MultiversBarrau}.
 
         \subsection{Supersymmetry \label{sec:SUSY}}
 
@@ -1860,7 +1864,7 @@ little world. »}\\
 
     \section{The Compact Muon Solenoid experiment \label{sec:CMSexperiment}}
 
-        The Compact Muon Experiment experiment \refNeeded is one of the four experiments installed
+        The Compact Muon Experiment experiment is one of the four experiments installed
         at the collision points of the LHC. It is a general purpose experiment, though mostly dedicated
         to the study of $pp$ collisions, in particular to test the validity of the Standard
         Model at the TeV scale, to understand the electroweak symmetry breaking, and to search for new physics. From this
@@ -1871,13 +1875,12 @@ little world. »}\\
         from a scientific point of view to be able to cross-check any possible discovery
         by one experiment with another one as independent as possible from the first.
 
-        \todo{rework this paragraph} So far, the CMS experiment, through the analysis of the Run I data at
+        So far, the CMS experiment, through the analysis of the Run I data at
         $\sqrt{s} = 7$ and $8\TeV$, allowed significant improvements on the precision measurements
-        of the Standard Model, and complemented the measurements of ALICE on heavy-ions
-        and LHCb on flavor physics. In April 2012, the collaboration reported the discovery
-        of the excited neutral $\Xi^{*0}_b$ baryon \cite{XibBaryon}.
-        In July 2012, CMS and ATLAS claimed evidence for a Standard Model-like Higgs boson
-        at a mass around $125\GeV$ \cite{CMSHiggs, ATLASHiggs}.
+        of the Standard Model, in particular in the top sector, and complemented the
+        measurements of ALICE on heavy-ions and LHCb on flavor physics. In July 2012, CMS
+        and ATLAS claimed evidence for a Standard Model-like Higgs boson at a mass around
+        $125\GeV$ \cite{CMSHiggs, ATLASHiggs}.
 
         In the following subsections, the CMS detector is first introduced generally before inspecting
         each subsystems individually. Then follows the presentation of the trigger system
@@ -1889,8 +1892,8 @@ little world. »}\\
 
             \subsubsection{Physics motivations and detector overview}
 
-        The CMS detector \cite{CMSdetector} is an instrument that answer the fantastic challenges posed by
-        the LHC machine while providing good measurements for physics purpose.
+        The CMS detector \cite{CMSdetector} is an instrument that answer the fantastic
+        challenges posed by the LHC machine while providing good measurements for physics purpose.
         The subsystems of the detector must indeed have a time response of the order of 25 ns,
         corresponding to the design bunch crossing frequency, and to be synchronized with
         each other. The detector must also allow the physicists to disentangle between the
@@ -2625,7 +2628,7 @@ little world. »}\\
 
             Then, we want to simulate the response of the entire CMS subdetectors. To do
             this, a detailed description of the detector is implemented in the software
-            \textsc{Geant4} \refNeeded. Its description can be tuned to study, for instance,
+            \textsc{Geant4} \cite{Geant4}. Its description can be tuned to study, for instance,
             misalignment condition. The interaction between particles emerging from
             the bunch crossing and the detector material is simulated using physical
             models of radiation-matter interaction, eventually generating a signal in
@@ -2739,7 +2742,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     therefore a high $b$-tagging discriminant. The invariant mass of the two $b$ candidates
     is found to be close to $125 \GeV$ \cite{HIG-13-011}.}
 
-    \subsection{$b$ jet discriminating quantities and objects}
+    \subsection{$b$ jets discriminating quantities and objects}
 
     \subsubsection{Track selection}
 
@@ -3429,7 +3432,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
 
     The reference used for this validation is a $t\bar{t}$ sample generated with $\sqrt{s}
     = 14\TeV$. The detector is simulated with the expected geometry for Phase 1 with
-    a pile-up of 50, and the conditions of the technical design report (TDR) \todo{ref phase 1}. The
+    a pile-up of 50, and the conditions of the technical design report (TDR) \cite{Phase1TDR}. The
     comparison is made with a $t\bar{t}$ sample with a Phase 1 aged geometry and a pile-up
     of 140.
 
@@ -4099,14 +4102,23 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     The second veto category targets a $\tau$ lepton that decayed hadronically
     into one or more charged hadron. $\tau$ candidates are reconstructed using the
-    hadron-plus-strips (HPS) algorithm \cite{TauID} \todo{describe principle}. To reject fake
-    $\tau$'s, we use a discriminant based on a multivariate analysis of the parameter and
-    topology of the jet. The medium working point is used, leading to a tagging efficiency
-    around $70\sim80$\% for a fake rate of about 1\% as shown on \reffig{fig:tauVeto_distributions}
-    on the left. The $\tau$ candidates must be separated from an already selected lepton
-    by $\Delta R > 0.4$ and to be oppositely charged. In addition, to reject fakes at low
-    $\pT$ as shown on \reffig{fig:tauVeto_distributions} on the right, we require the $\tau$
-    candidate to have $\pT > 20\GeV$.
+    hadron-plus-strips (HPS) algorithm \cite{TauID}. The reconstruction is based on the excellent
+    performances of the particle-flow, and the topology of the $\tau$ lepton decay containing
+    a low average number of hadrons ($h^\pm$) and $\pi^0$ with a high probability of decay
+    through $\pi^0 \rightarrow \gamma\gamma$. The algorithm therefore reconstruct candidates
+    from jets with low charged multiplicity, and strips of electromagnetic energy
+    deposits along $\phi$. The motivation behind the strips idea is that photons from $\pi^0$
+    are likely to convert to $e^+e^-$ pairs in the tracker material, spreading the energy
+    along $\phi$ as $e^+e^-$ are affected by the magnetic field. Depending on the exact topology,
+    several constrains are applied by the algorithm based on the mass of the $\pi^0$ and
+    $\tau$. After the reconstruction step, to reject fake $\tau$'s, we use a discriminant
+    based on a multivariate analysis of the parameter and topology of the jet. The medium
+    working point is used, leading to a tagging efficiency around $70\sim80$\% for a fake
+    rate of about 1\% as shown on \reffig{fig:tauVeto_distributions} on the left. The $\tau$
+    candidates must be separated from an already selected lepton by $\Delta R > 0.4$ and
+    to be oppositely charged. In addition, to reject fakes at low $\pT$ as shown on
+    \reffig{fig:tauVeto_distributions} on the right, we require the $\tau$ candidate to have
+    $\pT > 20\GeV$.
 
     \insertTwoFigures{tauVeto_distributions}
                      {secondLeptonVeto/tau/taggingEfficiency}
@@ -6261,7 +6273,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 \hspace*{0.6\textwidth} Frank Kafka
 \end{minipage}
 
-\vspace*{1.5cm}
+\vspace*{0.5cm}
 
 During the Run I of the LHC, collisions of proton-proton were produced at the
 energy of $\sqrt{s} = 7$ and $8\TeV$. The analysis of the $5+20\invfb$ of integrated luminosity
