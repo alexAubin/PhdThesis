@@ -131,6 +131,8 @@ a bit unreasonable – bewildering, even enigmatic... “Ladies and gentlemen,�
 
 \vspace*{0.5cm}
 
+\todo{recheck comment from Dirk on intro}
+
 The philosophical and scientific approaches share a common fundamental element, which is to
 question the world around us instead of taking it for granted. When we gaze at the world,
 we see the clouds, the forests and the mountains, the architecture of the buildings in a
@@ -165,7 +167,7 @@ In parallel, during the middle of the century, many experiments investigated the
 of mesons and baryons, which eventually led to the discovery of quarks and quantum chromodynamic.
 Finally, around 1965, the Higgs mechanism was proposed as a way to explain the short range
 of the weak interaction and unify it with electromagnetism. Together, these elements helped
-build the modern Standard Model of particle physics which has since been recognized to be
+to build the modern Standard Model of particle physics which has since been recognized to be
 one of the most successful scientific theory in the history of sciences.
 
 After the discovery of the top quark in 1995 at the Tevatron by the CDF and D0 experiments,
@@ -268,7 +270,7 @@ little world. »}\\
     to the spontaneous electroweak symmetry breaking via the Higgs mechanism. Then,
     \refsection{sec:standardModelShortcomings} discusses the shortcomings of the Standard
     Model with a particular focus on the hierarchy problem and dark matter. Finally,
-    \refsection{sec:beyondTheStandardModel} describes some o the theories beyond the
+    \refsection{sec:beyondTheStandardModel} describes some of the theories beyond the
     Standard Model that attempt to address these shortcomings, and in particular supersymmetry.
 
     \section{Fields and symmetries \label{sec:fieldsAndSymmetries}}
@@ -331,7 +333,7 @@ little world. »}\\
     derive the laws of Nature.
 
     Fields with spin zero, also called scalar fields are usually noted $\phi$. For a free
-    scalar field with mass $m$, the dynamic is described by Klein-Gordon's Lagrangian:
+    complex scalar field with mass $m$, the dynamic is described by Klein-Gordon's Lagrangian:
     \eq{kleinGordonLagrangian}
     {
         \mathcal{L}_\text{free scalar} = \partial_\mu \phi \partial^\mu\phi - m^2 \phi^\dagger \phi.
@@ -368,9 +370,10 @@ little world. »}\\
     between the fields $\phi_{i=1,2,3}$ with strength $k$. It is convenient to
     represent such an interaction using Feynman diagrams which provide a graphical and
     intuitive understanding of what is going on. The Feynman diagram corresponding to the
-    previous term is sketched on \reffig{fig:feynmanDiagramExample}. In a sense, the
-    goal of a particle physicist can be seen as using particles as a mean to understand
-    which fields exist, what their properties are and how they couple with each other.
+    term  $k \cdot \phi_1 \phi_2 \phi_3$ is sketched on \reffig{fig:feynmanDiagramExample}.
+    In a sense, the goal of a particle physicist can be seen as using particles as a mean
+    to understand which fields exist, what their properties are and how they couple with
+    each other.
 
     \insertFigure{feynmanDiagramExample}{0.3}
                  {Example of vertex corresponding to the Lagrangian term
@@ -380,14 +383,14 @@ little world. »}\\
 
     A big part of the theoretical work in particle physics is related to the studies of
     the symmetries of the Lagrangian. One of the most remarkable theorem in physics is
-    called the Noether theorem \cite{Noether}, stating that to every transformation of the space-time
+    called the Noether theorem \cite{Noether}, stating that for every transformation of the space-time
     coordinates and fields that let the Lagrangian invariant, there are two quantities
     called current and charge which are conserved. This is a very powerful theorem as it
     creates a direct link between symmetries and the laws of Nature. Using this theorem on
     space-time symmetries, one can deduce for instance the conservation of energy-momentum
     from invariance of the Lagrangian according to space-time translations.
 
-    However, a particular interest goes into studying internal symmetries of the field,
+    A particular interest goes into studying internal symmetries of the field,
     called gauge symmetries. Gauge transformations are transformations built from a gauge
     group and acting on the fields. They take the form:
     \eq{gaugeTransformation}
@@ -606,8 +609,8 @@ little world. »}\\
 
     In this subsection, we propose to describe explicitly how the introduction of the Higgs field leads
     to the spontaneous breaking of the electroweak symmetry \cite{LectureStandardModelHiggsBoson}.
-    Let's introduce a complex scalar $\phi$, which has a charge $+1$ under $U(1)_Y$, is a
-    doublet under $SU(2)_L$ and a singlet under $SU(3)_C$. As a $SU(2)_L$ doublet,
+    Let's introduce a complex scalar $\phi$, which has a charge $+1$ under $U(1)_Y$, and
+    is a doublet under $SU(2)_L$ and a singlet under $SU(3)_C$. As a $SU(2)_L$ doublet,
     $\phi$ may be written:
     \eq{higgsDoublet}
     {
@@ -652,11 +655,11 @@ little world. »}\\
 
     Because the symmetry is local, we may perform different isospin rotations for different
     values of $x^\mu$ and define the unitary gauge such that $h_1 = \theta_1 = \theta_2
-    = 0$ and $h_2(x^\mu) = v + h(x^\mu)$ with $h = 0$ in vacuum. $v$ therefore corresponds
+    = 0$ and $h_2(x^\mu) = v + h(x^\mu)$ with $h = 0$ in the vacuum. $v$ therefore corresponds
     to the vacuum expectation value of the Higgs field, and $h$ to a longitudinal excitation
     of the field, as summarized on \reffig{fig:theory/higgsPotential}.
     Note that even though this choice is arbitrary, one may work with $h_1$ instead of
-    $h_2$ and would still obtain a consistent picture at the end. In our case, $\phi$
+    $h_2$ and still obtain a consistent picture at the end. In our case, $\phi$
     takes the form
     \eq{higgsDoubletUnitaryGauge}
     {
@@ -672,7 +675,7 @@ little world. »}\\
                  The factor $1/\sqrt{2}$ is omitted for clarity.}
 
     To understand how this field impacts the physics of $SU(2)_L \times U(1)_Y$, let us
-    look at the covariant derivative. We may note $W^{i=1,2,3}$ and $B$ the gauge bosons
+    look at the covariant derivative. We note $W^{i=1,2,3}$ and $B$ the gauge bosons
     and $g_W$ and $g_B$ the coupling constants associated to $SU(2)_L$ and $U(1)_Y$ respectively.
     The covariant derivative writes
     \eqalign{CovariantDerivativeSU2U1}
@@ -699,15 +702,15 @@ little world. »}\\
             g_W W_\mu^+                                                         & - g_{WB} Z_\mu    \\
         \end{pmatrix} \phi,
     }
-    where we introduced:
+    where we introduced the following notation which will become convenient:
     \eqalign{DefinitionAZW}
     {
-        g_{WB}     & = \sqrt{g^2_W + g^2_B} \nonumber\\
-        W^\pm      & = W^1 \pm i W^2        \nonumber\\
+        g_{WB}     & \definedAs \sqrt{g^2_W + g^2_B} \nonumber\\
+        W^\pm      & \definedAs W^1 \pm i W^2        \nonumber\\
         \begin{pmatrix}
             Z \\ A
         \end{pmatrix}
-        & =
+        & \definedAs
         \frac{1}{g_{WB}}
         \begin{pmatrix}
             g_W & -g_B \\
@@ -782,7 +785,7 @@ little world. »}\\
         & =
         - \frac{v+h}{\sqrt{2}}\sum_{i,j} (y^{ij} \bar{E}^i_R E^j_L + \text{h.c.})
     }
-    where h.c. is the conjugate hamiltonian. The matrix $y^{ij}$ is not necessarily diagonal. However we can redefine the flavor
+    where h.c. is the Hermitian conjugate. The matrix $y^{ij}$ is not necessarily diagonal. However we can redefine the flavor
     eigenstates $\Lambda_L$ and $E^i_R$ such that $y^{ij}$ is diagonal. Let's label these
     eigenstates $(e,\mu,\tau)$. We simply obtain:
     \eqalign{YukawaCoupling2}
@@ -798,7 +801,7 @@ little world. »}\\
     \bar{e} e$. Additionally, on the second line, the field $e$ couples to the Higgs boson with strength
     $\frac{y_e}{\sqrt{2}}$. The remaining component of the $\Lambda^i_L$ are relabelled
     $(\nu_{e,L},\nu_{\mu,L},\nu_{\tau,L})$ and remain massless as they don't have any
-    $\nu_R$ counterpart to mix with. The reader should also notice how these mass terms
+    $\nu_R$ counterpart to mix with. It should also be noticed how these mass terms
     for fermions are different from those of the gauge bosons. The masses of gauge bosons
     are directly determined by the electroweak coupling constants and Higgs field expectation
     value while the fermion masses are related to new free parameters $y_$.
@@ -809,12 +812,13 @@ little world. »}\\
     quarks and down-type quarks. We therefore only diagonalize the up-type matrix and
     label the new flavor and mass eigenstates with $(u,s,t)$. For the down-type quarks,
     relabelled with $(d,c,b)$, there remain off-diagonal elements which mix the
-    different flavor eigenstates, corresponding to the so-called CKM matrix.
+    different flavor eigenstates, necessary to describe the data and corresponding to the
+    so-called CKM matrix.
 
     \reftab{tab:StandardModelFieldsAfterElectroweakBreaking} summarizes the observable
     fermions after breaking the electroweak symmetry and their associated charges.
 
-    \begin{table}[b]
+    \begin{table}[h]
         \centering
         \begin{tabular}{|ccc||cc|}
             \hline
@@ -825,7 +829,7 @@ little world. »}\\
             $d$                & $c$                & $b$                 & $\mathbf{3}$ & -1/3 \\
             \hline
             \hline
-            $\nu_{e,R}$        & $\nu_{\mu,R}$      & $\nu_{\tau,R}$      & $\mathbf{1}$ &  0   \\
+            $\nu_{e,L}$        & $\nu_{\mu,L}$      & $\nu_{\tau,L}$      & $\mathbf{1}$ &  0   \\
             $e$                & $\mu$              & $\tau$              & $\mathbf{1}$ & -1   \\
             \hline
         \end{tabular}
@@ -843,7 +847,8 @@ little world. »}\\
     electrodynamic. As $SU(3)$ is a non-abelian group, the gluons are also
     carrying color and interact with each other.
     The adjective \emph{strong} relates to the value of the coupling constant, being larger
-    than the weak interaction by a factor $\orderOf{100}$. The Lagrangian writes:
+    than the weak interaction by a factor $\orderOf{100}$ at the QCD scale which is
+    $\orderOf{200~\text{MeV}}$. The Lagrangian writes:
     \eq{QCDLagrangian}
     {
         \mathcal{L}_\text{QCD} = \bar{\psi} (i \Dslash - m) \psi - \frac{1}{4} G^a_{\mu\nu}G_a^{\mu\nu},
@@ -856,10 +861,9 @@ little world. »}\\
 
     $SU(3)$ is unbroken and therefore its associated gauge bosons, the gluons, are massless.
     Because of this, one could conclude that the range of the strong interaction is infinite
-    just like electromagnetism is. However, it was found that the strong coupling constant
-    $\alpha_S$ tends to zero at high-energies and to infinity at low energies.
-    This leads to the two following key, and rather counterintuitive, features of the strong
-    interaction.
+    just like electromagnetism is. However, the strong coupling constant $\alpha_S$ tends
+    to zero at high-energies and to infinity at low energies. This leads to the two
+    following key, and rather counterintuitive, features of the strong interaction.
 
     At high energies, i.e. short distances, two colored particles are not much affected by
     each other presence, a phenomenon referred to as asymptotic freedom \cite{AsymptoticFreedom}. In comparison, if one
@@ -869,15 +873,15 @@ little world. »}\\
     be obtained from perturbative QCD.
 
     At low energies, i.e. long distances, the intensity of the interaction grows. As a
-    consequence, to split a hadron into individual quarks, someone will need to give energy
-    to the system up to the point where this energy will be converted into new colored
+    consequence, to split a hadron into individual quarks, the system needs energy
+    up to a point where this energy will be converted into new colored
     particles coming out of vacuum, and will form new hadrons. This leads to the concept of
     confinement and explains why it is not possible to observe free quarks or gluon in nature
     \cite{QCDConfinment}.
     Interestingly, confinement is a property which is still not completely demonstrated from
     a mathematical point of view. Moreover, confinement results in hadrons, such as the
-    proton, having a structure that cannot be computed from perturbative QCD: one must
-    instead rely on experimental measurements.
+    proton, having a structure that cannot be computed analytically from perturbative QCD:
+    one must instead rely on experimental measurements.
 
     In the context of high energy physics, confinement translates into the production of
     jets of hadrons when quarks or gluons are produced in collisions. Jet physics is
@@ -903,7 +907,8 @@ little world. »}\\
     The physical observables such as the cross-section associated to a given process
     can be predicted following a perturbative development. For instance, the observation
     of the process $e^+ e^- \rightarrow \mu^+ \mu^-$ in a theory containing only a $U(1)_Q$
-    interaction is given by the superimposition of several processes as represented on
+    interaction is given by the superimposition of all possible processes leading to the
+    final state as represented on
     \reffig{fig:perturbativeDevelopment}. A given observable can be computed at leading-order
     (LO) by considering only the first diagram in the development or next-to-leading-order (NLO)
     and so on with increasing accuracy. For instance on \reffig{fig:perturbativeDevelopment},
@@ -939,7 +944,7 @@ little world. »}\\
             ...
             \nonumber
         }
-        \caption{Illustration of development of the process $e^+ e^- \rightarrow \mu^+ \mu^-$
+        \caption{Illustration of the process $e^+ e^- \rightarrow \mu^+ \mu^-$
         in a model with only electrons and muons coupling to a photon. \label{fig:perturbativeDevelopment}}
     \end{figure}
 
@@ -974,21 +979,21 @@ little world. »}\\
 
     Despite its success, the Standard Model contains theoretical open questions and unexplained
     experimental facts. For these reasons, it is considered as incomplete or as an effective
-    theory valid only at low energy and hiding a larger theory at higher energy.
+    theory valid only up to an upper bound in energy.
     In this section, we focus especially on the hierarchy problem and dark matter as they
     will be the most relevant one in the context of this document, and discuss briefly
     other open questions.
 
         \subsection{The hierarchy problem}
 
-    The hierarchy problem is related to the corrections to the Higgs boson mass.
+    The hierarchy problem is related to the radiative corrections of the Higgs boson mass.
     To have a complete understanding of the problem, let's first look at the case of the
     mass of fermions and gauge bosons before looking at the Higgs \cite{SupersymmetryDemystified}.
 
     To compute a physical observable in a quantum field theory, one needs to
     integrate over all possible quantum corrections related to this parameter. In the case
     of the cross-section of a process, this means considering all loops and diagrams
-    with the same initial and final states. For the mass of the mass of a particle, one is
+    with the same initial and final states. For the mass of a particle, one is
     interested in diagrams that contribute to the propagator. An example of diagram contributing
     to the propagator of the electron is given in \reffig{fig:feynmanDiagrams/output/electronPropagator}. We may
     express the observable mass $m_e$ of the electron as the sum of the bare mass $m^0_{e}$,
@@ -1015,7 +1020,7 @@ little world. »}\\
 
     With $\Lambda = \Lambda_{\text{electroweak}} = \orderOf{100\GeV}$, we find that
     $\frac{\Delta m_e}{m_e} \sim 20\%$. It is a relatively small correction, in the sense
-    that it is not surprising to have a mass for the electron that is $\orderOf{1\GeV} \ll \Lambda_{\text{electroweak}}$.
+    that it is not surprising to have a mass for the electron that is $\orderOf{1\MeV} \ll \Lambda_{\text{electroweak}}$.
     The most important feature in \refequation{eq:electronMassCorrection2} is the fact that $\Delta m_e$
     is proportional to $m_e^0$ and not $\Lambda$ as it means that the mass will not skyrocket
     as $\Lambda$ grows.
@@ -1057,7 +1062,7 @@ little world. »}\\
 
         \subsection{Dark matter}
 
-    Dark matter is one of the greatest mystery in cosmology and fundamental physics at present time.
+    Dark matter is one of the greatest mystery in current cosmology and fundamental physics.
     The first observation leading to the dark matter hypothesis came from the measurement
     of rotation curves of galaxies \cite{Begeman}. These curves showed the evolution of
     the orbital velocity of stars inside galaxies as function of their distance to the
@@ -1070,7 +1075,7 @@ little world. »}\\
     galaxies, interacting gravitationally but not electromagnetically with the rest of the
     matter, hence the denomination of \emph{dark} matter. Further experimental measurements
     provided indirect evidences for the existence of such dark matter \cite{DMPrimer}.
-    Among them, the technique of gravitational lensing allows the observer to
+    Among them, the technique of gravitational lensing allows to
     infer the distribution of the mass inside a galaxy or a cluster from the bending of
     the light emitted by an object further in the background. Nowadays, dark matter is
     part of the standard model of cosmology as there are many astrophysical and cosmological
@@ -1108,23 +1113,23 @@ little world. »}\\
             of the redshift of supernovas. The cosmological constant can be interpreted
             as vacuum energy, often referred to as dark energy. Despite the fact that this
             is in principle in agreement with quantum field theory which predicts vacuum
-            energy from vacuum quantum fluctuations, there is a complete mismatch, of $\orderOf{10^{120}}$,
-            between the small measured value of $\Lambda$ and its prediction
-            by quantum field theory. This is often called the vacuum catastrophe or the worst
+            energy from quantum fluctuations, there is a complete mismatch, of $\orderOf{10^{120}}$,
+            between the small measured value of $\Lambda$ and its prediction by quantum
+            field theory \cite{vacuumCatastrophe}. This is often called the vacuum catastrophe or the worst
             prediction in the history of physics. A big challenge of current physics therefore
             consists in understanding the nature of dark energy and the reason why it is so small
             compared to predictions.
         \item \textbf{Matter-antimatter asymmetry} - It is a well established fact that
             the baryonic content of the Universe is made of matter. Because matter and antimatter
             should have been produced in equal proportion during the big bang, there must
-            be sources of asymmetry that led to a state dominated by matter. Sakharov
+            be sources of asymmetry that led to a state dominated by matter. Sakharov \cite{Sakharov}
             established a set of conditions that would
             induce such an asymmetry. Among them is the violation of the symmetries C (charge)
             and CP (charge-parity). The Standard Model
             with massless neutrinos contains two sources of CP-violation originating from
             the CKM matrix and the CP-violating phase in the QCD sector. So far however,
             these sources are not important enough to explain the magnitude of the baryon
-            asymmetry.
+            asymmetry \cite{SMBaryogenesis}.
         \item \textbf{Neutrino masses} - It has been measured by experiments that neutrinos
             can oscillate from one flavor to another. This indicates that neutrinos should
             be massive and have different flavor states than mass states much like down-type
@@ -1252,7 +1257,7 @@ little world. »}\\
 
         One of the most obvious idea
         one can come up with is to postulate a fourth family of fermions. However, there are
-        tight constraints on the existence of such a fourth family, starting with with
+        tight constraints on the existence of such a fourth family, such as
         limits on the number of neutrinos with a mass lower than $\mass{Z}/2$ from measurements
         of the branching ratio $\text{BR}(Z \rightarrow \text{invisible})$ \cite{PDFNumberOfNeutrinos}.
 
@@ -1340,8 +1345,8 @@ little world. »}\\
         supergravity (SUGRA). Supersymmetry also provides a link with string theory which
         is a candidate for the « theory of everything\, ».
 
-        To each fermion is therefore associated a boson with same quantum numbers (apart
-        from spin), and similarly to each boson
+        To each fermionic degree of freedom is therefore associated a boson with same
+        quantum numbers (apart from spin), and similarly to each boson
         is associated a fermion. The particle associated to another one by SUSY is called
         its superpartner, and can be put together in a superfield. To ensure the consistency
         of the theory, superpartners of vector bosons have spin 1/2 and superpartners
@@ -1370,27 +1375,27 @@ little world. »}\\
         {
             \Delta m_h^2 \, \propto \, (m_f^2 - m_b^2) \, \text{ln}\left(\frac{\Lambda}{m_b}\right).
         }
-        But this alone does not solves everything. If one consider the most massive
-        fermion, i.e. the top quark $t$, then the mass ratio with its superpartner the
-        stop $\tilde{t}$, $r = m_{\tilde{t}} / m_t$ cannot be too large. For instance,
-        we assuming $r = 100$, then we are left with a correction $\Delta m_h = \orderOf{100 \cdot m_t}$
-        which is still large considering as we seek $\orderOf{m_h} = \orderOf{m_t}$.
+        But this alone does not solves everything. If the mass of the superpartners are
+        too high, then the difference $(m_f^2 - m_b^2)$ is large and we are left with
+        $\Delta m_h \gg m_h$.
         Therefore, we would need to reintroduce a certain level of fine-tunning in the
         parameters of the theory for the corrections to cancel each others, and we want
         to avoid that in order to keep the theory natural. Hence, the naturalness of SUSY
         is strongly related to the mass of the superpartners, and can be used as an indication
-        for experimental searches.
+        for experimental searches. This is in particular true for the mass of the partners
+        of the top quark, the Higgs, the gauge bosons as these sectors lead to the largest
+        corrections.
 
         \subsubsection{The MSSM}
 
         The most studied realization of supersymmetry is the Minimal Supersymmetric Standard
-        Model (MSSM), corresponding to adding the minimum number of fields to the Standard
+        Model (MSSM). It corresponds to adding the minimum number of fields to the Standard
         Model for it to become supersymmetric \cite{Dawson, Vempati, Romao}.
         Since the MSSM breaks SUSY with ad-hoc terms, it is to be seen as an effective
-        theory up to $\Lambda_{\text{SUSY breaking}}$.
+        theory up to $\Lambda_{\text{SUSY breaking}}$, i.e. a few TeV for low-scale SUSY.
 
-        At each fermion and gauge boson is therefore associated a superpartner that we may
-        call sfermion and gaugino. It should be
+        At each fermion and gauge boson is therefore associated a superpartner called
+        sfermion and gaugino. It should be
         stressed once again that left-handed and right-handed fermions are different
         fermions. Hence, there are for example two selectrons, one associated to
         each chirality of the electron. These are usually noted $\tilde{e}_R$ and $\tilde{e}_L$
@@ -1399,7 +1404,7 @@ little world. »}\\
         higgsino, but a second Higgs $SU(2)$ doublet to avoid a gauge anomaly.
 
         As shown in the case of the Standard Model, the mass eigenstates are not
-        necessarily the flavor eigenstates. This is still true in the MSSM, especially
+        necessarily the flavor eigenstates. This is also true in the MSSM, especially
         because of the SUSY breaking terms, and is an important consideration for the
         phenomenology. The introduction of a second Higgs $SU(2)$ doublet leads to four
         additional physical Higgs states noted $H^0$, $A$ and $H^\pm$.
@@ -1486,18 +1491,18 @@ little world. »}\\
             the flavor eigenstate. \label{tab:MSSMsuperpartners}}
         \end{table}
 
-        By design, the MSSM conserves a quantum number called R-parity defined as:
+        We introduce a quantum number called R-parity defined as:
         \eq{RparityDefinition}
         {
-            R = (-1)^{2S + 3B + L}.
+            R = (-1)^{2S + 3B + L}
         }
         where $S$ is the spin, $B$ the baryon number, and $L$ is the lepton number. $R$ is
         equal to 1 for the particles of the Standard Model and -1 for their superpartners.
-        As it is conserved, supersymmetric particles can only be
+        If it is conserved, supersymmetric particles can only be
         pair-produced and only decay into an odd number of supersymmetric particles. In
         particular, this means that the lightest supersymmetric particle (LSP) is stable as
         its decay would violate the $R$-parity. The important consequence is that it provides
-        a good candidate for dark matter, provided that this particle is neutral.
+        a good candidate for dark matter, if the LSP is neutral.
 
         The construction of the MSSM leads to the introduction of more than 100 additional
         parameters compared to the Standard Model, with more than 50 coming from $\mathcal{L}_\text{soft}$.
@@ -1508,7 +1513,7 @@ little world. »}\\
         is the LSP, and other assumptions on the sfermion masses, trilinear couplings and
         flavor violation. This reduces the number of new parameters to 19, namely:
         \begin{itemize}
-            \item the higgsino mass parameter $\mu$ and pseudo-scalar Higgs mass $\mass{A}$ ;
+            \item the higgsino mass parameter $\mu$ and pseudo-scalar Higgs mass $\mass{A}$ ; \todo{maybe check the exact terminology for mu}
             \item the ratio of the Higgs vacuum expectation values, $\text{tan}\, \beta \definedAs v_2 / v_1$ (with $0 \leq \beta \leq \frac{\pi}{2}$) ;
             \item the soft gaugino masses $M_1$, $M_2$ and $M_3$, corresponding respectively\footnote{One can notice that the index in $M_{1,2,3}$ refers to the gauge groups $U(1)$, $SU(2)$ and $SU(3)$, which makes it easier to remember which gaugino it refers to.} to the bino $\tilde{B}$, wino $\tilde{W}$ and gluino $\tilde{g}$ masses ;
             \item the first and second generation sfermion masses $\masstilde{\tilde{q}}$, $\masstilde{\tilde{u}}$, $\masstilde{\tilde{d}}$, $\masstilde{\tilde{l}}$ an $\masstilde{\tilde{e}}$ ;
@@ -1520,9 +1525,9 @@ little world. »}\\
         from the electroweak symmetry breaking.
         One can go one step further and reduce this number of parameters to 5 in the case
         of the constrained MSSM, noted cMSSM (or mSUGRA), by assuming that at grand unification scale, all the
-        scalar particles have the same mass $m_0$, all gauginos have the same mass $m_{1/2}$,
+        scalar particles have the same breaking mass $m_0$, all gauginos have the same breaking mass $m_{1/2}$,
         and all the trilinear couplings are equal to $A_0$. The remaining
-        two parameters are $\text{tan}$ and the sign of $\mu$. Although the assumptions
+        two parameters are $\tan \beta$ and the sign of $\mu$. Although the assumptions
         of the pMSSM and cMSSM can be seen as arbitrary, one can also simply take them as
         guidance to reduce the parameter space in the context of  phenomenology and
         experimental studies.
@@ -1604,6 +1609,7 @@ little world. »}\\
         terms and it is usually convenient to introduce the stop mixing parameter
         $X_t \definedAs ( A_{t} + \mu \,\text{cot}\, \beta)$.
 
+        \todo{implement comments from Pascal about the end of this chapter, e.g. natural susy spectra, ...}
 
 %==============================================================
 \setcounter{mtc}{3}
@@ -1631,13 +1637,15 @@ little world. »}\\
 
     \subsection{Scientific context and challenges}
 
-    There are several approaches one can follow toward new physics. For instance, using
+    \todo{check this}
+
+    There are several approaches one can follow to search for new physics. For instance, using
      measurements of observables and exploiting the fact described in
     \refsection{sec:standardModelSuccess} that observables are impacted through loops by
     the entire Nature's Lagrangian, it is possible to infer information or limits regarding
-    yet-unknown physics. Historically, this has been proved to be successful numerous times,
-    for instance to predict the mass of the top quark from the $W$ and $Z$ bosons mass
-    measurements \cite{discoveryOfTopQuark}. Similarly, a smoking-gun for some supersymmetric
+    yet-unknown physics. Historically, this has been proved to be successful,
+    for instance to predict the mass of the top quark from electroweak measurements, in particular
+    the $W$ and $Z$ bosons mass \cite{discoveryOfTopQuark}. Similarly, a smoking-gun for some supersymmetric
     models is the enhancement of the branching ratio BR($B_s \rightarrow \mu^+\mu^-$)
     \cite{BsToMuMu}. However,
     despite the fact this approach provides valuable information, it can be criticized as
@@ -1656,18 +1664,17 @@ little world. »}\\
     Two famous ones are the Large Electron-Positron (LEP) collider \cite{LEP} and the
     Tevatron collider \cite{Tevatron}. The
     LEP was an $e^+e^-$ collider which operated at a maximum of $\sqrt{s} \approx 200\GeV$
-    at CERN in the 90's and allowed precise measurements of the electroweak $Z$ and $W$
+    at CERN in the 1990's and allowed precise measurements of the electroweak $Z$ and $W$
     bosons and tested the robustness of the Standard Model. The Tevatron was a $p\bar{p}$
     collider which operated at a maximum $\sqrt{s} \approx 2\TeV$ at Fermilab until 2011
     and led to the discovery of the top quark and first measurements of its properties.
-    Nowadays, the only high energy collider in operation is the Large Hadron Collider
-    at CERN.
+    Nowadays, the only high energy collider in operation is the Large Hadron Collider.
 
     The LHC \cite{LHC} is a circular hadron collider built at CERN, near Geneva. One of its physics
     goals is the production of high-energy proton-proton ($pp$) collisions to uncover the mechanism
     of electroweak symmetry breaking, to test the validity of the Standard Model, and more
-    generally to explore physics around $0.1 \sim 10\TeV$ and possibly discover new
-    physics. It is also capable of producing heavy ions (PbPb) collisions or proton-ion
+    generally to explore physics around $0.1 \sim 10\TeV$.
+    It is also capable of producing heavy ions (PbPb) collisions or proton-ion
     collision ($p$Pb) in order to study quark matter at high temperature,
     and in particular the properties of quark-gluon plasma. The rest of this document will
     focus on $pp$ collisions.
@@ -1675,27 +1682,27 @@ little world. »}\\
     The LHC collider has been built in the same tunnel as the LEP. The beam energy at
     the LEP was largely limited by the energy loss from synchrotron radiation. This loss
     is proportional to $E^4 / (m^{4} r^{2})$ with $E$ and $m$ being the energy and mass of the
-    particle, and $r$ the radius of the tunnel. As $m_p$ is much larger than $m_e$, it is
+    particle, and $r$ the radius of the tunnel. As $m_p$ is $\orderOf{1000}$ times larger than $m_e$, it is
     easier to maintain the energy of a rotating proton beam than an electron/positron one.
     Consequently, using protons is preferred in the context of reaching the highest possible
-    energy, justifying this choice for the LHC. We will see however, in
+    energy, justifying this choice for the LHC \todo{decide about this}. We will see however, in
     \refsection{sec:physicsFromCollisionsAtTheLHC}, how proton collisions are more challenging
     from the point of view of the reconstruction and analysis due to their internal structure.
 
     \subsection{Beam injection, control and acceleration}
 
     The creation and first acceleration of the proton beam work as follow. Protons are initially
-    obtained by heating low-pressure $H_2$ gas which produces $H^+ (= p)$ and $e^-$, and
-    by isolating the protons using high voltages. The protons are fed to an acceleration
-    chain made of consecutive accelerators which use radio frequencies to create an acceleration
+    obtained by heating low-pressure $H_2$ gas which produces $H^+ (= p)$ and $e^-$, by isolating
+    the protons using high voltages. The protons are fed to an acceleration
+    chain made of different rings which use radiofrequency cavities to create an acceleration
     gradient. At the end of the chain, in the Super Proton Synchrotron (SPS), the
     beam acquires an energy of $450\GeV$ before being injected in the LHC ring. The LHC
     ring is a tunnel of 27 kilometers built between $50$ and $200$~m underground. The
-    project was originally designed to accelerate the proton beam up to $7\TeV$ per beam,
+    project is designed to accelerate the proton beam up to $7\TeV$ per beam,
     corresponding to a center of mass energy $\sqrt{s} = 14\TeV$. Four main experiments are
     installed along the ring, at each collision point. Two of them, ATLAS and CMS, are
     general-purpose experiments while ALICE focuses on heavy-ion collisions, and LHCb studies
-    $B$ and $C$-hadrons properties and $CP$-violation. \reffig{fig:LHClayout} presents an
+    the properties of $B$ and $C$-hadrons and $CP$-violation. \reffig{fig:LHClayout} presents an
     overview and the general layout of the machine.
 
     \insertTwoFigures{LHClayout}
@@ -1708,11 +1715,11 @@ little world. »}\\
                      eight octants, with some of them dedicated to collisions but also
                      injection, acceleration (RF) and beam dump.}
 
-    One of the biggest challenges of the LHC was the design and operation of magnets
+    One of the biggest challenges of the LHC is the design and operation of magnets
     powerful enough to bend the trajectory of the protons at such high energies. To do
-    so, superconducting magnets made of a niobium-titanium alloy are used and are able to
+    so, superconducting magnets made of a niobium-titanium alloy
     produce a magnetic field of up to $8.33~\text{T}$. The operating temperature of such magnets
-    is only a few Kelvins: in the context of the LHC, they are required to be cooled using
+    is only a few Kelvins: at the LHC, they are required to be cooled using
     a complex system of superfluid $^4$He at $1.9~\text{K}$. It is remarkable to note that this
     temperature is actually cooler than the cosmic microwave background at around $2.7~\text{K}$.
 
@@ -1730,9 +1737,9 @@ little world. »}\\
     punctured the cryogenic fluid enclosure and vaporized a fraction of the fluid, causing
     important damages to the installation \cite{LHCindicent}.
 
-    The pipes of the LHC consist of about 1200 dipole sections represented on
-    \reffig{fig:LHCpipe}, each $15$ m long, whose role are to bend the beam using dipole
-    magnets. In addition, about 400 quadrupole magnets are used to squeeze the
+    The pipes of the LHC consist of about 1200 dipole magnets represented on
+    \reffig{fig:LHCpipe}, each $15$ m long, whose role are to bend the proton beam.
+    In addition, about 400 quadrupole magnets are used to squeeze the
     beam. Higher multipolar magnets are also used to prevent and correct instabilities of
     the beam. The effective bending radius, created from the $17.6$ km of dipoles, is
     $r \approx 2.8$ km, to be compared to the radius of the full apparatus being about $4.3~\text{km}$.
@@ -1752,19 +1759,19 @@ little world. »}\\
     about 0.5 MeV per rotation, or $5.4\GeV$ per second. At $7\TeV$ per beam with 25 ns
     between bunches, the total energy of the beam is about 360 MJ and the energy stored
     in the magnet system is about 600 MJ, roughly corresponding to the energy of a
-    lightning bolt. The beams are then made to collide at four different points along the
+    lightning bolt. The beams collide at four different points along the
     ring, corresponding to the four main experiments.
 
         \subsection{Physics of $pp$ collisions \label{sec:physicsFromCollisionsAtTheLHC}}
 
     When considering a single $pp$ collision, it must be kept in mind that protons are
-    composite objects made of three valence quarks in a sea of virtual partons, i.e.
-    virtual quarks and gluons. At a given moment, partons in the proton only carries a fraction
-    of the total proton momentum. Because of the properties of quantum chromodynamic, the
-    structure of the proton can not easily be derived from first principles given our current
-    capabilities. Instead, we must rely on the parton distribution functions (PDF), determined
-    from experiment, characterizing the probably to find a parton with a fraction of
-    momentum $x$, depending on its nature. Two examples of PDF are given on
+    composite objects made of three valence quarks in a sea of virtual quarks and gluons
+    called partons. A parton in the proton only carries a fraction
+    of the total proton momentum. In quantum chromodynamic, the
+    structure of the proton can not easily be derived from first principles.
+    Instead, we rely on the parton distribution functions (PDF), determined
+    from experiment, which characterizes the probability to find a parton with a fraction of
+    momentum $x$, depending on the nature of the parton. Two examples of PDF are given on
     \reffig{fig:partonDistributionFunctionsExample}. The shape of these
     distributions implies that, in a collision, the center of mass energy of the two incoming
     partons is generally much lower than the beam energy.  Each incoming parton may also
@@ -1792,7 +1799,7 @@ little world. »}\\
     In the context of the LHC, the number of $pp$ collisions happening per unit of time is
     proportional to the instantaneous luminosity $L_\text{inst.}$ which depends on the bunch crossing
     frequency, the number of bunches, the number of proton per bunches and other beam and
-    geometry parameters. The two general purpose experiments, ATLAS and CMS, are designed
+    geometry parameters. \todo{add luminosity formula} The two general purpose experiments, ATLAS and CMS, are designed
     for a typical luminosity $L_\text{inst.} = 10^{34}~\text{cm}^{-2}
     \text{s}^{-1} = 10~\text{nb}^{-1} / \text{s}$. For a given process, one can compute $n$
     the number of expected events per unit of time:
@@ -1874,7 +1881,7 @@ little world. »}\\
     having two experiments independently studying the same phenomena is
     stimulating but also crucial to have robust claims. It is indeed highly desirable
     from a scientific point of view to be able to cross-check any possible discovery
-    by one experiment with another, as independent as possible from the first.
+    by one experiment with another independent experiment.
 
     So far, the CMS experiment, through the analysis of the Run I data at
     $\sqrt{s} = 7$ and $8\TeV$, allowed significant improvements on the precision measurements
@@ -1909,9 +1916,8 @@ little world. »}\\
     and $h\rightarrow ZZ \rightarrow 4\ell$ requires good resolution on the photons,
     electrons and muons energy-momentum. Furthermore, from the perspective of final
     states involving dark matter candidates, one must be able to measure
-    the energy escaping detection. This requires a good and as hermetic as
-    possible measurement of the repartition of the hadronic and electromagnetic energy
-    in each event.
+    the energy escaping detection. This requires an hermetic coverage of the detector around
+    the ineraction point.
 
     \insertFigure{CMS/detectorOverview}{0.9}{Overview of the CMS detector.}
 
@@ -1926,10 +1932,10 @@ little world. »}\\
     magnetic field allows to bend the trajectory of charged particles, allowing a
     measurement of their momentum with an accuracy inversely proportional to the value
     of the field.
-    Near the interaction point is found the tracker system, dedicated to
+    Near the interaction point, the tracker system is dedicated to
     the detection of hits left by charged particles. It is a fully silicon system composed of pixel detector
-    layers and microstrip layers. Around the tracker is the electromagnetic
-    calorimeter, whose aim is to measure the energy of photons and electrons using
+    layers and microstrip layers. Beyond the tracker, the electromagnetic
+    calorimeter measures the energy of photons and electrons using
     scintillation crystals. The next layer, the hadronic calorimeter, aims to measure
     the energy carried by hadrons produced in the collisions. It is a scintillator made
     of brass and plastic sandwich. Finally, the muon system uses three different gas-based
@@ -1968,12 +1974,12 @@ little world. »}\\
     The tracker is the subdetector closest to the interaction point. Its goal
     is to reconstruct hits left by charged particles to estimate their direction
     and momentum, and to identify not only the primary interaction vertices, but also
-    secondary vertices found in, for example, the hadronization of $b$ quarks. This requires
-    a precision on the vertex position to less than one millimeter.
+    secondary vertices found in, for example, jets from the hadronization of $b$ quarks.
+    This requires a precision on the vertex position to less than one millimeter.
 
-    While achieving this level of accuracy, the instrument must be able to handle the conditions of
+    While achieving this level of accuracy, the tracking system must also be able to handle the conditions of
     the LHC. At nominal conditions, it can be estimated that about 1000 charged particles
-    are produced for every bunch crossing each 25~ns. This roughly corresponds to a
+    are produced per bunch crossing. This roughly corresponds to a
     hit rate of 1~MHz/mm$^2$ at 4~cm of the interaction point and 3~kHZ/mm$^2$ at 115~cm.
     To not be overwhelmed (i.e. have a low occupancy), the detector must therefore
     have a high granularity. Moreover, the electronics should resist and be reliable
@@ -2020,7 +2026,7 @@ little world. »}\\
         \subsubsection{Electromagnetic calorimeter}
 
     The role of the electromagnetic calorimeter (ECAL) is to measure the energy of incoming electrons
-    and photons. The specifications of this subdetector are particularly oriented for
+    and photons. The specifications of this subdetector are particularly oriented by
     the search for the Higgs boson in the $h \rightarrow \gamma \gamma$ channel. The resolution on the
     invariant mass of the diphoton system depends directly on the energy and angular
     resolution of the photons. This part of the detector is of course also crucial for
@@ -2041,7 +2047,7 @@ little world. »}\\
 
     In the endcaps, to help to discriminate between prompt photons and $\pi^0$ decaying
     to two directionally close photons, two preshower disks are placed in front of the
-    ECAL. Their role is to initiate electromagnetic showers and provide a finer granularity
+    ECAL. Their role are to initiate electromagnetic showers and provide a finer granularity
     with silicon strips 0.2~cm wide, to be compared to the $\sim2\times2~\text{cm}^2$ faces
     of the crystals.
 
@@ -2051,41 +2057,41 @@ little world. »}\\
     The general layout of the ECAL is presented on \reffig{fig:CMS/ECAL}. The ECAL
     barrel (EB) extends to $\abseta = 1.479$, supplemented by the ECAL endcap (EC)
     up to $\abseta = 3.0$. The preshower disks cover the region $\abseta \in [1.653,2.6]$.
-    Overall, the system is $7.8~\text{m}$ long and lie within $1.2 < r < 1.8~\text{m}$
+    Overall, the system is $7.8~\text{m}$ long and lies within $1.2 < r < 1.8~\text{m}$
     in the barrel.
     The optical properties of the crystal are crucial parameters that depends on the
     temperature and radiations received. To obtain accurate measurements, a cooling
     system ensure that the crystal temperature is stable at $18\pm0.05^o\text{C}$ and the
     transparency is monitored in real time via a laser system.
 
-    The resolution measured using electrons is parametrized using the formula
+    The resolution measured using electrons is parametrized using the formula \todo{state where this is coming from i.e. test beam or LHC data}
     \eq{ECALresolution}
     {
-        \left( \frac{\sigma_E}{E} \right)^2
+        \left( \frac{\sigma_E}{E} \right)
         =
-        \left( \frac{S}{\sqrt{E}} \right)^2
+        \left( \frac{S}{\sqrt{E}} \right)
         \oplus
-        \left( \frac{N}{E} \right)^2
+        \left( \frac{N}{E} \right)
         \oplus
-        C^2
+        C
     }
     with the different parameters
     \eqalign{ECALresolution2}
     {
         S & = 0.028~\text{GeV}^{1/2} \text{, the stochastic contribution,}\nonumber\\
         N & = 0.12~\text{GeV}\text{, the noise contribution,}\\
-        C & = 0.003\text{, the constant contribution.}\nonumber
+        C & = 0.003\text{, the constant \todo{global or local ?} contribution.}\nonumber
     }
     This corresponds to a relative uncertainties of 12\%, 1.5\% and 0.4\% for particles
     of $1$, $10$ and $100\GeV$ respectively.
 
         \subsubsection{Hadronic calorimeter}
 
-    The hadronic calorimeter (HCAL) role is to measure the energy of incoming charged
+    The hadronic calorimeter (HCAL) role is to complete the energy measurement of incoming charged
     and neutral hadronic particles, which will be in turn a crucial information to
     reconstruct jets and missing transverse energy.
 
-    The main technology used for the HCAL consists of layers of dense absorbers and
+    The technology used for the HCAL consists of layers of dense absorbers and
     scintillation tiles. The absorbers are made of steel and brass, with which
     the incoming hadrons interact to develop a shower. As the particles of the shower
     travel through the calorimeter, they encounter scintillator layers in which they
@@ -2106,20 +2112,20 @@ little world. »}\\
     be able to endure the higher level of radiations and use hard quartz fibers instead of
     plastic ones.
 
-    The resolution measured on pions is
+    The energy resolution measured for pions is \todo{state where this is coming from i.e. test beam or LHC data}
     \eq{HCALresolution}
     {
-        \left( \frac{\sigma_E}{E} \right)^2
+        \left( \frac{\sigma_E}{E} \right)
         =
-        \left( \frac{S}{\sqrt{E}} \right)^2
+        \left( \frac{S}{\sqrt{E}} \right)
         \oplus
-        C^2
+        C
     }
     with
     \eqalign{HCALresolution2}
     {
         S & = 0.084~\text{GeV}^{1/2} \text{, the stochastic contribution,}\\
-        C & = 0.074\text{, the constant contribution.}\nonumber
+        C & = 0.074\text{, the  \todo{global or local ?} constant contribution.}\nonumber
     }
     This corresponds to a relative uncertainties of 11\%, 7.9\% and 7.4\% for particles
     of $1$, $10$ and $100\GeV$ respectively.
@@ -2138,9 +2144,10 @@ little world. »}\\
         \item \textbf{Drift tubes} (DT) - This technology uses stretched wires within
             a gas volume. Charged particles travelling through the gas ionize atoms,
             leaving a cloud of electron along the track. These electrons then drift
-            in the tube and are collected by the positively-charged wires. By knowing
-            the point where the electrons were collected along the wire, and the
-            drift time, it is possible to infer the position of the hit in the drift tube.
+            in the tube and are collected by the positively-charged wires. By measuring
+            the difference of current collected at both extremity of the wire \todo{check this}, and knowing
+            the drift time, it is possible to infer the position of the hit in the drift
+            tube.
         \item \textbf{Cathode strip chambers} (CSC) - Cathode strip chambers are
             made of array of anode wires crossing cathode strips within a gas volume.
             A charged particle travelling through the gas ionizes atoms and provokes an
@@ -2165,13 +2172,13 @@ little world. »}\\
     When combining the information of the muon system with the tracker, one can
     obtain a relative resolution on the $p_T$ typically of $1\%$, and a relative
     resolution on $\eta$ and $\phi$ typically of the order of $10^{-5}$ and $10^{-4}$
-    respectively.
+    respectively \todo{ref ? source of measurements ?}.
 
     \subsection{Trigger system}
 
     The CMS detector must sustain a rhythm of one bunch crossing each 50 or 25 ns, depending
     on the condition of the LHC machine. The raw output of the detector is therefore
-    about $20\sim40$~MHz. It is unrealistic to consider storing and reconstructing all these events
+    about $\sim 20-40$~MHz. It is unrealistic to consider storing and reconstructing all these events
     considering the speed of the link to the network, the memory and the computing power
     it would require. Therefore, a selection must be applied online to reduce the rate
     to a more realistic one, set to about $400~$Hz.
@@ -2217,11 +2224,11 @@ little world. »}\\
     The HLT selection consists of a much larger list of paths compared to the L1.
     It is done on a computer farm able to perform a full reconstruction
     of the objects present in the event, including the information from the tracker.
-    This reconstruction aims to be as close and accurate as possible as compared to the
-    offline reconstruction described in the next sections.
+    This reconstruction aims to be as close and accurate as possible as to the offline
+    reconstruction described in the next sections.
     However, some particular techniques may not be used if they are too expensive in
     terms of CPU resources. Furthermore, the processing steps are carefully designed in order to
-    optimize the processing time, especially by working as much as possible with steps
+    optimize the processing time, especially by working with steps
     of increasing complexity and possibly filtering some of the events in the middle
     of the procedure. For instance, selection steps involving only calorimeters and
     muon detectors are performed before any tracking reconstruction is required, as this
@@ -2230,10 +2237,14 @@ little world. »}\\
 
     \subsection{Object and event reconstruction}
 
+    \todo{in this subsection : discuss object reconstruction systematics ? JES, JER, MET, LES, ... relevant analysis}
+
+    \todo{add lepton reconstruction / perf discussion ?}
+
     After recording an event, the outputs of each subdetector
     are analyzed to identify the nature and properties of particles produced in the
-    event. Ultimately, one want to reduce step by step the complexity of an event to
-    something physically understandable. Here, we briefly present some of the
+    event. Ultimately, one wants to reduce step by step the complexity of an event down to
+    a few objects that are meaningful for the particle physicist. Here, we briefly present some of the
     cornerstones of the CMS reconstruction. First, the tracking and vertexing steps
     correspond to the identification of tracks left by charged particles in the tracker
     and the collision vertices. This step is a crucial point for the second part, the
@@ -2253,14 +2264,13 @@ little world. »}\\
     in time, but also have a good reconstruction efficiency and a low fake rate.
 
     The CMS tracking algorithm \cite{CMStracking} starts by constructing seeds from pairs or triplets of hits
-    in the pixel detector, compatible with the beamspot. Then, assuming that these
+    in the pixel detector, compatible with coming from the beamspot. Then, assuming that these
     hits are coming from a charged particle, the trajectory is extrapolated to the
     next layers. If a hit is found compatible with the extrapolation, it is used to
-    update the track parameters estimation. Finally, once some criteria are reached,
-    such as no more hits to be expected in the detector, the algorithm stops and a
-    final fit is performed to determine the track parameters. Then, an iterative procedure removes the
-    hits associated to reconstructed tracks, and repeats the track reconstruction
-    from new seeds with looser criteria.
+    update the track parameters estimation. Finally, once no more hits are expected in the
+    detector, the algorithm stops and a final fit is performed to determine the track
+    parameters. Then, an iterative procedure removes the hits associated to reconstructed
+    tracks, and repeats the track reconstruction from new seeds with looser criteria.
     The track reconstruction efficiency for muons is found to be very good as it is
     higher than 99\% up to $\abseta \sim 2.4$, whereas for pions the efficiency varies
     between 85 and 95\% depending on $\pT$ and $\eta$. \reffig{fig:trackingAndVertexingPerf}
@@ -2305,12 +2315,11 @@ little world. »}\\
     The role of the particle flow algorithm \cite{particleFlow} is to efficiently combine the output of each
     subdetector to reconstruct each kind of particle according to its nature. Thanks
     to a development before the data taking, it has quickly become the most common
-    method of reconstruction used for physics analysis such as cross-section measurements
-    and searches for new physics. Particle flow is especially relevant in the context
-    of jet clustering that will be presented in the next section: the tracker provides
-    key information such as the direction at the vertex for low $\pT$ charged particles
-    whereas the calorimeters are better suited in the high $\pT$ regime and for neutral
-    particles.
+    method of reconstruction used for physics analysis. Particle flow is especially
+    relevant in the context of jet clustering that will be presented in the next section:
+    the tracker provides key information such as the direction at the vertex for low $\pT$
+    charged particles whereas the calorimeters are needed in the high $\pT$ regime
+    and for neutral particles.
 
     To combine the outputs of the subdetectors, links are created between elements
     to create blocks. Given the granularity of the detector, blocks are typically made
@@ -2410,8 +2419,8 @@ little world. »}\\
     calorimeter-based jets. In terms of $\pT$ resolution, the reconstructed $\pT$ is
     roughly within $90\% \pm 15\%$ of the generated $\pT$ for the particle-flow jets
     when $40 < \pT^\text{gen.} < 60\GeV$, whereas it is within $50\% \pm 15\%$ for
-    calorimeter-based jets \cite{particleFlow}. This bias in the reconstructed transverse momentum, called
-    jet energy scale, is typically due to thresholds and inefficiencies in the calorimeters
+    calorimeter-based jets \cite{particleFlow}. This bias in the reconstructed transverse momentum
+    is typically due to thresholds and inefficiencies in the calorimeters
     and can be measured and corrected after the jet reconstruction. This correction is
     typically parametrized as function of $\pT$ and $\eta$.
 
@@ -2497,7 +2506,7 @@ little world. »}\\
         \includegraphics[width=0.41\textwidth]{CMS/MET/resolutionVsPU}
         \caption{On the left, measurement of the ratio $-u_{||}/q_T$ as function of $q_T$
         in $Z\rightarrow\mu\mu$, $Z\rightarrow e e$ and $\gamma$+jets events using
-        the particle-flow based $\MET$. On the right, measurement of the resolution of
+        the particle-flow based $\MET$. On the right, resolution of
         $u_{||}$ as function of the number of reconstructed primary vertices, for
         $Z\rightarrow\mu\mu$ events \cite{METperf}.}
         \label{fig:METresolution}
@@ -2517,19 +2526,20 @@ little world. »}\\
     the complexity of a single bunch crossing, including the hard scattering,
     underlying events and pile-up, and the complexity of the detector, the distribution
     of observables can not in the general case be predicted analytically. One must
-    instead rely on Monte-Carlo generations and an accurate detector simulation.
+    instead rely on Monte-Carlo generators and an accurate detector simulation.
     Such a tool can also help in designing the detector in the first place, for
     instance by studying the performances on a given process, all the way
     from the hard scattering to the objects after reconstruction.
 
-    The full chain of simulation can be implemented as follow. First, the model
-    is implemented and the Feynman rules associated to the Lagrangian are computed.
-    Then, for a given process, a Monte-Carlo generator computes all possible
-    Feynman diagrams up to a given order, and randomly generates hard-scatterings.
-    To these hard-scatterings are added the underlying event as well as initial and
-    final state radiations, and the quarks are hadronized. Finally the particles
-    are propagated to the detector and its response is simulated, after which
-    the reconstruction process is essentially the same as for data.
+    The full chain of simulation can be implemented as follow. First, the Lagrangian
+    is implemented and the Feynman rules are computed. Then, for a given process, a
+    Monte-Carlo generator computes all possible Feynman diagrams up to a given order, and
+    randomly generates hard-scatterings. The underlying event as well as initial and final
+    state radiations are then added, and the quarks are hadronized. Finally the particles
+    are propagated to the detector and its response is simulated, after which the
+    reconstruction process is essentially the same as for data.
+
+    \todo{rework next subsections}
 
     \subsection{Monte-Carlo generation of the hard scattering}
 
@@ -2547,9 +2557,9 @@ little world. »}\\
         \right|^2
         \frac{d\cos(\theta)\, d\phi}{32\pi^2}
     }
-    where $(\theta,\phi)$ are the angles of the $Z$ decay, $\mathcal{M}$
-    is the matrix element and $\hat{s}$ is the center of mass energy. The matrix
-    element is, for a given diagram, a number computable from the Feynman rules.
+    where $(\theta,\phi)$ are the angles of between the initial and final state particles,
+    $\mathcal{M}$ is the matrix element and $\hat{s}$ is the center of mass energy. The
+    matrix element is, for a given diagram, a number computable from the Feynman rules.
     To generate events according to this simple process, one may draw random
     values of $\cos(\theta)$ and $\phi$, uniformly distributed in $[-1, 1]$ and
     $[0,2\pi]$ respectively. From the masses constraints and the directions of the
@@ -2595,7 +2605,7 @@ little world. »}\\
     The number of problematics related to hadronization makes it a quite rich and
     active topic. The interface between the generation of the hard scattering
     and the parton shower is not trivial as no technique rigorously factorizes
-    these two problematics. For instance, a gluon emission during
+    these two problems. For instance, a gluon emission during
     the parton showering (so-called soft emission) may correspond to an additional
     parton during the generation of the hard process (so-called hard emission),
     ultimately causing double counting and biasing the event set. To solve this
@@ -2693,7 +2703,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     from $b$ jets. The properties can be listed as follow:
     \begin{itemize}
         \item \textbf{Large mass} - $B$ hadrons have masses ranging from $5$ to $10\GeV$, as
-              they contain a $b$ quark which has a mass around $4.5\GeV$. Such a mass is
+              they contain at least a $b$ quark which has a mass around $4.5\GeV$. Such a mass is
               much larger than those of hadrons found in light jets, which have a mass
               typically less than $0.1\GeV$.
         \item \textbf{Long life time and decay length} - $B$ hadrons decay via the weak
@@ -2707,7 +2717,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
               contain 5 charged particles on average, whereas other light hadrons
               usually decay into 1 or 3 charged particles.
         \item \textbf{Leptonic decay} - As the decay of $B$ hadrons involves a virtual $W$ boson,
-              they are likely to directly decay leptonically, with a branching ratio of
+              they can directly decay leptonically, with a branching ratio of
               11\% per lepton family. This fraction goes up to about 20\% if one
               considers the full decay cascade (which includes $B \rightarrow C +
               \text{hadrons} \rightarrow \ell\nu + \text{hadrons}$).
@@ -2765,7 +2775,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
                  {Representation of two tracks inside a $b$ jet, one coming from a prompt
                  charged hadron and the other from the decay of
                  the $B$ hadron. The prompt track has been slightly displaced from the primary vertex
-                 to illustrate resolution effects. One can define along the track the position
+                 to illustrate resolution effects. One can define, along the track, the position
                  of closest approach to the primary vertex, $P$, and the closest approach
                  to the jet axis, $Q$. The impact parameter corresponds to the distance $VP$
                  and it is given the sign of the scalar product $\vec{VP} \cdot \vec{j}$ (with
@@ -2783,7 +2793,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     have a large, positive impact parameter. Tracks in light jets are instead expected
     to originate directly from the primary vertex and therefore to have non-zero value
     only due to resolution effects. To integrate the knowledge of the tracking resolution,
-    the uncertainty on the impact parameter, $\sigma_\text{IP}$ can be computed for each
+    the uncertainty on the impact parameter, $\sigma_\text{IP}$, can be computed for each
     track, and one can define the impact parameter significance, $S_\text{IP} \definedAs
     \text{IP}/\sigma_\text{IP}$.
 
@@ -2802,7 +2812,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
         \includegraphics[width=0.49\textwidth]{bTagging/8TeV/TTbar_PU_lowLevelVariables/IPTag_ips_3D_GLOBAL_all}
         \end{minipage}
         \caption{Distribution of the impact parameter (on the left) and impact parameter significance
-        (on the right) for tracks
+        $S_\text{IP}$ (on the right) for tracks
         inside the different jet categories, estimated using the validation framework from a
         $t\bar{t}$ Monte-Carlo sample with Run I conditions, including pile-up.}
         \label{fig:bTagging/impactParameterDistr}
@@ -2874,7 +2884,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
         \includegraphics[width=0.49\textwidth]{bTagging/8TeV/muonPtRel}
         \end{minipage}
         \caption{Distribution of $\Delta R(\mu,\text{jet})$ (on the left) and $p_T^\text{rel.}$ (on the right)
-        for muons inside different jet categories \cite{SoftLeptonAN}.}
+        for muons inside different jet categories \cite{SoftLeptonAN}. \todo{clarify conditions used for the plot}}
         \label{fig:bTagging/softLepton}
     \end{figure}
 
@@ -2898,7 +2908,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     Performances are usually presented by showing the fake rate as function
     of the $b$ jet efficiency, each point of the curve corresponding to a different threshold
     value. To benchmark the performances and allow easier comparisons
-    between algorithms, one can define three operating points, loose, medium and tight,
+    between algorithms, three operating points, loose, medium and tight, are defined
     such that the fake rate for light jets is respectively 10, 1 and 0.1\%.
 
     Finally, the performances are likely to depend on the environment in which
@@ -2924,7 +2934,9 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     \reffig{fig:bTagging/perfTC} presents the discriminant and
     performances for the different jet categories for the high efficiency version of this
     algorithm. The $b$ jet efficiencies are around 77\%, 60\% and 18\% for the loose, medium
-    and tight working points respectively.
+    and tight working points respectively. The corresponding efficiencies for the high
+    purity version are around 68\%, 52\% and 36\% respectively, i.e significantly better
+    performance for the tight working point.
 
     \begin{figure}[th!]
         \centering
@@ -2935,7 +2947,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
         \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
         the left) and corresponding performances in term of misidentification rate versus $b$ jet efficiency
         (on the right) for the track counting high efficiency algorithm.
-        The distribution and performances were estimated using the validation framework and from
+        The distribution and performances are estimated using the validation framework and from
         a $t\bar{t}$ sample in 8 TeV conditions, including pile-up.}
         \label{fig:bTagging/perfTC}
     \end{figure}
@@ -2976,7 +2988,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
                 \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
         the left) and corresponding performances in term of misidentification rate versus $b$ jet efficiency
         (on the right) for the jet probability algorithm.
-        The distribution and performances were estimated using the validation framework and from
+        The distribution and performances are estimated using the validation framework and from
         a $t\bar{t}$ sample in 8 TeV conditions, including pile-up.}
         \label{fig:bTagging/perfJP}
     \end{figure}
@@ -2995,7 +3007,9 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     actually finding a secondary vertex which satisfies the constraints. For this version,
     it is around 62\% for $b$ jets and 20\% for $c$ jets, while the fake vertices rate (i.e.
     probability to find a vertex in light jets) is around 2\%. The $b$ jet efficiencies
-    for the medium and tight working points are around 58\% and 20\% respectively.
+    for the medium and tight working points are around 58\% and 20\% respectively. The
+    high purity version has a tight working points with a $b$ jet efficiency around
+    42\%, significantly higher than the high efficiency version.
 
     \begin{figure}[th!]
         \centering
@@ -3006,7 +3020,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
         \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
         the left) and corresponding performances in term of misidentification rate versus $b$ jet efficiency
         (on the right) for the simple secondary vertex high efficiency algorithm.
-        The distribution and performances were estimated using the validation framework and from
+        The distribution and performances are estimated using the validation framework and from
         a $t\bar{t}$ sample in 8 TeV conditions, including pile-up.}
         \label{fig:bTagging/perfSSV}
     \end{figure}
@@ -3042,7 +3056,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
         \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
         the left) and corresponding performances in term of misidentification rate versus $b$ jet efficiency
         (on the right) for the soft muon algorithm.
-        The distribution and performances were estimated using the validation framework and from
+        The distribution and performances are estimated using the validation framework and from
         a $t\bar{t}$ sample in 8 TeV conditions, including pile-up.}
         \label{fig:bTagging/perfSMT}
     \end{figure}
@@ -3059,7 +3073,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     define a pseudo-vertex in 15\% of the cases where no vertex is found for $b$ jets.
     With the goal of improving the rejection against $c$ jets, for jets with a vertex or pseudo-vertex,
     the tracks are ordered according to their impact parameter significance, and the
-    $S_\text{IP}$ of the first track to raises the invariant mass of the vertex above
+    $S_\text{IP}$ of the first track to raise the invariant mass of the vertex above
     the charm threshold ($1.5 \GeV$) acts as an additional good discriminating variable.
 
     Likelihoods are trained as function of $\pT$ and $\abseta$, and based on the secondary vertex information, the energy
@@ -3087,14 +3101,14 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
         \caption{Superimposed discriminant distributions for light, $c$ and $b$ jets (on
         the left) and corresponding performances in term of misidentification rate versus $b$ jet efficiency
         (on the right) for the combined secondary vertex algorithm.
-        The distribution and performances were estimated using the validation framework and from
+        The distribution and performances are estimated using the validation framework and from
         a $t\bar{t}$ sample in 8 TeV conditions, including pile-up.}
         \label{fig:bTagging/perfCSV}
     \end{figure}
 
     \section{$b$-tagging validation in the CMS collaboration \label{sec:bTagValidation}}
 
-    In this section, we focus on the contributions on $b$-tagging during this thesis.
+    In this section, we focus on my contributions on $b$-tagging during this thesis.
     After presenting the context of the work and discussing statistical aspects, some
     important validations are presented in particular related to the preparation of the
     Run II of the LHC, while the last subsection is dedicated to a preliminary study of
@@ -3168,11 +3182,11 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
 
     \eq{criticalEfficiency}
     {
-        \sigma^\text{rel.}_\epsilon = \frac{\sigma_\epsilon}{\epsilon} = \sqrt{\frac{1}{N} \frac{1-\epsilon}{\epsilon}} > 0.07
+        \sigma^\text{rel.}_\epsilon = \frac{\sigma_\epsilon}{\epsilon} = \sqrt{\frac{1}{n} \frac{1-\epsilon}{\epsilon}} > 0.07
         \hspace*{1cm}
         \Rightarrow
         \hspace*{1cm}
-        \epsilon < \frac{1}{\frac{N}{200} + 1}
+        \epsilon < \frac{1}{\frac{n}{200} + 1}
     }
 
     \reftab{tab:criticalEfficiencyBTag} presents the number of jets according to their flavor,
@@ -3202,19 +3216,19 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     To avoid this problem, some validations, only intended to study the impact of new
     reconstruction techniques and algorithms, recycle the Monte-Carlo generation and detector simulation
     steps of previous validation samples, in order to remove the statistical fluctuations
-    coming from these steps.
+    coming from these steps \todo{maybe clarify this paragraph}.
 
     \subsection{Validation of the new jet size parameter for the Run II}
 
     The preparation of the Run II of the LHC involves a change in the jet size parameter.
     Because the jets are expected to be narrower on average due to the energy increase,
-    and to limit the pile-up contamination, this parameter is moved from $R = 0.5$ to $0.4$.
+    and the pile-up contamination higher, this parameter is moved from $R = 0.5$ to $0.4$.
 
     The validation of this change is made using two sets of samples using the same
     generated events and the same simulation to limit the effect of statistical fluctuations,
-    but reconstruction is done with the two different jet size parameters. The sample
+    but different jet size parameters for reconstruction. The sample
     used to produce the following figures is a $t\bar{t}$ sample at $\sqrt{s} = 13\TeV$
-    with pile-up.
+    with a pile-up of 10.
 
     A comparison of the jets $\pT$ and $\eta$ spectra between the two reconstructions
     is presented on \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_kinematic}. The
@@ -3231,17 +3245,16 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
                      jet size parameter for the Run II.}
 
     \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables} on the top left
-    presents on the distribution of the $\Delta R$ between the tracks in the jet
+    presents the distribution of the $\Delta R$ between the tracks in the jet
     and the jet axis. Small differences are observed
     at low $\Delta R(\text{track},\text{jet axis})$, pointing towards tracks being slightly
     closer to jet axis in $R = 0.4$ compared to $R = 0.5$. This is interpreted as coming
-    from the fact that the jet axis is more likely to be perturbed by particles near
+    from the fact that the jet axis is more likely to be disrupted by particles near
     the edge of the cone with $R = 0.5$ compared to $0.4$.
-    On the top right, the comparison is done for the ratio of the energy of the sum
-    of the tracks and the jet energy. This distribution exhibits a clear shift towards
-    1 for $R = 0.4$ compared to 0.5. This is interpreted as coming from the fact that
-    the selected tracks (i.e. in $R < 0.3$) represents a more significant fraction of
-    the total jet energy in $R = 0.4$ compared to 0.5.
+    On the top right, the comparison is done for the ratio of the energy of the track sum
+    and the jet energy. This distribution exhibits a clear shift towards 1 for $R = 0.4$
+    compared to 0.5. This is because the selected tracks (i.e. in $R < 0.3$) represents a
+    more significant fraction of the total jet energy in $R = 0.4$ compared to 0.5.
 
     \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables}
                       {bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables/CSVTag_trackDeltaR_GLOBAL_all}
@@ -3259,10 +3272,10 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
 
     Two other $b$-tagging variables are presented on the bottom of
     \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_lowLevelVariables}, namely the
-    impact parameter significance and the flight distance of secondary vertices. Overall,
-    a little improvement is observed in the distribution of the impact parameter significance
-    for $b$ jets as a lower fraction of the tracks ends up with negative values. The
-    flight distance of secondary vertices is stable.
+    impact parameter significance and the flight distance significance of secondary vertices.
+    Overall, a little improvement is observed for $R = 0.4$ in the distribution of the impact
+    parameter significance for $b$ jets as a lower fraction of the tracks ends up with
+    negative values. The flight distance significance of secondary vertices is stable.
 
     \insertFourFigures{bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
                       {bTagging/AK4vsAK5/TTbar_FullSim_PU/TCHE_performance_vs_B_GLOBAL_all}
@@ -3278,21 +3291,21 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
                       to the ratio of the distribution between $R = 0.4$ and $R = 0.5$.
                       }
 
-    The impact on the performances is presented on \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
+    The impact on the performances is presented in \reffig{fig:bTagging/AK4vsAK5/TTbar_FullSim_PU_performances}
     for four algorithms, TCHE, JP, SSVHE and CSV. The performances for TCHE and SSVHE
     are relatively stable while JP, dependent on the exact shape of the impact parameter
     significance for all tracks, has a $b$ jet efficiency improved by a few percents attributed to the
-    observed small change in the impact parameter distribution. This also propagates to the
+    observed small change in the impact parameter significance distribution. This also propagates to the
     performance of CSV where, at constant $b$ jet efficiency, the fake rate is lowered
     by about 20\%.
 
     To conclude, as the observations in this validation are well understood from a physics
-    point of view and make sense, the change of jet size parameter has been validated for
+    point of view, the change of jet size parameter has been validated for
     the $b$-tagging aspects.
 
     \subsection{Validation of new default pile-up rate for validation samples}
 
-    As of the version v7.3.0 of the CMS software, the default pile-up rate for the validation
+    In this validation of the CMS software, the default pile-up rate for the validation
     samples was changed from 10 to 35. This should be differentiated from the pile-up rate
     used for analysis samples which follows a particular pile-up distribution.
     As tracking and $b$-tagging variables strongly depend on pile-up effects, this
@@ -3320,7 +3333,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     The impact parameter distribution for tracks in light jets gets a wider peak around
     0, from which we can expect an increase in fake rate for all algorithm based on
     this variable. The secondary vertex categorization shows also a 5\% absolute loss
-    in vertexing efficiency for $b$ jets, and an relative increase of around 35\% for light
+    in vertexing efficiency for $b$ jets, and a relative increase of around 35\% for light
     jets containing a secondary vertex. From this, we can expect that algorithms based
     on secondary vertex reconstruction will not only suffer from a higher fake rate from
     light jets, but also a lower maximum efficiency for $b$ jets.
@@ -3354,7 +3367,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
 
     \subsection{Validation of the premixing technique for pile-up simulation}
 
-    In the CMS software v7 cycle, a new technique, called premixing, started being developed.
+    In this validation, a new technique, called premixing, started being developed.
     The motivation for this technique starts from the observation that, when generating and
     simulating events, the simulation of the detector response to the pile-up represents
     a large fraction of the CPU time, compared to one single hard-scattering.
@@ -3376,10 +3389,10 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
 
     Overall, one wants the premixing technique to not impact the physics at the reconstruction
     level. $b$-tagging, as a high-level technique, is highly sensitive to the description
-    of tracks and calorimeter deposits and therefore allows an overall check that premixing does
-    not introduce any unphysical behavior. While there were several validations related to
-    this work, this document focuses on a pathological validation done in version 7.4.0
-    of the CMS software.
+    of tracks, pile-up, and to a lesser extended calorimeter deposits and therefore allows
+    an overall check that premixing does not introduce any unphysical behavior. While there
+    were several validations related to this work, this document focuses on a pathological
+    validation done in version 7.4.0 of the CMS software.
 
     Validation results are shown on \reffig{fig:bTagging/premixing/lowLevelVariables} from
     a $t\bar{t}$ sample with pile-up included and full simulation. The version of the
@@ -3401,10 +3414,10 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
                       of the premixing validation. On the bottom of the plots, the histogram corresponds
                       to the ratio of the distribution between premixing and standard mixing. }
 
-    This impacts the performances of both impact parameter-based algorithms and
-     secondary vertex-based algorithms significantly, as shown on
-    \reffig{fig:bTagging/premixing/performances}: for TCHE, the fake rate from lights
-    decreases by about 35\% at constant $b$ jet efficiency of 65\%, while SSVHE gets about 20\%
+    For this validation, the use of premixing therefore impacts the performances of both
+    impact parameter-based algorithms and  secondary vertex-based algorithms significantly,
+    as shown on \reffig{fig:bTagging/premixing/performances}: for TCHE, the fake rate from light jets
+    decreases by about 35\% for a constant $b$ jet efficiency of 65\%, while SSVHE gets about 20\%
     lower fake rate from $c$ jets.
 
     \insertTwoFigures{bTagging/premixing/performances}
@@ -3418,7 +3431,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
 
     This validation has therefore contributed to the identification of the problems with
     this version of the premixing. Since then, premixing has been developed further and
-    proved to be in agreement with the regular mixing, has been estimated to speed up the
+    proved to be in agreement with the regular mixing. It has been estimated to speed up the
     simulation by a factor 3 \cite{Premixing} and became part of the CMS workflow.
 
     \subsection{Studies of high pile-up scenario for Phase 2}
@@ -3431,8 +3444,8 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     problems and guide the orientation of the development for object reconstruction.
 
     The reference used for this validation is a $t\bar{t}$ sample generated with $\sqrt{s}
-    = 14\TeV$. The detector is simulated with the expected geometry for Phase 1 with
-    a pile-up of 50, and the conditions of the technical design report (TDR) \cite{Phase1TDR}. The
+    = 14\TeV$. The detector is simulated with the Phase 1 geometry with
+    a pile-up of 50, in the conditions of the technical design report (TDR) \cite{Phase1TDR}. The
     comparison is made with a $t\bar{t}$ sample with a Phase 1 aged geometry and a pile-up
     of 140.
 
@@ -3475,7 +3488,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
     distribution of the number of selected tracks per jet, and the distribution of the
     impact parameter significance for these tracks. In the high pile-up scenario, the
     number of selected tracks is significantly lower for all jets categories, interpreted
-    as coming from the simulated aging of the pixel detector. In particular
+    as coming from the aging of the pixel detector. In particular
     for the $b$ jet category, the distribution peaks around 7 or 8 selected tracks per
     jet in the Phase 2 scenario, compared to around 10 in the Phase 1. From this observation, one
     can expect a significant decrease in the $b$ jet efficiency. The distribution of
@@ -3499,7 +3512,7 @@ Florida, a pot of coffee, twelve jammy dodgers and a fez..! »}
                       to the ratio of the distribution between the PU = 140 and PU = 50
                       scenario. (Note that the color code is different from the previous plots.) }
 
-    \reffig{fig:bTagging/highPU/perf} shows the comparison of the performances curves
+    \reffig{fig:bTagging/highPU/perf} shows the comparison of the performance curves
     obtained for the two scenarios for the four main algorithms: track counting high
     efficiency, simple secondary vertex high efficiency, jet probability and combined secondary vertex.
     Track counting and jet probability, both relying essentially on the impact parameter
@@ -3586,7 +3599,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     As introduced in \refsection{sec:SUSY}, one of the best assets of supersymmetry is its ability to explain why the Higgs
     boson can be light, via the boson-fermion symmetry which protects the mass
-    of the Higgs from diverging because of quantum corrections. This is illustrated on
+    of the Higgs from diverging because of quantum corrections. This is illustrated in
     \reffig{fig:higgsCorrections}, showing the one-loop corrections to $m_h^2$
     from a fermionic field $f$ and a bosonic field $b$ coupled to the Higgs via the
     Lagrangian terms $- \lambda_f h \bar{f} f$ and $\lambda_b \left| h \right|^2 \left| b \right|^2$.
@@ -3730,7 +3743,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     consider that the lightest neutralino should be lighter than around $500\GeV$.
     Scenarios with a sneutrino as LSP might be studied as well, in particular in models
     attempting to explain the mass of the neutrinos, while the gravitino as LSP appears
-    in gravity mediated SUSY breaking models.
+    in gauge mediated SUSY breaking models.
 
     \subsection{Phenomenology and signature \label{sec:phenoAndSignature}}
     %=======================================
@@ -3777,12 +3790,12 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     \insertFigure{stopDecayModes}{0.8}
                  {Representation of the mass hierarchy in the $\lstop \rightarrow t
-                 \lneutralino$ decay mode (on the left) and $\lstop \rightarrow b
-                 \lchargino \rightarrow b W^{\pm} \lneutralino $ decay mode (on the
-                 right). For the later, the chargino mass $\mass{\lchargino}$ is
+                 \lneutralino$ decay mode (left) and $\lstop \rightarrow b
+                 \lchargino \rightarrow b W^{\pm} \lneutralino $ decay mode (right).
+                 For the later, the chargino mass $\mass{\lchargino}$ is
                  parametrized using $\mass{\lchargino} = x \cdot \mass{\lstop}
                  + (1 - x) \cdot \mass{\lneutralino}$ and three different values of $x$
-                 are studied, $x = 0.75$, $0.50$ and $0.25$.}
+                 are studied, $x = 0.75$, $0.50$ and $0.25$. \todo{maybe flag these as T2tt and T2bw}}
 
     All of these four decay hypotheses are studied independently
     of each other\footnote{We do not consider mixed decays where one stop of the pair
@@ -3793,8 +3806,9 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     $W$ bosons in the $\lstop \rightarrow b \lchargino \rightarrow b W^{\pm}
     \lneutralino$ mode, are dependent on the mixing matrices of the $\lstop$, $\lchargino$
     and $\lneutralino$. This can later significantly affect the distributions of
-    variables and the acceptance of the signal, and is discussed during the
-    interpretation of the results in \refsection{sec:analysis_results}.
+    variables and the acceptance of the signal. We first assume that the top is unpolarized
+    and will discuss alternative hypothesis during the interpretation of the results in
+    \refsection{sec:analysis_results}.
 
     \reffig{fig:stopFeynmanDiagrams} shows the two Feynman diagrams that are
     considered. It is relevant to target both those signals with the same analysis
@@ -3815,7 +3829,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     The cross-section of direct $\lstop$ pair production, which depends only on $\mass{\lstop}$,
     is presented on \reffig{fig:stopPairXsec} for $8\TeV$ and $13\TeV$ $pp$ collisions
-    as computed at next-to-leading-order by the software \textsc{Prospino} \cite{Prospino}.
+    as computed at next-to-leading-order by the software \textsc{Prospino} \cite{Prospino, Prospino2}.
     At $8\TeV$, the cross-section ranges from $\orderOf{100\pb}$ at $\mass{\lstop} =
     150\GeV$ to $\orderOf{1\fb}$ at $\mass{\lstop} = 900 \GeV$.
 
@@ -3979,8 +3993,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     This section focuses on the first aspect of the experimental search, namely the objects
     and events selection. The goal here is to, first, present the criteria used to define the
-    objects in the context of this analysis, and secondly, the baseline event selection based
-    on the signature being looked for.
+    objects in the context of this analysis, and secondly, the baseline event selection.
 
         \subsection{Trigger}
         %==============================================================
@@ -3989,23 +4002,23 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     presence of a muon or an electron in the event.
 
     The single muon trigger requires an isolated muon candidate with $\pT > 24\GeV$
-    with a relative isolation lower than 0.15 in a cone of $\Delta R = 0.3$. Under the present
+    and a relative isolation lower than 0.15 in a cone of $\Delta R = 0.3$. Under the present
     analysis selection, the efficiency of this trigger ranges from 78\% to 95\% depending
     on the $\pT$ and $\abseta$ of the muon. In addition to this single muon trigger, a
     muon+jets trigger is used, allowing a lower $\pT$ threshold for the muon. This trigger
     requires a muon candidate with $\pT > 17\GeV$ and $\abseta < 2.1$ and at least three
     jets with $\pT > 30\GeV$ and $\abseta < 3.0$. In the context of this analysis, the
-    efficiency of this trigger is essentially dependent of the muon $\pT$ and $\eta$ and
+    trigger efficiency depends essentially on the muon $\pT$ and $\eta$ and
     varies from 76\% to 97\% for a $\pT > 20\GeV$.
 
     The single electron trigger requires an electron candidate with $\pT > 27\GeV$. Because
     the reconstruction of electron is more challenging and subject to fakes than muons,
-    criteria are applied on the shower shape, the matching between track and supercluster,
+    extra criteria are applied on the shower shape, the matching between track and supercluster,
     and the ratio between of hadronic versus electromagnetic energy. In the context of this analysis,
-    the efficiency of this trigger ranges from 86\% to 97\% depending on the $\pT$ of the
+    the trigger efficiency ranges from 86\% to 97\% depending on the $\pT$ of the
     electron.
 
-    The analysis makes also use of dilepton triggers to later control the dileptonic
+    The analysis makes also use of dilepton triggers to control the dileptonic
     $t\bar{t}$ component. For these, electrons candidates are identified using loose
     requirements on the isolation and information from tracker and calorimeters. The
     leading lepton must have $\pT > 17\GeV$ while the second lepton must have $\pT > 8\GeV$.
@@ -4016,10 +4029,9 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
 
     After full reconstruction of the events, further criteria are applied on the lepton
     candidates. In the context of this analysis, we define two categories of leptons:
-    the first one, called \emph{selected} leptons, corresponds to well-identified high-$\pT$
-    isolated leptons ; the second one is a category meant to be used to veto events with
-    a lost second lepton, and is constructed from the particle-flow candidates directly,
-    with loose requirements.
+    \emph{selected} leptons, i.e. well-identified high-$\pT$ isolated leptons, and a second
+    category used to veto events with a lost second lepton, constructed from the particle-flow
+    candidates directly, with loose requirements.
 
             \subsubsection{Selected leptons}
             %==============================================================
@@ -4027,13 +4039,12 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         To enter the selected lepton category, muon candidates are requested to have
     $\pT > 20\GeV$ and $\abseta < 2.1$ as well as a good vertex compatibility, good fit
     quality for the track and a minimum number of hits in both the tracker and the muon
-    subdetectors using the tight identification working point of the collaboration
-    \cite{MuonID}.
+    subdetectors using the tight identification working point \cite{MuonID}.
 
         Electron candidates are requested to have $\pT > 30\GeV$, to be in the barrel
     ($\abseta < 1.4442$) and have good vertex compatibility, low number of missing hits
     and low amount of radiation in the tracker using the medium identification working
-    point of the collaboration \cite{ElectronID}.
+    point \cite{ElectronID}.
 
     For both muons and electrons, we quantify their isolation by considering the particles
     inside a cone of $\Delta R = 0.3$ around the lepton. The absolute isolation, $i_\text{abs}$,
@@ -4048,7 +4059,8 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         %==============================================================
 
     As announced in \refsection{sec:analysis_overview}, the dileptonic $t\bar{t}$
-    process becomes a major background of this analysis after cutting on the variable $\MT$.
+    process is the main background of this analysis after cutting on the variable $\MT$,
+    representing about 60\% of the total background.
     This motivates the development of efficient ways to reject this specific background,
     in particular via a veto targeting events with a 'lost' lepton.
 
@@ -4079,12 +4091,11 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     (1-prong $\tau$) categories. We look for a reconstructed isolated particle in the event,
     discarding those that are within $\Delta R < 0.1$ of an already selected lepton. To
     remove fakes from pile-up activity, we require the track of the particle to be
-    compatible with the primary vertex with $d_z < 0.05$ cm. A different treatment is then
-    applied on the particle depending if it is flagged or not as an electron or muon by the
-    particle-flow algorithm. If the particle is flagged as an electron or muon candidate,
+    compatible with the primary vertex with $d_z < 0.05$ cm.
+    If the particle is flagged as an electron or muon candidate by the particle flow algorithm,
     it is required to have $\pT > 5\GeV$ and a relative isolation lower than 0.2.
     If the particle is not flagged as an electron or muon candidate, the $\pT$ requirement
-    is tighten to $10\GeV$, the relative isolation must be lower than 0.1, and its charge
+    is tightened to $10\GeV$, the relative isolation must be lower than 0.1, and its charge
     must be opposite to the one of an already selected lepton.
     \reffig{fig:isoTrackVeto_distributions} shows the distribution of $d_z$ and the
     relative isolation before cutting on these variables. Particle-flow candidates are categorized depending if
@@ -4113,7 +4124,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     several constrains are applied by the algorithm based on the mass of the $\pi^0$ and
     $\tau$. After the reconstruction step, to reject fake $\tau$'s, we use a discriminant
     based on a multivariate analysis of the parameter and topology of the jet. The medium
-    working point is used, leading to a tagging efficiency around $70\sim80$\% for a fake
+    working point is used, leading to a tagging efficiency around $70-80$\% for a fake
     rate of about 1\% as shown on \reffig{fig:tauVeto_distributions} on the left. The $\tau$
     candidates must be separated from an already selected lepton by $\Delta R > 0.4$ and
     to be oppositely charged. In addition, to reject fakes at low $\pT$ as shown on
@@ -4159,11 +4170,11 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         \hline
     \end{tabular}
         \caption{Selection efficiencies when applying the two vetoes, estimated on the different
-        categories of second leptons on a $t\bar{t}$ sample. The first column presents to
+        categories of second leptons of a $t\bar{t}$ sample. The first column shows
         the case with no generated second lepton (i.e. semileptonic $t\bar{t}$) and is
         related to fake second leptons. The next columns detail the efficiency on each
         category of second lepton. The last column corresponds to the global efficiency
-        for events with two generated second lepton (i.e. dileptonic $t\bar{t}$).}
+        for events with two generated leptons (i.e. dileptonic $t\bar{t}$).}
         \label{tab:secondLeptonVetoPerformances}
     \end{table}
 
@@ -4186,23 +4197,23 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
        $b$-tagged jets are defined by, on top of the previous requirements, using the
        medium working point of the Combined Secondary Vertex (CSV) tagging algorithm \cite{BTagging8TeV}.
        The efficiency of this tagger is typically around 60\% for $b$ jets while the fake
-       rate of light jets is around 1\%. The value of the CSV discriminant is corrected in
-       the simulation via a reshaping technique, function of the $\pT$, $\eta$ and flavor
-       of the jet to account for known data/MC discrepancies.
+       rate of light jets is around 1\%. To account for known data/MC discrepancies, the
+       value of the CSV discriminant is corrected in the simulation via a reshaping technique,
+       function of the $\pT$, $\eta$ and flavor of the jet.
 
        The missing transverse energy, $\vec{\MET}$, is computed by considering the
        negative vector sum of all particle-flow candidates in the event and corrected by
        propagating the previous corrections applied on the jets. Because this quantity is
        crucial in this analysis, a particular attention is given to it. Especially, not only
        the energy resolution is important, but also the $\phi$ resolution. This is why
-       a correction is applied on the direction of $\vec{\MET}$ to remove a modulation seen in
-       both data and simulations, function of the pile-up. The direction of this
+       a correction is applied on the $\vec{\MET}$ direction to remove a modulation seen in
+       both data and simulations, function of the pile-up level. The direction of this
        particle-flow-based $\MET$ is also checked to be consistent with a calorimeter-based
        approach and we veto events were the difference is higher than $1.5~\text{rad}$.
        Finally, we filters events that suffer from high noise, anomalous subdetector operation
        or known misreconstruction issues that lead to unphysical $\MET$ \cite{METperf}.
 
-        \subsection{Events selection}
+        \subsection{Events preselection}
         %==============================================================
 
         The baseline selection, or preselection,
@@ -4222,8 +4233,8 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         category corresponds to dileptonic $t\bar{t}$ production. Finally, the rare
         category regroups several different processes from Drell-Yan, diboson, triboson and
         $t\bar{t}$+boson. The QCD background is not considered in this analysis as its
-        contribution has been found to be negligible, which is related to the
-        isolated lepton requirement and the $\MET$ cut.
+        contribution has been found to be negligible, following the isolated lepton
+        requirement and the $\MET$ cut.
 
         \reftab{tab:cutflowPreselection} presents a breakdown of the yields of the backgrounds
         at different steps of the preselection. \reffig{fig:selectionEfficiency} shows
@@ -4248,8 +4259,13 @@ $\lstop \rightarrow t \lneutralino$   (450/50) & 341 $\pm$ 7               & 289
 $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 398 $\pm$ 21              & 356 $\pm$ 20       & 306 $\pm$ 19      & 248 $\pm$ 16       \\
                 \hline
             \end{tabular}
-            \caption{Breakdown of the yields for each background categories as well as two signal benchmarks,
-            at different stages of the selection. Uncertainties are statistical only.}
+            \caption{Event yields for each background categories at different stages of
+            the selection, estimated from Monte-Carlo at $\sqrt{s} = 8\TeV$ and for
+            $\mathcal{L} = 19.5\invfb$. Two signal benchmark examples are also considered,
+            for the $\lstop \rightarrow t \lneutralino$ decay mode
+            and $\lstop \rightarrow b \lchargino$ with $x = 0.5$ decay mode,
+            both with $(\mass{\lstop},\mass{\lneutralino}) = (450,50)\GeV$.
+            Uncertainties reflects the statitics from the Monte-Carlo samples.}
             \label{tab:cutflowPreselection}
         \end{table}
 
@@ -4291,7 +4307,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 398 $\pm$ 21              & 356
     and $\Wjets$ background, while the same variable can get to higher values for the signal
     because of the additional missing energy coming from the two neutralinos.
 
-    \reffig{fig:MTatPreselection} shows how $\MT$ distributes for the different
+    \reffig{fig:MTatPreselection} shows the $\MT$ distribution for the different
     backgrounds and two signal benchmarks at preselection level. Despite the sharp drop after
     $\MT \sim 80\GeV$, the $\oneLeptonTop$, $\Wjets$ and rare components still contribute
     in the tail because of $\vec{\MET}$ resolution effects and off-shell $W$ contributions.
@@ -4307,24 +4323,23 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 398 $\pm$ 21              & 356
 
     Given the discriminating power of this variable, cutting on it is the starting point
     of all the signal region definitions of the analysis. Two approaches are used to define
-    the signal regions. The first approach is a cut-based approach which consists in applying
-    a sequential list of cuts on variables, followed by a counting experiment using the
-    expected yields of background and signal. The second approach uses a boosted decision
-    tree (BDT) that combines multiple inputs into a single discriminating variable, the
+    the signal regions. The first one, called cut-based approach or cut-and-count, consists
+    in applying a sequential list of cuts on variables, followed by a counting experiment
+    using the expected yields of background and signal. The second one uses a boosted
+    decision tree (BDT) that combines multiple inputs into a single discriminating variable, the
     BDT output, on which a cut is applied to also perform a counting experiment. While the
-    BDT approach exploits by design more phase space than the cut-based approach given the
-    same information, and therefore is expected to have better performances, the cut-based
-    approach is often seen as a more transparent tool as it offers the possibility to control
-    one by one the effect of each cut.
+    BDT approach exploits the information more efficiently than the cut-based, and therefore is
+    expected to have better performances, the cut-based approach is often seen as a more
+    transparent tool as it offers the possibility to control one by one the effect of each
+    cut.
 
     For the cut-based approach, we use $\MT > 120 \GeV$ as a starting point
     whereas for the BDT approach we use $\MT > 100 \GeV$ to allow more phase space for the
     training and higher initial selection efficiency for the signal. \reftab{tab:MTcutImpact}
     shows the breakdown of the yields after the $\MT$ cut for the different backgrounds and two signal benchmarks.
-    In particular for $\MT > 120\GeV$, one can notice how 96\% of the $\oneLeptonTop$ and
-    $\Wjets$ contributions is rejected while about 65\% of the signal is conserved. The
-    $\diLeptonTop$ category is the less impacted background and represents about
-    42\% of the total background after the cut.
+    For $\MT > 120\GeV$, 96\% of the $\oneLeptonTop$ and $\Wjets$ contributions is rejected
+    while about 65\% of the signal is conserved. The $\diLeptonTop$ category is less
+    impacted and represents about 42\% of the total background after the cut.
 
     \begin{table}[h!]
         \centering
@@ -4343,263 +4358,264 @@ $\lstop \rightarrow t \lneutralino$   (450/50) & 224 $\pm$ 6         & 160 $\pm$
 $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$ 14  & 146 $\pm$ 13  \\
             \hline
         \end{tabular}
-        \caption{Breakdown of the yields for each background category and two signal
-        benchmarks, after cutting on $\MT > 100 \GeV$ and $\MT > 120 \GeV$. Uncertainties
-        are coming only from the statistics of the Monte-Carlo samples.}
+        \caption{Event yields for each background categories, after $\MT > 100
+        \GeV$ and $\MT > 120 \GeV$, estimated from Monte-Carlo at $\sqrt{s} = 8\TeV$
+        and for $\mathcal{L} = 19.5\invfb$. Two signal benchmark examples are also
+        considered, for the $\lstop \rightarrow t \lneutralino$ decay mode and $\lstop
+        \rightarrow b \lchargino$ with $x = 0.5$ decay mode, both with $(\mass{\lstop},\mass{\lneutralino})
+        = (450,50)\GeV$. Uncertainties reflects the statitics from the Monte-Carlo samples.}
         \label{tab:MTcutImpact}
     \end{table}
 
     In the following, we first present the discriminating variables that are used to design
-    the signal regions, classified according to their nature, then we detail the
-    sensitivity estimation and optimization procedure.
+    the signal regions, and then detail the sensitivity estimation and optimization procedure.
 
     \subsection{Discriminating variables \label{sec:analysis_variables}}
         %==============================================================
 
-        This section describes the variables which are later used to define the
-        signal regions. For each of them, we discuss the motivation behind the construction
-        and usage of this variable, and compare the distribution for the background
-        and two signal benchmarks. This comparison is shown at preselection level with
-        an additional cut on $\MT > 100\GeV$. However, it should be kept in mind that the
-        usefulness of some variables only shows up after cutting on other variables or in
-        specific regions of the $(\mass{\lstop},\mass{\lneutralino})$ space.
+    This section describes the variables which are later used to define the
+    signal regions. For each of them, we discuss the motivation behind the construction
+    and usage of this variable, and compare the distribution for the background
+    and two signal benchmarks. This comparison is shown at preselection level with
+    an additional cut on $\MT > 100\GeV$. However, it should be kept in mind that the
+    usefulness of some variables only shows up after cutting on other variables or in
+    specific regions of the $(\mass{\lstop},\mass{\lneutralino})$ space.
 
-           \subsubsection{$\MET$ and $\MET$ significance}
+    \subsubsection{$\mathbf{\MET}$ and $\mathbf{\MET}$ significance}
 
-        While the preselection already includes a cut on the missing transverse energy,
-        cutting further on it can significantly increase the signal-to-noise ratio especially
-        since the mean $\MET$ is expected to grow as a function of $\deltam$ as shown
-        in \reffig{fig:phenoMET}. However, signal
-        at low $\deltam$ is more challenging because of the lower $\MET$. To address this
-        particular region of the ($\mass{\lstop}$,$\mass{\lneutralino}$) space, one
-        can turn to the significance of $\MET$ \cite{METperf, METsignificanceMirman}. The
-        uncertainty on $\MET$ is, in the gaussian approximation, $\sqrt{\sum_\text{particles} E_T}$,
-        which can be approximated by $\sqrt{H_T}$ with $H_T \definedAs \sum_\text{jets} p_T$.
-        The variable $\MET / \sqrt{H_T}$ can therefore be used as an approximation of the
-        real $\MET$ significance. Overall, it effectively provides a better discriminating
-        power compared to the regular $\MET$ at low $\deltam$. This can be qualitatively understood
-        by considering that some background events may have large $\MET$ coming
-        from mismeasurement due to high hadronic activity, and will therefore be have
-        a low $\MET/\sqrt{H_T}$ value. On the contrary, signal with relatively low $\MET$
-        can be recovered provided that the event contains a comparably low level of hadronic
-        activity, making it more likely that the $\MET$ is essentially real.
+    While the preselection already includes a cut on the missing transverse energy,
+    cutting further on it can significantly increase the signal-to-noise ratio especially
+    since the mean $\MET$ is expected to grow as a function of $\deltam$ as shown
+    in \reffig{fig:phenoMET}. However, signal
+    at low $\deltam$ is more challenging because of the lower $\MET$. To address this
+    particular region of the ($\mass{\lstop}$,$\mass{\lneutralino}$) space, one
+    can turn to the significance of $\MET$ \cite{METperf, METsignificanceMirman}. The
+    uncertainty on $\MET$ is, in the gaussian approximation, $\sqrt{\sum_\text{particles} E_T}$,
+    which can be approximated by $\sqrt{H_T}$ with $H_T \definedAs \sum_\text{jets} p_T$.
+    The variable $\MET / \sqrt{H_T}$ can therefore be used as an approximation of the
+    real $\MET$ significance. Overall, it effectively provides a better discriminating
+    power compared to the regular $\MET$ at low $\deltam$. This can be qualitatively understood
+    by considering that some background events may have large $\MET$ coming
+    from mismeasurement due to high hadronic activity, and will therefore be have
+    a low $\MET/\sqrt{H_T}$ value. On the contrary, signal with relatively low $\MET$
+    can be recovered provided that the event contains a comparably low level of hadronic
+    activity, making it more likely that the $\MET$ is essentially real.
 
-        \reffig{fig:METvsSqrtHT} illustrates this fact by showing the distribution of
-        $\sqrt{H_T}$ versus $\MET$ for the $\oneLeptonTop$ background and a signal benchmark, and
-        as an example the line corresponding to a cut at $\MET / \sqrt{H_T} < 10$. The distributions
-        for $\MET$ and $\MET / \sqrt{H_T}$ are compared for backgrounds and signal on
-        \reffig{fig:variables/METandMEToverSqrtHT} and shows how the signal populates the
-        tail of both distributions.
+    \reffig{fig:METvsSqrtHT} illustrates this fact by showing the distribution of
+    $\sqrt{H_T}$ versus $\MET$ for the $\oneLeptonTop$ background and a signal benchmark, and
+    as an example the line corresponding to a cut at $\MET / \sqrt{H_T} < 10$. The distributions
+    for $\MET$ and $\MET / \sqrt{H_T}$ are compared for backgrounds and signal on
+    \reffig{fig:variables/METandMEToverSqrtHT} and shows how the signal populates the
+    tail of both distributions.
 
-        \insertTwoFigures{METvsSqrtHT}
-                         {variables/METvsSqrtHT_1ltop}{variables/METvsSqrtHT_T2tt}{0.45}
-                         {Distribution of $\sqrt{H_T}$ versus $\MET$ for the
-                         $\oneLeptonTop$ background (on the left) and a benchmark for
-                         $\lstop \rightarrow t \lneutralino$ (on the right).
-                         The line illustrates a cut on $\MET / \sqrt{H_T} < 10$.}
+    \insertTwoFigures{METvsSqrtHT}
+                     {variables/METvsSqrtHT_1ltop}{variables/METvsSqrtHT_T2tt}{0.45}
+                     {Distribution of $\sqrt{H_T}$ versus $\MET$ for the
+                     $\oneLeptonTop$ background (on the left) and a benchmark for
+                     $\lstop \rightarrow t \lneutralino$ (on the right).
+                     The line illustrates a cut on $\MET / \sqrt{H_T} < 10$.}
 
-        \insertTwoFigures{variables/METandMEToverSqrtHT}
-                         {variables/MET}
-                         {variables/METoverSqrtHT}
-                         {0.49}
-                         {Stacked plots presenting the distribution of $\MET$ and $\MET /
-                         \sqrt{H_T}$ for the different background categories. Two
-                         signal benchmarks are superimposed, with cross section multiplied
-                         by 100, to show the discriminating power:
-                         $\lstop \rightarrow t \lneutralino$ with $(\mass{\lstop},\mass{\lneutralino})
-                         = (550,50)\GeV$ (in dashed green), and $\lstop \rightarrow b \lchargino$
-                         with $x = 0.5$ and $(\mass{\lstop}, \mass{\lneutralino}) = (550,50)\GeV$
-                         (in dashed purple). The preselection is applied as well as a cut
-                         on $M_T > 100 \GeV$.}
-
-        \subsubsection{$M_{T2}^{W}$}
-
-        As the sharp decrease of $\MT$ is a quite appealing feature, developments have been
-        carried \cite{MT2variables} to construct similar variables, adapted to other kind
-        of topologies than
-        a unique source of genuine $\MET$ from a $W \rightarrow \ell \nu_\ell$.  These extensions are
-        often called $M_{T2}$. Here, we make use of $M_{T2}^W$ which is specifically
-        designed for the topology of the $\diLeptonTop$ background, with
-        one missing lepton. $M_{T2}^W$ is designed by decomposing $\vec{\MET}$ into two
-        components: one corresponding to the neutrino $\nu_1$, and the other one to
-        the lost leptonic $W_2$, such that $\vec{p}_{W_2} + \vec{p}_{\nu_1} = \vec{\MET}$,
-        as sketched on \reffig{fig:MT2W}.
-        The momenta must fit into the constraints that each $W$-like systems, ($\ell + \nu_1$)
-        and $W_2$, should have a mass $m_W \sim 80 \GeV$. Finally, it is imposed that
-        $m(b_2 + W_2) = m(b_1 + \ell + \nu_1) \definedAs \mass{Y}$. The computation is
-        summarized in \refequation{eq:MT2W_definition}.
-        The resulting value for $M_{T2}^W$ is the minimum value of $\mass{Y}$ found across
-        all possible decomposition of $\vec{\MET}$. For the $\diLeptonTop$ background,
-        this variable has an end point at $m_t \sim 172\GeV$ while the signal can get to
-        larger values because it contains three sources of $\MET$.
-
-        \insertFigure{MT2W}{0.3}{Sketch of the object naming in the context of
-                                 $M_{T2}^{W}$ and assuming that the event follows the topology
-                                 of a dileptonic $t\bar{t}$ event with one lepton not
-                                 reconstructed.}
-
-        \eq{MT2W_definition}
-        {
-            M_{T2}^{W}
-            =
-            \text{min}
-            \left\{
-            \text{$m_y$ consistent with:}
-                \left[
-                    \begin{array}{r}
-                    \vec{p}_{T,1} + \vec{p}_{T,2} =  \vec{\MET}, p_1^2 = 0, \left(p_1 + p_l \right)^2 = p_2^2 = \mass{W}^2, \\
-                    \left(p_1 + p_l +  {p_{b}}_{1}  \right)^2 = \left(p_2 + {p_{b}}_{2} \right)^2 =\mass{Y}^2
-                    \end{array}
-                \right]
-            \right\}
-        }
-
-        The resulting distribution of $M_{T2}^W$ is shown on \reffig{fig:variables/MT2W} for
-        backgrounds and signal. The distribution exhibits a particularly good discriminating
-        power with the majority of the background, including the $\diLeptonTop$ component,
-        is found to have $M_{T2}^W < 175\GeV$ while the signal has a much broader distribution
-        from about $125$ to $350\GeV$.
-
-        \insertFigure{variables/MT2W}
+    \insertTwoFigures{variables/METandMEToverSqrtHT}
+                     {variables/MET}
+                     {variables/METoverSqrtHT}
                      {0.49}
-                     {Stacked plots presenting the distribution of $M_{T2}^W$
-                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+                     {Stacked plots presenting the distribution of $\MET$ and $\MET /
+                     \sqrt{H_T}$ for the different background categories. Two
+                     signal benchmarks are superimposed, with cross section multiplied
+                     by 100, to show the discriminating power:
+                     $\lstop \rightarrow t \lneutralino$ with $(\mass{\lstop},\mass{\lneutralino})
+                     = (550,50)\GeV$ (in dashed green), and $\lstop \rightarrow b \lchargino$
+                     with $x = 0.5$ and $(\mass{\lstop}, \mass{\lneutralino}) = (550,50)\GeV$
+                     (in dashed purple). The preselection is applied as well as a cut
+                     on $M_T > 100 \GeV$.}
 
-        \subsubsection{Hadronic top $\chi^{2}$}
+    \subsubsection{$\mathbf{M_{T2}^{W}}$}
 
-        An other way to reject the $\diLeptonTop$ background, complementary to the approach
-        offered by $M_{T2}^{W}$, is to try to reconstruct an hadronic top from the jets
-        in the event. It can be done by finding the best couple of jets, among selected jets,
-        that fits into the constraint of the mass of the $W$ and then to the mass of the top
-        by adding a third jet. The value of the hadronic top $\chi^2$ is defined as
-        \eq{hadronicChi2definition}
-        {
-            \chi^2_\text{hadronic top}
-            =
-            \frac{(\mass{j_1 j_2 j_3} - \mass{t})^2}{\sigma^2_{j_1 j_2 j_3}}
-            +
-            \frac{(\mass{j_1 j_2} - \mass{W})^2}{\sigma^2_{j_1 j_2}}
-        }
-        where the $\sigma$ are the uncertainties on the mass of the jet systems obtained by
-        propagating the jet energy resolution. This observable is in particular relevant to
-        discriminate signal events, expected to contain an hadronic top, from $\diLeptonTop$
-        and some of the processes of the rare category, expected to not contain an hadronic top.
-        The distribution of this variable is shown on \reffig{fig:variables/HadronicChi2}.
+    As the sharp decrease of $\MT$ is a quite appealing feature, developments have been
+    carried \cite{MT2variables} to construct similar variables, adapted to other kind
+    of topologies than
+    a unique source of genuine $\MET$ from a $W \rightarrow \ell \nu_\ell$.  These extensions are
+    often called $M_{T2}$. Here, we make use of $M_{T2}^W$ which is specifically
+    designed for the topology of the $\diLeptonTop$ background, with
+    one missing lepton. $M_{T2}^W$ is designed by decomposing $\vec{\MET}$ into two
+    components: one corresponding to the neutrino $\nu_1$, and the other one to
+    the lost leptonic $W_2$, such that $\vec{p}_{W_2} + \vec{p}_{\nu_1} = \vec{\MET}$,
+    as sketched on \reffig{fig:MT2W}.
+    The momenta must fit into the constraints that each $W$-like systems, ($\ell + \nu_1$)
+    and $W_2$, should have a mass $m_W \sim 80 \GeV$. Finally, it is imposed that
+    $m(b_2 + W_2) = m(b_1 + \ell + \nu_1) \definedAs \mass{Y}$. The computation is
+    summarized in \refequation{eq:MT2W_definition}.
+    The resulting value for $M_{T2}^W$ is the minimum value of $\mass{Y}$ found across
+    all possible decomposition of $\vec{\MET}$. For the $\diLeptonTop$ background,
+    this variable has an end point at $m_t \sim 172\GeV$ while the signal can get to
+    larger values because it contains three sources of $\MET$.
 
-        \insertFigure{variables/HadronicChi2}
+    \insertFigure{MT2W}{0.3}{Sketch of the object naming in the context of
+                             $M_{T2}^{W}$ and assuming that the event follows the topology
+                             of a dileptonic $t\bar{t}$ event with one lepton not
+                             reconstructed.}
+
+    \eq{MT2W_definition}
+    {
+        M_{T2}^{W}
+        =
+        \text{min}
+        \left\{
+        \text{$m_y$ consistent with:}
+            \left[
+                \begin{array}{r}
+                \vec{p}_{T,1} + \vec{p}_{T,2} =  \vec{\MET}, p_1^2 = 0, \left(p_1 + p_l \right)^2 = p_2^2 = \mass{W}^2, \\
+                \left(p_1 + p_l +  {p_{b}}_{1}  \right)^2 = \left(p_2 + {p_{b}}_{2} \right)^2 =\mass{Y}^2
+                \end{array}
+            \right]
+        \right\}
+    }
+
+    The resulting distribution of $M_{T2}^W$ is shown on \reffig{fig:variables/MT2W} for
+    backgrounds and signal. The distribution exhibits a particularly good discriminating
+    power with the majority of the background, including the $\diLeptonTop$ component,
+    is found to have $M_{T2}^W < 175\GeV$ while the signal has a much broader distribution
+    from about $125$ to $350\GeV$.
+
+    \insertFigure{variables/MT2W}
+                 {0.49}
+                 {Stacked plots presenting the distribution of $M_{T2}^W$
+                 with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+
+    \subsubsection{Hadronic top $\chi^{2}$}
+
+    An other way to reject the $\diLeptonTop$ background, complementary to the approach
+    offered by $M_{T2}^{W}$, is to try to reconstruct an hadronic top from the jets
+    in the event. It can be done by finding the best couple of jets, among selected jets,
+    that fits into the constraint of the $W$ mass of the and then to the top mass
+    by adding a third jet. The value of the hadronic top $\chi^2$ is defined as
+    \eq{hadronicChi2definition}
+    {
+        \chi^2_\text{hadronic top}
+        =
+        \frac{(\mass{j_1 j_2 j_3} - \mass{t})^2}{\sigma^2_{j_1 j_2 j_3}}
+        +
+        \frac{(\mass{j_1 j_2} - \mass{W})^2}{\sigma^2_{j_1 j_2}}
+    }
+    where the $\sigma$ are the uncertainties on the mass of the jet systems obtained by
+    propagating the jet energy resolution. This observable is particularly relevant to
+    discriminate signal events, expected to contain an hadronic top, from $\diLeptonTop$
+    and some of the processes of the rare category, that have no hadronic top.
+    The distribution of this variable is shown on \reffig{fig:variables/HadronicChi2}.
+
+    \insertFigure{variables/HadronicChi2}
+                 {0.49}
+                 {Stacked plots presenting the distribution of $\chi^2_\text{hadronic top}$
+                 with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+
+    \subsubsection{$\pT(\text{leading } b)$}
+
+    The $\pT$ of the selected objects are a natural source of discriminating power as
+    the signal is expected to have a larger momentum than the background on average.
+    However for the $\lstop \rightarrow b \lchargino$ decay mode, the $\pT$ of the
+    $b$ jets is expected to be particularly high (compared to the typical $\pT$ of $b$ jets in the
+    background) as it originates directly from the decay of the stop. It is therefore
+    interesting for the low $x$ cases, i.e. where the gap between $\lstop$ and
+    $\lchargino$ is large. The distribution of the $p_T$ of the leading
+    $b$-tagged jet is compared for the background and signal in \reffig{fig:variables/leadingBPt}
+    and illustrates the good discriminating power for the $\lstop \rightarrow b \lchargino$
+    decay mode.
+
+    \insertFigure{variables/leadingBPt}
+                 {0.49}
+                 {Stacked plots presenting the distribution of $\pT(\text{leading } b)$
+                 with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+
+    \subsubsection{ISR-tagged jets}
+
+    As described in \refsection{sec:analysis_contextAndPheno}, the low $\deltam$,
+    off-shell and stealthy regions are challenging because looking quite like the SM
+    $t\bar{t}$ production, of have lower $\pT$ decay products. One approach to
+    work around this issue is inspired by direct dark matter production searches \cite{EXOmonojet}
+    and other searches for new physics involving soft objects \cite{SUScompressedStop}. The
+    production of heavy particles, in our case stops, requires more energetic
+    partons compared to the productiong of lighter objects, such as tops. As the rate and energy of
+    initial-state radiation (ISR) grows according to the energy of the incoming partons,
+    the presence of an ISR and its energy in the event allow to discriminate between the $t\bar{t}$
+    background and a low $\deltam$ signal. Moreover, the production of an ISR can enhance
+    the $\vec{\MET}$ magntude in the event, as the system is recoiling in the opposite
+    direction of the ISR as sketched on \reffig{fig:ISRtagging/ISRsketch} for a
+    SUSY signal. This is further illustrated in \reffig{fig:ISRpheno} showing, at
+    $\deltam = 125\GeV$, the evolution of the mean stop pair recoil as function
+    of $\mass{\lstop}$, as well as the evolution of the mean generated $\MET$ as function
+    of the stop pair recoil.
+
+    \insertFigure{ISRtagging/ISRsketch}{0.75}{Topology of a SUSY signal without (A, on the
+    left) and with (B, on the right) an ISR jet labeled as $j$, boosting in that case
+    the initial pair of SUSY particles in the opposite direction. The scenario with the ISR jet therefore leads to an
+    increase of $\MET$ in the overall event, coming from the $\tilde{B}$ in the decay
+    of the initial pair of gluino $\tilde{g}$ (illustration from
+    \cite{ISRGluinoTevatron}).}
+
+    \insertTwoFigures{ISRpheno}
+                     {ISRtagging/mStop_vs_meanStopPairRecoil}
+                     {ISRtagging/stopPairRecoil_vs_meanGenMET}
                      {0.49}
-                     {Stacked plots presenting the distribution of $\chi^2_\text{hadronic top}$
-                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+                     {On the left, mean recoil of the stop pair system as function
+                     of the stop mass.
+                     On the right, mean $\MET$ as function of the stop pair system recoil.
+                     The signal benchmarks used here have $\deltam = 125\GeV$ and a
+                     preselection requiring at least 1 high-$\pT$ electron or muon,
+                     and at least three jets has been applied.}
 
-        \subsubsection{$\pT(\text{leading } b)$}
+    To take advantage of this phenomenological aspect, one can design criteria to
+    select jets that are likely to originate from ISR \cite{ISRGluinoTevatron, ISRtagging}.
+    In the present analysis, we define the ISR-tagging criterion by asking that
+    the event contains at least five jets, among which one of them with $\pT > 200 \GeV$
+    and not $b$-tagged. To illustrate this, \reffig{fig:variables/leadingNonBPtN5}
+    shows the distribution of the $\pT$ of the leading non $b$-tagged jet for
+    events with at least five jets. The signal benchmark used on this plot is
+    taken with $(\mass{\lstop},\mass{\lneutralino}) = (300,200)\GeV$.
 
-        The $\pT$ of the selected objects are a natural source of discriminating power as
-        the signal is expected to have a larger momentum than the background on average.
-        However for the $\lstop \rightarrow b \lchargino$ decay mode, the $\pT$ of the
-        $b$ jets is expected to be particularly high (compared to the typical $\pT$ of $b$ jets in the
-        background) as it originates directly from the decay of the stop. It is therefore
-        interesting for the low $x$ cases, i.e. where the gap between $\lstop$ and
-        $\lchargino$ is set to be large. The distribution of the $p_T$ of the leading
-        $b$-tagged jet is compared for the background and signal on \reffig{fig:variables/leadingBPt}
-        and illustrates the good discriminating power for the $\lstop \rightarrow b \lchargino$
-        decay mode.
+    \insertFigure{variables/leadingNonBPtN5}
+                 {0.49}
+                 {Stacked plots presenting the distribution of the $\pT$ of the leading
+                 non $b$-tagged jet
+                 with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT},
+                 except that the signal benchmarks used is with $(\mass{\lstop},
+                 \mass{\lneutralino}) = (450,350)\GeV$, i.e. in the $\deltam$ region where
+                 this variable is expected to be discriminant due to
+                 the presence of an ISR.}
 
-        \insertFigure{variables/leadingBPt}
-                     {0.49}
-                     {Stacked plots presenting the distribution of $\pT(\text{leading } b)$
-                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
+                 \subsubsection{$\mathbf{\Delta \phi( j_{1,2},} \vec{\MET} \mathbf{)}$ }
 
-        \subsubsection{ISR-tagged jets}
+    A topological difference between the signal and the background is the correlation
+    between the direction of $\vec{\MET}$ and the two leading jets, $j_1$ and $j_2$.
+    $\Delta \phi( j_{1,2}, \vec{\MET} )$ is defined as the minimum of $\Delta \phi$
+    between the $\vec{\MET}$ direction and the leading jet, and $\Delta \phi$ between the
+    $\MET$ direction and the next-to-leading jets:
+    \eq{deltaPhij1j2METDefinition}
+    {
+        \Delta \phi( j_{1,2}, \vec{\MET} )
+        \definedAs
+        \text{min}
+        (
+            \Delta \phi( j_1, \vec{\MET} )
+            ,
+            \Delta \phi( j_2, \vec{\MET} )
+        )
+    }
 
-        As described in \refsection{sec:analysis_contextAndPheno}, the low $\deltam$,
-        off-shell and stealthy regions are challenging because looking quite like the SM
-        $t\bar{t}$ production, if not having lower $\pT$ decay products. One approach to
-        work around this issue is inspired by direct dark matter production searches \cite{EXOmonojet}
-        and other searches for new physics involving soft objects \cite{SUScompressedStop}. It consists in noticing that
-        the production of heavy particles, in our case stops, requires more energetic
-        partons compared to lighter objects, in our case tops. As the rate and energy of
-        initial-state radiation (ISR) grows according to the energy of the incoming partons,
-        one can conclude that the presence and
-        the energy of an ISR in the event can allow to discriminate between the $t\bar{t}$
-        background and a low $\deltam$ signal. Moreover, the production of an ISR can enhance
-        the magnitude of the $\MET$ in the event as the system is recoiling in the opposite
-        direction of the ISR, as sketched on \reffig{fig:ISRtagging/ISRsketch} for a
-        SUSY signal. This is further illustrated on \reffig{fig:ISRpheno} showing, at
-        $\deltam = 125\GeV$, the evolution of the mean stop pair recoil as function
-        of $\mass{\lstop}$, as well as the evolution of the mean generated $\MET$ as function
-        of the stop pair recoil.
+    As illustrated in \reffig{fig:variables/deltaPhiMETJets},
+    $t\bar{t}$ background tends to get lower values for this variable because the
+    $\nu_{\ell}$ direction is linked to the $b$ quark from the top parent. In signal
+    events, $\MET$ is less correlated to the $b$ jet and $\Delta \phi( j_{1,2},
+    \vec{\MET} )$ can easily take higher values.
 
-        \insertFigure{ISRtagging/ISRsketch}{0.75}{Topology of a SUSY signal without (A, on the
-        left) and with (B, on the right) an ISR jet labeled as $j$, boosting in that case
-        the initial pair of SUSY particles in the opposite direction. The scenario with the ISR jet therefore leads to an
-        increase of $\MET$ in the overall event, coming from the $\tilde{B}$ in the decay
-        of the initial pair of gluino $\tilde{g}$ (illustration from
-        \cite{ISRGluinoTevatron}).}
+    \insertFigure{variables/deltaPhiMETJets}
+                 {0.49}
+                 {Stacked plots presenting the distribution of $\Delta \phi( j_{1,2}, \vec{\MET} )$
+                 with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
 
-        \insertTwoFigures{ISRpheno}
-                         {ISRtagging/mStop_vs_meanStopPairRecoil}
-                         {ISRtagging/stopPairRecoil_vs_meanGenMET}
-                         {0.49}
-                         {On the left, mean recoil of the stop pair system as function
-                         of the stop mass.
-                         On the right, mean $\MET$ as function of the stop pair system recoil.
-                         The signal benchmarks used here have $\deltam = 125\GeV$ and a
-                         preselection requiring at least 1 high-$\pT$ electron or muon,
-                         and at least three jets has been applied.}
+    \subsubsection{Other variables used in the BDT approach}
 
-        To take advantage of this phenomenological aspect, one can design criteria to
-        select jets that are likely to originate from ISR \cite{ISRGluinoTevatron, ISRtagging}.
-        In the present analysis, we define the ISR-tagging criterion by asking that
-        the event contains at least five jets, among which one of them with $\pT > 200 \GeV$
-        and not $b$-tagged. To illustrate this, \reffig{fig:variables/leadingNonBPtN5}
-        shows the distribution of the $\pT$ of the leading non $b$-tagged jet for
-        events with at least five jets. The signal benchmark used on this plot is
-        taken with $(\mass{\lstop},\mass{\lneutralino}) = (300,200)\GeV$.
-
-        \insertFigure{variables/leadingNonBPtN5}
-                     {0.49}
-                     {Stacked plots presenting the distribution of the $\pT$ of the leading
-                     non $b$-tagged jet
-                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT},
-                     except that the signal benchmarks used is with $(\mass{\lstop},
-                     \mass{\lneutralino}) = (300,200)\GeV$, i.e. in the $\deltam$ region where
-                     this variable is expected to be discriminant due to
-                     the presence of an ISR.}
-
-        \subsubsection{$\Delta \phi( j_{1,2}, \vec{\MET} )$ }
-
-        A topological difference between the signal and the background is the correlation
-        between the direction of $\vec{\MET}$ and the two leading jets, $j_1$ and $j_2$.
-        $\Delta \phi( j_{1,2}, \vec{\MET} )$ is defined as the minimum of $\Delta \phi$
-        between the $\vec{\MET}$ direction and the leading jet, and $\Delta \phi$ between the
-        $\MET$ direction and the next-to-leading jets:
-        \eq{deltaPhij1j2METDefinition}
-        {
-            \Delta \phi( j_{1,2}, \vec{\MET} )
-            \definedAs
-            \text{min}
-            (
-                \Delta \phi( j_1, \vec{\MET} )
-                ,
-                \Delta \phi( j_2, \vec{\MET} )
-            )
-        }
-
-        As illustrated on \reffig{fig:variables/deltaPhiMETJets},
-        $t\bar{t}$ background tends to get low values for this variable because the
-        $\nu_{\ell}$ direction is linked to the $b$ quark from the top parent. In signal
-        events, $\MET$ is less correlated to the $b$ jet and can $\Delta \phi( j_{1,2},
-        \vec{\MET} )$ easily get to higher values.
-
-        \insertFigure{variables/deltaPhiMETJets}
-                     {0.49}
-                     {Stacked plots presenting the distribution of $\Delta \phi( j_{1,2}, \vec{\MET} )$
-                     with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
-
-        \subsubsection{Other variables used in the BDT approach}
-
-        Other variables are used for the BDT approach and are more briefly described in
-        this section. Four of them are illustrated on \reffig{fig:variables/otherVariablesForBDT}.
+    Other variables are used for the BDT approach and are more briefly described in
+    this section. Four of them are illustrated on \reffig{fig:variables/otherVariablesForBDT}.
 
     \begin{itemize}
         \item $\pT(\ell)$, $\pT(\text{leading jet})$ ; As already mentioned, the $\pT$ of the
@@ -4627,12 +4643,12 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \item $M_{\ell b}$ and $M'_{\ell b}$ ; We consider also the invariant mass of the
             $\ell$+leading $b$-tagged jet system. This variable is a simple attempt to
             reconstruct the mass of the leptonic top system despite missing the information
-            of the neutrino. It appears to be useful in the search for $\lstop \rightarrow
+            on the neutrino. It appears to be useful in the search for $\lstop \rightarrow
             b \lchargino$ where no end point at $\mass{t}$ is expected for this variable as there
             is no top in the decay chain, and larger values can thus be obtained for signal events.
-            An extension of this variable to the case where no $b$-tagged jet is found in the event,
-            $M'_{\ell b}$, consists in using the jet with the highest $b$-tagging discriminant
-            value.
+            $M'_{\ell b}$ is an extension of this variable to the case where no $b$-tagged
+            jet is found in the event, where in this case the jet with the highest
+            $b$-tagging discriminant value is used.
         \item $M_{3b}$ ; In a similar way, one can attempt to reconstruct the mass of the
             hadronic top system by considering the three jets most back-to-back to the selected
             lepton. Here again, values larger than $\mass{t}$ can be expected for the $\lstop
@@ -4743,7 +4759,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
             with $0.1$ signal events and expected background of $10^{-5}$ over a
             situation with 10 signal events and 1 background event, despite the fact that
             the later will definitely bring more information.
-      \item It ultimately relies on a gaussian approximation which can cause significant
+      \item It ultimately relies on a Gaussian approximation which can cause significant
             discrepancies with respect to an accurate computation of $P(N|H)$. For instance,
             the Poisson and Gaussian tail integrals are significantly different at low
             means. More specifically, $\mathcal{S}_\text{disc.}$ is known to overestimate
@@ -4790,8 +4806,9 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
     To design the cut-based signal regions of the analysis, the variables are first
     classified by their individual discriminating power, estimated by taking the
-    maximum FoM ($\mathcal{S}_\text{exclu.}$ here) achievable on a few signal benchmarks when scanning the possible
-    cuts. The most discriminating variables are found to be $\MT$, $\MET$,
+    maximum FoM ($\mathcal{S}_\text{exclu.}$ from \refequation{FoM} here) achievable on a
+    few signal benchmarks when scanning the possible cuts. The most discriminating variables
+    are found to be $\MT$, $\MET$,
     $\MET/\sqrt{H_T}$ and $M_{T2}^{W}$. The variables $\Delta \phi(j_{1,2},\vec{\MET})$,
     hadronic top $\chi^2$, $\pT(\text{lead. } b)$ and the 5th jet (ISR) requirement are
     also found to be helpful in particular cases or after cutting on the most discriminant
@@ -4811,7 +4828,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     if $S < 3$. The relative systematic uncertainty on the background is set to vary between
     15 and 30\% depending on the tightness of the cuts. We also incorporate some feedback
     of the background estimation that will be described later, by rescaling the $\oneLeptonTop$
-    and $\Wjets$ contributions with a factor 1.3. This has for effect to favor the
+    and $\Wjets$ contributions with a factor 1.3. This favor the
     rejection of these backgrounds over the $\diLeptonTop$ and rare components.
 
     After optimizing a limited bunch of benchmarks, we test all the sets of cuts on each
@@ -5265,7 +5282,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         of the $\diLeptonTop$ background and the second lepton veto definition. In the
         2 lepton control region, $\MT$ is defined using the leading lepton and ignoring
         the second one. The $\MT$-peak of the reversed veto control region is dominated by
-        $\oneLeptonTop$ where a fake second lepton was reconstructed while the $\MT$-tail
+        $\oneLeptonTop$ where a fake second lepton is reconstructed while the $\MT$-tail
         is dominated by $\diLeptonTop$ with a true second lepton. As for the $\MT$-peak
         normalization, we introduce scale factors to normalize the backgrounds in the peak
         of $\MT$ and then quantify the agreement in the tail.
@@ -5297,7 +5314,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         modeling of $\diLeptonTop$ as the four jets requirement corresponds to two
         additional jets coming from radiations or pile-up for this background.
         \reffig{fig:controlPlots/2leptons/nJets} presents the distribution of the number
-        of selected jets after application of $\MT>100$, which is found in good agreement.
+        of selected jets after application of $\MT>100\GeV$, which is found in good agreement.
 
 
         \begin{figure}[h!]
@@ -5358,7 +5375,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         to the $\oneLeptonTop$ and $\Wjets$ component. The $\oneLeptonTop$ and $\Wjets$
         are also corrected with $\SFRoneLeptonTop$ and $\SFRWjets$ respectively. The
         prediction for the rare component is directly the Monte-Carlo yield in $\MT$-tail.
-        \refequation{eq:prediction1ltop} to \refequation{eq:predictionrare} below summarize
+        \refequation{eq:prediction1ltop} to \refequation{eq:predictionrare} summarize
         the computation of the prediction. The procedure is repeated for each signal
         region as all the scale factors involved are signal-region dependent. As an
         illustration, \reftab{tab:predictionPreselection}
@@ -5494,7 +5511,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     The $\MT$-peak normalization scale factors are an important part of the background
     estimation procedure, but are nevertheless limited by the statistics available
     in the peak region. Therefore, the $\SFpre$ and $\SFpost$ scale factors come
-    associated to an uncertainty, dominated by the event count of data. This
+    associated with an uncertainty, dominated by the event count of data. This
     uncertainty is propagated to the prediction in the tail. This leads to a
     relative uncertainty on the total background ranging from 2 to 15\% for the
     cut-based signal regions and between 3 and 40\% for the BDT signal regions.
@@ -5521,7 +5538,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
               it also contributes to the systematic uncertainty on the final prediction.
     \end{itemize}
 
-    \subsubsection{Summary of background uncertainties at preselection}
+    \subsubsection{Summary of background uncertainties}
     %==============================================================
 
     \reftab{tab:systematicsSummary} shows a breakdown of the different systematic
@@ -5589,7 +5606,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
 
     The uncertainty on the ISR jets reweighting applied on signal is taken from data/MC
     scale factors derived from the analysis of events with high $\diLeptonTop$ purity. The
-    scale factors, function of the $\pT$ recoil of the system, are varied within their
+    scale factors depends on the $\pT$ recoil of the system. They are varied within their
     uncertainties and lead to a maximum variation of 8 and 10\% on the signal yield, depending
     on the decay mode.
 
@@ -5616,7 +5633,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         \label{eq:contaminationRatio}
     \end{equation}
 
-    This ratio $R$ is found to be sometimes higher than an arbitrary threshold value of 15$\sim$20\%.
+    This ratio $R$ is found to be sometimes higher than an arbitrary threshold value of $\sim$15-20\%.
     This is especially true when considering the low $\deltam$ region of the $(\mass{\lstop},
     \mass{\lneutralino})$ plane, as the signal is likely to get smaller values of $\MT$ and the $b$ jets
     are less likely to be selected or correctly $b$-tagged as their momenta decrease. This is illustrated
@@ -5660,7 +5677,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     to the rare category before fitting the $\oneLeptonTop$ and $\Wjets$ components to the data using the template
     fit method. We however constrain, a posteriori to the fit, $\SFRoneLeptonTopTilde$ to be $\geq 1$.
 
-    The corrected background $\tilde{B}$ is computed in the same way as described in
+    The corrected background $\tilde{B}$ is computed as described in
     \refequation{eq:prediction1ltop} to \refequation{eq:predictionrare} using the
     corrected scale factors. As the correction depends on the signal, it has to be
     performed on a per-benchmark basis. However, as it is a CPU intensive task, it is done
@@ -5711,7 +5728,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     \rightarrow t \lneutralino$ decay mode, the observed exclusion using the BDT approach
     goes up to $\mass{\lstop} \sim 700\GeV$ and $\mass{\lneutralino} \sim 250\GeV$ in the
     on-shell region and up to $\mass{\lneutralino} \sim 150\GeV$ in the off-shell region.
-    As discussed back to \refsection{sec:phenoAndSignature}, the case with $\deltam \sim
+    As discussed in \refsection{sec:phenoAndSignature}, the case with $\deltam \sim
     \mass{t}$ is challenging as the kinematic here is very close to Standard Model $t\bar{t}$
     production and cannot be efficiently probed directly. However, dedicated approach can
     be built to indirectly probe this scenario \cite{SUS-13-021, ClosingStopGap}. The
@@ -5741,7 +5758,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         regions between data and the background prediction under the null hypothesis. The
         grey hatching represents the systematic uncertainty, propagated on the ratio plot.
         On the bottom: upper limit on $\sigma(\lstop\lstop) \times \text{BR}$ at 95\% confidence level and exclusion in terms of
-        $(\mass{\lstop},\mass{\lneutralino})$ after comparison to the theory, assuming
+        $(\mass{\lstop},\mass{\lneutralino})$, assuming
         $BR = 1$. On the first column, for $\lstop \rightarrow t \lneutralino$ decay mode and on
         the second, third and last columns for $\lstop \rightarrow b \lchargino$ decay mode
         with $x=0.75$, $0.50$ and $0.25$ respectively.}
@@ -5766,7 +5783,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
         regions between data and the background prediction under the null hypothesis. The
         grey hatching represents the systematic uncertainty, propagated on the ratio plot.
         On the bottom: upper limit on $\sigma(\lstop\lstop) \times \text{BR}$ at 95\% confidence level and exclusion in terms of
-        $(\mass{\lstop},\mass{\lneutralino})$ after comparison to the theory, assuming
+        $(\mass{\lstop},\mass{\lneutralino})$, assuming
         $BR = 1$. On the first column, for $\lstop \rightarrow t \lneutralino$ decay mode and on
         the second, third and last columns for $\lstop \rightarrow b \lchargino$ decay mode
         with $x=0.75$, $0.50$ and $0.25$ respectively.}
@@ -5965,12 +5982,12 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     To define selection criteria, we study the distribution of a few variables
     on a $t\bar{t}$ Monte-Carlo sample after applying the preselection defined in
     \refsection{sec:analysis_objectAndEventSelection}. We however allow events with at
-    least three regular (i.e. based on the anti$k_T$ algorithm with a size parameter 0.5) jets
+    least three regular (i.e. based on the anti-$k_T$ algorithm with a size parameter 0.5) jets
     instead of four. $W$ candidates are matched to generated
     hadronically-decaying $W$: if the candidate is within $\Delta R < 0.4$, it
     is considered as matched, whereas candidates which are in $\Delta R > 2$ are
     considered to be fakes originating from quark or gluons.
-    The quantity investigated are the pruned mass of the jet the $N$-subjetiness ratio
+    The quantity investigated are the pruned mass of the jet, the $N$-subjetiness ratio
     $\tau_2 / \tau_1$ and the distance to the selected lepton $\Delta R (\ell,\text{jet})$.
     The later variable is relevant in this context of $t\bar{t}$-like event as the lepton
     is expected to be in the hemisphere opposite to the hadronic $W$.
@@ -5978,7 +5995,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     \reffig{fig:wTaggingVariables} shows the distribution of the pruned mass of
     the jet and the $N$-subjetiness ratio $\tau_2 / \tau_1$ for candidates with
     $\pT > 150\GeV$ and with $\Delta R(\ell,\text{jet}) > 1.5$. A good working point
-    is found to be $\text{mass}(\text{jet}) > 70\GeV$ and $\tau_2 / \tau_1 < 0.5$.
+    is found by requiring $\text{mass}(\text{jet}) > 70\GeV$ and $\tau_2 / \tau_1 < 0.5$.
     The resulting tagging efficiency is estimated as function of the $\pT$ of the
     candidate as presented on \reffig{fig:wTagging/taggingEfficiency_fromttbar}.
     The efficiency for candidates matched
@@ -6015,7 +6032,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     diboson, triboson and $t\bar{t}$+boson events are likely to contain not only
     true boosted hadronic $W$, but also boosted hadronic $Z$ which may be selected.
     The fraction of signal with a $W$-tagged jet increases from 20 to 30\% between
-    the two benchmarks $(\mass{\lstop},\mass{\neutralino}) = (600,0) \GeV$ and
+    the two benchmarks $(\mass{\lstop},\mass{\lneutralino}) = (600,0) \GeV$ and
     $(800,0) \GeV$ for the $\lstop \rightarrow t \lneutralino$ decay mode.
 
     \insertFigure{wTagging/analysisSelectionEfficiency}{0.5}
@@ -6118,7 +6135,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     \end{table}
 
     From this comparison, one observes that the use of $W$-tagging may provide a mild gain of
-    5$\sim$10\% on the total significance of the analysis in the high-$\deltam$ region.
+    $\sim$5-10\% on the total significance of the analysis in the high-$\deltam$ region.
     While it is counterintuitive that the gain at $\deltam = 600\GeV$ is around 8\%
     compared to 5\% at $\deltam = 800\GeV$, this is understood to be an artefact coming
     from the rough averaging of the optimal cuts across the five benchmarks. The average
@@ -6137,7 +6154,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     any discriminating variable likely to improve the performance.
     Finally, it must be kept in mind that the statistical usage of the $W$-tagging
     category can be done in different ways. The presence of a $W$-tagged jet or
-    related kinematic or angular quantity may be used in input of a boosted decision
+    related kinematic or angular quantity may be used as input to a boosted decision
     tree able to exploit the correlation between these variables and the others.
     One may also statistically combine the two categories (1W) and (0W) with multi-bins
     techniques, instead of merging them together into a single bin.
@@ -6281,20 +6298,18 @@ energy of $\sqrt{s} = 7$ and $8\TeV$. The analysis of the $5+20\invfb$ of integr
 recorded by the CMS detector allowed the discovery of a Standard Model-like Higgs boson
 with a mass around $125\GeV$. This discovery reinforces the need to address the hierarchy
 problem. Supersymmetry, in addition to proposing dark matter candidates, can provide a natural
-solution to the hierarchy problem, meaning that it does not require an extensive amount of fine
-tunning of the parameters of the theory. For supersymmetry to provide such a natural solution,
-the lightest stop $\lstop$ and neutralino $\lneutralino$ are expected to have masses below about
-$1\TeV$ and $500\GeV$ respectively.
+solution to the hierarchy problem. Natural supersymmetry favorizes the lightest stop $\lstop$ and
+neutralino $\lneutralino$ to have masses below about $1\TeV$ and $500\GeV$ respectively.
 
-This thesis was centered precisely on the search for such particles using the CMS detector, and
-in particular for direct stop pair production. Two possible decay chains were considered for the stop:
+This thesis is centered precisely on the search for such particles using the CMS detector, and
+in particular for direct stop pair production. Two possible decay chains are considered for the stop:
 $\lstop \rightarrow t \lneutralino$, and $\lstop \rightarrow b \lchargino$ with $\lchargino
-\rightarrow W^\pm \lneutralino$. The search was performed in the semileptonic channel, corresponding
+\rightarrow W^\pm \lneutralino$. The search is performed in the semileptonic channel, corresponding
 to a final state containing one lepton, four jets, and a large amount of missing transverse energy
-($\MET$). The analysis was built around the $\MT$ variable, defined as the transverse mass of the lepton + $\MET$
+($\MET$). The analysis is built around the $\MT$ variable, defined as the transverse mass of the lepton + $\MET$
 system, which provides great discriminating power between signal and backgrounds.
 
-An initial contribution to the analysis has been dedicated to the improvement of the
+An initial contribution to the analysis is dedicated to the improvement of the
 second lepton veto based on isolated track identification, and the development of an
 hadronic $\tau$ veto using $\tau$-tagging algorithms. This second lepton veto effectively
 rejects one  of the main backgrounds of the analysis, the dileptonic $t\bar{t}$ process,
@@ -6302,7 +6317,7 @@ where one of the leptons is lost. It is estimated that the current veto rejects 
 60\% of this background, corresponding to a gain in sensitivity about 25\% in $\diLeptonTop$
 dominated signal regions.
 
-This contribution was followed by the design and optimization of a cut-based oriented
+This contribution is followed by the design and optimization of a cut-based oriented
 analysis, motivated by the better control and transparency offered by this approach,
 compared to more sophisticated techniques such as boosted decision trees.
 This work required to develop a good understanding of the relevance of the different
@@ -6312,16 +6327,16 @@ cuts were chosen to maximize the sensitivity of the analysis. The results obtain
 allows to cross-check the boosted decision tree approach, and are sometimes found to
 provide comparable performances.
 
-Then, responsibility was taken for the background estimation, and particularly the integration
+Then, I took the responsibility of the background estimation, and particularly the integration
 of a new method, based on a template fit, to correct for a mismodeling of the tail of $\MT$ caused
 by the semileptonic $t\bar{t}$ and $\Wjets$ backgrounds. This method allows a reliable
 prediction of the contribution of these backgrounds in the control region. In addition, signal
-contamination was noticed not to be negligible in the control regions of the analysis. This
+contamination was noticed to be non-negligible in the control regions of the analysis. This
 is true in particular at low stop mass, $\mass{\lstop}$, and low $\deltam \definedAs \mass{\lstop} -
 \mass{\lneutralino}$ were the signal cross-section is high and the kinematic remains close
 to the semileptonic $t\bar{t}$ background. To take this into account, the background estimation
-had to be modified to obtain a rigorous prediction of the background, as function of the signal
-benchmark considered.
+is modified to obtain a more rigorous prediction of the background, depending on the signal
+hypothesis made.
 
 After the Run I of the LHC, no significant excess is observed, and the results are
 interpreted in terms of upper limit on the signal cross-section, as function of the masses
@@ -6331,19 +6346,19 @@ $(\mass{\lstop},\mass{\lneutralino})$ space. In the $\lstop \rightarrow t \lneut
 decay mode, this constraint goes up to around $700\GeV$ for the mass of the stop,
 and around $250\GeV$ in term of neutralino mass, assuming $\text{BR}(\lstop \rightarrow t
 \lneutralino) = 100\%$. While these results disfavor the idea of a natural supersymmetry,
-there are still a large portion of phase space where this signal could be awaiting to be
-discovered, not only at higher masses but also in the stealthy region and compressed spectra region.
+there are still a large portion of phase space where this signal might hide,
+not only at higher masses but also in the stealthy region and compressed spectra region.
 
 The quest for natural supersymmetry will therefore continue during the Run II of the LHC,
 which is just starting as this thesis ends. To pave the way for the future
-of the analysis, the use of $W$-tagging was investigated as a potential source of improvement
+of the analysis, the use of $W$-tagging is investigated as a potential source of improvement
 in the high $\deltam$ region. This technique, based on the analysis of the jet substructure, is
 relevant for boosted and hadronically decaying $W$ bosons. We demonstrate that
 this technique indeed holds potential that could be exploited during the Run II. In parallel,
- we estimate the sensitivity of the analysis for the beginning of the Run II. Using a
+ we estimate the sensitivity of the analysis at the beginning of the Run II. Using a
 simplified version of the Run I analysis, one can expect for instance
 to probe the region around $(\mass{\lstop},\mass{\lneutralino}) = (650,325)\GeV$
-with the first $15\sim20\invfb$ of data taking.
+with the first $15-20\invfb$ of data taking.
 
 Overall, the conclusions that will come out of the Run II will definitely shape the future
 of particle physics. If the promised land of New Physics is discovered, be it supersymmetry
