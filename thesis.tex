@@ -1,7 +1,5 @@
 
 
-%\todo{section title in odd pages ?}
-
 \emptypage
 
 \thispagestyle{empty}
@@ -131,7 +129,7 @@ a bit unreasonable – bewildering, even enigmatic... “Ladies and gentlemen,�
 
 \vspace*{0.5cm}
 
-\todo{recheck comment from Dirk on intro}
+\todo{recheck comments from Dirk on intro}
 
 The philosophical and scientific approaches share a common fundamental element, which is to
 question the world around us instead of taking it for granted. When we gaze at the world,
@@ -1637,7 +1635,7 @@ little world. »}\\
 
     \subsection{Scientific context and challenges}
 
-    \todo{check this}
+    \todo{recheck this}
 
     There are several approaches one can follow to search for new physics. For instance, using
      measurements of observables and exploiting the fact described in
@@ -1799,7 +1797,7 @@ little world. »}\\
     In the context of the LHC, the number of $pp$ collisions happening per unit of time is
     proportional to the instantaneous luminosity $L_\text{inst.}$ which depends on the bunch crossing
     frequency, the number of bunches, the number of proton per bunches and other beam and
-    geometry parameters. \todo{add luminosity formula} The two general purpose experiments, ATLAS and CMS, are designed
+    geometry parameters. \todo{add luminosity formula?} The two general purpose experiments, ATLAS and CMS, are designed
     for a typical luminosity $L_\text{inst.} = 10^{34}~\text{cm}^{-2}
     \text{s}^{-1} = 10~\text{nb}^{-1} / \text{s}$. For a given process, one can compute $n$
     the number of expected events per unit of time:
@@ -2238,7 +2236,6 @@ little world. »}\\
     \subsection{Object and event reconstruction}
 
     \todo{in this subsection : discuss object reconstruction systematics ? JES, JER, MET, LES, ... relevant analysis}
-
     \todo{add lepton reconstruction / perf discussion ?}
 
     After recording an event, the outputs of each subdetector
@@ -3592,7 +3589,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     \section{Context and phenomenology \label{sec:analysis_contextAndPheno}}
     %==============================================================
 
-    \subsection{Theoretical context and constraints}
+    \subsection{Theoretical context and constraints \label{sec:theoreticalContextAndConstrains}}
     %==============================================================
 
     \subsubsection{Motivation and constraints on the stop sector from the Higgs sector}
@@ -4526,7 +4523,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
                  {Stacked plots presenting the distribution of $\pT(\text{leading } b)$
                  with the same conditions of \reffig{fig:variables/METandMEToverSqrtHT}.}
 
-    \subsubsection{ISR-tagged jets}
+    \subsubsection{ISR-tagged jets \label{sec:ISRjets}}
 
     As described in \refsection{sec:analysis_contextAndPheno}, the low $\deltam$,
     off-shell and stealthy regions are challenging because looking quite like the SM
@@ -5730,8 +5727,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     on-shell region and up to $\mass{\lneutralino} \sim 150\GeV$ in the off-shell region.
     As discussed in \refsection{sec:phenoAndSignature}, the case with $\deltam \sim
     \mass{t}$ is challenging as the kinematic here is very close to Standard Model $t\bar{t}$
-    production and cannot be efficiently probed directly. However, dedicated approach can
-    be built to indirectly probe this scenario \cite{SUS-13-021, ClosingStopGap}. The
+    production and cannot be efficiently probed directly.  The
     decay mode $\lstop \rightarrow b \lchargino$ is also challenging in the low $x$ case
     as the decays of the two $W$'s are typically softer compared to higher $x$ cases. In
     particular, at low $\mass{\lneutralino}$, the mass of the $\lchargino$ is also low and
@@ -5885,6 +5881,111 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     Only tracks coming from the primary vertex are shown.}
 
     \newpage
+
+    \subsection{Comparison with other direct stop pair production searches}
+    %==============================================================
+
+    In this section, we finally present the place of this analysis with respect to other
+    direct stop pair production searches using data from the Run I. We briefly discuss the
+    key aspects of a few of these analyses, namely the search in the fully hadronic channel
+    for the $\lstop \rightarrow t \lneutralino$ decay mode, searches targetting
+    compressed-spectra scenarios ($\deltam < 80\GeV$), and strategies to attempt to cover
+    the stealthy regime ($\deltam \sim 172\GeV$).
+
+    \insertTwoFigures{stopSummary}
+                     {otherAnalysis/CMST2ttSummary}{otherAnalysis/AtlasT2ttSummary}{0.49}
+    {Summary of expected (dashed lines) and observed (solid lines) limits for direct stop
+    production searches decaying through $\lstop \rightarrow t \lneutralino / c \lneutralino / b ff' \lneutralino$,
+    with Run I data in CMS (left) and ATLAS (right).}
+
+    \reffig{fig:stopSummary} presents a summary of the limits obtained in CMS and ATLAS
+    with the Run I of the LHC on direct stop searches for the $\lstop \rightarrow t \lneutralino / c \lneutralino / b ff' \lneutralino$
+    decay modes. The top polarization in the $\lstop \rightarrow t \lneutralino$ decay mode
+    is assumed right-handed in the ATLAS analyses instead of unpolarized for CMS. Overall,
+    both experiments obtain comparable sensitivity, reaching stop masses up to $750-780\GeV$
+    and neutralino masses up to $275\GeV$.
+
+    \subsubsection{Search in fully hadronic channel}
+    %==============================================================
+
+    The search in the fully hadronic channel (i.e. both $W$ decaying hadronically) benefits
+    at high $\deltam$ from the higher branching ratio. In the low $\deltam$ regime however,
+    the analysis is impacted by the tighter trigger requirement to limit the large multijet
+    backgrounds : a trigger with $\MET > 80\GeV$ and two central jets with $\pT > 50\GeV$
+    is used, to be compared to the $24$ and $27\GeV$ trigger thresholds of the 1-lepton
+    analysis.
+
+    Interestingly, this analysis also requires a dedicated strategy to find and veto
+    event with lost lepton as the semi-leptonic $t\bar{t}$ becomes a major background
+    after requiring large $\MET$ in the event.
+
+    The fully-hadronic channel also offers the possibility to reconstruct both tops. A
+    variable jet-size clustering algorithm have been developped to efficiently reconstruct
+    tops over the wide range of momenta of the analysis, from soft ($\pT(\text{jets}) \sim
+    \orderOf{20\GeV}$) to boosted tops.
+    In the $\lstop \rightarrow t \lneutralino$ channel, the analysis is able to exclude
+    up to $\mass{\lstop} = 780\GeV$ when $\mass{\lneutralino} < 200\GeV$. \todo{add ref to SUS-13-023}
+
+    \subsubsection{Searches in compressed spectra regions}
+    %==============================================================
+
+    The compressed spectra region, i.e. with $0 < \deltam < \mass{W}$, is cosmologically
+    motivated as a mass spliting of $15-30\GeV$ is preferred to obtain the right density
+    of dark matter due to $\lstop-\lneutralino$ annhihiliation \cite{TheLightStopWindow,SUSYBaryogenesis}
+
+    In this region, the stop is expected to decay through flavor changing neutral current
+    $\lstop \rightarrow c \lneutralino$ (2-body decay), or $\lstop \rightarrow bff' \lneutralino$
+    (4-body decay)depending of the exact parameters of the theory.
+
+    In the first decay type ($\lstop \rightarrow c \lneutralino$), the jets from $c$ are
+    expected to be low $\pT$. The analysis strategy is therefore centered instead around
+    ISR jet identification, following the same arguments described in \refsection{sec:ISRjets}.
+    The analysis is most sensitive in the region with very low $\deltam$, and decreases as
+    $\deltam$ increases because the $c$ jets start to carry a significant momentum.
+    \todo{add ref to SUS-14-001}
+
+    In the second decay type ($\lstop \rightarrow bff' \lneutralino$), the signal is expected
+    to contain 1 or 2 soft leptons in the semi- and fully-leptonic channel. The event preselection
+    requires a high-$\pT$ jet coming from ISR, one muon with $\pT > 5\GeV$, possibly another
+    lepton (electron or muon), and $\MET > 200\GeV$. The two lepton channels ends up having
+    the best overall sensitivity and excluded stop masses up to about $300\GeV$.
+    \todo{add ref to SUS-14-021}
+
+    \subsubsection{Searches in stealthy region}
+    %==============================================================
+
+    As discussed in \refsection{sec:phenoAndSignature} and \refsection{sec:analysis_results},
+    when $\deltam \sim \mass{t} \approx 172\GeV$ in the $\lstop \rightarrow t \lneutralino$
+    decay mode, the kinematic of the signal is very close to Standard Model $t\bar{t}$ production
+    and is quite difficult to bring out. It should be noted that at 8 TeV, the cross-section
+    for stop pair production with $\mass{\lstop}$ around $172\GeV$ is about ten times lower
+    than the $t\bar{t}$ cross-section, to be compared to the $\orderOf{5\%}$ theoretical
+    and $\orderOf{3\%}$ experimental uncertainty on the $t\bar{t}$ cross-section. A first
+    strategy to target the stop stealthy regime consists in reinterpreting $t\bar{t}$
+    cross-section measurements. In CMS, this has been used to exlude stop masses up to
+    $190\GeV$ for $\mass{\lneutralino} = 1\GeV$, as presented in \reffig{fig:stealthyStops}
+    \cite{topCrossSectionMeasurement}. This
+    strategy can be refined using the lack of spin correlation for tops produced via
+    stops compared to Standard Model $t\bar{t}$ production \cite{LightStopSigns}.
+    In ATLAS, this technique has been used to exclude stops up to $200\GeV$ for
+    $\mass{\lneutralino} = 1\GeV$ \cite{ATLASstealthyStops}.
+
+    An alternative aproach consists in looking for the second stop production, $\tilde{t}_2$,
+    decaying to the first stop $\lstop$ via a Higgs $h$ or a $Z$, and $\lstop$ still decaying
+    to $t + \lneutralino$ with $\deltam \sim \mass{t}$. The full decay chain is therefore,
+    assuming $\text{BR}(\tilde{t}_2 \rightarrow \lstop h) = 1$,
+    $\tilde{t}_2 \tilde{t}^*_2 \rightarrow \lstop \lstop^* + hh \rightarrow t\bar{t} \lneutralino \lneutralino + hh$.
+    The analysis targetting this process is able to constrain the $(\mass{\tilde{t}_2},\mass{\lstop})$
+    space, as shown on \reffig{fig:stealthyStops} \todo{ref to SUS-13-024}, which
+    can be put in parallel to theoretical constrains such as dicussed in \refsection{sec:theoreticalContextAndConstrains}.
+
+    \insertTwoFigures{stealthyStops}{otherAnalysis/topCrossSection}
+                                {otherAnalysis/secondStopToStealthyStop}{0.49}{
+                                On the left, upper limit on $\sigma_{\lstop\lstop} / \sigma^\text{theo.}_{\lstop\lstop}$
+                                as function of $\mass{\lstop}$ and for $\mass{\lneutralino} = 1\GeV$. On the right,
+                                exclusion limit in the $(\mass{\tilde{t}_2},\mass{\lstop})$ space from a search for
+                                $pp \rightarrow \tilde{t}_2\tilde{t}_2$, $\tilde{t}_2 \rightarrow \lstop h/Z$ with
+                                variable branching ratio, and $\lstop \rightarrow t \lneutralino$ with $\deltam = 175\GeV$.}
 
     \section{Perspectives \label{sec:analysis_perspective}}
     %==============================================================
