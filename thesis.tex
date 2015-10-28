@@ -1037,7 +1037,7 @@ little world. »}\\
     computation for the correction from a fermion loop gives:
     \eq{higgsMassCorrectionFromFermion}
     {
-        \Delta m_h^2 \, \propto \, m_f^2 \Lambda^2,
+        \Delta m_h^2 \, \propto \, G_F m_f^2 \Lambda^2,
     }
     which diverges with $\Lambda$. If one believes that the Standard Model is valid
     up to the Planck scale, where gravity is expected to play a significant role, then
@@ -1637,10 +1637,10 @@ little world. »}\\
 
         Three main strategies are therefore used at the LHC to search for natural supersymmetry.
         The first one is to look for gluino production. In models with a neutralino LSP, gluinos
-        are expected to the neutralino via quarks, experimentally corresponding to a large number
+        are expected to decay to the neutralino via quarks, experimentally corresponding to a large number
         of jets in the event, and energy escaping detection as they are carried by neutralinos.
         The Run I of the LHC have made it possible to exclude gluino masses up to $1-1.4\TeV$
-        depending on the exact decay considered.
+        depending on the exact decay considered \cite{CMS-SUS-14-011, ATLASGluino}.
 
         A second approach is look for electroweakinos production. As it is motivated for
         electroweakinos to have a mass of only a few hundred GeV, it is worth looking for
@@ -1650,7 +1650,7 @@ little world. »}\\
         is the production of $\tilde{\chi}_1^\pm \tilde{\chi}_2^0$. If no decay via sleptons
         is possible, then $\tilde{\chi}_1^\pm$ decays to $W \tilde{\chi}_1^0$ and $\tilde{\chi}_2^0$
         decays to $Z \tilde{\chi}_1^0$ or $h \tilde{\chi}_1^0$. Using the Run I of the LHC, it has been possible
-        to exclude masses for these particles up to $275\GeV$ (CMS) or $425\GeV$ (ATLAS)
+        to exclude masses for these particles up to $275\GeV$ (CMS) or $425\GeV$ (ATLAS) \cite{CMSEwkino, ATLASEwkino}.
 
         Finally, one may look for direct third generation squark direct production,
         and in particular direct stop pair production which is the focus of this document.
@@ -3791,7 +3791,7 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
     the LHC}
 
     Before the LHC, searches for supersymmetry have been conducted at the LEP and the
-    Tevatron and were used to put constrains on the masses supersymmetric particles and
+    Tevatron and were used to put constrains on the masses of supersymmetric particles and
     in particular the stop and the LSP.
     First, the LEP experiments were able to derive an absolute lower limit of $43\GeV$ on the
     mass of the lightest neutralino if it is the LSP \cite{LEPLSP}. Additionally, an absolute
@@ -3813,10 +3813,14 @@ and somewhere else the tea’s getting cold. Come on, Ace. We’ve got work to d
         \centering
         \includegraphics[width=0.49\textwidth]{stopAtTevatron/stopD0}
         \includegraphics[width=0.39\textwidth]{stopAtTevatron/stopCDF}
-        \caption{On the left, exclusion plot at 95\% confidence level in terms of
-        $(\mass{\lstop},\mass{\tilde{\nu}})$ obtained from a search for $p\bar{p}
+        \caption{On the left, exclusion at 95\% confidence level in terms of
+        $(\mass{\lstop},\mass{\tilde{\nu}})$ obtained from a search \cite{TevatronStopSneutrino}
+        for $p\bar{p}
         \rightarrow \lstop \lstop^* \rightarrow b\bar{b} \tilde{\nu} \tilde{nu}^*$
-        using $5.4\invfb$ recorded by D0 at the Tevatron.
+        using $5.4\invfb$ recorded by D0 at the Tevatron. On the right, exclusion at 95\%
+        confidence level in terms of $(\mass{\lstop},\mass{\lneutralino})$ obtained from
+        a search \cite{TevatronStopChargino} for $p\bar{p} \rightarrow \lstop \lstop^* \rightarrow b\bar{b} \lchargino \lchargino$
+        with $\lchargino \rightarrow \lneutralino \nu_\ell \ell$.}
         \label{fig:tevatronStop}}
     \end{figure}
 
@@ -4613,7 +4617,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     initial-state radiation (ISR) grows according to the energy of the incoming partons,
     the presence of an ISR and its energy in the event allow to discriminate between the $t\bar{t}$
     background and a low $\deltam$ signal. Moreover, the production of an ISR can enhance
-    the $\vec{\MET}$ magntude in the event, as the system is recoiling in the opposite
+    the $\vec{\MET}$ magnitude in the event, as the system is recoiling in the opposite
     direction of the ISR as sketched on \reffig{fig:ISRtagging/ISRsketch} for a
     SUSY signal. This is further illustrated in \reffig{fig:ISRpheno} showing, at
     $\deltam = 125\GeV$, the evolution of the mean stop pair recoil as function
@@ -5966,7 +5970,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     In this section, we finally present the place of this analysis with respect to other
     direct stop pair production searches using data from the Run I. We briefly discuss the
     key aspects of a few of these analyses, namely the search in the fully hadronic channel
-    for the $\lstop \rightarrow t \lneutralino$ decay mode, searches targetting
+    for the $\lstop \rightarrow t \lneutralino$ decay mode, searches targeting
     compressed-spectra scenarios ($\deltam < 80\GeV$), and strategies to attempt to cover
     the stealthy regime ($\deltam \sim 172\GeV$).
 
@@ -5998,7 +6002,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     after requiring large $\MET$ in the event.
 
     The fully-hadronic channel also offers the possibility to reconstruct both tops. A
-    variable jet-size clustering algorithm have been developped to efficiently reconstruct
+    variable jet-size clustering algorithm have been developed to efficiently reconstruct
     tops over the wide range of momenta of the analysis, from soft ($\pT(\text{jets}) \sim
     \orderOf{20\GeV}$) to boosted tops.
     In the $\lstop \rightarrow t \lneutralino$ channel, the analysis is able to exclude
@@ -6008,8 +6012,8 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     %==============================================================
 
     The compressed spectra region, i.e. with $0 < \deltam < \mass{W}$, is cosmologically
-    motivated as a mass spliting of $15-30\GeV$ is preferred to obtain the right density
-    of dark matter due to $\lstop-\lneutralino$ annhihiliation \cite{TheLightStopWindow,SUSYBaryogenesis}
+    motivated as a mass splitting of $15-30\GeV$ is preferred to obtain the right density
+    of dark matter due to $\lstop-\lneutralino$ annihilation \cite{TheLightStopWindow,SUSYBaryogenesis}
 
     In this region, the stop is expected to decay through flavor changing neutral current
     $\lstop \rightarrow c \lneutralino$ (2-body decay), or $\lstop \rightarrow bff' \lneutralino$
@@ -6041,7 +6045,7 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     than the $t\bar{t}$ cross-section, to be compared to the $\orderOf{5\%}$ theoretical
     and $\orderOf{3\%}$ experimental uncertainty on the $t\bar{t}$ cross-section. A first
     strategy to target the stop stealthy regime consists in reinterpreting $t\bar{t}$
-    cross-section measurements. In CMS, this has been used to exlude stop masses between
+    cross-section measurements. In CMS, this has been used to exclude stop masses between
     $150$ and $190\GeV$ for $\mass{\lneutralino} = 1\GeV$, as presented in \reffig{fig:stealthyStops}
     \cite{topCrossSectionMeasurement}. This
     strategy can be refined using the lack of spin correlation for tops produced via
@@ -6054,10 +6058,10 @@ $\lstop \rightarrow b \lchargino$ (0.5/450/50) & 248 $\pm$ 16        & 167 $\pm$
     to $t + \lneutralino$ with $\deltam \sim \mass{t}$. The full decay chain is therefore,
     assuming $\text{BR}(\tilde{t}_2 \rightarrow \lstop h) = 1$,
     $\tilde{t}_2 \tilde{t}^*_2 \rightarrow \lstop \lstop^* + hh \rightarrow t\bar{t} \lneutralino \lneutralino + hh$.
-    The analyses \cite{SUS-13-024, ATLASstopSearches} targetting this process is able to
+    The analyses \cite{SUS-13-024, ATLASstopSearches} targeting this process is able to
     constrain the $(\mass{\tilde{t}_2},\mass{\lstop})$ space, as shown on
     \reffig{fig:stealthyStops} for CMS, which can be put in parallel to theoretical
-    constrains such as dicussed in \refsection{sec:theoreticalContextAndConstrains}.
+    constrains such as discussed in \refsection{sec:theoreticalContextAndConstrains}.
 
     \insertTwoFigures{stealthyStops}{otherAnalysis/topCrossSection}
                                 {otherAnalysis/secondStopToStealthyStop}{0.49}{
@@ -6598,7 +6602,7 @@ quark top dans l'expérience CMS}}
     La découverte en 2012 par les collaborations CMS et ATLAS d'un boson de Higgs avec une
 masse de $125\GeV$ et ayant des propriétés compatibles avec celles prédites par le
 Modèle Standard renforce la nécessité de répondre au problème de hiérarchie. La
-supersymmétrie propose une solution naturelle à ce problème, privilégiant un
+supersymétrie propose une solution naturelle à ce problème, privilégiant un
 partenaire scalaire du quark top, le stop ($\lstop$), ayant une masse en dessous du
 TeV tandis que le plus léger des neutralinos ($\lneutralino$), candidat pour
 la matière noire dans les modèles avec $R$-parité conservée, est attendu avec une masse
@@ -6619,7 +6623,7 @@ du signal. À défaut de mettre un signal en évidence, les résultats ont été
 terme de contrainte sur l'espace ($\mass{\lstop}$,$\mass{\lneutralino}$), excluant des masses
 pour le stop et le neutralino jusqu'à $700\GeV$ et $250\GeV$ respectivement.
 
-    Finallement, une ouverture sur le Run II du LHC est proposée à travers une étude sur
+    Finalement, une ouverture sur le Run II du LHC est proposée à travers une étude sur
 l'utilisation de techniques d'étiquettage de $W$ dans le cadre de l'analyse, et une
 estimation de la sensibilité de l'analyse pour le début de la prise de données. En parallèle
 de ce travail d'analyse, une activité de validation des algorithmes d'étiquettage de jets $b$
@@ -6634,7 +6638,7 @@ a été poursuivie.
     \vspace*{-0.3cm}
     The discovery in 2012 by the CMS and ATLAS collaborations of a Standard Model-like Higgs boson
 with a mass around $125\GeV$ reinforces the need to address the hierarchy problem. Supersymmetry
-proposes a natural solution to this problem, favorizing a scalar partner of the top quark,
+proposes a natural solution to this problem, favoring a scalar partner of the top quark,
 the stop ($\lstop$), to be lighter than the TeV scale while the lightest neutralino
 ($\lneutralino$), a dark matter candidate in $R$-parity conserved models, is expected to have
 a mass of a few hundred GeV.
@@ -6649,7 +6653,7 @@ transverse energy coming from neutrinos and possibly neutralinos.
     The work of this thesis first helped to improve the rejection of one of the main backgrounds.
 Cut-based signal regions have then been designed and optimized. A new approach for the background
 estimation has been integrated, and a procedure to correct for signal contamination has
-been developped. No excess has been observed, and the results were interpreted in terms of
+been developed. No excess has been observed, and the results were interpreted in terms of
 constrains on the ($\mass{\lstop}$,$\mass{\lneutralino}$) space, excluding stop and neutralino
 masses up to $700\GeV$ and $250\GeV$ respectively.
 
